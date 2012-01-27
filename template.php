@@ -23,3 +23,10 @@ function hba_theme_menu_link__menu_sections(array $variables) {
   $element['#attributes']['class'][] = 'menu_' . strtolower(transliteration_clean_filename($element['#title']));
   return '<li' . drupal_attributes($element['#attributes']) . '><div class="wrapper"><span class="menu_image"></span>' . $output . $description . $sub_menu . "</div></li>\n";
 }
+
+function hba_theme_preprocess_page(&$variables) {
+  // Move some variables to the top level for themer convenience and template cleanliness.
+  if(drupal_is_front_page()) {
+    $variables['title'] = '';
+  }
+}
