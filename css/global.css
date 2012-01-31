@@ -102,6 +102,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px;
 }
 
+#region-sidebar-first .block {
+  margin-bottom: 15px;
+}
+
 #section-content {
   background: #f2f2f2;
   border-top: 2px solid white;
@@ -375,7 +379,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #bb2934;
 }
 
-#region-content .region-inner {
+.not-front #region-content .region-inner {
   background: white;
   padding: 15px 30px;
   border-top: 5px solid #e5e1e1;
@@ -438,7 +442,7 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
 }
 
-#region-sidebar-second .region-inner {
+.not-front #region-sidebar-second .region-inner {
   border-top: 4px solid #e5e1e1;
   padding: 10px 0;
 }
