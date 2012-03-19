@@ -568,15 +568,31 @@ body .comment-links ul li a {
   top: -3px;
 }
 
+#block-bird-taxonomies-bird-orders .content ul.orders {
+  border-left: 1px solid #b2b1b1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#block-bird-taxonomies-bird-orders .content ul.families {
+  border-color: #EE9C31;
+}
+  
+#block-bird-taxonomies-bird-orders .content ul.species {
+}
+
+#block-bird-taxonomies-bird-orders .content ul.subspecies {
+  border-color: #EE9C31;
+}
+
+
 #block-bird-taxonomies-bird-orders .content ul {
   border-left: 1px solid #b2b1b1;
-  margin-left: 10px
 }
 
 #block-bird-taxonomies-bird-orders .content ul li {
   margin-left: 0;
   padding-left: 10px;
-  padding-right: 10px;
 }
 
 #block-bird-taxonomies-bird-orders .content a {
@@ -584,6 +600,38 @@ body .comment-links ul li a {
   text-decoration: none;
 }
 
+#block-bird-taxonomies-bird-orders .content li:hover {
+  /*background: #FCFCD7;*/
+}
+
 body.context-family #region-content .region-inner {
   border-color: #ca4c55;
+}
+
+#block-bird-taxonomies-bird-orders .content .go {
+  background: url(images/icons.png) no-repeat -440px 0;
+}
+
+#block-bird-taxonomies-bird-orders .content .go span {
+  visibility: hidden;
+}
+
+#block-bird-taxonomies-bird-orders .content .species {
+  margin-top: 7px;
+}
+
+#block-bird-taxonomies-bird-orders .content .subspecies {
+  margin-top: 7px;
+}
+
+#block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
+  color: white;
+  background: #CF3F3A;
+  padding: 2px 4px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 7px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
