@@ -35,7 +35,7 @@ function hba_theme_menu_link__menu_sections(array $variables) {
  * for more information on this topic.
  */
 
-function hba_form_alter(&$form, &$form_state, $form_id) {
+function hba_theme_form_alter(&$form, &$form_state, $form_id) {
   switch($form_id) {
     /**
       * Make some adjustments to the login form to use HTML5 Placeholder values. 
@@ -54,7 +54,7 @@ function hba_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
-function hba_preprocess_node(&$vars) {
+function hba_theme_preprocess_node(&$vars) {
   /**
     * if user pictures are enabled on nodes, inject them with the body field
     */
@@ -69,7 +69,7 @@ function hba_preprocess_node(&$vars) {
  * Open filter tips link in new page. Prevents data loss.
  * @see http_://drupal.org/node/87994#comment-4713488
  */
-function hba_filter_tips_more_info() {
+function hba_theme_filter_tips_more_info() {
   return '<p>' . l(t('More information about text formats'), 'filter/tips', array('attributes' => array('target' => '_blank'))) . '</p>';
 }
 /**
@@ -88,16 +88,19 @@ function hba_filter_tips_more_info () {
   return '';
 }*/
 
-function hba_process_page(&$variables) {
+function hba_theme_process_page(&$variables) {
   // Add theme suggestion for all content types
   if (isset($variables['node'])) {
     if ($variables['node']->type != '') {
     $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
     }
   }
+  
+  if(drupal_is_front_page()) {
+    $variables['title'] = '';
+  }
 
 }
-
 /**
  * http://drupal.org/node/312220
  * Generates a node-flagged-FLAGNAME css class for every flag set on the node.
@@ -164,7 +167,7 @@ function hba_process_page(&$variables) {
  * To fix this, add the following preprocess functions to your template.php. Rename garland to the actual name of your theme.
  */
 /*
-function hba_preprocess_views_view_table(&$vars) {
+function hba_theme_preprocess_views_view_table(&$vars) {
   $view = $vars['view'];
   $rows = $vars['rows'];
 
@@ -178,7 +181,7 @@ function hba_preprocess_views_view_table(&$vars) {
   }
 }
 
-function hba_preprocess_views_view_unformatted(&$vars) {
+function hba_theme_preprocess_views_view_unformatted(&$vars) {
   $view = $vars['view'];
   $rows = $vars['rows'];
 
@@ -200,7 +203,7 @@ function hba_preprocess_views_view_list(&$vars) {
 
 /* Make page templates for specific content types. */
 /* http://cheekymonkeymedia.ca/blog/brian-top-chimp/how-have-drupal-7-node-type-page-tpls */
-function hba_preprocess_page(&$variables, $hook) {
+function hba_theme_preprocess_page(&$variables, $hook) {
     // When this goes through the theme.inc some where it changes _ to - so the tpl name is actually page--type-typename.tpl
     if (isset($variables['node'])) {
         $variables['theme_hook_suggestions'][] = 'page__type__'. str_replace('_', '--', $variables['node']->type);  
@@ -213,7 +216,7 @@ function hba_preprocess_page(&$variables, $hook) {
 }
 
 /*
-function hba_form_comment_form_alter(&$form, &$form_state, &$form_id) {
+function hba_theme_form_comment_form_alter(&$form, &$form_state, &$form_id) {
   $form['comment_body']['#after_build'][] = 'configure_comment_form';
 }
 
@@ -227,7 +230,7 @@ function configure_comment_form(&$form) {
  * http://drupal.org/node/796530#comment-5116106
  * Inconsistent behavior with exposed filter in block AJAX
  */
-function hba_form_views_exposed_form_alter(&$form , &$form_state){
+function hba_theme_form_views_exposed_form_alter(&$form , &$form_state){
   // Overrides the views exposed form url to be the current one
   // Avoids odd views redirect to views page from an exposed form in block
   $form['#action'] = request_uri();

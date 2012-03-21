@@ -1,7 +1,7 @@
 /* This file will hold the main styles for your website. */
 body {
   background-color: #eaeaea;
-  color: #7e7c7c;
+  color: #636262;
   font-family: 'Arial', sans-serif;
 }
 
@@ -451,14 +451,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
 }
 
+/*
 #region-sidebar-second h2 {
   text-transform: uppercase;
   color: black;
   font-weight: normal;
-}
+}*/
 
 #region-sidebar-second .views-label,
-#region-sidebar-second h3 {
+#region-sidebar-second h2 {
   background: rgb(255,255,255); /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -477,10 +478,17 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-right-radius: 4px;
   
   border: 1px solid #c8c5c5;
-  border-left: 4px solid #44985a;
-  padding: 0px 14px;
   font-weight: normal;
-  color: black;
+  color: #707070;
+  
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+#region-sidebar-second h2 span {
+    border-left: 4px solid #44985a;
+    padding: 0px 14px;
+    display: block;
 }
 
 body .region-content ul.flippy {
@@ -634,4 +642,20 @@ body.context-family #region-content .region-inner {
   -moz-border-radius-bottomright: 7px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+
+#search-block-form .form-text {
+  width: 176px;
+}
+
+#region-content h3 {
+  margin: 10px 0 5px;
+  background: #F4F4F4;
+  padding: 0px 10px;
+}
+
+#region-content h3 a {
+  font-size: 18px;
+  color: #707070;
+  text-decoration: none;
 }
