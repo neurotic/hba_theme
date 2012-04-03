@@ -99,6 +99,10 @@ function hba_theme_process_page(&$variables) {
   if(drupal_is_front_page()) {
     $variables['title'] = '';
   }
+  
+  if($variables['node']->type == 'species') {
+    $variables['title'] = hba_theme_cursive($variables['title']);
+  }
 
 }
 /**
@@ -239,4 +243,16 @@ function hba_theme_form_views_exposed_form_alter(&$form , &$form_state){
 // drupal_valid_path check drupal path is exist, and if user have access to path, and if afirmative return true, and if negative return false. This functions is perfect for displaying only the links that the user can see
 if(drupal_valid_path('node/add/story')) {
   $items_scape[] = l(t('Add scape'),'node/add/story');
+}
+
+/**
+  * Devuelve el mismo string que contiene un nombre dentro de parentesis pero con <em> englobando al parentesis
+  * Entrada Ostrich (Struthio camelus)
+  * Salida Ostrich <em>(Struthio camelus)</em>
+  */
+function hba_theme_cursive($string) {
+  $string = str_replace("(", "<em>(", $string);
+  $string = str_replace(")", ")</em>", $string);
+  
+  return $string;
 }
