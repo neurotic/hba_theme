@@ -68,7 +68,7 @@ h1#page-title {
 }
 
 #region-menu ul#main-menu li.first a {
-  background: url(images/icons.png) no-repeat -8px -216px;
+  background: url(images/icons.png) no-repeat -8px -288px;
 }
 
 #region-menu ul#main-menu li.active {
@@ -558,12 +558,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #region-sidebar-second h2 span {
     border-left: 4px solid #44985a;
-    padding: 2px 14px;
+    padding: 2px 30px 2px 14px;
     display: block;
 }
 
 #region-sidebar-second h2.collapsiblockCollapsed a {
-  background: url(images/icons.png) no-repeat 246px -162px;
+  background: url(images/icons.png) no-repeat 246px -239px;
 }
 
 #region-sidebar-second h2 a {
@@ -783,7 +783,7 @@ body.context-family #region-content .region-inner {
 
 #region-content h3 {
   margin: 10px 0 5px;
-  background: #f0f0f0 url(images/icons.png) no-repeat 486px -119px;
+  background: #f0f0f0 url(images/icons.png) no-repeat 486px -135px;
   padding: 0px 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
