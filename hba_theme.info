@@ -24,6 +24,7 @@ regions[postscript_third] = 'Postscript Third'
 regions[postscript_fourth] = 'Postscript Fourth'
 regions[footer_first] = 'Footer First'
 regions[footer_second] = 'Footer Second'
+
 zones[header] = 'Header'
 zones[content] = 'Content'
 zones[footer] = 'Footer'
@@ -33,6 +34,7 @@ zones[menu] = 'Menu'
 zones[preface] = 'Preface'
 zones[postscript] = 'Postscript'
 
+
 css[global.css][name] = 'Your custom global styles'
 css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
 css[global.css][options][weight] = '10'
@@ -41,6 +43,7 @@ css[julien.css][name] = 'Fichero CSS de Julien'
 css[julien.css][description] = 'Fichero de CSS que habra que ir pasando al global.'
 css[julien.css][options][weight] = '9'
 
+scripts[] = js/actions.js
 
 settings[alpha_grid] = 'alpha_default'
 settings[alpha_primary_alpha_default] = 'normal'

@@ -20,7 +20,6 @@ body a:visited {
 }
 
 #section-header {
-  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -583,7 +582,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   border-color: #c94b54;
 }
 
+#region-sidebar-second #block-views-species-figure-block-3 h2 span,
+#region-sidebar-second #block-views-species-figure-block-1 h2 span {
+  border-color: #23a7df;
+}
 
+#region-sidebar-second #block-views-species-test-block-2 h2 span {
+  border-color: #4eaeb9;
+}
+
+#region-sidebar-second #block-block-12 h2 span {
+  border-color: #417498;
+}
+
+#region-sidebar-second #block-views-revisions-pending-block-1 h2 span {
+  border-color: #c94b54;
+}
+
+#region-sidebar-second #block-block-13 h2 span {
+  border-color: #864722;
+}
+
+#region-sidebar-second #block-views-flickr-photos-species-block h2 span {
+  border-color: #6f6e6e;
+}
+
+#region-sidebar-second #block-block-14 h2 span {
+  border-color: #bfbcbc;
+}
+
+#region-sidebar-second #block-block-11 h2 span {
+  border-color: #81378a;
+}
 
 body .region-content ul.flippy {
   margin: 10px;
@@ -818,8 +848,203 @@ body #region-content .region-inner h3 a {
   font-size: 13px;
 }
 
+#zone-user-wrapper {
+  background: #535151;
+  padding: 3px 15px;
+  color: #bec6c6;
+  height: 22px;
+}
+
+#zone-user-wrapper a {
+  color: #bec6c6;
+}
+
+#block-global-filter-global-filter-1 {
+  color: #fff200;
+  position: relative;
+  z-index: 100;
+  background: #535151;
+  width: 306px;
+  float: left;
+}
+  
+#block-global-filter-global-filter-1 h3 {
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-left: 20px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+}
+
+#block-global-filter-global-filter-1 a {
+  /*color: red;*/
+  color: #fff200;
+  font-weight: normal;
+}
+
+#block-global-filter-global-filter-1 #edit-inputs {
+  margin-bottom: 0;
+}
+
+#block-global-filter-global-filter-1 #edit-inputs .fieldset-wrapper {
+  padding: 10px 20px 15px 20px;
+  background: #535151;
+  position: absolute; 
+  left: -999em;
+  color: black;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/*#block-global-filter-global-filter-1 #edit-inputs.visible,*/
+#block-global-filter-global-filter-1 #edit-inputs .fieldset-wrapper.visible {
+  left: 0;
+}
+
+#block-global-filter-global-filter-1 h3:before {
+  /*Add another block-level blank space*/
+  content:"\00a0";
+  display:block;
+  
+  width: 10px;
+  height: 10px;
+  background: #fff200;
+  margin: 6px 6px 0 0;
+  float: left;
+}
+
+body .chzn-choices {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#block-global-filter-global-filter-1 #edit-submit {
+  display: block;
+  width: 257px;
+  margin-top: 5px;
+}
+
+#zone-branding-wrapper {
+  margin-top: 10px;
+}
+
+body button, 
+body input[type="reset"], 
+body input[type="submit"], 
+body input[type="button"] {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#block-system-user-menu .content ul {
+  text-align: right;
+}
+
+#block-system-user-menu .content ul li {
+  display: inline;
+  list-style: none;
+}
+
+#block-system-user-menu .content ul li.first a {
+  color: #fff200;
+}
+
+#block-system-user-menu .content ul li a {
+  color: white;
+}
+
+#block-system-user-menu .content ul li.last a {
+  color: #bec6c6;
+}
+
+#block-views-flag-nodes-block-6,
+#block-views-flag-nodes-block-5 {
+  float: left;
+  width: 180px;
+}
+
+#block-views-flag-nodes-block-6 {
+  margin-right: 10px;
+}
 
 
+#block-views-flag-nodes-block-6 h2,
+#block-views-flag-nodes-block-5 h2 {
+  color: #e3e6e6;
+  font-size: 14px;
+  font-weight: normal;
+  cursor: pointer;
+  cursor: hand;
+  letter-spacing: -0.02em;
+}
+
+#block-views-flag-nodes-block-6 .content,
+#block-views-flag-nodes-block-5 .content {
+  background: #535151;
+  position: absolute; 
+  left: -999em;
+  color: black;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 180px;
+}
+
+#block-views-flag-nodes-block-6 .content.visible,
+#block-views-flag-nodes-block-5 .content.visible {
+  left: 0;
+}
+
+#block-views-flag-nodes-block-6 .content .item-list,
+#block-views-flag-nodes-block-5 .content .item-list {
+  list-style: none;
+  background: #535151;
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 5px 10px;
+  margin-top: -2px;
+  margin-bottom: 0;
+  float: left;
+  position: absolute;
+  z-index: 100;
+}
+
+#block-views-flag-nodes-block-6 .content ul li,
+#block-views-flag-nodes-block-5 .content ul li  {
+  list-style: none;
+  margin-left: 0;
+}
+
+#block-views-flag-nodes-block-6 .content ul li a,
+#block-views-flag-nodes-block-5 .content ul li a {
+  color: #FFF200;
+}
+
+#block-views-flag-nodes-block-5 h2:before,
+#block-views-flag-nodes-block-6 h2:before {
+  /*Add another block-level blank space*/
+  content:"\00a0";
+  display:block;
+  
+  width: 10px;
+  height: 10px;
+  background: #e3e6e6;
+  margin: 6px 6px 0 15px;
+  float: left;
+}
 
 /* ******************************************** Anadidos JULIEN ************************************* */
 

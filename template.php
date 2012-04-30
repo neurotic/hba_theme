@@ -35,7 +35,7 @@ function hba_theme_menu_link__menu_sections(array $variables) {
  * for more information on this topic.
  */
 
-function hba_theme_form_alter(&$form, &$form_state, $form_id) {
+function hba_theme_form_alter(&$form, &$form_state, $form_id) {  
   switch($form_id) {
     /**
       * Make some adjustments to the login form to use HTML5 Placeholder values. 
@@ -44,14 +44,44 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
       */
   
   case 'user_login_block':
-    $form['name']['#attributes']['placeholder'] = t('UsernameÉ');
+    $form['name']['#attributes']['placeholder'] = t('Username');
     $form['pass']['#attributes']['placeholder'] = t('Password...');
     break;
     
   case 'search_block_form':
-    $form['search_block_form']['#attributes']['placeholder'] = t('SearchÉ');
+    $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+    break;
+    
+  case 'global_filter_1':
+    
+    //dsm($_SESSION['global_filter']['view_taxo_paisos']);
+    if(count($_SESSION['global_filter']['view_taxo_paisos']) > 0) {
+      foreach($_SESSION['global_filter']['view_taxo_paisos'] as $country) {
+        $term = taxonomy_term_load($country);
+        if(isset($term->name)) {
+          $countries[] = $term->name;
+        }
+        else {
+          $countries[] = t('All');
+        }
+      }
+    }
+    
+    $countries = implode($countries,', ');
+    $countries = truncate_utf8(ucfirst(strtolower($countries)),38,false,'...');
+    $form['filter']['#markup'] = '<h3>' . t('<a href="#" class="change">Filter by: !countries</a>', array('!countries' => $countries)) . '</h3>';
+    $form['filter']['#weight'] = -10;
+    $form['inputs']['view_taxo_paisos'] = $form['view_taxo_paisos'];
+    unset($form['view_taxo_paisos']);
+    $form['inputs']['submit'] = $form['submit'];
+    unset($form['submit']);
+    
+    $form['inputs']['#type'] = 'fieldset';
+
     break;
   }
+  
+
 }
 
 function hba_theme_preprocess_node(&$vars) {
@@ -95,16 +125,8 @@ function hba_theme_process_page(&$variables) {
     $variables['theme_hook_suggestions'][] = 'page__node__' . $variables['node']->type;
     }
   }
-  
-  if(drupal_is_front_page()) {
-    $variables['title'] = '';
-  }
-  
-  if($variables['node']->type == 'species') {
-    $variables['title'] = hba_theme_cursive($variables['title']);
-  }
-
 }
+
 /**
  * http://drupal.org/node/312220
  * Generates a node-flagged-FLAGNAME css class for every flag set on the node.
@@ -217,6 +239,12 @@ function hba_theme_preprocess_page(&$variables, $hook) {
   if(drupal_is_front_page()) {
     $variables['title'] = '';
   }
+  
+  if(isset($variables['node']) && $variables['node']->type == 'species') {
+    $variables['title'] = _hba_cursive(drupal_get_title());
+  }
+  
+  drupal_add_library('hoverintent', 'hoverintent', TRUE);
 }
 
 /*
@@ -240,19 +268,24 @@ function hba_theme_form_views_exposed_form_alter(&$form , &$form_state){
   $form['#action'] = request_uri();
 }
 
+/*
+CRS: Esto hace que salgan unos cuantos warnings
+
 // drupal_valid_path check drupal path is exist, and if user have access to path, and if afirmative return true, and if negative return false. This functions is perfect for displaying only the links that the user can see
 if(drupal_valid_path('node/add/story')) {
   $items_scape[] = l(t('Add scape'),'node/add/story');
-}
+}*/
+
 
 /**
   * Devuelve el mismo string que contiene un nombre dentro de parentesis pero con <em> englobando al parentesis
   * Entrada Ostrich (Struthio camelus)
   * Salida Ostrich <em>(Struthio camelus)</em>
   */
-function hba_theme_cursive($string) {
-  $string = str_replace("(", "<em>(", $string);
-  $string = str_replace(")", ")</em>", $string);
+function _hba_cursive($string) {
+  $string = str_replace("(", "(<em>", $string);
+  $string = str_replace(")", "</em>)", $string);
   
   return $string;
 }
+
