@@ -165,7 +165,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(244,241,241,1) 45%,rgba(255,255,255,1) 86%,rgba(235,235,235,1) 97%); /* IE10+ */
   background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(244,241,241,1) 45%,rgba(255,255,255,1) 86%,rgba(235,235,235,1) 97%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebebeb',GradientType=0 ); /* IE6-8 */
-
   margin-bottom: 5px;
   border-left: 9px solid #c84a53;
   padding: 0;
@@ -557,7 +556,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #region-sidebar-second h2 span {
     border-left: 4px solid #44985a;
-    padding: 2px 30px 2px 14px;
+    padding: 2px 14px;
     display: block;
 }
 
@@ -582,38 +581,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   border-color: #c94b54;
 }
 
-#region-sidebar-second #block-views-species-figure-block-3 h2 span,
-#region-sidebar-second #block-views-species-figure-block-1 h2 span {
-  border-color: #23a7df;
-}
 
-#region-sidebar-second #block-views-species-test-block-2 h2 span {
-  border-color: #4eaeb9;
-}
-
-#region-sidebar-second #block-block-12 h2 span {
-  border-color: #417498;
-}
-
-#region-sidebar-second #block-views-revisions-pending-block-1 h2 span {
-  border-color: #c94b54;
-}
-
-#region-sidebar-second #block-block-13 h2 span {
-  border-color: #864722;
-}
-
-#region-sidebar-second #block-views-flickr-photos-species-block h2 span {
-  border-color: #6f6e6e;
-}
-
-#region-sidebar-second #block-block-14 h2 span {
-  border-color: #bfbcbc;
-}
-
-#region-sidebar-second #block-block-11 h2 span {
-  border-color: #81378a;
-}
 
 body .region-content ul.flippy {
   margin: 10px;
@@ -848,6 +816,7 @@ body #region-content .region-inner h3 a {
   font-size: 13px;
 }
 
+
 #zone-user-wrapper {
   background: #535151;
   padding: 3px 15px;
@@ -1046,6 +1015,8 @@ body input[type="button"] {
   float: left;
 }
 
+
+
 /* ******************************************** Anadidos JULIEN ************************************* */
 
 a {text-decoration: none !important;}
@@ -1059,6 +1030,7 @@ a {text-decoration: none !important;}
 #block-views-revisions-pending-block.block-views {
 background: #FFFDDB;
 border: 1px dashed #D38C9B;
+padding: 10px;
 }
 
 /*
@@ -1085,6 +1057,27 @@ border-top: 1px solid #B4002D;
 border-left: 1px solid #B4002D;
 border-right: 1px solid #B4002D;
 border-bottom: 0px solid #FFF;
+}
+
+/*tabs secundaries de un node display, si Node Current */
+ul.tabs.secondary {
+display: inline-block;
+padding: 8px 5px;
+margin-top: 10px;
+background: #E1ECEF; 
+border: 1px solid #B8E0ED;
+}
+/*tabs secundaries de un node display, si Node Pending */
+ul.tabs.secondary.pending {
+width: 98.8%;
+text-align: center !important;
+display: inline-block;
+padding: 5px 0 8px 5px;
+margin: 0;
+background-color: #FFFDDB !important; 
+border-left: 1px solid #B8E0ED;
+border-right: 1px solid #B8E0ED;
+border-top: 1px solid #CCC;
 }
 
 /* diff */
@@ -1225,7 +1218,6 @@ line-height: 100%;
 border-bottom: 1px solid #CCC;
 }
 .field-name-field-sp-biblio-new ul.biblio-bt li {padding: 0; margin: 0;}
-.field-name-field-sp-biblio-new .biblio-bt .autors {display: none;}
 .field-name-field-sp-biblio-new .biblio-bt .titol {float: left; padding-right: 8px;}
 
 /*numero d'ordre (computed field) */
@@ -1245,20 +1237,23 @@ font: bold 105% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 float: left;
 margin: 0 20px 0 0;
 padding-left: 18px;
-background: transparent url(/sites/all/themes/hbw/images/arrow_r.gif) no-repeat left center;
+background: transparent url(/misc/menu-leaf.png) no-repeat left center;
 }
 .sp-ssp-main a {
 font-weight: bold;
 padding-right: 15px;
 background: transparent url(/sites/all/modules/extlink/extlink.png) no-repeat right center;
 }
+.sp-ssp-descriptor {padding-left: 15px;}
 .sp-ssp-edit {
 padding-right: 15px;
 background: transparent url(/sites/all/modules/extlink/extlink.png) no-repeat right center;
 text-shadow: #222 0px -1px 0px;
 }
-.view-subspecies-of-the-species .view-content .views-row p {
-margin: 2px 0;
+.sp-ssp-distrib { padding-left: 5px;}
+.sp-ssp-distrib,
+.sp-ssp-distrib p {
+display: inline;
 }
 
 /*section log*/
@@ -1279,30 +1274,15 @@ width: 90px;
 
 /* flag */
 
-.node-flagged-flag-nodes {
-  border: 1px dashed pink !important;
-}
-.node-flagged-flag-nodes-self {
-  border: 1px dashed green !important;
-}
-
 h1#page-title.title .flag-nodes {
 font-style: italic;
 height: 34px !important;
 padding-left: 5px;
 }
-h1#page-title.title span.flag-nodes a{
+h1#page-title.title span.flag-nodes a {
 text-decoration: none;
 }
 
-.flag-action {
-  background: url(/themes/bartik/images/icon_uncheck.png) no-repeat 0 center transparent; /* LTR */
-  padding-left: 20px;
-}
-.unflag-action {
-  background: url(/themes/bartik/images/icon_check.png) no-repeat 0 center transparent; /* LTR */
-  padding-left: 20px;
-}
 .page-node-revisions .unflag-action {
 display: none;
 }
@@ -1314,7 +1294,7 @@ display: none;
 
 /* Colorbox / Shadowbox */
 
-.colorbox-video a.colorbox-load, .node-inner .shadowbox.video {
+/*.colorbox-video a.colorbox-load, .node-inner .shadowbox.video {
 padding-right: 16px;
 background:url(/sites/all/themes/hbw/images/video.gif) no-repeat right 3px transparent;
 }
@@ -1325,12 +1305,7 @@ background:url(/sites/all/themes/hbw/images/pic.png) no-repeat right 4px transpa
 .colorbox-sound a.colorbox-load, .node-inner .shadowbox.sound {
 padding-right: 16px;
 background:url(/sites/all/themes/hbw/images/sound.gif) no-repeat right 4px transparent;
-}
-/*beautytips for biblio*/
-.node-inner .bt.biblio {
-padding-right: 16px;
-background:url(/sites/all/themes/hbw/images/biblio.png) no-repeat right 4px transparent;
-}
+}*/
 
 #colorbox #cboxWrapper #cboxContent #cboxTitle {
 margin: -20px 5px 5px 10px !important;
@@ -1448,11 +1423,11 @@ height: 70px !important;
 color: #555;
 }
 li.flag-compare .flag-action {
-  background: url(/sites/all/themes/hbw/images/icon-compare_add.png) no-repeat 0 center transparent; /* LTR */
+  background: url(images/icon-compare_add.png) no-repeat 0 center transparent; /* LTR */
   padding-left: 20px;
 }
 li.flag-compare .unflag-action {
-  background: url(/sites/all/themes/hbw/images/icon-compare_remove.png) no-repeat 0 center transparent; /* LTR */
+  background: url(images/icon-compare_remove.png) no-repeat 0 center transparent; /* LTR */
   padding-left: 20px;
 }
 .page-node-revisions li.flag-compare .flag-action, 
@@ -1462,39 +1437,41 @@ display: none;
 
 /* report = flag */
 
-#region-content .flag-action {
-	width: 108px;
-	height: 16px;
+#region-content .links.inline {
+text-align: right;
+margin: 4em 0 3em 0;
+display: block;
+}
+li.flag-flag_nodes {
+display: inline-block !important;
+}
+#region-content a.flag-action {
+  color: #FFF;
+  padding: 5px 8px 5px 24px;
 	font-size: 11px;
-	line-height: 16px;
-	text-indent: 22px;
+	line-height: 25px;
 	text-decoration: none;
-	color: #fff;
-	background: #000 url("/sites/all/themes/hbw/images/flag_white_16px.png") 3px 3px no-repeat;
+	background: #333 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;
 	overflow: hidden;
-	opacity: 0.5;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
-#region-content .unflag-action {
-	width: 108px;
-	height: 16px;
+#region-content a.unflag-action {
+  color: #FFF;
+  padding: 5px 8px 5px 24px;
 	font-size: 11px;
-	line-height: 16px;
-	text-indent: 22px;
+	line-height: 25px;
 	text-decoration: none;
-	color: #fff;
-	background: #000 url("/sites/all/themes/hbw/images/flag_white_16px.png") 3px 3px no-repeat;
+	background: #9FC748 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;
 	overflow: hidden;
-	opacity: 0.5;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 }
 #region-content .flag-action label {
 	display: block;
-	font-weight: bold;
+	font-weight: normal;
 }
 #region-content .flag-action input {
 	display: block;
@@ -1504,9 +1481,24 @@ display: none;
 	float: left;
 	margin: 4px 4px 0 0;
 }
-#region-content a.flag-action:hover, 
+#region-content a.flag-action:hover {
+	background-color: #9FC748;
+	color: #FFF;
+}
 #region-content a.unflag-action:hover {
-	opacity: 0.8;
+	background-color: #CCC;
+	color: #FFF;
+}
+
+/*missatge de confirmaci— (fade out)*/
+span.flag-message {
+  position: absolute;
+  top: 2.7em;
+  line-height: normal;
+  left: 10px;
+  text-align: left;
+  width: 300px;
+  font-size: .95em;
 }
 
 /*
@@ -1668,13 +1660,10 @@ right: 6px;
 cursor: pointer;
 padding: 0 0 3px 3px;
 }
-.node-type-species #page #region-content .bt-content a {
-display: block !important;
-}
 /* Beautytips + multiple links */
 span.lm-wrapper a {display:none;}
 span.lm-wrapper span.lm-number {
-background: url(/sites/all/themes/hbw/images/more-links-10.gif) no-repeat 3px 2px transparent; /* LTR */
+background: url(/sites/all/themes/hba_theme/css/images/more-links-10.gif) no-repeat 3px 2px transparent; /* LTR */
 padding: 0 0 2px 16px;
 margin: 0 !important;
 font-size: 0.8em;
@@ -1687,24 +1676,30 @@ opacity: 0.6;
 }
 
 .node-type-species #page #region-content .bt-content a {
+display: block !important;
 padding-left: 20px;
-background:url(/sites/all/themes/hbw/images/document-icon.png) no-repeat left 3px transparent;
+background:url(/sites/all/themes/hba_theme/css/images/document-icon.png) no-repeat left 3px transparent;
+}
+.node-type-species #page #region-content .bt-content .field-item .source_nid a {
+display: inline !important;
+padding-left: 0px !important;
+background:none !important;
 }
 .node-type-species #page #region-content .bt-content .shadowbox.video {
 padding-left: 20px;
-background:url(/sites/all/themes/hbw/images/video.gif) no-repeat left 3px transparent;
+background:url(/sites/all/themes/hba_theme/css/images/video.gif) no-repeat left 3px transparent;
 }
 .node-type-species #page #region-content .bt-content .shadowbox.pic {
 padding-leftt: 20px;
-background:url(/sites/all/themes/hbw/images/pic.png) no-repeat left 4px transparent;
+background:url(/sites/all/themes/hba_theme/css/images/pic.png) no-repeat left 4px transparent;
 }
 .node-type-species #page #region-content .bt-content .shadowbox.sound {
 padding-left: 20px;
-background:url(/sites/all/themes/hbw/images/sound.gif) no-repeat left 4px transparent;
+background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat left 4px transparent;
 }
-.node-type-species #page #region-content .bt-content .bt.bilio {
-padding-left: 20px;
-background:url(/sites/all/themes/hbw/images/biblio.png) no-repeat left 4px transparent;
+.node-type-species #page #region-content .bt.biblio {
+padding-right: 17px;
+background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat right 1px transparent;
 }
 span#beautytip-multiple-link.bt-multiple-link:hover {
 background-color: #F4F4F4;
@@ -1718,7 +1713,7 @@ margin-left: 5px;
 .node-type-species #page #region-content .bt-content #bt-container ul.biblio-bt li .titol {
 font-weight: bold;
 }
-.node-type-species #page #region-content .bt-content #bt-container ul.biblio-bt li .autors {
+.node-type-species #page #region-content .bt-content #bt-container ul.biblio-bt li .revista {
 margin-bottom: 5px;
 }
 /*beautytips: Ajax dynamic path*/
@@ -1809,8 +1804,21 @@ overflow-x: scroll !important;
  * Portada
  * 
  */
- 
-/* Block/Page: New bibliographic references */
+
+/* Bloc: Bew bibliographic references (en dashboard) */
+.field-name-field-bib-ref-name, .field-name-field-bib-resta, .field-name-field-bib-nid-source {
+    display:inline;
+}
+.field-name-field-bib-revista {
+    display:inline;
+    padding-right:4px;
+    font-style:italic;
+}
+.field-name-field-bib-nid-source .contextual-links-region {
+    display:inline;
+}
+
+/* Page: New bibliographic references (/biblio/new) */
 #block-views-biblio-node-references-block-1 {
 float: right;
 width: 45%;
@@ -1822,32 +1830,65 @@ margin: 0 10px 10px 0;
 .view-id-biblio_node_references .views-field-title {
 float: left;
 padding-right: 8px;
-font-size: 1.05em;
-}
-.view-id-biblio_node_references .views-field-field-bib-ref-name {
-float: left;
 }
 #block-views-biblio-node-references-block-1 .views-field-title-1 {
 padding-bottom: 10px;
 font-style: italic;
 }
-.view-id-biblio_node_references .views-field-timestamp {
-
+.view-id-biblio_node_references .views-field-field-bib-ref-name,
+.view-id-biblio_node_references .views-field-field-bib-revista,
+.view-id-biblio_node_references .views-field-field-bib-resta {
+float: left;
+padding-right: 3px;
 }
 .view-id-biblio_node_references .views-field-created {
 clear: left;
-padding: 10px 0 15px 0;
+text-align: right;
+padding: 0 0 5px 0;
 font-style: italic;
 }
 
-/* Block/Page: Last updates */
-#block-views-1c7283690bf80030fa3ad47fea6a6eb6 {
-float: left;
-width: 45%;
-position: relative;
-border: 1px solid #CCC;
-padding: 15px;
-margin: 0 10px 10px 0;
+/* Block/Page: Last species accounts updates */
+#block-views-log-updated-nodes-block-2 {
+  background: #e8e7e7;
+  padding: 10px;
+  margin: 15px auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#block-views-log-updated-nodes-block-2 .view-content {
+  border: 1px solid #7a7a7a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: white;
+  padding: 10px 20px 20px 20px;
+}
+#block-views-log-updated-nodes-block-2 .views-field-changed,
+.view-log-updated-nodes .views-field-changed {
+  margin: 10px auto 5px auto;
+  font-size: 1.05em;
+  font-weight: bold;
+}
+.view-log-updated-nodes span.updates-nodes-ago {
+  font-weight: normal;
+  float: right;
+}
+#block-views-log-updated-nodes-block-2 .sp_bibliolog_nid_to_link-item,
+.view-log-updated-nodes .sp_bibliolog_nid_to_link-item {
+  display: inline;
+}
+#block-views-log-updated-nodes-block-2 .sp_bibliolog_nid_to_link-item a,
+.view-log-updated-nodes .sp_bibliolog_nid_to_link-item a {
+  margin: 1px 1px 1px 3px;
+  padding: 2px 3px;
+  line-height: 25px;
+  background-color: #F9F7F7;
+}
+#block-views-log-updated-nodes-block-2 .sp_bibliolog_nid_to_link-item a:hover,
+.view-log-updated-nodes .sp_bibliolog_nid_to_link-item a:hover {
+  border: 1px dashed #C02A35;
 }
 
 /* Views: eines admins */
@@ -1861,6 +1902,12 @@ float: left;
 #views-exposed-form-revision-pending-page input#edit-number-of-revisions-value.form-text {
 width: 23px;
 }
+
 /* Species by HBW volume number */
 .view-species-by-hbw-volum div.container-inline {padding-top: 4em;}
 .view-species-by-hbw-volum div.container-inline select {font-size: 1.3em;}
+
+/* Bloc: Reference ID (en els node Biblio) */
+div.bib-nid-clipboard span.label,
+div.bib-link-clipboard span.label {font-weight: bold;}
+div.bib-link-clipboard input#embed_code {height: 18px; width: 100px;}

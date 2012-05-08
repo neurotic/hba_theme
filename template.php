@@ -27,7 +27,7 @@ function hba_theme_menu_link__menu_sections(array $variables) {
 /**
  * @file
  * This file is empty by default because the base theme chain (Alpha & Omega) provides
- * all the basic functionality. However, in case you wish to customize the output that Drupal
+ * all the basic functionality. However, in case you wish to customize the output that Drupal;
  * generates through Alpha & Omega this file is a good place to do so.
  * 
  * Alpha comes with a neat solution for keeping this file as clean as possible while the code
@@ -54,8 +54,12 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
     
   case 'global_filter_1':
     
-    //dsm($_SESSION['global_filter']['view_taxo_paisos']);
-    if(count($_SESSION['global_filter']['view_taxo_paisos']) > 0) {
+    /*dsm(count($_SESSION['global_filter']['view_taxo_paisos']));
+    dsm($_SESSION['global_filter']);*/
+
+    $countries = array();
+    
+    if(!empty($_SESSION['global_filter']['view_taxo_paisos'])) {
       foreach($_SESSION['global_filter']['view_taxo_paisos'] as $country) {
         $term = taxonomy_term_load($country);
         if(isset($term->name)) {
