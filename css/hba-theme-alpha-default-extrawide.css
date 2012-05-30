@@ -1,0 +1,18 @@
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+#breadcrumb {
+  width: 1530px;
+}
+
+#zone-content {
+  width: 1530px;
+}
+
+#region-sidebar-second {
+  width: 600px;
+}
+
+#region-sidebar-second .block {
+  width: 280px;
+  float: left;
+  margin-right: 20px;
+}
