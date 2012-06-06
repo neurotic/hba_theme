@@ -61,19 +61,30 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
     
     if(!empty($_SESSION['global_filter']['view_taxo_paisos'])) {
       foreach($_SESSION['global_filter']['view_taxo_paisos'] as $country) {
-        $term = taxonomy_term_load($country);
-        if(isset($term->name)) {
-          $countries[] = $term->name;
+        $continents = bird_taxonomies_continents();
+        
+        if(isset($continents[$country])) {
+          $countries[] = $continents[$country]['name'];
         }
         else {
-          $countries[] = t('All');
+          $term = taxonomy_term_load($country);
+          if(isset($term->name)) {
+            $countries[] = $term->name;
+          }
+          else {
+            $countries[] = t('All');
+          }
         }
       }
-    }
+//}
     
-    $countries = implode($countries,', ');
-    $countries = truncate_utf8(ucfirst(strtolower($countries)),38,false,'...');
+    $countries = implode(', ', $countries);
+    $countries = truncate_utf8(ucfirst($countries),38,false,'...');
     $form['filter']['#markup'] = '<h3>' . t('<a href="#" class="change">Filter by: !countries</a>', array('!countries' => $countries)) . '</h3>';
+      }
+      else {
+        $form['filter']['#markup'] = '<h3>No active filters</h3>';
+        }
     $form['filter']['#weight'] = -10;
     $form['inputs']['view_taxo_paisos'] = $form['view_taxo_paisos'];
     unset($form['view_taxo_paisos']);
@@ -81,6 +92,8 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
     unset($form['submit']);
     
     $form['inputs']['#type'] = 'fieldset';
+    //}
+
 
     break;
   }
