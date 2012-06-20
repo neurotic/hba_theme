@@ -1059,6 +1059,53 @@ body.page-plate #block-system-main {
   padding: 20px;
 }
 
+body.page-plate #block-views-exp-galley-fluid-page h2 {
+  width: 120px;
+  float: left;
+  border-right: 1px solid white;
+}
+
+body.page-plate #block-views-exp-galley-fluid-page h2 a {
+  text-transform: uppercase;
+  font-style: normal;
+  color: #4e4f4e;
+  font-size: 14px;
+}
+
+body.page-plate #block-views-exp-galley-fluid-page .content {
+  float: left;
+}
+
+body.page-plate .views-exposed-widgets > .views-exposed-widget {
+  float: left;
+}
+
+body.page-plate #edit-submit-galley-fluid {
+  background: #25ade2;
+  color: white;
+  border-color: #25ade3;
+  text-shadow: none;
+}
+
+body.page-plate #edit-reset {
+  background: #fdfdfd;
+  color: #cecdcd;
+  border-color: #cecdcd;
+}
+
+body.page-plate .color-bkg-selector-label {
+  float: left;
+}
+
+/*
+body.page-plate #edit-field-figure-morph-value-wrapper {
+  border-right: 1px solid red;
+}
+
+body.page-plate #edit-field-figure-gender-value-wrapper {
+  border-left: 1px solid #eae8e8;
+}*/
+
 /* ******************************************** Anadidos JULIEN ************************************* */
 
 a {text-decoration: none !important;}
@@ -1605,7 +1652,7 @@ ul#BGSelector li:hover {border: 1px solid #000;}
 /*filtros de la view*/
 #block-views-exp-galley-fluid-page .views-exposed-widget label {font-weight: normal;}
 #block-views-exp-galley-fluid-page .views-widget-filter-title {
-float: none;
+/*float: none;*/
 }
 #block-views-exp-galley-fluid-page #edit-field-figure-hbw-vol-value-wrapper.views-widget-filter-field_figure_hbw_vol_value {
 float: left;
@@ -1627,8 +1674,8 @@ font-size: 0.85em;
 }
 #block-views-exp-galley-fluid-page .views-exposed-widget.views-submit-button,
 #block-views-exp-galley-fluid-page .views-exposed-widget.views-reset-button {
-float: right;
-clear: left;
+/*float: right;
+clear: left;*/
 }
 
 /*contingut de la view*/
