@@ -1,1 +1,40 @@
 /* This file will hold styles that are loaded using the same media query as the normal grid. */
+
+body {
+  font-size: 60% !important;
+}
+
+body #zone-content aside.region {
+  width: 200px;
+}
+
+#region-content {
+  width: 500px;
+}
+
+#block-bird-taxonomies-bird-orders .content {
+  width: 158px;
+}
+
+#region-branding {
+  clear: left;
+}
+
+#region-menu ul#main-menu li a {
+  font-size: 17px;
+  padding: 10px 11px 5px;
+}
+
+#region-menu {
+  width: 460px;
+  padding-left: 152px;
+}
+
+#region-menu ul#main-menu {
+  padding: 0 10px;
+}
+
+#region-menu ul#main-menu li.first a {
+  background-position: -8px -288px;
+  padding-left: 14px;
+}

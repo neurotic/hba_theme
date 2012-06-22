@@ -1,2 +1,17 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
+body {
+  font-size: 76% !important;
+}
 
+body #zone-content aside.region {
+  width: 280px;
+}
+
+
+#region-content {
+  width: 580px;
+}
+
+#block-bird-taxonomies-bird-orders .content {
+  width: 236px;
+}
