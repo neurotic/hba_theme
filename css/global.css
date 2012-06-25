@@ -1,3 +1,4 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
 /* This file will hold the main styles for your website. */
 body {
   background-color: #eaeaea;
@@ -54,7 +55,7 @@ h1#page-title {
 #region-menu ul#main-menu li {
   float: left;
   display: block;
-  padding: 0 8px;
+  padding: 0 7px;
 }
 
 #region-menu ul#main-menu li a {
@@ -107,7 +108,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 }
 
 .logo-img {
-  margin-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 416px;
+  float: none;
 }
 
 #region-sidebar-first .region-inner {
@@ -257,6 +261,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #block-menu-menu-sections ul li.menu_newsletters_and_warnings .menu_image {  
   background-position: -347px 0;
+}
+
+#region-content {
+  margin-top: 10px;
 }
 
 .view-display-id-page .views_slideshow_main {
@@ -646,6 +654,56 @@ body .comment-links ul li a {
   border-radius: 5px;
 }
 
+ul.orders > li > .item-list > ul {
+  display: none;
+  margin-top: 5px;
+}
+
+ul.orders > li.active > .item-list > ul {
+  display: block;
+}
+
+#block-bird-taxonomies-bird-orders h2,
+#block-bird-taxonomies-bird-orders .plus,
+#block-bird-taxonomies-bird-orders .go {
+  cursor: hand;
+  cursor: pointer;
+}
+
+#block-bird-taxonomies-bird-orders .content {
+  display: none;
+  width: 98%;
+}
+
+body.context-order #block-bird-taxonomies-bird-orders .content,
+body.context-family #block-bird-taxonomies-bird-orders .content,
+body.context-species #block-bird-taxonomies-bird-orders .content,
+body.context-subspecies #block-bird-taxonomies-bird-orders .content {
+  display: block;
+}
+
+#block-bird-taxonomies-bird-orders h2 span.plus {
+  color: black;
+  float: right;
+  font-size: 25px;
+  position: relative;
+  top: -3px;
+}
+
+#block-bird-taxonomies-bird-orders .content ul li span.go {
+  color: black;
+  float: right;
+}
+
+#block-bird-taxonomies-bird-orders .orders .item-list {
+  /*display: none;*/
+}
+
+#block-bird-taxonomies-bird-orders .a-wrapper a {
+  float: left;
+  width: 85%;
+}
+
 #block-bird-taxonomies-bird-orders h2 {
   background: rgb(193,49,39); /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -831,10 +889,12 @@ body #region-content .region-inner h3 a {
   padding: 3px 15px;
   color: #bec6c6;
   height: 22px;
+  font-size: 11px;
 }
 
 #zone-user-wrapper a {
   color: #bec6c6;
+  font-size: 11px;
 }
 
 #block-global-filter-global-filter-1 {
@@ -852,6 +912,7 @@ body #region-content .region-inner h3 a {
   padding-left: 20px;
   font-weight: normal;
   letter-spacing: -0.02em;
+  margin-top: -3px;
 }
 
 #block-global-filter-global-filter-1 a {
@@ -911,6 +972,14 @@ body .chzn-choices {
   margin-top: 10px;
 }
 
+#region-user-second {
+  margin-right: 0;
+}
+
+#region-user-second #block-system-user-menu {
+  margin-top: 2px;
+}
+
 body button, 
 body input[type="reset"], 
 body input[type="submit"], 
@@ -939,6 +1008,11 @@ body input[type="button"] {
 
 #block-system-user-menu .content ul li.last a {
   color: #bec6c6;
+}
+
+#block-views-flag-nodes-block-6,
+#block-views-flag-nodes-block-5 {
+  display: none;
 }
 
 #block-views-flag-nodes-block-6,
