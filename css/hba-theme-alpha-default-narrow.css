@@ -1,1 +1,43 @@
 /* This file will hold styles that are loaded using the same media query as the narrow grid. */
+#region-menu {
+  clear: both;
+  width: 99%;
+  padding-left: 0;
+  margin: 20px auto 0;
+}
+
+#region-branding {
+  width: 100%;
+}
+
+body .logo-img {
+  float: none;
+  margin-left: auto;
+}
+
+#region-sidebar-first {
+  width: 100%;
+}
+
+#region-content {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#region-sidebar-second,
+#region-sidebar-third {
+  width: 45%;
+}
+
+#region-sidebar-third {
+  margin-right: 0;
+  float: right;
+}
+
+#block-views-flag-nodes-block-6, #block-views-flag-nodes-block-5 {
+  display: none;
+}
+
+#block-bird-taxonomies-bird-orders .content {
+  width: 98%;
+}

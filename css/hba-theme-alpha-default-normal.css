@@ -4,6 +4,24 @@ body {
   font-size: 60% !important;
 }
 
+body .logo-img {
+  float: left;
+}
+
+body #region-menu {
+  float: left;
+  clear: none;
+  padding-left: 50px;
+}
+
+body #region-menu ul#main-menu li.first a {
+  padding-left: 19px;
+}
+
+#region-branding {
+  width: auto;
+}
+
 body #zone-content aside.region {
   width: 200px;
 }
@@ -13,7 +31,7 @@ body #zone-content aside.region {
 }
 
 #block-bird-taxonomies-bird-orders .content {
-  width: 158px;
+  width: 163px;
 }
 
 #region-branding {
@@ -39,3 +57,43 @@ body #zone-content aside.region {
   padding-left: 14px;
 }
 
+body #region-sidebar-third {
+  margin-right: 10px;
+}
+
+#block-bird-taxonomies-bird-orders .content {
+  padding: 15px 2px 2px;
+}
+
+#block-bird-taxonomies-bird-orders .content ul.orders {
+  margin-right: 3px;
+}
+
+#block-bird-taxonomies-bird-orders .content ul li {
+  padding-left: 4px;
+}
+
+#block-views-flag-nodes-block-6 h2, #block-views-flag-nodes-block-5 h2 {
+  font-size: 12px;
+  padding-top: 3px;
+}
+
+#block-views-flag-nodes-block-5 h2:before, #block-views-flag-nodes-block-6 h2:before {
+  margin-top: 4px;
+}
+
+#block-views-flag-nodes-block-6, #block-views-flag-nodes-block-5 {
+  width: 150px;
+}
+
+#block-views-flag-nodes-block-6 .content, #block-views-flag-nodes-block-5 .content {
+  width: 150px;
+}
+
+#block-bird-taxonomies-bird-orders h2 {
+  font-size: 16px;
+}
+
+#block-bird-taxonomies-bird-orders h2 span.plus {
+  top: -7px;
+}

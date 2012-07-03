@@ -522,7 +522,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #region-sidebar-second .block,
 #region-sidebar-third .block {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+#region-sidebar-second .block > .clearfix:after,
+#region-sidebar-third .block > .clearfix:after {
+  content: '';
 }
 
 /*
@@ -576,13 +581,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #region-sidebar-second h2.collapsiblockCollapsed a,
 #region-sidebar-third h2.collapsiblockCollapsed a {
-  background: url(images/icons.png) no-repeat 246px -239px;
+  background: none;
 }
+
+#region-sidebar-second h2.collapsiblock a,
+#region-sidebar-third h2.collapsiblock a {
+  background: none;
+}
+
+#region-sidebar-second h2.collapsiblockCollapsed a:after,
+#region-sidebar-third h2.collapsiblockCollapsed a:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: block;
+  float: right;
+  background: url("images/icons.png") no-repeat scroll -5px -197px transparent;
+  position: relative;
+  top: -20px;
+  margin-right: 12px;
+}
+
 
 #region-sidebar-second h2 a,
 #region-sidebar-third h2 a {
   color: #707070;
-  background: url(images/icons.png) no-repeat 246px -192px;
+}
+
+#region-sidebar-second h2 a:after,
+#region-sidebar-third h2 a:after {
+  content: "";
+  display: block;
+  float: right;
+  width: 15px;
+  height: 15px;
+  background: url("images/icons.png") no-repeat scroll -5px -244px transparent;
+  position: relative;
+  top: -20px;
+  margin-right: 12px;
 }
 
 #region-sidebar-second #block-views-species-figure-block-1 h2 span,
@@ -894,7 +930,7 @@ body #region-content .region-inner h3 a {
 
 #zone-user-wrapper a {
   color: #bec6c6;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 #block-global-filter-global-filter-1 {
@@ -974,6 +1010,8 @@ body .chzn-choices {
 
 #region-user-second {
   margin-right: 0;
+  width: 200px;
+  float: right;
 }
 
 #region-user-second #block-system-user-menu {
