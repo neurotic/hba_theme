@@ -30,3 +30,18 @@ body #zone-content aside.region {
 #block-bird-taxonomies-bird-orders .content {
   width: 236px;
 }
+
+#region-branding {
+  width: auto;
+}
+
+body .logo-img {
+  float: left;
+}
+
+body #region-menu {
+  float: left;
+  clear: none;
+  padding-left: 50px;
+  width: auto;
+}
