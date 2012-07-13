@@ -19,6 +19,7 @@ body a:link,
 body a:visited {
   color: #C4202B;
 }
+a {text-decoration: none !important;}
 
 #section-header {
   margin-bottom: 10px;
@@ -457,41 +458,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   box-shadow: 0px 1px 1px 1px #F1E6D7; 
 }
 
-#block-block-2 .content-toc .toc-list ul {
+#block-block-2 .content-toc ul {
   margin: 0 0 0 68px;
 }
-
-#block-block-2 .content-toc .toc-list ul li {
+#block-block-2 .content-toc ul li {
   list-style: none;
   float: left;
   width: 190px;
 }
-
-#block-block-2 .content-toc .toc-list ul li a {
+#block-block-2 .content-toc ul li a {
   font-size: 13px;
   text-decoration: none;
-}
-
-#block-block-2 .content-toc .toc-title {
-  margin-bottom: 10px;
-}
-
-#block-block-2 .content-toc .toc-title a {
-  color: gray;
-}
-
-#block-textsize-form {
-  float: right;
-}
-
-#block-textsize-form .block-title {
-  font-weight: normal;
-  float: left;
-  margin-right: 10px;
-}
-
-#block-textsize-form .content {
-  float: left;
 }
 
 #region-content h3,
@@ -528,6 +505,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 #region-sidebar-second .block > .clearfix:after,
 #region-sidebar-third .block > .clearfix:after {
   content: '';
+  display: inline;
 }
 
 /*
@@ -602,7 +580,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   margin-right: 12px;
 }
 
-
 #region-sidebar-second h2 a,
 #region-sidebar-third h2 a {
   color: #707070;
@@ -634,53 +611,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 #region-sidebar-second #block-block-8 h2 span,
 #region-sidebar-third #block-block-8 h2 span {
   border-color: #c94b54;
-}
-
-body .region-content ul.flippy {
-  margin: 10px;
-  padding-bottom: 30px;
-}
-
-.region-content ul.flippy li {
-  padding: 4px;
-}
-
-.region-content ul.flippy li a {
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  background-clip: padding-box;
-  margin: 0 0.5em 0.5em 0;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background: #ddd url(../images/button.png) repeat-x;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
-  background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
-  border: 1px solid;
-  border-color: #ddd #bbb #999;
-  cursor: pointer;
-  outline: 0;
-  overflow: visible;
-  padding: 2px 10px 2px;
-  text-shadow: #fff 0 1px 1px;
-  width: auto;
-
-  /* IE7 */
-  *padding-top: 2px;
-  *padding-bottom: 0px;
-}
-
-.region-content ul.flippy li a {
-  color: #333;
-  font: bold 12px/1.2 Arial, sans-serif;
-  text-decoration: none;
-  text-transform: lowercase;
-}
-
-.region-content ul.flippy li a:hover {
-  background: white;
 }
 
 body .node-links ul li a, 
@@ -762,7 +692,7 @@ body.context-subspecies #block-bird-taxonomies-bird-orders .content {
 
 #block-bird-taxonomies-bird-orders .content {
   padding: 15px 5px 5px 5px;
-  bordeR: 1px solid #a0a0a0;
+  /*border: 1px solid #a0a0a0;*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -884,7 +814,7 @@ body.context-family #region-content .region-inner {
 
 #region-content h3 {
   margin: 10px 0 5px;
-  background: #f0f0f0 url(images/icons.png) no-repeat 486px -135px;
+  background: #f0f0f0;
   padding: 0px 10px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -894,9 +824,36 @@ body.context-family #region-content .region-inner {
   box-shadow: 0px 1px 1px 1px #e8e8e8; 
 }
 
-#region-content .collapsed h3 {
-  background-position: 486px -80px;
+#region-content h3:after {
+  background: url("images/icons.png") no-repeat scroll 0px -140px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: right;
+  position: relative;
+  top: 5px;
+  margin-right: 12px;
 }
+
+#region-content .collapsed h3:after {
+  background-position: 0px -85px;
+}
+
+/*
+#region-sidebar-second h2 a:after,
+#region-sidebar-third h2 a:after {
+  content: "";
+  display: block;
+  float: right;
+  width: 15px;
+  height: 15px;
+  background: url("images/icons.png") no-repeat scroll -5px -244px transparent;
+  position: relative;
+  top: -20px;
+  margin-right: 12px;
+}
+*/
 
 
 body #region-content .region-inner h3 a {
@@ -941,7 +898,7 @@ body #region-content .region-inner h3 a {
   width: 306px;
   float: left;
 }
-  
+
 #block-global-filter-global-filter-1 h3 {
   font-size: 14px;
   margin-bottom: 0;
@@ -949,6 +906,7 @@ body #region-content .region-inner h3 a {
   font-weight: normal;
   letter-spacing: -0.02em;
   margin-top: -3px;
+  cursor: pointer;
 }
 
 #block-global-filter-global-filter-1 a {
@@ -1136,6 +1094,19 @@ body input[type="button"] {
   float: left;
 }
 
+.not-front #zone-content #block-views-species-test-block-2 .content {
+  padding: 0;
+}
+
+#block-views-species-test-block-2 .view-content {
+  margin: 0 auto;
+  width: 260px;
+}
+
+#block-views-species-test-block-2 .view-footer {
+  padding: 0 10px 10px 10px;
+}
+
 /* Plates */
 body.page-plate #region-content {
   width: 99%;
@@ -1174,6 +1145,8 @@ background: -o-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(248,247,247,1) 
 background: -ms-linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(248,247,247,1) 100%); /* IE10+ */
 background: linear-gradient(top,  rgba(250,250,250,1) 0%,rgba(248,247,247,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#f8f7f7',GradientType=0 ); /* IE6-8 */
+
+padding: 10px;
 }
 
 body.page-plate #block-system-main {
@@ -1183,6 +1156,7 @@ body.page-plate #block-system-main {
 body.page-plate #block-views-exp-galley-fluid-page h2 {
   width: 120px;
   float: left;
+  margin-right: 1em;
   border-right: 1px solid white;
 }
 
@@ -1196,7 +1170,9 @@ body.page-plate #block-views-exp-galley-fluid-page h2 a {
 body.page-plate #block-views-exp-galley-fluid-page .content {
   float: left;
 }
-
+body.page-plate .views-exposed-widgets {
+  padding-bottom: 1.5em;
+}
 body.page-plate .views-exposed-widgets > .views-exposed-widget {
   float: left;
 }
@@ -1214,9 +1190,114 @@ body.page-plate #edit-reset {
   border-color: #cecdcd;
 }
 
-body.page-plate .color-bkg-selector-label {
-  float: left;
+body.page-plate .color-bkg-selector {
+  float: right;
 }
+ul#BGSelector {display: inline; padding-left: 10px;}
+ul#BGSelector li {display: inline; padding: 0 0.5em; width: 16px; height: 16px; border: 1px solid #CCC;
+overflow: hidden;
+cursor: pointer;
+text-indent: -999px;
+margin-right: 2px;
+border: 1px solid #999;}
+ul#BGSelector li:hover {border: 1px solid #000;}
+#BGSelector li.FFF {background-color: #FFF;}
+#BGSelector li.EAF9F8 {background-color: #EAF9F8;}
+#BGSelector li.D9D9D9 {background-color: #F6F6F6;}
+#BGSelector li.selector-4 {background-color: #423F3F !important; background: #423F3F !important;}
+/*filtros de la view*/
+
+#block-views-exp-galley-fluid-page .views-exposed-widget label {font-weight: normal;}
+#block-views-exp-galley-fluid-page .views-widget-filter-title {
+/*float: none;*/
+}
+#block-views-exp-galley-fluid-page #edit-field-figure-hbw-vol-value-wrapper.views-widget-filter-field_figure_hbw_vol_value {
+/*float: left;*/
+width: 123px;
+padding-right: 5px;
+}
+#block-views-exp-galley-fluid-page #edit-field-figure-hbw-plate-value-wrapper.views-widget-filter-field_figure_hbw_plate_value {
+width: 123px;
+}
+#block-views-exp-galley-fluid-page input#edit-field-figure-hbw-vol-value.form-text,
+#block-views-exp-galley-fluid-page input#edit-field-figure-hbw-plate-value.form-text {
+width: 93px;
+}
+#block-views-exp-galley-fluid-page select#edit-field-figure-morph-value {
+height: 120px;
+}
+#block-views-exp-galley-fluid-page select.form-select {
+font-size: 0.85em;
+}
+#block-views-exp-galley-fluid-page .views-exposed-widget.views-submit-button,
+#block-views-exp-galley-fluid-page .views-exposed-widget.views-reset-button {
+/*float: right;
+clear: left;*/
+}
+/*contingut de la view*/
+.page-plate #region-content .view-content {
+border: 1px solid #CCC;
+padding: 5px;
+min-height: 50px;
+}
+/*boto Reset drags*/
+.page-plate h1#page-title.title button {
+float: right; margin: 10px 8px 5px 5px;
+display: none;
+}
+.page-plate h1#page-title.title {
+display: none;
+}
+.page-plate .view-content .reset button {
+float: right;
+margin: 0.4em;
+}
+/*numero d'ordre al costat de la miniatura*/
+.page-plate .views-field-field-figure-order .field-content {
+font-weight: bold;
+height: 18px;
+float: left;
+position: relative;
+bottom: 30px; /* amb mes pixels el numero toca les miniatures amb noms un cap */
+left: 30px;
+background: #eee;
+border: 1px solid #EEE;
+padding: 0 2px;
+opacity: 0.5;
+border-radius: 6px;
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+}
+.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a {
+z-index: 0;
+}
+.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .plate-tip {
+float: left;
+position: relative;
+background-color: #F6F6F6;
+opacity: 0.8;
+border: 1px solid #CCC;
+color: #000;
+padding: 8px;
+margin: 5px;
+font-size: 0.85em;
+z-index: 10;
+}
+/*plate > beautytip*/
+#views_fluidgrid_galley_fluid_page .plate-hovertip .text .sp,
+#views_fluidgrid_galley_fluid_page .plate-hovertip .text .ssp,
+#views_fluidgrid_galley_fluid_page .plate-hovertip .text .sp a,
+#views_fluidgrid_galley_fluid_page .plate-hovertip .text .ssp a {
+color: #FFF !important;
+}
+#views_fluidgrid_galley_fluid_page .plate-hovertip .text .tip {
+padding-top: 8px !important;
+font-style: italic !important;
+font-size: 0.85em !important;
+}
+/*plate > colorbox*/
+.colorbox-plate .text .tip {display: none;}
+.colorbox-plate .text .descr-notes {padding-top: 10px !important;}
 
 /*
 body.page-plate #edit-field-figure-morph-value-wrapper {
@@ -1227,13 +1308,9 @@ body.page-plate #edit-field-figure-gender-value-wrapper {
   border-left: 1px solid #eae8e8;
 }*/
 
-/* ******************************************** Anadidos JULIEN ************************************* */
 
-a {text-decoration: none !important;}
-
-/*
+/**
  * sidebar izquierda
- * 
  */
 
 /* bloc Pending revision */
@@ -1243,9 +1320,8 @@ border: 1px dashed #D38C9B;
 padding: 10px;
 }
 
-/*
+/**
  * parte central
- *
  */
 
 .tabs ul.tabs.primary {
@@ -1273,7 +1349,7 @@ border-bottom: 0px solid #FFF;
 ul.tabs.secondary {
 display: inline-block;
 padding: 8px 5px;
-margin-top: 10px;
+margin: 0;
 background: #E1ECEF; 
 border: 1px solid #B8E0ED;
 }
@@ -1290,7 +1366,17 @@ border-right: 1px solid #B8E0ED;
 border-top: 1px solid #CCC;
 }
 
-/* diff */
+/* view HBW Vol. x, p. xxx */
+#block-views-species-hbw-vol-page-block-1 {
+float: left;
+}
+fieldset#node_species_full_group_sp_admin_display {
+clear: left;
+}
+
+/**
+ * diff
+ */
 
 .content table.diff, 
 div.diff-section-title {
@@ -1299,8 +1385,32 @@ background: #E1ECEF;
 border: 1px solid #B8E0ED;}
 .content table.diff td.diff-section-title {font-size: 0.95em; padding: 10px 5px 5px 5px;}
 div.diff-section-title {margin-bottom: 10px;}
+.page-node-revisions-compare table.diff tr td.diff-prevlink,
+.page-node-revisions-compare article.node,
+.page-node-revisions-compare div.diff-section-title {display: none;}
+table.diff thead tr th a {display: inline;}
+table.diff thead tr th {padding: 20px;}
+.view-comparediff .view-content table th {font-weight: bold;}
+.view-comparediff .view-content table th,
+.view-comparediff .view-content table td {vertical-align: top;}
+.view-comparediff .view-content table td.col_0,
+.view-comparediff .view-content table td.col_1 {width: 40%;}
+.view-comparediff .view-content table tr.log td.col .revision-log,
+.page-node-revisions-compare table.diff .revision-log {
+background-color: #FCF9D4;
+border: 1px solid #FCE771;
+padding: 5px 10px;
+margin: 8px 5px;
+}
+/*OJO para el diff de admin, es el theme seven!!!!*/
 
 /* Menu nav parte central FAMILY */
+
+h1.title-sec {
+font-size: 1.5em;
+font-weight: normal;
+line-height: 20%;
+}
 
 .node-type-family .vertical-tabs {
 margin-left: 0;
@@ -1415,6 +1525,24 @@ display: block;
   cursor: pointer;
 }
 
+/* seccio Taxonomy */
+.field-name-family-info-extra {
+border: 1px solid #CCC;
+padding: 5px;
+margin: 0 0 1.5em 0;
+}
+.field-name-sp-section-1-taxonomy span.label {float: left; padding-right: 3px; font-weight: bold;}
+.field-name-sp-section-1-taxonomy div.ds-names span.label {float: none;}
+.field-name-sp-section-1-taxonomy div.ds-names span.name {padding-right: 20px;}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy .label {float: left;}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.name_desc p,
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p,
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p {display: inline; margin: 0;}
+/*.field-name-sp-section-1-taxonomy div.ds-taxonomy .taxo_comments {padding-top: 8px;}*/
+.field-name-sp-section-1-taxonomy div.ds-ssp_comp span.label {float: none;}
+.field-name-sp-section-1-taxonomy div p {margin: 0;}
+.field-name-sp-section-1-taxonomy div.ds-other-names p {display: inline; margin: 0;}
+
 /* seccio Bibliography */
 .node-type-species .field-name-field-sp-biblio-new .field-name-title {float: left; padding-right: 10px;}
 .node-type-species .field-name-field-sp-biblio-new .field-item .ds-1col.view-mode-ds_biblio_teaser {padding-bottom: 15px;}
@@ -1445,9 +1573,9 @@ font: bold 105% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
 }
 .sp-ssp-main {
 float: left;
-margin: 0 20px 0 0;
+margin: 0 10px 0 0;
 padding-left: 18px;
-background: transparent url(/misc/menu-leaf.png) no-repeat left center;
+background: transparent url(../../../../../misc/menu-leaf.png) no-repeat left center;
 }
 .sp-ssp-main a {
 font-weight: bold;
@@ -1458,9 +1586,10 @@ background: transparent url(/sites/all/modules/extlink/extlink.png) no-repeat ri
 .sp-ssp-edit {
 padding-right: 15px;
 background: transparent url(/sites/all/modules/extlink/extlink.png) no-repeat right center;
-text-shadow: #222 0px -1px 0px;
 }
 .sp-ssp-distrib { padding-left: 5px;}
+.sp-ssp-descriptor,
+.sp-ssp-descriptor p,
 .sp-ssp-distrib,
 .sp-ssp-distrib p {
 display: inline;
@@ -1504,43 +1633,9 @@ display: none;
 
 /* Colorbox / Shadowbox */
 
-/*.colorbox-video a.colorbox-load, .node-inner .shadowbox.video {
-padding-right: 16px;
-background:url(/sites/all/themes/hbw/images/video.gif) no-repeat right 3px transparent;
-}
-.colorbox-pic a.colorbox-load, .node-inner .shadowbox.pic {
-padding-right: 16px;
-background:url(/sites/all/themes/hbw/images/pic.png) no-repeat right 4px transparent;
-}
-.colorbox-sound a.colorbox-load, .node-inner .shadowbox.sound {
-padding-right: 16px;
-background:url(/sites/all/themes/hbw/images/sound.gif) no-repeat right 4px transparent;
-}*/
-
 #colorbox #cboxWrapper #cboxContent #cboxTitle {
 margin: -20px 5px 5px 10px !important;
 height: 40px;
-}
-
-/* Shadowbox*/
-#sb-wrapper {
-top: 0px !important;
-left: 80px !important;
-/*background: url(/sites/all/themes/hbw/images/ajax-loader.gif) center no-repeat;*/
-border: 0px;
-}
-#sb-title-inner {
-background-color: #000;
-font-size: 0.9em;
-padding: 2px 4px !important;
-opacity: 0.8;
-}
-#sb-info {
-background-color: #000;
-opacity: 0.8;
-}
-#sb-counter {
-padding-left: 4px !important;
 }
 
 /* Revision */
@@ -1574,8 +1669,25 @@ position: relative;
 display: none; /*no mostrar en les pagines de revisio*/
 }
 
+/* bloc Update history */
+#block-views-revisions-pending-block-1 .view-header p {
+margin-bottom: 4px !important;
+}
+#block-views-revisions-pending-block-1 .view-footer p {
+margin-top: 15px !important;
+}
+
 /* Species comparison */
 
+/*block*/
+#block-views-compare-block-1 .view-content div.item-list ul li.views-row {clear: left; background-color: #FCEFF1;}
+#block-views-compare-block-1 .view-content div.item-list ul li {margin-left: 0;}
+#block-views-compare-block-1 .views-field-field-figure-img-jpg {float: left; margin-right: 3px;}
+#block-views-compare-block-1 .views-field-ops {text-align: right; font-style: italic;}
+#block-views-compare-block-1 span.flag-wrapper.flag-compare {font-size: 0.85em;}
+#block-views-compare-block-1 .view-footer {float: right; margin-top: 1.5em;}
+
+/*page*/
 .page-species-comparison table {
 	width: 100%;
 	padding: 0;
@@ -1585,7 +1697,6 @@ display: none; /*no mostrar en les pagines de revisio*/
 .page-species-comparison table td {
 	width: 200px; /*Set default width*/
 }
-
 .page-species-comparison table td .col img {
         /*Flexible image size with border*/
 	width: 89%;  /*Took 1% off of the width to prevent IE6 bug*/
@@ -1595,18 +1706,15 @@ display: none; /*no mostrar en les pagines de revisio*/
 	display: block;
 	-ms-interpolation-mode: bicubic; /*prevents image pixelation for IE 6/7 */
 }
-
 .view-compare.view-display-id-page table th {
 width: 75px;
 }
-
 .view-compare.view-display-id-page table tr.title.odd th, 
 .view-compare.view-display-id-page table tr.ops.even th,
 .view-compare.view-display-id-page table tr.ops.even,
 .view-compare.view-display-id-page table tr.title {
 background-color: #fff;
 }
-
 .view-compare.view-display-id-page table tr.odd th,
 .view-compare.view-display-id-page table tr.even th {
 background-color: transparent !important;
@@ -1616,19 +1724,16 @@ border-right: 0 !important;
 padding-right: 0 !important;
 margin-right: 0 !important;
 }
-
 .view-compare.view-display-id-page table td {
 border-left: 1px transparent solid;
 border-right: 1px transparent solid;
 vertical-align: top;
 }
-
 .view-compare.view-display-id-page table tr.title {
 font-size: 1.2em;
 font-weight: bold;
 height: 70px !important;
 }
-
 .view-compare.view-display-id-page table td a.flag.unflag-action {
 color: #555;
 }
@@ -1645,7 +1750,11 @@ li.flag-compare .unflag-action {
 display: none;
 }
 
-/* report = flag */
+/**
+ * Flag
+ */
+
+/* flag (general) */
 
 #region-content .links.inline {
 text-align: right;
@@ -1655,13 +1764,22 @@ display: block;
 li.flag-flag_nodes {
 display: inline-block !important;
 }
+
+#region-content .links.inline li {
+  padding: 0;
+}
+
 #region-content a.flag-action {
   color: #FFF;
-  padding: 5px 8px 5px 24px;
+  padding: 5px 8px 5px 9px;
 	font-size: 11px;
 	line-height: 25px;
 	text-decoration: none;
-	background: #333 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;
+  /*background-color: #333;
+  background: url(images/icons.png) no-repeat -32px -90px;*/
+	/*background: #333 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;*/
+	background-color: #333;
+	background-color: #CFCFCF;
 	overflow: hidden;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -1669,11 +1787,12 @@ display: inline-block !important;
 }
 #region-content a.unflag-action {
   color: #FFF;
-  padding: 5px 8px 5px 24px;
+  padding: 5px 8px 5px 9px;
 	font-size: 11px;
 	line-height: 25px;
 	text-decoration: none;
-	background: #9FC748 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;
+	background: #9FC748;
+	/*background: #9FC748 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;*/
 	overflow: hidden;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -1700,7 +1819,7 @@ display: inline-block !important;
 	color: #FFF;
 }
 
-/*missatge de confirmaci— (fade out)*/
+/*missatge de confirmacio (fade out)*/
 span.flag-message {
   position: absolute;
   top: 2.7em;
@@ -1711,6 +1830,61 @@ span.flag-message {
   font-size: .95em;
 }
 
+/* Flag: Useful */
+
+#region-content .flag-useful a.flag-action,
+.flag-useful a.flag-action {
+  color: #333;
+  padding: 5px 20px 5px 5px;
+	font-size: 11px;
+	line-height: 25px;
+	text-decoration: none;
+	background: transparent url("/sites/all/themes/hba_theme/css/images/star_grey.png") right center no-repeat;
+}
+#region-content .flag-useful a.unflag-action,
+.flag-useful a.unflag-action {
+  color: #333;
+  padding: 5px 20px 5px 5px;
+	font-size: 11px;
+	line-height: 25px;
+	text-decoration: none;
+	background: transparent url("/sites/all/themes/hba_theme/css/images/star_yellow.gif") right center no-repeat;
+}
+
+/* Bloc WIKICONTRIBUTIONS */
+
+#block-views-wikicontribution-block div.view-empty {font-style: italic;}
+#block-views-wikicontribution-block div.view-footer {text-align: right; font-size: 0.85em;}
+
+/* Flag: Promote */
+
+#region-content .group-left .field-name-prova-code-field {
+  margin: 1em auto 0.6em auto;
+}
+
+/* Bloc Mynotes */
+
+#block-views-mynotes-block div.view-empty .add,
+#block-views-mynotes-block div.view-footer .add {
+text-align: right;
+padding-top: 1em;
+font-size: 0.85em;
+}
+#block-views-mynotes-block div.view-empty {
+font-style: italic;
+}
+/*ctools modal for mynote*/
+#ctools-main-dialog-box form#mynote-node-form .filter-help {display: none;}
+#ctools-main-dialog-box form#mynote-node-form input#edit-submit--2.form-submit,
+#ctools-main-dialog-box form#mynote-node-form div#edit-actions.form-actions {
+margin: 25px 0 30px 0;
+}
+/*pb amb la llista de propostes que s'en va 280px mes amunt. fall de modules/system/system.base.css (drupal core)*/
+/*pb amb la llista de propostes que s'en va 280px mes amunt*/
+#ctools-main-dialog-box form#mynote-node-form .form-item-field-mynote-sp-und-0-target-id #autocomplete,
+#ctools-main-dialog-box form#mynote-node-form .form-item-field-country-und #autocomplete {
+  position: inherit !important;
+}
 /*
  * START cosas de (http://webdesignerwall.com/tutorials/responsive-design-with-css3-media-queries)
  * no lo incorpora el tema Omega (probado con viewport de movil)
@@ -1735,106 +1909,8 @@ html {-webkit-text-size-adjust: none;}
 
 /* STOP cosas de (http://webdesignerwall.com/tutorials/responsive-design-with-css3-media-queries) */
 
-/*
- * Plates
- *
- */
-
-/* bloc de cerca de les plates */
-#block-views-exp-galley-fluid-page {
-background: #F6F6F6;
-border: 1px solid #CCC;
-padding: 10px 15px 5px 15px;
-margin: 5px 0 10px 0;
-}
-#block-views-exp-galley-fluid-page h2.block-title {
-border: 0;
-padding: 0;
-margin: 0;
-}
-#block-views-exp-galley-fluid-page h2.block-title a {
-color: #111;
-text-decoration: none;
-font-style: italic;
-}
-.color-bkg-selector-label {margin-bottom: 0.8em;}
-ul#BGSelector {display: inline; padding-left: 12px;}
-ul#BGSelector li {display: inline; padding: 0 0.5em; width: 16px; height: 16px; border: 1px solid #CCC;
-overflow: hidden;
-cursor: pointer;
-text-indent: -999px;
-margin-right: 2px;
-border: 1px solid #999;}
-ul#BGSelector li:hover {border: 1px solid #000;}
-#BGSelector li.FFF {background-color: #FFF;}
-#BGSelector li.EAF9F8 {background-color: #EAF9F8;}
-#BGSelector li.D9D9D9 {background-color: #D9D9D9;}
-#BGSelector li.selector-4 {background-color: #423F3F !important; background: #423F3F !important;}
-/*filtros de la view*/
-#block-views-exp-galley-fluid-page .views-exposed-widget label {font-weight: normal;}
-#block-views-exp-galley-fluid-page .views-widget-filter-title {
-/*float: none;*/
-}
-#block-views-exp-galley-fluid-page #edit-field-figure-hbw-vol-value-wrapper.views-widget-filter-field_figure_hbw_vol_value {
-float: left;
-width: 123px;
-padding-right: 5px;
-}
-#block-views-exp-galley-fluid-page #edit-field-figure-hbw-plate-value-wrapper.views-widget-filter-field_figure_hbw_plate_value {
-width: 123px;
-}
-#block-views-exp-galley-fluid-page input#edit-field-figure-hbw-vol-value.form-text,
-#block-views-exp-galley-fluid-page input#edit-field-figure-hbw-plate-value.form-text {
-width: 93px;
-}
-#block-views-exp-galley-fluid-page select#edit-field-figure-morph-value {
-height: 120px;
-}
-#block-views-exp-galley-fluid-page select.form-select {
-font-size: 0.85em;
-}
-#block-views-exp-galley-fluid-page .views-exposed-widget.views-submit-button,
-#block-views-exp-galley-fluid-page .views-exposed-widget.views-reset-button {
-/*float: right;
-clear: left;*/
-}
-
-/*contingut de la view*/
-.page-plate #region-content .view-content {
-border: 1px solid #CCC;
-}
-/*boto Reset drags*/
-.page-plate h1#page-title.title button {
-float: right; margin: 10px 8px 5px 5px;
-display: none;
-}
-.page-plate h1#page-title.title {
-display: none;
-}
-.page-plate .view-content .reset button {
-float: right;
-margin: 0.4em;
-}
-/*numero d'ordre a costat de la miniatura*/
-.page-plate .views-field-field-figure-order .field-content {
-font-weight: bold;
-height: 18px;
-float: left;
-position: relative;
-bottom: 30px; /* amb mes pixels el numero toca les miniatures amb noms un cap */
-left: 30px;
-background: #eee;
-border: 1px solid #EEE;
-padding: 0 2px;
-opacity: 0.5;
-border-radius: 6px;
--moz-border-radius: 6px;
--webkit-border-radius: 6px;
-}
-
-/* 
+/**
  * Altres elements
- * 
  */
 
 /* Feed */
@@ -1885,49 +1961,86 @@ opacity: 0.6;
   padding-right: 12px;
 }
 
-.node-type-species #page #region-content .bt-content a {
-display: block !important;
-padding-left: 20px;
-background:url(/sites/all/themes/hba_theme/css/images/document-icon.png) no-repeat left 3px transparent;
+.colorbox-video a.colorbox-load, .node .shadowbox.video {
+padding-right: 13px;
+background:url(/sites/all/themes/hba_theme/css/images/video.gif) no-repeat right 3px transparent;
 }
-.node-type-species #page #region-content .bt-content .field-item .source_nid a {
+.colorbox-pic a.colorbox-load, .node .shadowbox.pic {
+width: 10px !important;
+padding-right: 12px;
+background:url(/sites/all/themes/hba_theme/css/images/pic.png) no-repeat right center transparent;
+/*background:url(images/icons.png) no-repeat -216px -93px;*/
+}
+.colorbox-sound a.colorbox-load, .node .shadowbox.sound {
+padding-right: 13px;
+background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat right center transparent;
+}
+/*si no es foto, video o so (o porta la classe none de Linkit), mostrar una icona de text*/
+.node .content div.field-group-format-wrapper div.field div.field-items div.field-item a,
+.node .none {
+padding-right: 13px;
+background:url(/sites/all/themes/hba_theme/css/images/doc.png) no-repeat right center transparent;
+}
+/*no volem l'icona del modul External Link si tipus de cont. = SP, SSP, F'*/
+/*.node-type-family .content div.field a.ext,
+.node-type-species .content div.field a.ext,
+.node-type-subspecies .content div.field a.ext {
+background: none !important;
+}*/
+
+.view-compare .bt-content .field-item .source_nid a,
+#page #region-content .bt-content .field-item .source_nid a {
 display: inline !important;
 padding-left: 0px !important;
 background:none !important;
 }
-.node-type-species #page #region-content .bt-content .shadowbox.video {
+.view-compare .bt-content .shadowbox.video,
+#page #region-content .bt-content .shadowbox.video {
 padding-left: 20px;
 background:url(/sites/all/themes/hba_theme/css/images/video.gif) no-repeat left 3px transparent;
 }
-.node-type-species #page #region-content .bt-content .shadowbox.pic {
-padding-leftt: 20px;
+.view-compare .bt-content .shadowbox.pic,
+#page #region-content .bt-content .shadowbox.pic {
+padding-left: 20px;
 background:url(/sites/all/themes/hba_theme/css/images/pic.png) no-repeat left 4px transparent;
 }
-.node-type-species #page #region-content .bt-content .shadowbox.sound {
+.view-compare .bt-content .shadowbox.sound,
+#page #region-content .bt-content .shadowbox.sound {
 padding-left: 20px;
 background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat left 4px transparent;
 }
-.node-type-species #page #region-content .bt.biblio {
-padding-right: 17px;
-background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat right 1px transparent;
+.view-compare .bt.biblio,
+#page #region-content .bt.biblio {
+/*padding-right: 13px;
+background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat right center transparent;*/
+padding-right: 13px;
+background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat left center transparent;
 }
 span#beautytip-multiple-link.bt-multiple-link:hover {
 background-color: #F4F4F4;
 opacity: 0.9;
 }
 
+/*quan es clicka el boto Show/hide links*/
+#region-content .content a.bt.disabled {
+/*padding-right: 0 !important;
+padding-left: 0 !important;
+background-image: none !important;*/
+display: none;
+}
+
 /*Beautytips biblio*/
-.node-type-species #page #region-content .bt-content #bt-container ul.biblio-bt li {
+#page #region-content .bt-content #bt-container ul.biblio-bt li {
 margin-left: 5px;
 }
-.node-type-species #page #region-content .bt-content #bt-container ul.biblio-bt li .titol {
+#page #region-content .bt-content #bt-container ul.biblio-bt li .titol {
 font-weight: bold;
 }
-.node-type-species #page #region-content .bt-content #bt-container ul.biblio-bt li .revista {
+#page #region-content .bt-content #bt-container ul.biblio-bt li .revista {
 margin-bottom: 5px;
 }
 /*beautytips: Ajax dynamic path*/
-.node-type-species #page #region-content .bt-content h1#page-title.title {
+#page #region-content .bt-content h1#page-title.title {
 font: bold 13px verdana,helvetica,arial,sans-serif;
 margin-bottom: 10px;
 }
@@ -1936,16 +2049,17 @@ margin-bottom: 10px;
 
 a.hide_links{
 
-/*posicionamiento provisional para ver el boton*/
+/*posicionamiento provisional para ver el boton
 position: absolute;
 top: 0px;
 z-index: 100;
-
 display: inline-block;
+margin: 1em auto;*/
+float: right;
 color: white !important;
 background: #9FC748;
 padding: 0.5em 1.2em;
-margin: 1em auto;
+margin: 0;
 font-size: 1.077em;
 border: none;
 border-radius: 5px;
@@ -2010,20 +2124,25 @@ width: 100% !important;
 overflow-x: scroll !important;
 }
 
-/*
- * Portada
- * 
+/**
+ * Biblio
  */
 
-/* Bloc: Bew bibliographic references (en dashboard) */
-.field-name-field-bib-ref-name, .field-name-field-bib-resta, .field-name-field-bib-nid-source {
+.field-name-field-bib-ref-name, .field-name-field-bib-resta, .field-name-field-bib-nid-source, .field-name-field-bib-revista,
+.field-name-field-bib-nid-source .field-items, .field-name-field-bib-nid-source .field-item,
+.field-name-field-bib-ref-name p, .field-name-field-bib-resta p, .field-name-field-bib-nid-source p, .field-name-field-bib-revista p {
     display:inline;
 }
 .field-name-field-bib-revista {
-    display:inline;
     padding-right:4px;
     font-style:italic;
 }
+
+div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
+background: none !important;
+}
+
+/* Bloc: Bew bibliographic references (en dashboard) */
 .field-name-field-bib-nid-source .contextual-links-region {
     display:inline;
 }
@@ -2101,6 +2220,64 @@ font-style: italic;
   border: 1px dashed #C02A35;
 }
 
+/* View: updated Sp by family (for admins) */
+.page-species-updated .region-inner.region-content-inner {width: 900px;}
+.page-species-updated #views-form-updated-species-by-family-page-2 ul.views-summary {
+float: left;
+width: 350px;
+padding-right: 25px;
+}
+.page-species-updated .attachment {
+min-width: 400px;
+margin-left: 400px;
+border-left: 1px dashed #333;
+border-top: 1px dashed #333;
+opacity: 0.7;
+}
+.page-species-updated .attachment .view-header {
+padding: 15px 0 0 20px;
+}
+.page-species-updated .view-updated-species-by-family .view-footer {
+float: left;
+}
+
+/* Bloc Last updated species (thumbnails) - portada */
+#block-views-log-updated-nodes-block-3 {
+  background: #e8e7e7;
+  padding: 10px;
+  margin: 15px auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#block-views-log-updated-nodes-block-3 .view-content {
+  border: 1px solid #7a7a7a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: white;
+	margin:0px auto;
+	text-align:left;
+	padding:0px;
+}
+#block-views-log-updated-nodes-block-3 .view-content table {
+  border: 0;
+  background: white;
+}
+#block-views-log-updated-nodes-block-3 .view-content tr {
+background: white;
+}
+#block-views-log-updated-nodes-block-3 .view-content td {
+vertical-align: bottom !important;
+background: white;
+}
+#block-views-log-updated-nodes-block-3 .view-content td:hover {
+  cursor: pointer;
+}
+#block-views-log-updated-nodes-block-3 .view-content td .views-field-title {
+padding: 5px 0 0 5px;
+}
+
 /* Views: eines admins */
 /* Pending revisions */
 #views-exposed-form-revision-pending-page #edit-number-of-revisions-wrapper.views-exposed-widget.views-widget-filter-number_of_revisions {
@@ -2121,3 +2298,221 @@ width: 23px;
 div.bib-nid-clipboard span.label,
 div.bib-link-clipboard span.label {font-weight: bold;}
 div.bib-link-clipboard input#embed_code {height: 18px; width: 100px;}
+
+
+/*el html sol no mostra el sup més elevat que la resta de lletres. culpa del full alpha-reset.css!!*/
+sup {
+vertical-align: super;
+font-size: 0.7em;
+}
+
+/**
+ * Wikicontributions
+ */
+
+/* FORM (hba_theme for non admins users + sense modal frame) */
+
+form#wikinote-node-form input.form-text {
+width: 100%;
+}
+form#wikinote-node-form td#cke_top_edit-body-und-0-value.cke_top:hover,
+form#wikinote-node-form td.cke_top:hover {background-color: transparent;}
+form#wikinote-node-form textarea#edit-body-und-0-value {
+
+}
+form#wikinote-node-form td#cke_contents_edit-body-und-0-value.cke_contents,
+#wikinote-node-form td.cke_contents {
+border: 1px solid #CCC;
+outline:none;
+}
+
+#edit-body-und-0-value label {clear: both;}
+form#wikinote-node-form div.cke_path,
+form#wikinote-node-form span.cke_browser_gecko,
+form#wikinote-node-form table.cke_editor,
+form#wikinote-node-form .cke_skin_kama,
+form#wikinote-node-form span.cke_wrapper.cke_ltr {
+border: 0;
+padding: 0;
+background-color: white !important;
+}
+form#wikinote-node-form div.tabledrag-toggle-weight-wrapper,
+form#wikinote-node-form a#cke_15.cke_toolbox_collapser,
+form#wikinote-node-form td#cke_bottom_edit-body-und-0-value.cke_bottom,
+form#wikinote-node-form td.cke_bottom,
+form#wikinote-node-form fieldset#edit-body-und-0-format.filter-wrapper.form-wrapper,
+form#wikinote-node-form .field-name-body div#body-add-more-wrapper div.text-format-wrapper fieldset.filter-wrapper.form-wrapper,
+form#wikinote-node-form div.tabledrag-toggle-weight-wrapper {
+/*display: none;*/
+}
+fieldset#node_wikinote_form_group_wiki_authors,
+fieldset#node_wikinote_form_group_wiki_taxo {
+border: 1px solid #CCC;
+padding: 10px;
+}
+fieldset#node_wikinote_form_group_wiki_authors {
+margin-top: 10px;
+}
+form#wikinote-node-form div.form-item.form-type-checkbox {display: inline !important;}
+
+/* FORM (hba_theme for non admins users + AMB modal frame) */
+
+/*enllaç Add a wikicontributon*/
+.ctools-modal-wikicontrib-modal-style {
+
+}
+/*el modal frame*/
+.wikicontrib-modal-style {
+/*no funciona (amb ctools abans del patch). Afegit a modules/ctools/css/modal.css*/
+}
+
+/* DISPLAY */
+
+.node-wikinote .group-left {
+width: 25%;
+clear: left;
+background-color: #EEE;
+padding: 10px;
+margin-bottom: 2.2em;
+}
+.node-wikinote .group-right {
+width: 69%;
+padding-left: 5px;
+margin-bottom: 2.2em;
+}
+a.alpha-block-toggle {
+
+}
+/*.node-wikinote.view-mode-full .group-header ul.links {
+position: absolute;
+right: 0;
+top: -40px;
+width: 250px !important;
+}
+.node-wikinote li.flag-useful {
+padding: 0;
+}*/
+.node-wikinote .group-right ul.links {
+padding-top: 1.5em;
+text-align: right;
+float: right;
+width: 100%;
+min-width: 250px;
+}
+.node-wikinote .field-name-author.field-type-ds {
+padding: 0.3em 0 0.01em 0;
+}
+.field-name-field-wiki-other-part {padding-top: 0.6em;}
+.node-wikinote .field-name-field-wiki-sp .field-item,
+.node-wikinote .field-name-field-wiki-sections .field-item {
+display: block;
+}
+.node-wikinote .field-name-body {
+overflow: hidden;
+}
+.node-wikinote .field-name-field-wiki-tags {margin-top: 5px;}
+.node-wikinote .field-name-field-wiki-tags .field-item {padding-right: 5px;}
+.node-wikinote #comments {
+padding-top: 3em;
+}
+
+/*PROVISIONAL MENTRE DS NO COMPATIBLE AMB ENTITY REF*/
+.node-wikinote .ds-2col.user-profile.view-mode-token .group-right {
+float: left;
+padding: 0;
+margin: 0;
+}
+.node-wikinote .ds-2col.user-profile.view-mode-token .group-left,
+.node-wikinote .ds-2col.user-profile.view-mode-token .field-name-ds-user-picture.field-type-ds,
+.node-wikinote .ds-2col.user-profile.view-mode-token div.field-name-name.field-type-ds,
+.node-wikinote div.ds-2col.user-profile.view-mode-token h3,
+.node-wikinote div.ds-2col.user-profile.view-mode-token dl.user-profile-category {
+display: none;
+}
+
+/**
+ * Comments
+ */
+
+div#comments.comment-wrapper {
+border: 1px solid #CCC;
+padding: 10px;
+margin-bottom: 1em;
+}
+
+fieldset#edit-comment-body-und-0-format,
+a#switch_edit-comment-body-und-0-value.ckeditor_links {display: none;}
+textarea#edit-comment-body-und-0-value {height: 100px !important;}
+
+/**
+ * Absolute messages
+ */
+
+#absolute-messages-messages a {
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+/* Provisional para que Susanna haga capturas de pantalla de la portada */
+#block-views-log-updated-nodes-block-2 div.view-content {height: 105px; overflow: hidden;}
+#block-views-log-updated-nodes-block-2 div.more-link {display: none;}
+
+#block-menu-menu-footer-menu,
+#block-menu-menu-footer-menu-2,
+#block-menu-menu-footer-menu-3,
+#block-menu-menu-footer-menu-4 {
+float: left;
+width: 25%;
+}
+
+/**
+ * Dialog API
+ */
+
+/*modal del flag Mark as Viewed*/
+/*.page-node div.ui-dialog {min-height: 500px !important; min-width: 450px !important;}
+.page-node div#dialog.ui-dialog-content {min-height: 450px !important; min-width: 430px !important;}*/
+.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container.chzn-container-multi.chzn-container-active {padding-bottom: 135px;}
+.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container.chzn-container-multi,
+.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container ul.chzn-choices,
+.page-node div.chzn-drop ul.chzn-results {width: 100% !important;}
+/*.page-node div.form-item.form-type-select.form-item-field-flag-viewed-country-und {float: left; padding-right: 20px;}*/
+.page-node form#flagging-form-flagging-form-dialog div#edit-actions-dialog.form-actions.form-wrapper {float: right;}
+
+
+
+
+ /*  Imagenes en el Foreword o otras paginas de texto  */
+
+.node-type-foreword .image-large {
+    margin:auto;
+    text-align:center;
+    border:20px solid #f1efdd;
+    max-width:640px;
+    margin-bottom:20px;
+}
+.node-type-foreword .image-large .caption {
+    background-color:#f1efdd;
+}
+.node-type-foreword .image-small {
+    margin:auto;
+    text-align:center;
+    border:20px solid #f1efdd;
+    max-width:350px;
+    margin-bottom:20px;
+}
+.node-type-foreword .image-small .caption {
+    background-color:#f1efdd;
+}
+
+/* Dialog API */
+
+/*modal del flag Mark as Viewed*/
+/*.page-node div.ui-dialog {min-height: 500px !important; min-width: 450px !important;}
+.page-node div#dialog.ui-dialog-content {min-height: 450px !important; min-width: 430px !important;}*/
+.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container.chzn-container-multi.chzn-container-active {padding-bottom: 135px;}
+.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container.chzn-container-multi,
+.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container ul.chzn-choices,
+.page-node div.chzn-drop ul.chzn-results {width: 100% !important;}
+/*.page-node div.form-item.form-type-select.form-item-field-flag-viewed-country-und {float: left; padding-right: 20px;}*/
+.page-node form#flagging-form-flagging-form-dialog div#edit-actions-dialog.form-actions.form-wrapper {float: right;}

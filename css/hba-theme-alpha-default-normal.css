@@ -1,7 +1,7 @@
 /* This file will hold styles that are loaded using the same media query as the normal grid. */
 
 body {
-  font-size: 60% !important;
+  font-size: 70% !important;
 }
 
 body .logo-img {
@@ -11,7 +11,12 @@ body .logo-img {
 body #region-menu {
   float: left;
   clear: none;
-  padding-left: 50px;
+  padding-left: 0;
+  width: 520px;
+}
+
+body #region-menu ul#main-menu li a { 
+  font-size: 15px;
 }
 
 body #region-menu ul#main-menu li.first a {
@@ -96,4 +101,12 @@ body #region-sidebar-third {
 
 #block-bird-taxonomies-bird-orders h2 span.plus {
   top: -7px;
+}
+
+#block-block-2 .content-toc ul {
+  margin-left: 20px;
+}
+
+#block-block-2 .content-toc ul li {
+  width: 180px;
 }

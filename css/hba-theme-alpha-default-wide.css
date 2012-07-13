@@ -3,10 +3,13 @@ body {
   font-size: 76% !important;
 }
 
-body #zone-content aside.region {
+body.sidebar-third  #zone-content aside.region {
   width: 280px;
 }
 
+body #zone-content aside.region {
+  width: 270px;
+}
 
 #region-content {
   width: 580px;
@@ -14,4 +17,17 @@ body #zone-content aside.region {
 
 #block-bird-taxonomies-bird-orders .content {
   width: 236px;
+}
+
+body #region-menu {
+  width: 562px;
+  padding-left: 50px;
+}
+
+#block-block-2 .content-toc ul {
+  margin-left: 68px;
+}
+
+#block-block-2 .content-toc ul li {
+  width: 190px;
 }

@@ -3,12 +3,12 @@ body {
   font-size: 76% !important;
 }
 
-#breadcrumb,
-#messages {
+body.sidebar-third #breadcrumb,
+body.sidebar-third #messages {
   width: 1530px;
 }
 
-#zone-content {
+body.sidebar-third #zone-content {
   width: 1530px;
 }
 
@@ -18,10 +18,9 @@ body {
 }
 */
 
-body #zone-content aside.region {
+body.sidebar-third #zone-content aside.region {
   width: 280px;
 }
-
 
 #region-content {
   width: 600px;

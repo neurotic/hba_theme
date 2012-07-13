@@ -22,9 +22,11 @@
 //dsm($view);
 //$data = $row->{$field->field_alias};
 //dsm($data);
-if($view->exposed_raw_input['style'] == '') {
+if(!isset($view->exposed_raw_input['style']) || $view->exposed_raw_input['style'] == '') {
   $view->exposed_raw_input['style'] = 'plate_10';
 }
+
+
 ?>
 
 <?php print theme('image_style', array('style_name' => $view->exposed_raw_input['style'], 'path' => $row->field_field_figure_img[0]['raw']['uri'])); ?>

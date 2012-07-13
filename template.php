@@ -108,6 +108,10 @@ function hba_theme_preprocess_node(&$vars) {
   if(isset($vars['user_picture']) && isset($vars['content']['body'][0]['#markup']) && !$vars['teaser']) {
     $vars['content']['body'][0]['#markup'] = $vars['user_picture'] . $vars['content']['body'][0]['#markup'];
   }
+  // treure del camp Body els embeds videos, etc.
+  /*if(isset($vars['content']['body'][0]['#markup']) && !$vars['teaser']) {
+    $vars['content']['body'][0]['#markup'] = strip_only($vars['content']['body'][0]['#markup'], '<iframe> <embed>');
+  }*/
 }
 
 /**
@@ -257,6 +261,10 @@ function hba_theme_preprocess_page(&$variables, $hook) {
     $variables['title'] = '';
   }
   
+  if(isset($variables['node']) && $variables['node']->type == 'family') {
+    $variables['title'] = '';
+  }
+  
   if(isset($variables['node']) && $variables['node']->type == 'species') {
     $variables['title'] = _hba_cursive(drupal_get_title());
   }
@@ -300,9 +308,35 @@ if(drupal_valid_path('node/add/story')) {
   * Salida Ostrich <em>(Struthio camelus)</em>
   */
 function _hba_cursive($string) {
-  $string = str_replace("(", "(<em>", $string);
-  $string = str_replace(")", "</em>)", $string);
+  $string = str_replace("(", "</strong><em>(", $string);
+  $string = str_replace(")", ")</em>", $string);
   
   return $string;
 }
 
+function hba_theme_preprocess_html(&$variables) {
+
+  // Miramos las columnas que hay
+  if(isset($variables['page']['content']['content']['sidebar_third']) && hba_theme_region_not_empty($variables['page']['content']['content']['sidebar_third'])) {
+    $variables['attributes_array']['class'][] = 'sidebar-third';
+  }
+  
+  if(isset($variables['page']['content']['content']['sidebar_second']) && hba_theme_region_not_empty($variables['page']['content']['content']['sidebar_second'])) {
+    $variables['attributes_array']['class'][] = 'sidebar-second';
+  }
+  
+  if(isset($variables['page']['content']['content']['sidebar_first']) && hba_theme_region_not_empty($variables['page']['content']['content']['sidebar_first'])) {
+    $variables['attributes_array']['class'][] = 'sidebar-first';
+  }
+}
+
+function hba_theme_region_not_empty($region) {
+  foreach($region as $name => $block) {
+    if(substr($name,0,1) != '#' && substr($name,0,11) != 'alpha_debug') {
+      //dsm("Bloque encontrado " . $name);
+      return true;
+    }
+  }
+  
+  return false;
+}
