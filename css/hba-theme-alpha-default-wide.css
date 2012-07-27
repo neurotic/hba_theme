@@ -31,3 +31,7 @@ body #region-menu {
 #block-block-2 .content-toc ul li {
   width: 190px;
 }
+
+#block-views-frontpage-content-blocks-block .view-content .views-row {
+  width: 265px;
+}

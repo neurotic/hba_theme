@@ -56,7 +56,7 @@ h1#page-title {
 #region-menu ul#main-menu li {
   float: left;
   display: block;
-  padding: 0 7px;
+  padding: 0 2px;
 }
 
 #region-menu ul#main-menu li a {
@@ -264,7 +264,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   background-position: -347px 0;
 }
 
-#region-content {
+.not-front #region-content {
   margin-top: 10px;
 }
 
@@ -341,7 +341,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #block-views-frontpage-content-blocks-block .view-content .views-row {
   float: left;
-  width: 265px;
+  width: 260px;
   background: #e8e7e7;
   padding: 10px;
   -webkit-border-radius: 5px;

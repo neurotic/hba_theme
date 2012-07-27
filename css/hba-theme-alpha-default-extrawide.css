@@ -22,7 +22,7 @@ body.sidebar-third #zone-content aside.region {
   width: 280px;
 }
 
-#region-content {
+.not-front #region-content {
   width: 600px;
 }
 

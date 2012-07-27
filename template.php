@@ -18,6 +18,10 @@ function hba_theme_menu_link__menu_sections(array $variables) {
   if ($element['#below']) {
     $sub_menu = drupal_render($element['#below']);
   }
+  
+  //dsm($element['#attributes']);
+  $element['#attributes']['class'][] = 'clearfix';
+  
   $output = l($element['#title'], $element['#href']);
   $description = '<p class="desc">' . $element['#localized_options']['attributes']['title'];   
   $element['#attributes']['class'][] = 'menu_' . strtolower(transliteration_clean_filename($element['#title']));
