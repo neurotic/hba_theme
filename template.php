@@ -25,7 +25,7 @@ function hba_theme_menu_link__menu_sections(array $variables) {
   $output = l($element['#title'], $element['#href']);
   $description = '<p class="desc">' . $element['#localized_options']['attributes']['title'];   
   $element['#attributes']['class'][] = 'menu_' . strtolower(transliteration_clean_filename($element['#title']));
-  return '<li' . drupal_attributes($element['#attributes']) . '><div class="wrapper"><span class="menu_image"></span>' . $output . $description . $sub_menu . "</div></li>\n";
+  return '<li' . drupal_attributes($element['#attributes']) . '><div class="wrapper clearfix"><span class="menu_image"></span>' . $output . $description . $sub_menu . "</div></li>\n";
 }
 
 /**

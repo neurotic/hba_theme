@@ -35,3 +35,31 @@ body #region-menu {
 #block-views-frontpage-content-blocks-block .view-content .views-row {
   width: 265px;
 }
+
+.view-display-id-page .views_slideshow_main {
+  height: 244px;
+}
+
+#views_slideshow_cycle_main_slideshow-page {
+  width: 580px;
+}
+
+#views_slideshow_cycle_teaser_section_slideshow-page {
+  width: 580px;
+  height: 244px;
+}
+
+#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row {
+  width: 580px;
+}
+
+.view-display-id-page .views_slideshow_main .views-field-title {
+  left: 235px;
+  width: 300px;
+  height: 80px;
+  top: -130px;
+}
+
+.view-display-id-page .views_slideshow_main .views-field-title a {
+  font-size: 18px;
+}

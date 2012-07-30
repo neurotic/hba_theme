@@ -115,6 +115,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   float: none;
 }
 
+#region-sidebar-first,
+#region-content,
+#slidemarginleft {
+  width: 570px;
+  margin: 0 auto;
+}
+
 #region-sidebar-first .region-inner {
   background: white;
   /*border: 1px solid #c2c2c2;*/
@@ -277,16 +284,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 .view-display-id-page .views_slideshow_main .views-slideshow-cycle-main-frame-row {
   height: 244px;
+  width: 570px;
+}
+
+.view-display-id-page .views_slideshow_main {
+  height: 240px;
+  width: 570px;
+}
+
+#views_slideshow_cycle_teaser_section_slideshow-page {
+  width: 570px;
+  height: 240px;
+  margin-top: 15px;
+}
+
+#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row {
+  width: 570px;
 }
 
 .view-display-id-page .views_slideshow_main .views-field-title {
-  float: right;
+  left: 150px;
+  width: 300px;
+  height: 50px;
+  top: -100px;
+}
+
+.view-display-id-page .views_slideshow_main .views-field-title a {
+  font-size: 18px;
+}
+
+
+#block-views-frontpage-content-blocks-block .view-content .views-row {
+  width: 335px;
+}
+
+.view-display-id-page .views_slideshow_main .views-field-title {
   width: 300px;
   height: 80px;
   padding: 15px;
   text-align: center;
   position: relative;
   top: -130px;
+  left: 235px;
   margin-right: 15px;
   background: #f3eeec;
   /*opacity: 0.73;*/
@@ -603,14 +642,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   border-color: #b94ebe;
 }
 
-#region-sidebar-second #block-views-species-test-block-1 h2 span,
-#region-sidebar-third #block-views-species-test-block-1 h2 span {
+#region-sidebar-second #block-views-family-am-block h2 span,
+#region-sidebar-third #block-views-family-am-block h2 span {
   border-color: #417498;
 }
 
 #region-sidebar-second #block-block-8 h2 span,
 #region-sidebar-third #block-block-8 h2 span {
   border-color: #c94b54;
+}
+
+#region-sidebar-second #block-views-species-figure-block-3 h2 span,
+#region-sidebar-third #block-views-species-figure-block-3 h2 span {
+  border-color: #;
+}
+
+#region-sidebar-second #block-views-species-test-block-2 h2 span,
+#region-sidebar-third #block-views-species-test-block-2 h2 span {
+  border-color: #;
+}
+
+#region-sidebar-second #block-block-12 h2 span,
+#region-sidebar-third #block-block-12 h2 span {
+  border-color: #;
+}
+
+#region-sidebar-second #block-views-mynotes-block h2 span,
+#region-sidebar-third #block-views-mynotes-block h2 span {
+  border-color: #;
+}
+
+#region-sidebar-second #block-views-log-updated-nodes-block-1 h2 span,
+#region-sidebar-third #block-views-log-updated-nodes-block-1 h2 span {
+  border-color: #;
+}
+
+#region-sidebar-second #block-views-wikicontribution-block h2 span,
+#region-sidebar-third #block-views-wikicontribution-block h2 span {
+  border-color: #;
+}
+
+#region-sidebar-second # h2 span,
+#region-sidebar-third # h2 span {
+  border-color: #;
 }
 
 body .node-links ul li a, 
@@ -637,7 +711,7 @@ ul.orders > li.active > .item-list > ul {
 }
 
 #block-bird-taxonomies-bird-orders .content {
-  display: none;
+  display: block;
   width: 98%;
 }
 
@@ -1504,6 +1578,11 @@ body.context-family .vertical-tabs ul.vertical-tabs-list li a {
   padding: 0;
   outline: none;
 }
+
+#section-footer ul li {
+  list-style: none;
+}
+
 
 li.columna1 { margin-left: 20px !important; width: 40%; }
 li.columna2 { margin-left: 50% !important; width: 40%; }
