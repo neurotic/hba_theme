@@ -637,15 +637,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   margin-right: 12px;
 }
 
+/* Figures */
 #region-sidebar-second #block-views-species-figure-block-1 h2 span,
 #region-sidebar-third #block-views-species-figure-block-1 h2 span {
-  border-color: #b94ebe;
+  border-color: #25ade2;
 }
 
+/* Familias */
 #region-sidebar-second #block-views-family-am-block h2 span,
 #region-sidebar-third #block-views-family-am-block h2 span {
-  border-color: #417498;
+  border-color: #ae191f;
 }
+
 
 #region-sidebar-second #block-block-8 h2 span,
 #region-sidebar-third #block-block-8 h2 span {
@@ -654,22 +657,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #region-sidebar-second #block-views-species-figure-block-3 h2 span,
 #region-sidebar-third #block-views-species-figure-block-3 h2 span {
-  border-color: #;
+  border-color: #25ade2;
 }
 
+/* photos */
 #region-sidebar-second #block-views-species-test-block-2 h2 span,
 #region-sidebar-third #block-views-species-test-block-2 h2 span {
-  border-color: #;
+  border-color: #54b4c0;
 }
 
+/* Sounds */
 #region-sidebar-second #block-block-12 h2 span,
 #region-sidebar-third #block-block-12 h2 span {
-  border-color: #;
+  border-color: #b94ebe;
 }
 
 #region-sidebar-second #block-views-mynotes-block h2 span,
 #region-sidebar-third #block-views-mynotes-block h2 span {
-  border-color: #;
+  border-color: #b7b4b4;
 }
 
 #region-sidebar-second #block-views-log-updated-nodes-block-1 h2 span,
@@ -679,13 +684,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #region-sidebar-second #block-views-wikicontribution-block h2 span,
 #region-sidebar-third #block-views-wikicontribution-block h2 span {
-  border-color: #;
+  border-color: #cf4f02;
 }
 
-#region-sidebar-second # h2 span,
-#region-sidebar-third # h2 span {
-  border-color: #;
+/* Videos */
+#region-sidebar-second #block-block-11 h2 span,
+#region-sidebar-third #block-block-11 h2 span {
+  border-color: #3d7094;
 }
+
+#region-sidebar-second #block-views-flickr-photos-species-block h2 span,
+#region-sidebar-third #block-views-flickr-photos-species-block h2 span {
+  border-color: #54b4c0;
+}
+
+/* maps */
+#region-sidebar-second #block-views-species-map-block h2 span,
+#region-sidebar-third #block-views-species-map-block h2 span {
+  border-color: #7fbb01;
+}
+
+/* maps */
+#region-sidebar-second #block-views-compare-block-1 h2 span,
+#region-sidebar-third #block-views-compare-block-1 h2 span {
+  border-color: #904b29;
+}
+
 
 body .node-links ul li a, 
 body .comment-links ul li a {
@@ -694,9 +718,13 @@ body .comment-links ul li a {
   border-radius: 5px;
 }
 
-ul.orders > li > .item-list > ul {
+body ul.orders > li > .item-list > ul {
   display: none;
   margin-top: 5px;
+}
+
+body ul.orders > li > .item-list > ul.selected {
+  display: block;
 }
 
 ul.orders > li.active > .item-list > ul {
@@ -871,6 +899,10 @@ body.context-family #region-content .region-inner {
 
 #block-bird-taxonomies-bird-orders .content ul.subspecies a {
   font-style: italic;
+}
+
+#block-bird-taxonomies-bird-orders .content ul.subspecies a.selected {
+  font-weight: bold;
 }
 
 #block-bird-taxonomies-bird-orders .content ul a:hover {
@@ -1251,6 +1283,19 @@ body.page-plate .views-exposed-widgets > .views-exposed-widget {
   float: left;
 }
 
+body.page-plate .block-views-exp-galley-fluid-page input {
+  font-size: 10px;
+  border-radius: 4px;
+}
+
+body.page-plate .block-views-exp-galley-fluid-page .chzn-container {
+  font-size: 10px;
+}
+
+body.page-plate .block-views-exp-galley-fluid-page .chzn-container input {
+
+}
+
 body.page-plate #edit-submit-galley-fluid {
   background: #25ade2;
   color: white;
@@ -1267,6 +1312,19 @@ body.page-plate #edit-reset {
 body.page-plate .color-bkg-selector {
   float: right;
 }
+
+.node-type-family .content .vertical-tabs fieldset,
+.node-type-species .content .node-species,
+.node-type-species .content .node-species p {
+  font-size: 14px;
+}
+
+/** Chosen **/
+.chzn-container .chzn-results li {
+  line-height: 120%;
+  padding: 2px 7px;
+}
+
 ul#BGSelector {display: inline; padding-left: 10px;}
 ul#BGSelector li {display: inline; padding: 0 0.5em; width: 16px; height: 16px; border: 1px solid #CCC;
 overflow: hidden;
