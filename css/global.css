@@ -765,6 +765,10 @@ body.context-subspecies #block-bird-taxonomies-bird-orders .content {
   /*display: none;*/
 }
 
+#block-bird-taxonomies-bird-orders .a-wrapper {
+  display: block;
+}
+
 #block-bird-taxonomies-bird-orders .a-wrapper a {
   float: left;
   width: 85%;
