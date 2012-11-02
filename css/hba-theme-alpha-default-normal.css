@@ -39,6 +39,10 @@ body #zone-content aside.region {
   width: 163px;
 }
 
+#block-bird-taxonomies-bird-orders .a-wrapper a {
+  font-size: 12px;
+}
+
 #region-branding {
   clear: left;
 }
@@ -75,6 +79,14 @@ body #region-sidebar-third {
 }
 
 #block-bird-taxonomies-bird-orders .content ul li {
+  padding-left: 4px;
+}
+
+#block-bird-taxonomies-bird-orders .content ul li ul li {
+  padding-left: 4px;
+}
+
+#block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   padding-left: 4px;
 }
 
@@ -142,4 +154,18 @@ body #region-sidebar-third {
 
 #views_slideshow_cycle_teaser_section_slideshow-page {
   margin-top: 0;
+}
+
+#block-bird-taxonomies-bird-orders .a-wrapper a {
+  width: 84%;
+}
+
+#block-menu-menu-sections .content ul li {
+  float: none;
+  width: auto;
+  margin-left: 0;
+}
+
+#block-menu-menu-sections .content ul li:nth-child(odd) {
+  margin-right: 0;
 }

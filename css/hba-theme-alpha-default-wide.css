@@ -63,3 +63,11 @@ body #region-menu {
 .view-display-id-page .views_slideshow_main .views-field-title a {
   font-size: 18px;
 }
+
+#block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
+  padding-left: 7px;
+}
+
+#block-bird-taxonomies-bird-orders .a-wrapper a {
+  width: 86%;
+}

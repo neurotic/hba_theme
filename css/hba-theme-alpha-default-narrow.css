@@ -29,6 +29,11 @@ body .logo-img {
   width: 45%;
 }
 
+.front #region-sidebar-second {
+  width: 100%;
+  margin-left: 14px;
+}
+
 #region-sidebar-third {
   margin-right: 0;
   float: right;
