@@ -33,8 +33,6 @@
  */
 ?>
 
-<?php if ($flag->name == 'seen'):  ?>
-
 <?php
 
   $node = node_load(arg(1));
@@ -53,7 +51,41 @@
   else {*/
     //print '<p>' . flag_create_link('seen', $node->nid) . '</p>';
     ?>
+    
+  <?php
   
+    /*$flag_counter2 = 'Flag counter fix: ' . $flag_counter . '<br />';
+    print $flag_counter2;
+    print 'Flag counter: ' . $flag_counter . '<br />';*/
+    
+    if ($flag_counter != 0){
+      //not yet flagged by me
+      
+      if ($status == 'unflagged'){
+           if($flag_counter == 1){
+                $link_text = t("1 user have seen it");
+            }else{
+                $link_text = t($flag_counter." users have seen it");
+            }
+   
+        //flagged by me
+        }else{
+       
+            if ($flag_counter == 1){
+                $link_text = t("You're the only user who have seen it");
+            }elseif($flag_counter == 2){
+                $link_text = t("You and another user have seen it");
+            }else{
+                $link_text = t("You and other ".($flag_counter-1)." people have seen it");
+            }
+           
+        }
+    }
+    else{
+      $link_text = t("Nobody has seen it");
+    }
+  ?>
+
 <div class="<?php print $flag_wrapper_classes; ?>">
   <?php if ($link_href): ?>
     <a href="<?php print $link_href; ?>" title="<?php print $link_title; ?>" class="<?php print $flag_classes ?>" rel="nofollow"><?php print $link_text; ?></a><span class="flag-throbber">&nbsp;</span>
@@ -67,53 +99,4 @@
   <?php endif; ?>
 </div>
 
-<span class="flag-seen-counter">
-  <?php
-    if ($flag_counter != 0){
-      //not yet flagged by me
-      
-      if ($status == 'unflagged'){
-           if($flag_counter == 1){
-                print t("1 user have seen it");
-            }else{
-                print t($flag_counter." users have seen it");
-            }
-   
-        //flagged by me
-        }else{
-       
-            if ($flag_counter == 1){
-                print t("You're the only user who have seen it");
-            }elseif($flag_counter == 2){
-                print t("You and another user have seen it");
-            }else{
-                print t("You and other ".($flag_counter-1)." people have seen it");
-            }
-           
-        }
-    }
-    else{
-      print t("Nobody has seen it");
-    }   
-  ?>
-</span>
 <?php //} ?>
-
-
-
-<?php else: ?>
-
-<span class="<?php print $flag_wrapper_classes; ?>">
-  <?php if ($link_href): ?>
-    <a href="<?php print $link_href; ?>" title="<?php print $link_title; ?>" class="<?php print $flag_classes ?>" rel="nofollow"><?php print $link_text; ?></a><span class="flag-throbber">&nbsp;</span>
-  <?php else: ?>
-    <span class="<?php print $flag_classes ?>"><?php print $link_text; ?></span>
-  <?php endif; ?>
-  <?php if ($after_flagging): ?>
-    <span class="flag-message flag-<?php print $status; ?>-message">
-      <?php print $message_text; ?>
-    </span>
-  <?php endif; ?>
-</span>
-
-<?php endif; ?>

@@ -152,101 +152,7 @@ function hba_theme_process_page(&$variables) {
   }
 }
 
-/**
- * http://drupal.org/node/312220
- * Generates a node-flagged-FLAGNAME css class for every flag set on the node.
- *
- * In addition, if the flag is set by the current user, a
- * node-flagged-FLAGNAME-self class will be generated as well.
- *
- * The class names are accumulated in the $flag_classes variable and you must 
- * use it in your 'node.tpl.php', or else it will have no effect.
- */
-/*function phptemplate_preprocess_node(&$vars) {
-  $vars['flag_classes'] = implode(' ', _phptemplate_get_flag_classes('node', $vars['node']->nid));
-}*/
-
-/**
- * Returns a list of CSS classes for a flagged item.
- *
- * The classes are of the form "node-flagged-FLAGNAME" (where "node" would be
- * "user" or "comment": depending on the item type).
- *
- * Additionally, if the flag is set by the current user, a
- * "node-flagged-FLAGNAME-self" class will be generated as well.
- *
- * @param $content_type
- *   The item type: Either "node" or "user" or "comment" or whatever.
- * @param $content_id
- *   The item ID.
- */
-/*function _phptemplate_get_flag_classes($content_type, $content_id) {
-  static $flags = array();
-
-  if (!module_exists('flag')) {
-    return array();
-  }
-
-  if (!isset($flags[$content_type])) {
-    $flags[$content_type] = flag_get_flags($content_type);
-  }
-
-  // Note: is_flagged() and get_count() use internal cache,
-  // so using them won't result in issuing excessive SQL queries.
-
-  $classes = array();
-  foreach ($flags[$content_type] as $flag) {
-    $css_name = str_replace('_', '-', $flag->name);
-    if (!$flag->global && $flag->is_flagged($content_id)) {
-      // The item is flagged by me.
-      $classes[] = $content_type . '-flagged-' . $css_name;
-      $classes[] = $content_type . '-flagged-' . $css_name . '-self';
-    }
-    elseif ($flag->get_count($content_id)) {
-      // The item is flagged by anybody.
-      $classes[] = $content_type . '-flagged-' . $css_name;
-    }
-  }
-  return $classes;
-}
-*/
-
-/**
- * http://drupal.org/node/312220 2a part
- * When your view is styled as a table, list or unformatted,
- * then 'node.tpl.php' isn't used and therefore the rows in the view won't carry our flag classes.
- * To fix this, add the following preprocess functions to your template.php. Rename garland to the actual name of your theme.
- */
 /*
-function hba_theme_preprocess_views_view_table(&$vars) {
-  $view = $vars['view'];
-  $rows = $vars['rows'];
-
-  if ($view->base_table == 'node') {
-    foreach ($rows as $id => $row) {
-      $data = $view->result[$id];
-      $flag_classes = implode(' ', _phptemplate_get_flag_classes('node', $data->nid));
-      $vars['row_classes'][$id][] = $flag_classes;
-      $vars['row_classes'][$id][] = 'views-row'; // For our JavaScript.
-    }
-  }
-}
-
-function hba_theme_preprocess_views_view_unformatted(&$vars) {
-  $view = $vars['view'];
-  $rows = $vars['rows'];
-
-  if ($view->base_table == 'node'
-       && $view->display_handler->get_option('row_plugin') != 'node'
-       && empty($view->style_plugin->options['grouping'])) {  // Note: we don't support Grouping.
-    foreach ($rows as $id => $row) {
-      $data = $view->result[$id];
-      $flag_classes = implode(' ', _phptemplate_get_flag_classes('node', $data->nid));
-      $vars['classes'][$id] .= ' ' . $flag_classes;
-    }
-  }
-}
-
 function hba_preprocess_views_view_list(&$vars) {
   hba_preprocess_views_view_unformatted($vars);
 }
@@ -269,8 +175,14 @@ function hba_theme_preprocess_page(&$variables, $hook) {
     $variables['title'] = '';
   }
   
-  if(isset($variables['node']) && $variables['node']->type == 'species') {
-    $variables['title'] = _hba_cursive(drupal_get_title());
+  if(arg(0) == 'node' && arg(1) == '201985' && arg(2) == '') {
+    $variables['title'] = '';
+  }
+  
+  //dsm($variables['node']);
+  
+  if($variables['node']->type == 'species') {
+    $variables['title'] = '';
   }
   
   drupal_add_library('hoverintent', 'hoverintent', TRUE);
@@ -291,11 +203,11 @@ function configure_comment_form(&$form) {
  * http://drupal.org/node/796530#comment-5116106
  * Inconsistent behavior with exposed filter in block AJAX
  */
-function hba_theme_form_views_exposed_form_alter(&$form , &$form_state){
+/*function hba_theme_form_views_exposed_form_alter(&$form , &$form_state){
   // Overrides the views exposed form url to be the current one
   // Avoids odd views redirect to views page from an exposed form in block
   $form['#action'] = request_uri();
-}
+}*/
 
 /*
 CRS: Esto hace que salgan unos cuantos warnings
