@@ -678,12 +678,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 }
 
 /* Figures */
+/*
 #region-sidebar-second #block-views-species-figure-block-1 h2 span,
 #region-sidebar-third #block-views-species-figure-block-1 h2 span {
   border-color: #25ade2;
 }
+*/
 
 /* Familias */
+/*
 #region-sidebar-second #block-views-family-am-block h2 span,
 #region-sidebar-third #block-views-family-am-block h2 span {
   border-color: #ae191f;
@@ -699,14 +702,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 #region-sidebar-third #block-views-species-figure-block-3 h2 span {
   border-color: #25ade2;
 }
+*/
 
 /* photos */
+/*
 #region-sidebar-second #block-views-species-test-block-2 h2 span,
 #region-sidebar-third #block-views-species-test-block-2 h2 span {
   border-color: #54b4c0;
 }
+*/
 
 /* Sounds */
+/*
 #region-sidebar-second #block-block-12 h2 span,
 #region-sidebar-third #block-block-12 h2 span {
   border-color: #b94ebe;
@@ -726,8 +733,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 #region-sidebar-third #block-views-wikicontribution-block h2 span {
   border-color: #cf4f02;
 }
-
+*/
 /* Videos */
+/*
 #region-sidebar-second #block-block-11 h2 span,
 #region-sidebar-third #block-block-11 h2 span {
   border-color: #3d7094;
@@ -737,18 +745,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 #region-sidebar-third #block-views-flickr-photos-species-block h2 span {
   border-color: #54b4c0;
 }
+*/
 
 /* maps */
+/*
 #region-sidebar-second #block-views-species-map-block h2 span,
 #region-sidebar-third #block-views-species-map-block h2 span {
   border-color: #7fbb01;
 }
+*/
 
 /* maps */
+/*
 #region-sidebar-second #block-views-compare-block-1 h2 span,
 #region-sidebar-third #block-views-compare-block-1 h2 span {
   border-color: #904b29;
 }
+*/
 
 body .node-links ul li a, 
 body .comment-links ul li a {
@@ -2816,7 +2829,6 @@ margin-bottom: 10px;
 
 /* Boton Show / hide (en species node + plate) */
 /* Boton Reset drags (en plate) */
-a.hide_links,
 a.hide_links_plate,
 .page-plate .reset a {
   float: right;
@@ -3607,12 +3619,12 @@ body #block-block-2 .content-toc ul li {
 }
 
 body #section-content #slidemarginleft #region-sidebar-second h2 span,
-body #section-content #slidemarginleft #region-sidebar-third h2 span {
+body #section-content #region-sidebar-third h2 span {
   border-color: #fc862c;
 }
 
 body #section-content #slidemarginleft #region-sidebar-second h2.collapsiblockCollapsed span,
-body #section-content #slidemarginleft #region-sidebar-third h2.collapsiblockCollapsed span {
+body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   border-color: #b7b4b4;
 }
 
@@ -3666,7 +3678,8 @@ body #region-content a.flag-action:hover {
   margin: 10px 0;
 }
 
-body #region-content a.unflag-action:after {
+body #region-content a.unflag-action:before,
+body #region-content a.hide_links:before {
   content: '';
   display: block;
   float: left;
@@ -3675,9 +3688,15 @@ body #region-content a.unflag-action:after {
   width: 23px;
   margin-right: 5px;
   margin-top: 2px;
+  text-align: left;
 }
 
-body #region-content a.flag-action:after {
+body #region-content a.hide_links:before {
+  height: 30px;
+}
+
+body #region-content a.flag-action:before,
+body #region-content #widgets_wrapper a.show:before {
   content: '';
   display: block;
   float: left;
@@ -3686,50 +3705,76 @@ body #region-content a.flag-action:after {
   width: 23px;
   margin-right: 5px;
   margin-top: 2px;
+  text-align: left;
 }
 
-body #region-content .flag-highlighted a.unflag-action:after {
-  background: url(images/icons.png) no-repeat 0px -370px;
+body #region-content #widgets_wrapper a.show:before {
+  height: 30px;
 }
 
-body #region-content .flag-flag_follow a.unflag-action:after {
+body #region-content .flag-highlighted a.unflag-action:before,
+body #region-content .flag-highlighted a.flag-action:hover:before {
+  background: url(images/icons.png) no-repeat 0px -371px;
+}
+
+body #region-content .flag-flag_follow a.unflag-action:before,
+body #region-content .flag-flag_follow a.flag-action:hover:before {
   background-position: -20px -370px;
 }
 
-body #region-content .flag-flag_viewed a.unflag-action:after {
+body #region-content .flag-flag_viewed a.unflag-action:before,
+body #region-content .flag-flag_viewed a.flag-action:hover:before {
   background-position: -42px -370px;
   width: 20px;
 }
 
-body #region-content .flag-compare a.unflag-action:after {
-  background-position: -62px -370px;
+body #region-content .flag-compare a.unflag-action:before,
+body #region-content .flag-compare a.flag-action:hover:before {
+  background-position: -62px -371px;
   height: 23px;
 }
 
-body #region-content a.hide_links:after {
-  background-position: 0px -340px;
+body #region-content a.hide_links:before,
+body #region-content a.show:hover:before {
+  background-position: -85px -371px;
+  margin-top: -6px;
 }
 
-body #region-content .flag-highlighted a.flag-action:after {
-  background: url(images/icons.png) no-repeat 0px -340px;
+body #region-content .flag-highlighted a.flag-action:before,
+body #region-content .flag-highlighted a.unflag-action:hover:before {
+  background: url(images/icons.png) no-repeat 0px -338px;
 }
 
-body #region-content .flag-flag_follow a.flag-action:after {
+body #region-content .flag-flag_follow a.flag-action:before,
+body #region-content .flag-flag_follow a.unflag-action:hover:before {
   background-position: -20px -337px;
 }
 
-body #region-content .flag-flag_viewed a.flag-action:after {
-  background-position: -42px -338px;
+body #region-content .flag-flag_viewed a.flag-action:before,
+body #region-content .flag-flag_viewed a.unflag-action:hover:before {
+  background-position: -42px -337px;
   width: 20px;
 }
 
-body #region-content .flag-compare a.flag-action:after {
-  background-position: -62px -339px;
+body #region-content .flag-compare a.flag-action:before,
+body #region-content .flag-compare a.unflag-action:hover:before {
+  background-position: -62px -338px;
   height: 23px;
 }
 
-body #region-content a.hide_links:after {
-  background-position: 0px -340px;
+body #region-content a.show:before,
+body #region-content a.hide_links:hover:before {
+  background-position: -85px -338px;
+}
+
+body #region-content .flag-compare a.flag-action {
+  width: 80px;
+}
+
+body #region-content .flag-compare a.flag-action,
+body #region-content .flag-compare a.unflag-action {
+  line-height: 15px;
+  text-align: left;
 }
 
 body #region-content .flag-message {
@@ -3740,4 +3785,27 @@ body #region-content .flag-message {
   border-radius: 6px;
   left: -80px;
   width: auto;
+}
+
+body #region-content .links #widgets-wrapper a.hide_links {
+  background: none;
+  text-shadow: none;
+  color: #c6c6c6;
+  border: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 5px 2px 5px 0;
+}
+
+.bottom_links {
+  margin-top: 60px;
+  border-top: 2px solid #f9f9f9;
+}
+
+.node-inner.full .content {
+  font-size: 14px;
+}
+
+body .node-inner.full .content .field-group-format-wrapper {
+  margin: 30px 0;
 }

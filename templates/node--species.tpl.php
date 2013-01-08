@@ -324,7 +324,7 @@ node/*/revisions/list -->
     ?>
   </div>
   
-  <div class="clearfix">
+  <div class="clearfix bottom_links">
     <?php if (!empty($content['links'])): ?>
       <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
     <?php endif; ?>
