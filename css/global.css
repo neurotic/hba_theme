@@ -33,6 +33,7 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  /*font-family: 'GeosansLightRegular', 'Arial', sans-serif;*/
   font-family: 'Arial', sans-serif;
 }
 
@@ -211,11 +212,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 
 #block-menu-menu-sections .content ul li:nth-child(odd) {
   margin-right: 16px;
-}
-
-#region-sidebar-second {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 #block-menu-menu-sections .content ul li.menu_regions__countries  {
@@ -494,13 +490,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 }
 
 .context-species #region-content .region-inner {
-  border-color: #ee9c31;
-  border-color: #FA991B;
+  border-color: #ca4c55;
 }
 
-.context-species h1#page-title em {
+body.context-species #region-content .region-inner h1 {
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+body.context-species #region-content .region-inner h1 em {
+  color: #8a8989;
   font-weight: normal;
-  color: gray;
+}
+
+body.context-species #region-content .region-inner h2 {
+  color: #c02a35;
+  font-size: 15px;
+  margin-bottom: 0;
 }
 
 .context-species #region-content a {
@@ -516,38 +522,53 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   color: gray;*/
 }
 
-/*Menu de navegació per SP node display*/
-#block-block-2 {
-  clear: both;
-  min-height: 100px;
-  background: #FAFAFA;
-  padding: 10px 25px 25px 25px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  -webkit-box-shadow: 0px 1px 1px 1px #EEE;
-  box-shadow: 0px 1px 1px 1px #EEE;
-  -webkit-box-shadow: 0px 1px 1px 1px #EEE;
-  box-shadow: 0px 1px 1px 1px #EEE;
-}
-#block-block-2 h2.title {
-  margin-bottom: 0;
-  font-size: 130%;
+/* Navigation menu for Species full node display */
+
+body #block-block-2 {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 2px solid #faf9f9;
+  padding-top: 8px 0;
+  margin-top: 10px;
 }
 #block-block-2 .content-toc {
-  text-align: center;
-}
-#block-block-2 .content-toc ul {
-  text-align: left;
-}
-#block-block-2 .content-toc ul li {
-  list-style: none;
   float: left;
-  width: 190px;
 }
-#block-block-2 .content-toc ul li a {
-  font-size: 13px;
+body #block-block-2 .content-toc ul {
+  margin-left: 15px;
+  text-align: left;
+  padding-left: 0;
+}
+body #block-block-2 .content-toc ul li {
+  list-style: none;
+  line-height: 1.5em; /* Stipulate the height of each item so that vertical return = items * height */
+  margin: 0;
+  padding: 0;
+  
+  /*float: left;
+  width: 180px;
+  margin-right: 15px;*/
+}
+* html ul li {
+	position: relative;
+}
+body #block-block-2 .content-toc ul li.column1 { margin-left: 0em; }
+body #block-block-2 .content-toc ul li.column2 { margin-left: 14em; }
+body #block-block-2 .content-toc ul li.reset {
+  margin-top: -7.7em;
+}
+body #block-block-2 .content-toc ul li a {
+  color: #111111;
+  font-size: 15px;
   text-decoration: none;
+}
+/*figure decorativa dins del menu*/
+body #block-block-2 .thumbnail {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100px;
 }
 
 #region-content h3,
@@ -555,13 +576,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   color: black;
 }
 
+#region-sidebar-second {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .not-front #region-sidebar-second .region-inner {
   /*border-top: 4px solid #e5e1e1;
   padding: 10px 0;*/
 }
 
-.not-front #region-sidebar-second .block .content,
-.not-front #region-sidebar-third .block .content {
+body #section-content #region-sidebar-second h2 span,
+body #section-content #region-sidebar-third h2 span {
+  border-color: #fc862c;
+}
+
+body #section-content #region-sidebar-second h2.collapsiblockCollapsed span,
+body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
+  border-color: #b7b4b4;
+}
+
+.not-front #region-sidebar-second .block .block-inner > .content,
+.not-front #region-sidebar-third .block .block-inner > .content {
   background: white;
   padding: 14px 25px 16px;
   margin: 0 4px 0 4px;
@@ -595,9 +631,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 }*/
 
 #region-sidebar-second .views-label,
-#region-sidebar-second h2,
+#region-sidebar-second .block-inner > h2,
 #region-sidebar-third .views-label,
-#region-sidebar-third h2 {
+#region-sidebar-third .block-inner > h2 {
   background: rgb(255,255,255); /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMGYwZjAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -624,30 +660,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   font-size: 13px;
 }
 
-#region-sidebar-second h2,
-#region-sidebar-third h2 {
-  margin-bottom: 0;
+#region-sidebar-second .block-inner > h2,
+#region-sidebar-third .block-inner > h2 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  line-height: 100%;
 }
 
-#region-sidebar-second h2 span,
-#region-sidebar-third h2 span {
+#region-sidebar-second .block-inner > h2 span,
+#region-sidebar-third .block-inner > h2 span {
     border-left: 4px solid #44985a;
     padding: 2px 14px;
     display: block;
 }
 
-#region-sidebar-second h2.collapsiblockCollapsed a,
-#region-sidebar-third h2.collapsiblockCollapsed a {
+#region-sidebar-second .block-inner > h2.collapsiblockCollapsed a,
+#region-sidebar-third .block-inner > h2.collapsiblockCollapsed a {
   background: none;
 }
 
-#region-sidebar-second h2.collapsiblock a,
-#region-sidebar-third h2.collapsiblock a {
+#region-sidebar-second .block-inner > h2.collapsiblock a,
+#region-sidebar-third .block-inner > h2.collapsiblock a {
   background: none;
 }
 
-#region-sidebar-second h2.collapsiblockCollapsed a:after,
-#region-sidebar-third h2.collapsiblockCollapsed a:after {
+#region-sidebar-second .block-inner > h2.collapsiblockCollapsed a:after,
+#region-sidebar-third .block-inner > h2.collapsiblockCollapsed a:after {
   content: "";
   width: 15px;
   height: 15px;
@@ -659,13 +697,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   margin-right: 12px;
 }
 
-#region-sidebar-second h2 a,
-#region-sidebar-third h2 a {
+#region-sidebar-second .block-inner > h2 a,
+#region-sidebar-third .block-inner > h2 a {
   color: #707070;
 }
 
-#region-sidebar-second h2 a:after,
-#region-sidebar-third h2 a:after {
+#region-sidebar-second .block-inner > h2 a:after,
+#region-sidebar-third .block-inner > h2 a:after {
   content: "";
   display: block;
   float: right;
@@ -673,7 +711,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   height: 15px;
   background: url("images/icons.png") no-repeat scroll -5px -244px transparent;
   position: relative;
-  margin-top: -20px;
+  top: -20px;
   margin-right: 12px;
 }
 
@@ -691,7 +729,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 #region-sidebar-third #block-views-family-am-block h2 span {
   border-color: #ae191f;
 }
-
 
 #region-sidebar-second #block-block-8 h2 span,
 #region-sidebar-third #block-block-8 h2 span {
@@ -734,6 +771,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   border-color: #cf4f02;
 }
 */
+
 /* Videos */
 /*
 #region-sidebar-second #block-block-11 h2 span,
@@ -753,10 +791,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 #region-sidebar-third #block-views-species-map-block h2 span {
   border-color: #7fbb01;
 }
-*/
-
-/* maps */
-/*
 #region-sidebar-second #block-views-compare-block-1 h2 span,
 #region-sidebar-third #block-views-compare-block-1 h2 span {
   border-color: #904b29;
@@ -768,6 +802,24 @@ body .comment-links ul li a {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+
+/* Taxonomic tree */
+
+/*mini-buscador de especies */
+#views-exposed-form-species-table-by-family-page-2b .views-exposed-widget {padding-bottom: 10px;}
+#views-exposed-form-species-table-by-family-page-2b .views-exposed-widget.views-widget-filter-field_sp_name_common_value {
+  float: left !important;
+  width: 80%;
+  padding: 0 5px;
+}
+#views-exposed-form-species-table-by-family-page-2b .views-ac-dependent-filter.form-text.form-autocomplete {
+  width: 95%;
+}
+#views-exposed-form-species-table-by-family-page-2b .views-exposed-widget.views-submit-button {
+  float: left !important;
+  width: auto !important;
+  padding-top: 15px !important;
 }
 
 body ul.orders > li > .item-list > ul {
@@ -951,6 +1003,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   padding-right: 5px;
   max-height: 325px;
   overflow-y: auto;
+  /*background: #F5F5F5 none repeat scroll 0 0;*/
 }
 
 #block-bird-taxonomies-bird-orders .content .subspecies {
@@ -970,12 +1023,11 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 }
 
 #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
-  background-color: #CF3F3A;
+  background-color: #fc6f03;
 }
 
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
-  background-color: #EE9C31;
-  background: #FA991B;
+  background-color: #ca4c55;
 }
 
 #block-bird-taxonomies-bird-orders .content ul.subspecies a {
@@ -999,7 +1051,19 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   width: 176px;
 }
 
-#region-content h3 {
+.node-inner.full .content {
+  font-size: 14px;
+}
+
+#region-content #node_species_full_group_sp_tab_taxo h3,
+#region-content #node_species_full_group_sp_tab_descr_notes h3,
+#region-content #node_species_full_group_sp_tab_voice h3, 
+#region-content #node_species_full_group_sp_tab_habitat h3, 
+#region-content #node_species_full_group_sp_tab_food h3, 
+#region-content #node_species_full_group_sp_tab_breeding h3, 
+#region-content #node_species_full_group_sp_tab_move h3, 
+#region-content #node_species_full_group_sp_tab_status h3, 
+#region-content #node_species_full_group_sp_tab_biblio h3 {
   margin: 10px 0 5px;
   background: #f0f0f0;
   padding: 0px 10px;
@@ -1010,9 +1074,20 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
   box-shadow: 0px 1px 1px 1px #e8e8e8; 
 }
+#region-content #node_species_full_group_sp_tab_taxo h3 {
+  clear: both;
+}
 
-#region-content h3:after {
-  background: url("images/icons.png") no-repeat scroll 0px -140px;
+#region-content #node_species_full_group_sp_tab_taxo h3:after,
+#region-content #node_species_full_group_sp_tab_descr_notes h3:after,
+#region-content #node_species_full_group_sp_tab_voice h3:after, 
+#region-content #node_species_full_group_sp_tab_habitat h3:after, 
+#region-content #node_species_full_group_sp_tab_food h3:after, 
+#region-content #node_species_full_group_sp_tab_breeding h3:after, 
+#region-content #node_species_full_group_sp_tab_move h3:after, 
+#region-content #node_species_full_group_sp_tab_status h3:after, 
+#region-content #node_species_full_group_sp_tab_biblio h3:after {
+  background: url("images/icons.png") no-repeat scroll 0px -85px;
   content: "";
   width: 20px;
   height: 20px;
@@ -1023,8 +1098,16 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   margin-right: 12px;
 }
 
-#region-content .collapsed h3:after {
-  background-position: 0px -85px;
+#region-content #node_species_full_group_sp_tab_taxo .collapsed h3:after,
+#region-content #node_species_full_group_sp_tab_descr_notes .collapsed h3:after,
+#region-content #node_species_full_group_sp_tab_voice .collapsed h3:after, 
+#region-content #node_species_full_group_sp_tab_habitat .collapsed h3:after, 
+#region-content #node_species_full_group_sp_tab_food .collapsed h3:after, 
+#region-content #node_species_full_group_sp_tab_breeding .collapsed h3:after, 
+#region-content #node_species_full_group_sp_tab_move .collapsed h3:after, 
+#region-content #node_species_full_group_sp_tab_status .collapsed h3:after, 
+#region-content #node_species_full_group_sp_tab_biblio .collapsed h3:after {
+  background-position: 0px -140px;
 }
 
 /*
@@ -1057,9 +1140,28 @@ body #region-content .region-inner h3 a {
   font-family: "Trebuchet MS" ,sans-serif;
 }
 
+body.page-node-201985 #region-content h1 { 
+  float: left;
+  margin-bottom: 8px;
+} 
+
+body.page-node-201985 #region-content h2 { 
+  float: left;
+  color: #717070;
+  margin-left: 15px;
+  margin-top: 5px;
+} 
+
+.view-content h3 {
+  border-bottom: 2px solid #666;
+}
+
 .view-mode-full .field-group-format-wrapper {
   margin: 20px 15px 23px;
   font-size: 13px;
+}
+body .node-inner.full .content .field-group-format-wrapper {
+  margin: 30px 0;
 }
 
 #zone-user-wrapper {
@@ -1601,7 +1703,7 @@ margin: auto 0;
 }
 /*plate > colorbox*/
 .colorbox-plate .text .tip {display: none;}
-.colorbox-plate .text .descr-notes {padding-top: 10px !important;}
+.colorbox-plate .descr-notes {padding-top: 10px !important;}
 
 /*bloc Figures*/
 .views_slideshow_cycle_main,
@@ -1704,18 +1806,18 @@ position:absolute;
   padding: 10px 0;
 }
 .view-plate-node-sp.view-display-id-block_1 h3 {
-  font-size: 1em !important;
+  width: 60%;
+  font-size: 1.2em !important;
   font-weight: normal !important;
-  background: none !important;
-  padding: 0.3em 0 0.1em 0.1em !important;
+  padding: 0.5em 0 0.2em 0.1em !important;
   margin: 0 !important;
-  border: 0 !important;
-  -webkit-border-radius: 0 !important;
-  border-radius: 0 !important;
-  
-  /*-webkit-box-shadow: 0px 0px 0px 0px #E8E8E8 !important;
+  background: none !important;
+  -webkit-box-shadow: 0px 0px 0px 0px #E8E8E8 !important;
   box-shadow: 0px 0px 0px 0px #E8E8E8 !important;
-  font-weight: normal !important;
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important;
+  border: 0 !important;
+  /*font-weight: normal !important;
   font-size: 1em !important;
   padding: 0.3em 0.7em;
   margin-bottom: 0 !important;
@@ -1738,14 +1840,17 @@ position:absolute;
 }
 .view-plate-node-sp.view-display-id-block_1 h3:after {
   background: none !important;
-  height: 0;
 }
 
 .view-plate-node-sp.view-display-id-block_1 table.views-view-grid {
+  table-layout: fixed;
+  width: 100%;
   min-width: 66% !important;
+  max-width: 520px !important;
   /*float: left;
   clear: right !important;*/
   margin-right: 10px;
+  padding: 0;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1757,7 +1862,7 @@ position:absolute;
 .view-plate-node-sp.view-display-id-block_1 tr,
 .view-plate-node-sp.view-display-id-block_1 td {padding: 10px; margin: 0;}
 .view-plate-node-sp.view-display-id-block_1 tr {min-width: 300px !important;}
-.view-plate-node-sp.view-display-id-block_1 table:first-child td:first-child {text-align: center; padding: 10px 0 10px 10px !important; }
+.view-plate-node-sp.view-display-id-block_1 table:first-child tr:first-child td:first-child {text-align: center; padding: 10px 0 10px 10px !important; }
 .view-plate-node-sp.view-display-id-block_1 tr:hover {background: white !important; background-color: white !important;}
 .view-plate-node-sp.view-display-id-block_1 td {vertical-align: top;}
 .view-plate-node-sp.view-display-id-block_1 .views-field-field-figure-gender {
@@ -1853,7 +1958,8 @@ padding: 10px;
 }
 
 .node-inner.teaser div.content div.right .thumbnail {
-  
+  text-align: center;
+  margin-bottom: 5px;
 }
 .node-inner.teaser div.content div.right .thumbnail img.sp-map {
   /*bottom: 10px;
@@ -1939,10 +2045,10 @@ table.diff thead tr th {padding: 20px;}
 .view-comparediff2 .view-content table tr.log td.col .revision-log,
 .page-node-revisions-view table.diff .revision-log,
 .page-node-revisions-compare table.diff .revision-log {
-background-color: #FCF9D4;
-border: 1px solid #FCE771;
-padding: 5px 10px;
-margin: 8px 5px;
+  background-color: #FCF9D4;
+  border: 1px solid #FCE771;
+  padding: 5px 10px;
+  margin: 8px 5px;
 }
 /*OJO para el diff de admin, es el theme seven!!!!*/
 
@@ -1954,38 +2060,69 @@ margin: 8px 5px;
 /* Family teaser */
 
 /*Family teaser on Order teaser display*/
-.view-families-of-the-order-wrapper h2.block-title {padding-bottom: 10px;}
-.view-families-of-the-order .view-content > .views-row {
-padding: 5px 10px;
-margin-bottom: 10px;
-color: #333333;
-border: 0.11em solid #DDDDDD;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
-border-radius: 3px;
-overflow: hidden;
+
+body .view-families-of-the-order .view-content > .views-row {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  color: #333333;
+  border: 0.11em solid #DDDDDD;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  overflow: hidden;
 }
+
 .view-families-of-the-order .views-field-title,
 .view-families-of-the-order .views-field-field-fam-summary,
-.view-families-of-the-order .views-field-php {width: 70%;}
-.view-families-of-the-order .views-field-field-figure-img-jpg {float: right; width: 100px;}
-.view-families-of-the-order .views-field-title {font-size: 1.15em;}
-.view-families-of-the-order .views-field-field-fam-summary ul {padding-left: 0;}
-.view-families-of-the-order .views-field-field-fam-summary li {list-style: none; list-style-image: none;}
+.view-families-of-the-order .views-field-php {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+body.context-family #region-content .region-inner .views-field-php a {
+  color: #c6c6c6;
+}
+.view-families-of-the-order .views-field-field-figure-img-jpg {float: right;}
+.view-families-of-the-order .views-field-title {
+  font-size: 1.15em;
+  margin-bottom: 0.7em;
+  border-top: 1px solid #e3e1e1;
+  padding-top: 10px;
+}
+body .view-families-of-the-order .views-field-title a {
+  font-weight: bold;
+}
+
+body.context-family .views-field-field-fam-summary ul {
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+
+body.context-family .views-field-field-fam-summary ul li {
+  list-style: disc;
+}
+
+/* Family teaser on lists*/
+.node-family.node-teaser h2.node-title {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+.node-family.node-teaser .node-inner.teaser div.content div.right {
+  height: 230px;
+}
 
 /* Family full node */
 
 /* Menu nav parte central FAMILY */
 
 div.title-sec {
-font-size: 1.5em;
-font-weight: normal;
-line-height: 20%;
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 20%;
 }
 
 .node-type-family .vertical-tabs {
-margin-left: 0;
-border: 0;
+  margin-left: 0;
+  border: 0;
 }
 
 .node-type-family .vertical-tabs legend {
@@ -1996,49 +2133,49 @@ border: 0;
 
 body.node-type-family ul.vertical-tabs-list {
   min-height: 160px !important;
-  margin: 0 0 20px 0;
   padding: 10px 0;
   position: relative; /* IE6 */
   list-style: none;
   list-style-image: none; /* IE6 */
-  background: #f0f0f0;
-  background: #FAF5F5;
-  padding: 10px 25px 13px 25px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  padding: 10px 25px 13px 0;
+  margin: 0;
   margin-bottom: 20px;
-  -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
-  -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
-  box-shadow: 0px 1px 1px 1px #e8e8e8; 
-  -webkit-box-shadow: 0px 1px 1px 1px #EEE2E2;
-  -moz-box-shadow: 0px 1px 1px 1px #EEE2E2;
-  box-shadow: 0px 1px 1px 1px #EEE2E2; 
   width: auto;
   float: none;
-  border: none;
-}
-
-.node-type-family ul.vertical-tabs-list {
-  min-height: 190px !important;
+  border: 0;
 }
 .node-type-family ul.vertical-tabs-list li {
   background: none;
   border: 0px solid #ccc;
   min-width: 5em; /* IE7 */
   float: none;
-  line-height: 1.2em !important;
+  line-height: 1em !important;
+}
+.node-type-family ul.vertical-tabs-list li.columna1 { margin-left: 0em; }
+.node-type-family ul.vertical-tabs-list li.columna2 { margin-left: 14em; }
+.node-type-family ul.vertical-tabs-list li.columna3 { margin-left: 28em; }
+
+body.node-type-family #region-content ul.vertical-tabs-list li a {
+  background: none;
+  color: #111111;
+  font-size: 15px;
+  font-weight: normal !important;
+  text-decoration: none;
+}
+body.node-type-family #region-content ul.vertical-tabs-list li a strong {
+  font-weight: normal !important;
 }
 body.node-type-family #region-content ul.vertical-tabs-list li.selected,
 body.node-type-family #region-content ul.vertical-tabs-list li a:hover {
   background: none;
-  color: gray;
   text-decoration: none;
+  color: #FC6F03;
 }
 
 body.node-type-family #region-content ul.vertical-tabs-list li.selected strong,
 body.node-type-family #region-content ul.vertical-tabs-list li a:hover strong {
   text-decoration: none;
+  font-weight: normal !important;
 }
 
 .node-type-family .content .vertical-tabs fieldset .field-type-text-long.field-label-above .field-label {
@@ -2048,21 +2185,7 @@ body.node-type-family #region-content ul.vertical-tabs-list li a:hover strong {
 }
 
 .node-type-family ul.vertical-tabs-list li.reset {
-/*margin-top: -187px;*/
-  margin-top: -141px;
-}
-
-body .vertical-tabs ul.vertical-tabs-list .selected strong {
-  background: #CA4C55;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  color: white;
-  display: block;
-}
-
-body .vertical-tabs ul.vertical-tabs-list  strong {
-
+  margin-top: -8.15em;
 }
 
 body .vertical-tabs ul.vertical-tabs-list strong {
@@ -2081,6 +2204,17 @@ body.context-family .vertical-tabs ul.vertical-tabs-list li a {
   padding: 0;
   outline: none;
 }
+
+body.context-family #region-content .region-inner {
+  border-color: #fc6f03;
+}
+
+body.context-family #region-content .region-inner a {
+  color: #fc6f03;
+}
+
+/*fieldset General*/
+#node_family_full_group_fam_view_vt_general ul {margin-left: 10px;}
 
 /*
  * Footer
@@ -2106,8 +2240,8 @@ body.context-family .vertical-tabs ul.vertical-tabs-list li a {
 
 /*region footer second*/
 
-li.columna1 { margin-left: 20px !important; width: 40%; }
-li.columna2 { margin-left: 50% !important; width: 40%; }
+.region-footer-second-inner li.columna1 { margin-left: 20px !important; width: 40%; }
+.region-footer-second-inner li.columna2 { margin-left: 50% !important; width: 40%; }
 
 #section-footer ul li {
   list-style: none;
@@ -2450,70 +2584,150 @@ height: 70px !important;
 .view-compare.view-display-id-page table td a.flag.unflag-action {
 color: #555;
 }
-li.flag-compare .flag-action {
-  background: url(images/icon-compare_add.png) no-repeat 0 center transparent; /* LTR */
-  padding-left: 20px;
-}
-li.flag-compare .unflag-action {
-  background: url(images/icon-compare_remove.png) no-repeat 0 center transparent; /* LTR */
-  padding-left: 20px;
-}
 .page-node-revisions li.flag-compare .flag-action, 
 .page-node-revisions li.flag-compare .unflag-action {
-display: none;
+  display: none;
 }
 
 /**
- * Flag
+ * Node links
  */
 
-/* flag (general) */
-
-h1#page-title.title .flag-nodes {
-font-style: italic;
-height: 34px !important;
-padding-left: 5px;
-}
-h1#page-title.title span.flag-nodes a {
-text-decoration: none;
-}
-
 #region-content .links.inline {
-text-align: right;
-margin: 4em 0 3em 0;
-display: block;
+  text-align: right;
+  display: block;
+  margin: 10px 0;
 }
-li.flag-flag_nodes {
-display: inline-block !important;
-}
-
 #region-content .links.inline li {
+  float: left;
+  display: block;
   padding: 0;
 }
 
-#region-content a.flag-action {
-  color: #FFF;
-  padding: 5px 8px 5px 24px;
-	font-size: 11px;
-	line-height: 25px;
+.bottom_links {
+  margin-top: 60px;
+  border-top: 2px solid #f9f9f9;
+}
+
+/**
+ * Flags
+ * and Hide links button
+ */
+
+/*START ultimos cambios carlos neurotic*/
+body #region-content a.flag-action,
+body #region-content a.flag-action:hover,
+body #region-content a.unflag-action,
+body #region-content a.unflag-action:hover {
+  background: none;
+  text-shadow: none;
+  color: #c6c6c6;
+  border: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 5px 2px 5px 0;
+
+  line-height: 120%;
 	text-decoration: none;
-  background: #333 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;
-	overflow: hidden;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
 }
-#region-content a.unflag-action {
-  color: #FFF;
-  padding: 5px 8px 5px 24px;
-	font-size: 11px;
-	line-height: 25px;
-	background: #9FC748 url("/sites/all/themes/hba_theme/css/images/flag_white_16px.png") 3px 3px no-repeat;
-	overflow: hidden;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+
+body #region-content .links a.hide_links {
+  background: none;
+  text-shadow: none;
+  color: #c6c6c6;
+  border: none;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 5px 2px 5px 0;
 }
+
+body #region-content a.flag-action:before,
+body #region-content a.show:before,
+body #region-content a.unflag-action:before,
+body #region-content a.hide_links:before {
+  content: '';
+  display: block;
+  float: left;
+  background: url(images/icons.png) no-repeat 0px -340px;
+  height: 23px;
+  width: 23px;
+  margin-right: 5px;
+  margin-top: 2px;
+  text-align: left;
+}
+
+body #region-content a.hide_links:before {
+  height: 30px;
+}
+body #region-content a.hide_links:before,
+body #region-content a.show:hover:before {
+  background-position: -85px -338px;
+}
+body #region-content a.show:before,
+body #region-content a.hide_links:hover:before {
+  background-position: -85px -371px;
+}
+
+body #region-content .flag-highlighted a.flag-action:before,
+body #region-content .flag-highlighted a.unflag-action:hover:before {
+  background: url(images/icons.png) no-repeat 0px -338px;
+}
+body #region-content .flag-highlighted a.flag-action:hover:before,
+body #region-content .flag-highlighted a.unflag-action:before {
+  background: url(images/icons.png) no-repeat 0px -371px;
+}
+
+body #region-content .flag-flag_follow a.flag-action:before,
+body #region-content .flag-flag_follow a.unflag-action:hover:before {
+  background-position: -20px -337px;
+}
+body #region-content .flag-flag_follow a.unflag-action:before,
+body #region-content .flag-flag_follow a.flag-action:hover:before {
+  background-position: -20px -370px;
+}
+
+body #region-content .flag-flag_viewed a.flag-action:before,
+body #region-content .flag-flag_viewed a.unflag-action:hover:before {
+  background-position: -42px -337px;
+  width: 20px;
+}
+body #region-content .flag-flag_viewed a.unflag-action:before,
+body #region-content .flag-flag_viewed a.flag-action:hover:before {
+  background-position: -42px -370px;
+  width: 20px;
+}
+
+body #region-content .flag-compare a.flag-action,
+body #region-content .flag-compare a.unflag-action {
+  line-height: 15px;
+  text-align: left;
+}
+body #region-content .flag-compare a.unflag-action:before,
+body #region-content .flag-compare a.flag-action:hover:before {
+  background-position: -62px -371px;
+  height: 23px;
+}
+body #region-content .flag-compare a.flag-action:before,
+body #region-content .flag-compare a.unflag-action:hover:before {
+  background-position: -62px -338px;
+  height: 23px;
+}
+/*END ultimos cambios Carlos neurotic*/
+
+h1#page-title.title .flag-nodes {
+  font-style: italic;
+  height: 34px !important;
+  padding-left: 5px;
+}
+h1#page-title.title span.flag-nodes a {
+  text-decoration: none;
+}
+
+li.flag-flag_nodes,
+li.hide_links_wrapper {
+  display: inline-block !important;
+}
+
 #region-content .flag-action label {
 	display: block;
 	font-weight: normal;
@@ -2526,25 +2740,16 @@ display: inline-block !important;
 	float: left;
 	margin: 4px 4px 0 0;
 }
-#region-content a.flag-action:hover {
-	background-color: #9FC748;
-	color: #FFF;
-}
 
-#region-content a.unflag-action:hover {
-	background-color: #CCC;
-	color: #FFF;
-}
-
-/*missatge de confirmacio (fade out)*/
-span.flag-message {
+/*missatge de confirmacio (amb fade out)*/
+body #region-content .flag-message {
   position: absolute;
-  top: 2.7em;
-  line-height: normal;
-  left: 10px;
-  text-align: left;
-  width: 300px;
-  font-size: .95em;
+  float: left;
+  background: #e7e7e7;
+  padding: 3px 6px;
+  border-radius: 6px;
+  left: -80px;
+  width: auto;
 }
 
 /* Flag: Useful */
@@ -2584,9 +2789,8 @@ th.views-field-ops {width: 30px !important; padding-right: 20px;}
 .view-my-list .flag-seen,
 .view-my-list .flag-seen .flag-action,
 .view-my-list .flag-seen .unflag-action {
-float: left;
-padding-left: 5px;
-font-size: 0 !important;
+  padding: 0 0 5px 5px;
+  width: 10px;
 }
 .view-species-table-by-family table a:hover,
 .view-my-list table a:hover {
@@ -2611,6 +2815,7 @@ font-size: 0 !important;
 
 /*Flag: Users you are following*/
 /*en dashboard -> seven > style.css*/
+
 
 /* Bloc WIKICONTRIBUTIONS */
 
@@ -2741,6 +2946,10 @@ background:url(/sites/all/themes/hba_theme/css/images/pic.png) no-repeat right c
 padding-right: 13px;
 background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat right center transparent !important;
 }
+.bt.biblio {
+padding-right: 14px !important;
+background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat right center transparent !important;
+}
 /*no volem l'icona del modul External Link si tipus de cont. = SP, SSP, F'*/
 /*.node-type-family .content div.field a.ext,
 .node-type-species .content div.field a.ext,
@@ -2748,35 +2957,56 @@ background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat right
 background: none !important;
 }*/
 
+/*en un beautytip*/
+.bt-content span.link-arroba {
+  display: block !important;
+}
+span.link-arroba a.shadowbox.none {
+  padding-left: 16px;
+  background:url(/sites/all/themes/hba_theme/css/images/doc.png) no-repeat left center transparent !important;
+}
+span.link-arroba a.shadowbox.video {
+  padding-left: 16px;
+  background:url(/sites/all/themes/hba_theme/css/images/video.gif) no-repeat left 3px transparent !important;
+}
+span.link-arroba a.shadowbox.pic {
+  padding-left: 16px;
+  background:url(/sites/all/themes/hba_theme/css/images/pic.png) no-repeat left center transparent !important;
+}
+span.link-arroba a.shadowbox.sound {
+  padding-left: 16px;
+  background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat left center transparent !important;
+}
+span.link-arroba a.bt.biblio {
+  padding-left: 16px;
+  background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat left center transparent !important;
+}
+
 .view-compare .bt-content .field-item .source_nid a,
 #page #region-content .bt-content .field-item .source_nid a {
 display: inline !important;
 padding-left: 0px !important;
 background:none !important;
 }
-.view-compare .bt-content .shadowbox.video,
-#page #region-content .bt-content .shadowbox.video {
+.view-compare .bt-content .shadowbox.video {
 display: block;
 padding-left: 20px;
-background:url(/sites/all/themes/hba_theme/css/images/video.gif) no-repeat left 3px transparent !important;
+background:url(/sites/all/themes/hba_theme/css/images/video.gif) no-repeat right 3px transparent !important;
 }
-.view-compare .bt-content .shadowbox.pic,
-#page #region-content .bt-content .shadowbox.pic {
+.view-compare .bt-content .shadowbox.pic {
 display: block;
 padding-left: 20px;
-background:url(/sites/all/themes/hba_theme/css/images/pic.png) no-repeat left 4px transparent !important;
+background:url(/sites/all/themes/hba_theme/css/images/pic.png) no-repeat right 4px transparent !important;
 }
-.view-compare .bt-content .shadowbox.sound,
-#page #region-content .bt-content .shadowbox.sound {
+.view-compare .bt-content .shadowbox.sound {
 display: block;
 padding-left: 20px;
-background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat left 4px transparent !important;
+background:url(/sites/all/themes/hba_theme/css/images/sound.gif) no-repeat right 4px transparent !important;
 }
-.view-compare .bt.biblio,
-#page #region-content .bt.biblio {
+.view-compare .bt.biblio {
 /*display: block;*/
 padding-right: 13px;
-background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat left center transparent !important;
+background:url(/sites/all/themes/hba_theme/css/images/biblio2.png) no-repeat right center transparent !important;
 }
 span#beautytip-multiple-link.bt-multiple-link:hover {
 background-color: #F4F4F4;
@@ -2827,14 +3057,14 @@ margin-bottom: 10px;
   text-align: right;
 }
 
-/* Boton Show / hide (en species node + plate) */
 /* Boton Reset drags (en plate) */
 a.hide_links_plate,
 .page-plate .reset a {
   float: right;
   color: white !important;
   background: #9FC748 !important;
-  padding: 0.5em 1.2em !important;
+  /*padding: 0.5em 1.2em !important;*/
+  padding: 5px 8px !important;
   margin: 0;
   font-size: 1.077em;
   border: none;
@@ -2854,7 +3084,6 @@ a.hide_links_plate,
   background: #CECDCD;
   color: #FDFDFD;
 }
-a.hide_links:hover,
 a.hide_links_plate:hover,
 .page-plate .reset a:hover {
   background: #8AAF3C;
@@ -2866,7 +3095,6 @@ a.hide_links_plate:hover,
   background: #BFBDBD;
   color: #FDFDFD;
 }
-a.hide_links:active:focus,
 a.hide_links_plate:active:focus,
 .page-plate .reset a:active:focus {
   text-decoration:none;
@@ -2967,10 +3195,14 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 }
 
 /* Page: New bibliographic references (/reference/all /reference/new /reference/outstanding) */
-.page-reference .view-header {
+.page-reference .view-header,
+.view-taxonomy-term .view-header {
   padding: 10px;
   margin: 10px 0 15px 0;
   background: #F2F2F2;
+}
+.view-id-biblio_node_references .views-row {
+  padding-bottom: 15px;
 }
 .view-id-biblio_node_references .views-field-title,
 .view-id-biblio_node_references .views-field-title .field-content a,
@@ -2978,15 +3210,16 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 .view-id-biblio_node_references .views-field-field-bib-revista,
 .view-id-biblio_node_references .views-field-field-bib-resta,
 .view-id-biblio_node_references .field-content,
-.view-id-biblio_node_references .field-content > p {
+.view-id-biblio_node_references .field-content > p,
+.view-id-biblio_node_references .views-field-flagged,
+.view-id-biblio_node_references .outstanding {
   display: inline !important;
 }
 .view-id-biblio_node_references .views-field-title {
   padding-right: 5px;
 }
-.view-id-biblio_node_references.view-display-id-page_2 .views-field-title-1 { /*Ref. mentioned in...*/
-  padding-bottom: 10px;
-  text-align: right;
+.view-id-biblio_node_references.view-display-id-page_2 .views-field-title-1 { /*Reference mentioned in: ...*/
+  text-align: left;
   color: #666;
 }
 .view-id-biblio_node_references .views-field-created {
@@ -2995,6 +3228,90 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
   padding-bottom: 15px;
   font-style: italic;
 }
+.view-id-biblio_node_references .outstanding {
+  width: 12px;
+  padding: 3px 5px;
+  background:url(/sites/all/themes/hba_theme/css/images/outstanding.png) no-repeat left center transparent;
+  /*background: #F2F1F0;
+  margin: 0 5px;
+  color: #666;
+  font-size: 0.95em;*/
+}
+.page-reference #region-content ul.tabs.primary li:nth-child(3) > a {
+  padding-right: 16px;
+  background:url(/sites/all/themes/hba_theme/css/images/outstanding.png) no-repeat right center #FCF5F4;
+}
+.view-id-biblio_node_references .outstanding a {
+  cursor: help;
+}
+
+/**
+ * Views: exposed filters
+ */
+ 
+/*bloc sp search*/
+#block-views-024b51b0948df12f8903897e79946969,
+/*blocs /reference*/
+#block-views-258063f6767b6942b787998a1c928f07 {
+  background: #EEE;
+  padding: 5px 15px;
+  border: 1px solid #CCC;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#block-views-024b51b0948df12f8903897e79946969 {
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/*block Search on common name, incrustat en Taxonomic Tree*/
+.block-28,
+.block-28 .content,
+.block-28 .views-exposed-widgets {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.block-28 .views-exposed-widgets {padding-top: 3px !important;}
+/*.block-28 .views-exposed-form #edit-genus-wrapper,*/
+.block-28 .views-exposed-form #edit-species-wrapper,
+/*.block-28 .views-exposed-form #edit-other-wrapper,*/
+.block-28 .views-exposed-form #edit-family-wrapper,
+.block-28 .views-exposed-form #edit-status-wrapper,
+.block-28 .views-exposed-form #edit-seen-wrapper {
+  display: none !important;
+}
+.block-28 .views-exposed-form label {
+  font-weight: normal;
+}
+.block-28 .views-exposed-widget.views-widget-filter-field_sp_genus_value,
+.block-28 .views-exposed-widget.views-widget-filter-field_sp_name_common_value,
+.block-28 .views-exposed-widget.views-widget-filter-field_sp_names_other_common_value {
+  padding: 0 !important;
+  float: left !important;
+  width: 80% !important;
+  padding-right: 5px !important;
+}
+.block-28 .content > .label {
+
+}
+.block-28 .views-exposed-widgets #edit-sp-wrapper .views-widget input.form-autocomplete,
+.block-28 .views-exposed-widgets #edit-other-wrapper .views-widget input.form-autocomplete {
+  width: 100% !important;
+  padding: 0 !important;
+}
+.block-28 .views-exposed-widget.views-submit-button {
+  float: right !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block !important;
+}
+.block-28 .views-exposed-widget.views-submit-button input {
+  margin: 0 !important;
+}
 
 /* Block: Search (exposed filters from biblio_node_references view) */
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .views-exposed-widget,
@@ -3002,11 +3319,24 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .form-type-textfield,
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form input,
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form select {
-  width: 100% !important;
+  
+}
+#views-exposed-form-biblio-node-references-page-2 .views-exposed-form .views-widget-filter-field_bib_year_value {
+  float: left;
 }
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .form-item-year input {
   width: 60px !important;
 }
+.views-exposed-widget.views-widget-filter-field_bib_hbw_volume_value,
+.views-exposed-widget.views-widget-sort-by,
+.views-exposed-widget.views-widget-sort-order {
+  width: 25%;
+}
+.views-exposed-widget.views-widget-filter-field_bib_hbw_volume_value select {width: 70px; min-width: 70px;}
+.views-exposed-widget.views-widget-filter-field_bib_hbw_volume_value {}
+.views-exposed-widget.views-widget-sort-by {}
+.views-exposed-widget.views-widget-sort-order {}
+.views-exposed-widget.views-submit-button {/*float: right;*/}
 
 /* Block/Page: Last species accounts updates */
 /* Block/Page: Outstanding new references */
@@ -3253,9 +3583,6 @@ overflow: hidden;
 }
 .node-wikinote .field-name-field-wiki-tags {margin-top: 5px;}
 .node-wikinote .field-name-field-wiki-tags .field-item {padding-right: 5px;}
-.node-wikinote #comments {
-padding-top: 3em;
-}
 
 /*PROVISIONAL MENTRE DS NO COMPATIBLE AMB ENTITY REF*/
 .node-wikinote .ds-2col.user-profile.view-mode-token .group-right {
@@ -3275,10 +3602,20 @@ display: none;
  * Comments
  */
 
-div#comments.comment-wrapper {
-border: 1px solid #CCC;
-padding: 10px;
-margin-bottom: 1em;
+.node-wikinote #comments {
+padding-top: 3em;
+}
+
+div#comments.comment-wrapper,
+fieldset.group-comments {
+  border: 1px solid #CCC;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+
+fieldset.group-comments .fieldset-legend {
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 fieldset#edit-comment-body-und-0-format,
@@ -3396,9 +3733,13 @@ border-top: 0;
 border-left: 0;
 border-right: 0;
 }
-.block #tabs .ui-tabs-nav li a,
-.block #tabs-photos .ui-tabs-nav li a {
-font-size: 0.65em !important;
+#region-sidebar-first .block #tabs .ui-tabs-nav li a,
+#region-sidebar-second .block #tabs .ui-tabs-nav li a,
+#region-sidebar-third .block #tabs .ui-tabs-nav li a,
+#region-sidebar-first .block #tabs-photos .ui-tabs-nav li a,
+#region-sidebar-second .block #tabs-photos .ui-tabs-nav li a,
+#region-sidebar-third .block #tabs-photos .ui-tabs-nav li a {
+font-size: 0.65em; /*in a sidebar*/
 }
 /*Blocs: content in tab*/
 #tabs-photos1 {
@@ -3519,293 +3860,34 @@ input#email-M6JL4NGD.field.blink {width: 360px !important; color: #111; line-hei
   font-size: 0.95em;
 }
 
-
-/** Ultimo de CRS **/
-body.context-family #region-content .region-inner {
-  border-color: #fc6f03;
+/*User picture*/
+.node-inner .content .user-picture {
+  float: right;
+  padding: 4px;
+  border: 1px solid #d9d9d9;
+  margin-left: 7px;
+  margin-bottom: 7px;
+}
+/*Authored on...by*/
+.node-inner footer.submitted {
+  float: none; /*teaser o view*/
+  padding-bottom: 10px;
+}
+.node-type-news .node-inner.full footer.submitted {
+  float: left; /*full*/
+}
+/*news > body*/
+.node-type-news .node-inner.full .body {
+  clear: left;
+}
+.node-type-news .node-inner.full #match .label {
+  margin-bottom: 0.5em;
+  color: #8C7E7E;
 }
 
-body.context-family #region-content .region-inner a {
-  color: #fc6f03;
-}
-
-body .view-families-of-the-order .view-content > .views-row {
-  border: 0;
-}
-
-body.page-node-201985 #region-content h1 { 
-  float: left;
-  margin-bottom: 8px;
-} 
-
-body.page-node-201985 #region-content h2 { 
-  float: left;
-  color: #717070;
-  margin-left: 15px;
-  margin-top: 5px;
-} 
-
-body .view-families-of-the-order .views-field-title {
-  border-top: 1px solid #e3e1e1;
-  padding-top: 10px;
-}
-
-body .view-families-of-the-order .views-field-title a {
-  font-weight: bold;
-}
-
-body.context-family #region-content .region-inner .views-field-php a {
-  color: #c6c6c6;
-}
-
-body.context-family .views-field-field-fam-summary ul {
-  margin-bottom: 5px;
-  margin-left: 15px;
-}
-
-body.context-family .views-field-field-fam-summary ul li {
-  list-style: disc;
-}
-
-body .view-families-of-the-order .view-content > .views-row {
-  padding: 0;
-}
-
-body.context-family .views-field-title,
-body.context-family .views-field-field-fam-summary,
-body.context-family .views-field-php {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
-  background-color: #fc6f03;
-}
-
-#block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
-  background-color: #ca4c55;
-}
-
-#block-bird-taxonomies-bird-orders .content ul.species em {
-  color: white;
-}
-
-body #block-block-2 {
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-  border-top: 2px solid #faf9f9;
-  padding-top: 8px;
-  margin-top: 10px;
-}
-
-body #block-block-2 #menu-title {
-  display: none;
-}
-
-body #block-block-2 .content-toc ul li a {
-  color: #111111;
-  font-size: 15px;
-}
-
-body #block-block-2 .content-toc ul {
-  margin-left: 5px;
-}
-
-body #block-block-2 .content-toc ul li {
-  width: 140px;
-  margin-right: 15px;
-}
-
-body #section-content #slidemarginleft #region-sidebar-second h2 span,
-body #section-content #region-sidebar-third h2 span {
-  border-color: #fc862c;
-}
-
-body #section-content #slidemarginleft #region-sidebar-second h2.collapsiblockCollapsed span,
-body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
-  border-color: #b7b4b4;
-}
-
-body.context-species #region-content .region-inner {
-  border-color: #ca4c55;
-}
-
-body.context-species #region-content .region-inner h2 {
-  color: #c02a35;
-  font-size: 15px;
-  margin-bottom: 0;
-}
-
-body.context-species #region-content .region-inner h1 {
-  font-size: 23px;
-  margin-bottom: 5px;
-}
-
-body.context-species #region-content .region-inner h1 em {
-  color: #8a8989;
-}
-
-#region-content .links.inline li {
-  float: left;
-  display: block;
-}
-
-body #region-content a.unflag-action,
-body #region-content a.unflag-action:hover {
-  background: none;
-  text-shadow: none;
-  color: #c6c6c6;
-  border: none;
-  font-size: 12px;
-  font-weight: normal;
-  padding: 5px 2px 5px 0;
-}
-
-body #region-content a.flag-action,
-body #region-content a.flag-action:hover {
-  background: none;
-  text-shadow: none;
-  color: #c6c6c6;
-  border: none;
-  font-size: 12px;
-  font-weight: normal;
-  padding: 5px 2px 5px 0;
-}
-
-#region-content .links.inline {
-  margin: 10px 0;
-}
-
-body #region-content a.unflag-action:before,
-body #region-content a.hide_links:before {
-  content: '';
-  display: block;
-  float: left;
-  background: url(images/icons.png) no-repeat 0px -340px;
-  height: 23px;
-  width: 23px;
-  margin-right: 5px;
-  margin-top: 2px;
-  text-align: left;
-}
-
-body #region-content a.hide_links:before {
-  height: 30px;
-}
-
-body #region-content a.flag-action:before,
-body #region-content #widgets_wrapper a.show:before {
-  content: '';
-  display: block;
-  float: left;
-  background: url(images/icons.png) no-repeat 0px -340px;
-  height: 23px;
-  width: 23px;
-  margin-right: 5px;
-  margin-top: 2px;
-  text-align: left;
-}
-
-body #region-content #widgets_wrapper a.show:before {
-  height: 30px;
-}
-
-body #region-content .flag-highlighted a.unflag-action:before,
-body #region-content .flag-highlighted a.flag-action:hover:before {
-  background: url(images/icons.png) no-repeat 0px -371px;
-}
-
-body #region-content .flag-flag_follow a.unflag-action:before,
-body #region-content .flag-flag_follow a.flag-action:hover:before {
-  background-position: -20px -370px;
-}
-
-body #region-content .flag-flag_viewed a.unflag-action:before,
-body #region-content .flag-flag_viewed a.flag-action:hover:before {
-  background-position: -42px -370px;
-  width: 20px;
-}
-
-body #region-content .flag-compare a.unflag-action:before,
-body #region-content .flag-compare a.flag-action:hover:before {
-  background-position: -62px -371px;
-  height: 23px;
-}
-
-body #region-content a.hide_links:before,
-body #region-content a.show:hover:before {
-  background-position: -85px -371px;
-  margin-top: -6px;
-}
-
-body #region-content .flag-highlighted a.flag-action:before,
-body #region-content .flag-highlighted a.unflag-action:hover:before {
-  background: url(images/icons.png) no-repeat 0px -338px;
-}
-
-body #region-content .flag-flag_follow a.flag-action:before,
-body #region-content .flag-flag_follow a.unflag-action:hover:before {
-  background-position: -20px -337px;
-}
-
-body #region-content .flag-flag_viewed a.flag-action:before,
-body #region-content .flag-flag_viewed a.unflag-action:hover:before {
-  background-position: -42px -337px;
-  width: 20px;
-}
-
-body #region-content .flag-compare a.flag-action:before,
-body #region-content .flag-compare a.unflag-action:hover:before {
-  background-position: -62px -338px;
-  height: 23px;
-}
-
-body #region-content a.show:before,
-body #region-content a.hide_links:hover:before {
-  background-position: -85px -338px;
-}
-
-body #region-content .flag-compare a.flag-action {
-  width: 80px;
-}
-
-body #region-content .flag-compare a.flag-action,
-body #region-content .flag-compare a.unflag-action {
-  line-height: 15px;
-  text-align: left;
-}
-
-body #region-content .flag-message {
-  position: absolute;
-  float: left;
-  background: #e7e7e7;
-  padding: 3px 6px;
-  border-radius: 6px;
-  left: -80px;
-  width: auto;
-}
-
-body #region-content .links #widgets-wrapper a.hide_links {
-  background: none;
-  text-shadow: none;
-  color: #c6c6c6;
-  border: none;
-  font-size: 12px;
-  font-weight: normal;
-  padding: 5px 2px 5px 0;
-}
-
-.bottom_links {
-  margin-top: 60px;
-  border-top: 2px solid #f9f9f9;
-}
-
-.node-inner.full .content {
-  font-size: 14px;
-}
-
-body .node-inner.full .content .field-group-format-wrapper {
-  margin: 30px 0;
+/*Block: Content I follow*/
+.block.block-flag-nodes-block-4 .block-inner > .content,
+.block.block-flag-nodes-block-4 .block-inner > .content table {
+  padding: 0 !important;
+  margin: 0 !important;
 }
