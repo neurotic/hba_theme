@@ -35,9 +35,11 @@
 
 <?php
 
-  $node = node_load(arg(1));
-  $nid = $node->nid;
-  $flag_counter = $flag->get_count($nid);
+  //$node = node_load(arg(1)); // aixo dona errors
+  $node = menu_get_object();
+  if (!empty($node)) {
+    $nid = $node->nid;
+    $flag_counter = $flag->get_count($nid);
   
   /*global $user;
   if (empty($user->roles[6]) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) {
@@ -50,9 +52,7 @@
   }
   else {*/
     //print '<p>' . flag_create_link('seen', $node->nid) . '</p>';
-    ?>
-    
-  <?php
+
   
     /*$flag_counter2 = 'Flag counter fix: ' . $flag_counter . '<br />';
     print $flag_counter2;
@@ -84,6 +84,7 @@
     else{
       $link_text = t("Nobody has seen it");
     }
+  }
   ?>
 
 <div class="<?php print $flag_wrapper_classes; ?>">

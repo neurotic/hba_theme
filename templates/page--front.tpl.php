@@ -31,7 +31,8 @@ if (!$user->uid) {
             BV = new $.BigVideo();
 			BV.init();
 			//BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ambient:true});
-			BV.show('http://alive.hbw.com/HBWalive_MarcaAgua_BR.mp4',{ambient:true});
+			//BV.show('http://alive.hbw.com/HBWalive_MarcaAgua_BR.mp4',{ambient:true});
+      BV.show('http://alive.hbw.com/promo_hbw.mov',{ambient:true});
       //BV.show('promo_hbw.mov',{ambient:true});
 
             // Playlist button click starts video

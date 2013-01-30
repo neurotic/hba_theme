@@ -18,17 +18,27 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
-      print '<div class="thumbnail">' . views_embed_view('species_figure','block_3') . '</div>';
+      print '<div class="left">' . render($content) . '</div>';
+      print '<div class="right">';
+      // si privileged user, mostrar slideshow de figures
+      if (in_array('Basic subscriptor', $user->roles) && in_array('Supporting subscriptor', $user->roles) && in_array('editor', $user->roles) && in_array('administrator', $user->roles)) {
+        //print '<div class="thumbnail">' . views_embed_view('species_figure','block_4', $element['#object']->nid) . '</div>'; // l'argument ja està en la view
+        print '<div class="thumbnail">' . views_embed_view('species_figure','block_3', $node->nid) . '</div>'; // provisional
+      }
+      else {
+        //print '<div class="thumbnail">' . views_embed_view('species_figure','block_9', $node->nid) . '</div>'; // provisional
+        print '<div class="thumbnail">' . views_embed_view('species_figure','block_3', $node->nid) . '</div>';
+      }
+      print '</div>';
     ?>
   </div>
-  
+
   <div class="clearfix">
     <?php if (!empty($content['links'])): ?>
       <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
     <?php endif; ?>
-    
   </div>
+  
   </div>
   <?php print render($content['comments']); ?>
 </article>
@@ -49,10 +59,18 @@
     <?php print render($title_suffix); ?>
   </header>
   <?php endif; ?>
+  
   <div class="node-inner full">
+    
   <?php if ($display_submitted): ?>
   <footer class="submitted"><?php print $date; ?> -- <?php print $name; ?></footer>
   <?php endif; ?>  
+  
+  <div class="clearfix">
+    <?php if (!empty($content['links'])): ?>
+      <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
+    <?php endif; ?>
+  </div>
   
   <div<?php print $content_attributes; ?>>
     <?php
@@ -120,9 +138,10 @@
     <?php if (!empty($content['links'])): ?>
       <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
     <?php endif; ?>
-    
   </div>
-  </div>
+  
+  </div><!-- END node-inner full -->
+  
   <?php print render($content['comments']); ?>
 </article>
 

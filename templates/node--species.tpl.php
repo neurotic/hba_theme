@@ -13,10 +13,10 @@
     <?php print render($title_suffix); ?>
     <?php
       //trim the text with http://api.drupalize.me/api/drupal/function/views_trim_text/7
-      $alter_taxo_c = array('max_length' => 225, 'word_boundary' => TRUE, 'ellipsis' => TRUE, 'html' => FALSE);
+      $alter_taxo_c = array('max_length' => 225, 'word_boundary' => TRUE, 'ellipsis' => TRUE, 'html' => TRUE);
       print '<div class="ds-taxonomy"><span class="label">Taxonomy: </span> <span class="name_desc">' . render($content['field_sp_name_desc'][0]) . '</span> <span class="descriptor">' . render($content['field_sp_descriptor'][0]) . '</span>, <span class="year">' . render($content['field_sp_year'][0]) . '</span>, <span class="type_locality">' . render($content['field_sp_type_locality'][0]) . '</span>.<div class="taxo_comments">' . views_trim_text($alter_taxo_c, render($content['field_sp_taxo_comments'][0])) . '</div></div>';
 
-      $alter_dn = array('max_length' => 225, 'word_boundary' => TRUE, 'ellipsis' => TRUE, 'html' => FALSE);
+      $alter_dn = array('max_length' => 225, 'word_boundary' => TRUE, 'ellipsis' => TRUE, 'html' => TRUE);
       print '<strong>Descriptive notes:</strong> ' . views_trim_text($alter_dn, render($content['field_sp_descr_notes'][0]));
       
       print '<div class="more"><a href="' . $node_url . '" title="' . $title . '">read more</a></div>';
@@ -24,7 +24,6 @@
   </div>
   
   <div class="right">
-  <span></span>
   <?
   // si privileged user, mostrar la figure sense watermark
   if (in_array('Basic subscriptor', $user->roles) && in_array('Supporting subscriptor', $user->roles) && in_array('editor', $user->roles) && in_array('administrator', $user->roles)) {
@@ -39,7 +38,7 @@
   //print theme('image_style', array( 'path' => $content['field_sp_map_jpg'][0]['uri'], 'style_name' => 'icon'));
   //dpm($content['field_sp_map_jpg']);
   // seleccionant formatter uri en http://alive.hbw.com/admin/structure/types/manage/species/display/teaser
-  print '<img class="sp-map" alt="map" src="' . render($content['field_sp_map_jpg'][0]) . '" /></div>';
+  print '<img class="sp-map" alt="distribution map" src="' . render($content['field_sp_map_jpg'][0]) . '" />';
   ?>
   </div>
 
@@ -47,37 +46,44 @@
   </div>
 </article>
 
-<?php // END if teaser ?>
-
-
-
-<?php else: // START if full node ?>
+<?php else: // START if full node
+  //dpm($_SESSION);
+  //if (isset($node) && ($node->type == 'species') && (is_numeric(arg(1))) && (!empty($_SESSION['views']['species_table_by_family']['page_2']['other']))) {
+  //if (!empty($_SESSION['views']['species_table_by_family']['page_2']['other'])) {
+  /*if (!empty($_SESSION['other_proves2']['other'])) {
+    $message = 'Redirected from ' . $_SESSION['other_proves2']['other'] . ' (other common name for species ' . $title . ')';
+    if (isset($node) && ($node->type == 'species') && (is_numeric(arg(1)))) {
+      drupal_set_message($message, $type = 'status', $repeat = FALSE);
+      //unset($_SESSION['views']['species_table_by_family']['page_2']['other']);
+      unset($_SESSION['other_proves2']['other']);
+    }
+  }*/
+?>
 
 <article<?php print $attributes; ?>>
   <header>
     <?php print render($title_prefix); ?>
-    <h2><?php print t('Specie')?></h2>
+    <h2><?php print t('Species')?></h2>
     <h1<?php print $title_attributes; ?>><?php print _hba_cursive($title) ?></h1>
     <?php print render($title_suffix); ?>
   </header>
-  
-     <?php if (!empty($content['links'])): ?>
-      <?php $content['links']['#attributes']['class'][] = 'clearfix'; ?>
-      <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
-    <?php endif; ?>
-  
+
   <?php
-    if (arg(0) == 'node' and is_numeric(arg(1)) and arg(2) != 'revisions') {
+    /*if (arg(0) == 'node' and is_numeric(arg(1)) and arg(2) != 'revisions') {
       print '<div class="sp-vol-page">' . views_embed_view('species_hbw_vol_page','block_1', $node->nid) . '</div>';
-    }
+    }*/
   ?>
   
   <div class="node-inner full">
+    
   <?php if ($display_submitted): ?>
   <footer class="submitted"><?php print $date; ?> -- <?php print $name; ?></footer>
-  <?php endif; ?>  
-  
+  <?php endif; ?>
 
+  <?php if (!empty($content['links'])): ?>
+    <?php $content['links']['#attributes']['class'][] = 'clearfix'; ?>
+    <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
+  <?php endif; ?> 
   
 <!-- node/*/revisions
 node/*/revisions/*/list
@@ -88,22 +94,23 @@ node/*/revisions/list -->
   <div style="display: none;">no menu</div>
   <?php } else { ?>
     <div class="block block-block block-2 block-block-2" id="block-block-2">
-      <h2 class="title" id="menu-title"> <?php print t('Sections')?></h1>
+      <!--<h1 class="title" id="menu-title">  print t('Sections') </h1>-->
       <div class="content-toc">
         <ul class="clearfix">
-          <li><a href="#Taxonomy">Taxonomy</a></li>
-          <li><a href="#Descriptive_notes">Descriptive notes</a></li>
+          <li class="column1"><a href="#Taxonomy">Taxonomy</a></li>
+          <li class="column1"><a href="#Descriptive_notes">Descriptive notes</a></li>
           <?php if (!empty($content['group_sp_tab_voice']['field_sp_voice'])) { ?>
-            <li><a href="#Voice">Voice</a></li>
+            <li class="column1"><a href="#Voice">Voice</a></li>
           <?php } ?>
-          <li><a href="#Habitat">Habitat</a></li>
-          <li><a href="#Food_and_feeding">Food and feeding</a></li>
-          <li><a href="#Breeding">Breeding</a></li>
-          <li><a href="#Movements">Movements</a></li>
-          <li><a href="#Status_and_conservation">Status and conservation</a></li>
-          <li><a href="#Bibliography">Bibliography</a></li>
+          <li class="column1"><a href="#Habitat">Habitat</a></li>
+          <li class="column1"><a href="#Food_and_feeding">Food and feeding</a></li>
+          <li class="column2 reset"><a href="#Breeding">Breeding</a></li>
+          <li class="column2"><a href="#Movements">Movements</a></li>
+          <li class="column2"><a href="#Status_and_conservation">Status and conservation</a></li>
+          <li class="column2"><a href="#Bibliography">Bibliography</a></li>
         </ul>
       </div>
+       <?php print '<div class="thumbnail">' . views_embed_view('species_figure','block_10', $node->nid) . '</div>'; ?>
     </div>
   <?php } ?>
 
@@ -317,8 +324,15 @@ node/*/revisions/list -->
 
           // print the modified group
           print render($content['group_sp_tab_descr_notes']);
-        
+          
+          //TO-DO find a better way to include this embeded sound...
+          if(isset($content['group_sp_tab_voice']['field_sp_voice'][0])){ //check if we have a voice section...
+              $content['group_sp_tab_voice']['field_sp_voice'][0]['#markup'].='<iframe src="http://ibc.lynxeds.com/embed_best_sound_s.php?sp='.$node->field_sp_nid_ibc['und'][0]['value'].'" width="520" height="40" frameborder="0" scrolling="no"></iframe>';
+          }
+          
+          //print the rest of the fields of the species.
           print render($content);
+
         } // END if page is NOT a revision
       } // END if user is subscriber
     ?>
@@ -327,11 +341,11 @@ node/*/revisions/list -->
   <div class="clearfix bottom_links">
     <?php if (!empty($content['links'])): ?>
       <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
-    <?php endif; ?>
-
-    
+    <?php endif; ?>    
   </div>
-  </div>
+  
+  </div><!-- END node-inner full -->
+  
   <?php print render($content['comments']); ?>
 </article>
 

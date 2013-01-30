@@ -53,23 +53,25 @@ print $q;
 <?php print $sort_order; ?>
 </div>
 <?php endif; ?>
+<!--
 <div class="views-exposed-widget">
       <label for="edit-style">
-            <?php print t('Pic width'); ?>
+            Pic width
       </label>
       <div class="views-widget">
       <div class="form-item form-type-select form-item-field-figure-gender-value">[filtre des de tpl]
-     <!--<select id="edit-style" name="style" class="form-select">
+     <select id="edit-style" name="style" class="form-select">
       <?php
         /*$styles = bird_taxonomies_plates_styles();
         foreach($styles as $key => $style) {
           print '<option value="' . $key . '">' . $style . '</option>';
         }*/
       ?>
-      </select>-->
+      </select>
       </div>
       </div>
     </div>
+-->
 <?php if (!empty($items_per_page)): ?>
 <div class="views-exposed-widget views-widget-per-page">
 <?php print $items_per_page; ?>
