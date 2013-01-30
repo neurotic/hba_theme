@@ -1,0 +1,93 @@
+
+/*
+ * jQuery UI Dialog 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }
+.ui-dialog .ui-dialog-titlebar { padding: .5em 1em .3em; position: relative;  }
+.ui-dialog .ui-dialog-title { float: left; margin: .1em 16px .2em 0; } 
+.ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; }
+.ui-dialog .ui-dialog-titlebar-close span { display: block; margin: 1px; }
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
+.ui-dialog .ui-dialog-content { position: relative; border: 0; padding: .5em 1em; background: none; overflow: auto; zoom: 1; }
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
+.ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+
+/* Julien */
+
+/*html, body {
+  border-top:0;
+  background-color: #fff !important;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #fff url(../../../../../../misc/throbber.gif) no-repeat 50% 50% !important;
+}*/
+
+.ui-dialog {
+  padding: 0 !important;
+  border: 0 !important;
+  
+  background-clip: padding-box;
+  background-color: #FFFFFF;
+  border-radius: 6px 6px 6px 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.5) inset !important;
+}
+
+.ui-dialog-titlebar {
+  background-color: #ECECEC !important;
+  background-image: -moz-linear-gradient(center top , #F5F5F5 0px, #ECECEC 100%) !important;
+  background-repeat: repeat-x !important;
+  border-bottom: 1px solid #DDDDDD !important;
+  border-radius: 6px 6px 0 0 !important;
+  box-shadow: 0 1px 0 #FFFFFF inset !important;
+  cursor: move;
+  padding-bottom: 8px !important;
+  padding-top: 8px !important;
+  
+  font-family: "Helvetica Neue",Arial,sans-serif !important;
+  font-size: 14px !important;
+  text-align: center !important;
+}
+
+.ui-dialog .ui-dialog-title {
+  color: #555555 !important;
+  font-weight: bold !important;
+  line-height: 18px !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-shadow: 0 1px 0 #FFFFFF !important;
+  white-space: nowrap !important;
+
+  float: none;
+}
+
+.modal-close {
+    border-left: 1px solid #DDDDDD;
+    border-radius: 0 6px 0 0;
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.modal-btn {
+    background-color: transparent;
+    cursor: pointer;
+    overflow: visible;
+    padding: 11px 12px;
+}
+button {
+    border: 0 none;
+    margin: 0;
+}

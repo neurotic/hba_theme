@@ -35,6 +35,7 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
   /*font-family: 'GeosansLightRegular', 'Arial', sans-serif;*/
   font-family: 'Arial', sans-serif;
+  text-rendering: optimizelegibility;
 }
 
 body a:link, 
@@ -42,6 +43,63 @@ body a:visited {
   color: #C4202B;
 }
 a {text-decoration: none !important;}
+
+/* fieldset */
+.content-inner form fieldset,
+.content-inner .node-inner fieldset {
+  border: 1px solid #ccc;
+  padding: 2.5em 0 0 0;
+  position: relative;
+  margin: 1em 0;
+  display: block;
+  -webkit-margin-start: 2px;
+  -webkit-margin-end: 2px;
+  -webkit-padding-before: 0.35em;
+  -webkit-padding-start: 0.75em;
+  -webkit-padding-end: 0.75em;
+  -webkit-padding-after: 0.625em;
+}
+.content-inner form fieldset .fieldset-wrapper,
+.content-inner .node-inner fieldset .fieldset-wrapper {
+  padding: 0 13px 13px 15px;
+}
+html.js .content-inner form fieldset.collapsible .fieldset-legend,
+.content-inner .node-inner fieldset.collapsible .fieldset-legend {
+  background: url(../../../../../misc/menu-expanded.png) 5px 65% no-repeat;
+  padding-left: 15px;
+  display: block;
+  margin-top: 0.5em;
+  position: absolute;
+  text-transform: uppercase;
+}
+html.js .content-inner form fieldset.collapsed,
+.content-inner .node-inner fieldset.collapsed {
+  border-width: 1px;
+  height: auto;
+  background-color: transparent;
+  position: relative;
+}
+html.js .content-inner form fieldset.collapsed .fieldset-legend,
+.content-inner .node-inner fieldset.collapsed .fieldset-legend {
+  background-image: url(../../../../../misc/menu-collapsed.png);
+  background-position: 5px 50%;
+}
+.content-inner form fieldset.collapsible .fieldset-legend,
+.content-inner .node-inner fieldset.collapsible .fieldset-legend {
+  display: block;
+}
+.content-inner form fieldset .fieldset-legend,
+.content-inner .node-inner fieldset .fieldset-legend {
+  margin-top: 0.5em;
+  padding-left: 15px;
+  position: absolute;
+  text-transform: uppercase;
+}
+.content-inner form fieldset .fieldset-legend a,
+.content-inner .node-inner fieldset .fieldset-legend a {
+  color: #0074BD;
+  font-weight: bold;
+}
 
 #section-header {
   margin-bottom: 10px;
@@ -630,9 +688,9 @@ body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   font-weight: normal;
 }*/
 
-#region-sidebar-second .views-label,
+#region-sidebar-second > .views-label,
 #region-sidebar-second .block-inner > h2,
-#region-sidebar-third .views-label,
+#region-sidebar-third > .views-label,
 #region-sidebar-third .block-inner > h2 {
   background: rgb(255,255,255); /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -655,15 +713,15 @@ body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   font-weight: normal;
   color: #707070;
   
-  margin-bottom: 5px;
+  /*margin-bottom: 5px;*/
   text-transform: uppercase;
   font-size: 13px;
 }
 
 #region-sidebar-second .block-inner > h2,
 #region-sidebar-third .block-inner > h2 {
-  font-size: 1.3em;
-  margin-bottom: 5px;
+  font-size: 1.2em;
+  /*margin-bottom: 5px;*/
   line-height: 100%;
 }
 
@@ -691,9 +749,8 @@ body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   height: 15px;
   display: block;
   float: right;
-  background: url("images/icons.png") no-repeat scroll -5px -197px transparent;
+  background: url("images/icons.png") no-repeat scroll -5px -195px transparent;
   position: relative;
-  margin-top: -20px;
   margin-right: 12px;
 }
 
@@ -709,7 +766,7 @@ body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   float: right;
   width: 15px;
   height: 15px;
-  background: url("images/icons.png") no-repeat scroll -5px -244px transparent;
+  background: url("images/icons.png") no-repeat scroll -5px -241px transparent;
   position: relative;
   top: -20px;
   margin-right: 12px;
@@ -1055,7 +1112,8 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   font-size: 14px;
 }
 
-#region-content #node_species_full_group_sp_tab_taxo h3,
+/*Seccions Sp collapsible / collapsed*/
+/*#region-content #node_species_full_group_sp_tab_taxo h3,
 #region-content #node_species_full_group_sp_tab_descr_notes h3,
 #region-content #node_species_full_group_sp_tab_voice h3, 
 #region-content #node_species_full_group_sp_tab_habitat h3, 
@@ -1063,7 +1121,8 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #region-content #node_species_full_group_sp_tab_breeding h3, 
 #region-content #node_species_full_group_sp_tab_move h3, 
 #region-content #node_species_full_group_sp_tab_status h3, 
-#region-content #node_species_full_group_sp_tab_biblio h3 {
+#region-content #node_species_full_group_sp_tab_biblio h3*/
+#region-content .field-group-div h3 {
   margin: 10px 0 5px;
   background: #f0f0f0;
   padding: 0px 10px;
@@ -1074,11 +1133,11 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
   box-shadow: 0px 1px 1px 1px #e8e8e8; 
 }
-#region-content #node_species_full_group_sp_tab_taxo h3 {
+#region-content .field-group-div h3 {
   clear: both;
 }
 
-#region-content #node_species_full_group_sp_tab_taxo h3:after,
+/*#region-content #node_species_full_group_sp_tab_taxo h3:after,
 #region-content #node_species_full_group_sp_tab_descr_notes h3:after,
 #region-content #node_species_full_group_sp_tab_voice h3:after, 
 #region-content #node_species_full_group_sp_tab_habitat h3:after, 
@@ -1086,7 +1145,8 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #region-content #node_species_full_group_sp_tab_breeding h3:after, 
 #region-content #node_species_full_group_sp_tab_move h3:after, 
 #region-content #node_species_full_group_sp_tab_status h3:after, 
-#region-content #node_species_full_group_sp_tab_biblio h3:after {
+#region-content #node_species_full_group_sp_tab_biblio h3:after*/
+#region-content .field-group-div h3:after {
   background: url("images/icons.png") no-repeat scroll 0px -85px;
   content: "";
   width: 20px;
@@ -1098,7 +1158,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   margin-right: 12px;
 }
 
-#region-content #node_species_full_group_sp_tab_taxo .collapsed h3:after,
+/*#region-content #node_species_full_group_sp_tab_taxo .collapsed h3:after,
 #region-content #node_species_full_group_sp_tab_descr_notes .collapsed h3:after,
 #region-content #node_species_full_group_sp_tab_voice .collapsed h3:after, 
 #region-content #node_species_full_group_sp_tab_habitat .collapsed h3:after, 
@@ -1106,7 +1166,8 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #region-content #node_species_full_group_sp_tab_breeding .collapsed h3:after, 
 #region-content #node_species_full_group_sp_tab_move .collapsed h3:after, 
 #region-content #node_species_full_group_sp_tab_status .collapsed h3:after, 
-#region-content #node_species_full_group_sp_tab_biblio .collapsed h3:after {
+#region-content #node_species_full_group_sp_tab_biblio .collapsed h3:after*/
+#region-content .field-group-div.collapsed h3:after {
   background-position: 0px -140px;
 }
 
@@ -1273,7 +1334,7 @@ body .chzn-choices {
 
 #region-user-second {
   margin-right: 0;
-  width: 200px;
+  width: 220px;
   float: right;
 }
 
@@ -1766,7 +1827,7 @@ position:absolute;
   margin-left: 5px;
   margin-top: 3px;
 }
-.description {
+.description_overlay .description {
   position: absolute;
   white-space: nowrap;
   /*bottom: 5px;
@@ -1778,6 +1839,7 @@ position:absolute;
   font-family: "arial";
   font-size: 0.8em;
   color: black;
+  line-height: 95%;
 }
 .description_content {
   /*padding: 20px;*/
@@ -1966,7 +2028,9 @@ padding: 10px;
   right: 0;
   position: absolute;*/
 }
-.node-inner.teaser div.content div.more {text-align: right; padding-top: 1em;}
+.node-inner.teaser div.content div.more,
+.view-footer .more {text-align: right; padding-top: 1em;}
+span.more {float: right;}
 
 /* Full node */
 
@@ -2816,12 +2880,6 @@ th.views-field-ops {width: 30px !important; padding-right: 20px;}
 /*Flag: Users you are following*/
 /*en dashboard -> seven > style.css*/
 
-
-/* Bloc WIKICONTRIBUTIONS */
-
-#block-views-wikicontribution-block div.view-empty {font-style: italic;}
-#block-views-wikicontribution-block div.view-footer {text-align: right; font-size: 0.85em;}
-
 /* Flag: Promote */
 
 #region-content .group-left .field-name-prova-code-field {
@@ -2830,8 +2888,8 @@ th.views-field-ops {width: 30px !important; padding-right: 20px;}
 
 /* Bloc Mynotes */
 
-#block-views-mynotes-block div.view-empty .add,
-#block-views-mynotes-block div.view-footer .add {
+div.view-empty .add,
+div.view-footer .add {
 text-align: right;
 padding-top: 1em;
 font-size: 0.85em;
@@ -2850,6 +2908,91 @@ margin: 25px 0 30px 0;
 #ctools-main-dialog-box form#mynote-node-form .form-item-field-country-und #autocomplete {
   position: inherit !important;
 }
+
+/*Attachment: masonry + post-it style for My Notes*/
+.view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick,
+.view-mynotes.view-display-id-attachment_1 .views-row,
+.postit {
+  /*width: 250px;
+  padding: 10px;
+  margin: 0 20px 15px 0;
+  background: rgb(241, 241, 156);*/
+  
+  float: left;
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  /*display: inline-block;
+  margin: 25px;
+  min-height: 175px;
+  max-height: 175px;
+  padding-top: 35px;
+  border-top: 60px solid #fdfd86;*/
+  position: relative;
+  border: 1px solid #E8E8E8;
+  font-family: 'Reenie Beanie';
+  font-size: 22px;
+  border-bottom-right-radius: 60px 5px;
+  -webkit-border-bottom-right-radius: 60px 5px;
+  background: rgb(255,255,136);
+  background: -moz-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(77%,rgba(255,255,136,1)), color-stop(100%,rgba(255,255,214,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%);
+  background: linear-gradient(-45deg, rgba(255,255,136,1) 77%,rgba(255,255,214,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffff88',GradientType=0 );
+
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  filter: progid : DXImageTransform.Microsoft.Matrix ( sizingMethod='auto expand', /* IE6-IE9 */ M11 = 0.9993908270190958, M12 = -0.03489949670250097, M21 =0.03489949670250097, M22 = 0.9993908270190958 );
+  zoom: 1;
+
+  box-shadow: 2px 7px 4px rgba(0, 0, 0, 0.40);
+}
+.view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick:after,
+.view-mynotes.view-display-id-attachment_1 .views-row:after,
+.postit:after {     
+  /*content: "";
+  position:absolute;
+  z-index:-1;
+  right:-0px;
+  bottom:20px;
+  width:200px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
+    -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+ -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+      -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+     -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+         transform: matrix(-1, -0.1, 0, 1, 0, 0);*/
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-type {
+  float: left;
+  margin: 0.6em 1em;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-field-figure-img {
+  float: right;
+  margin: 0.5em 1em;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-title {
+  clear: right;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-title-1 {
+  line-height: 95%;
+  font-size: 80%;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-edit-node {
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+  margin-bottom: 0.2em;
+}
+
 /*
  * START cosas de (http://webdesignerwall.com/tutorials/responsive-design-with-css3-media-queries)
  * no lo incorpora el tema Omega (probado con viewport de movil)
@@ -2892,7 +3035,21 @@ margin: 5px 0 10px 0;
 
 /* Pager */
 
-.pager {margin: 1em 0 4em 0 !important;}
+.pager {
+  margin: 1em 0 4em 0 !important;
+  background: none;
+  border: 0px;
+  border-color: transparent;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+.pager li.pager-previous a {
+  width: 60px;
+}
+.pager li.pager-ellipsis {
+  border-right: 0px;
+}
 
 /* table for duplicates detection: /biblio/duplicats */
 
@@ -3246,14 +3403,21 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 }
 
 /**
- * Views: exposed filters
+ * Views
  */
- 
+
+/* Exposed filters */
+
 /*bloc sp search*/
 #block-views-024b51b0948df12f8903897e79946969,
 /*blocs /reference*/
-#block-views-258063f6767b6942b787998a1c928f07 {
+#block-views-258063f6767b6942b787998a1c928f07,
+/*wikicontributions exposed filters*/
+.view-id-wikicontribution.view-display-id-page .views-exposed-widgets,
+/*My Records exposed filters*/
+.view-id-my_record.view-display-id-page .views-exposed-widgets {
   background: #EEE;
+  margin-bottom: 2em;
   padding: 5px 15px;
   border: 1px solid #CCC;
   -webkit-border-top-right-radius: 4px;
@@ -3470,11 +3634,26 @@ div.bib-nid-clipboard span.label,
 div.bib-link-clipboard span.label {font-weight: bold;}
 div.bib-link-clipboard input#embed_code {height: 18px; width: 100px;}
 
-
-/*el html sol no mostra el sup mes elevat que la resta de lletres. culpa del full alpha-reset.css!!*/
-sup {
-vertical-align: super;
-font-size: 0.7em;
+/* View: My Records */
+/*My Records exposed filters*/
+.view-id-my_record.view-display-id-page .views-exposed-widgets #edit-sp-wrapper,
+.view-id-my_record.view-display-id-page .views-exposed-widgets .form-item-sp input {
+  width: 100%;
+}
+.view-id-my_record.view-display-id-page .views-exposed-widgets #edit-country-wrapper,
+.view-id-my_record.view-display-id-page .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  float: right;
+  padding-right: 0;
+}
+.view-id-my_record.view-display-id-page .views-exposed-widgets #edit-country-wrapper {
+  display: block;
+  margin-left: 20px;
+  padding-left: 20px;
+  width: 80%;
+}
+.view-id-my_record.view-display-id-page .views-exposed-widgets input#edit-country {width:100%;}
+.view-id-my_record.view-display-id-page .views-exposed-widgets .form-item-nb input {
+  width: 40px;
 }
 
 /**
@@ -3597,6 +3776,16 @@ margin: 0;
 .node-wikinote div.ds-2col.user-profile.view-mode-token dl.user-profile-category {
 display: none;
 }
+
+/* Bloc WIKICONTRIBUTIONS */
+#block-views-wikicontribution-block div.view-empty {font-style: italic;}
+#block-views-wikicontribution-block div.view-footer {text-align: right; font-size: 0.85em;}
+
+/* Pàgina Wikicontributions */
+.view-wikicontribution .views-row {margin-bottom: 20px;}
+.view-wikicontribution .views-field.views-field-field-user-real-name {float:left; padding-right:5px;}
+.view-wikicontribution .views-field.views-field-title-1 {clear:left;}
+.view-wikicontribution .views-field.views-field-body .field-content p {margin-bottom:0;}
 
 /**
  * Comments
@@ -3890,4 +4079,283 @@ input#email-M6JL4NGD.field.blink {width: 360px !important; color: #111; line-hei
 .block.block-flag-nodes-block-4 .block-inner > .content table {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+/*el html sol no mostra el sup mes elevat que la resta de lletres. culpa del full alpha-reset.css!!*/
+sup {
+vertical-align: super;
+font-size: 0.7em;
+}
+
+/** 
+ * Locality node form
+ * + My record
+ * + Trip
+ */
+
+/* Trip */
+
+#edit-body-und-0-format,
+#edit-field-trip-private-desc-und-0-format {display:none;}
+
+/* Locality */
+
+/*Link to add an entity reference with Reference Dialog module*/
+/*div.form-item-field-loc-sp-und-0-target-id,
+div.form-item-field-loc-sp-und-1-target-id,*/
+#field-loc-sp-values td > div.form-item.form-type-textfield {
+  float: left;
+  padding-right: 5px;
+}
+/*.form-item.form-type-textfield.form-item-field-loc-sp-und-0-target-id {
+  width: 425px;
+  float: left;
+}*/
+
+.form-item-field-myr-trip-und-0-target-id{float:left;width:375px;}
+input#edit-field-myr-trip-und-0-target-id {width:100%;}
+.dialog-links.edit-field-myr-trip-und-0-target-id {padding-top:30px;}
+
+#field-loc-date-add-more-wrapper fieldset,
+#field-loc-date-add-more-wrapper fieldset .fieldset-wrapper {border:0; padding:0; margin:0;}
+#field-loc-date-add-more-wrapper fieldset span.fieldset-legend {
+  background: none !important;
+  padding-left: 0px !important;
+  margin-top: 0 !important;
+  position: relative !important;
+  text-transform: none !important;
+  font-weight: bold;
+}
+#locality-node-form .field-name-field-loc-date {clear:left !important;}
+#locality-node-form .date-no-float {
+  clear: none !important;
+  float: left;
+  width: auto;
+}
+#locality-node-form .date-float {
+  float: none !important;
+}
+.form-item-field-loc-date-und-0 > label,
+#field-loc-date-add-more-wrapper fieldset .fieldset-wrapper legend span.fieldset-legend {
+  float: left;
+  padding-top: 5px;
+  padding-right: 20px;
+}
+.form-item-field-loc-date-und-0 .start-date-wrapper {
+  float: left !important;
+}
+#locality-node-form .date-no-float.end-date-wrapper.container-inline-date {clear:none!important;}
+.form-item-field-loc-date-und-0 .end-date-wrapper {
+  float:left;
+  padding-left: 15px;
+}
+.form-item-field-loc-date-und-0-value2 > label {
+  float:left;
+  padding-right: 5px;
+  padding-top: 6px;
+  font-weight: normal;
+}
+.form-item-field-loc-date-und-0-value2-date > label {display:none;}
+.field-name-field-myr-date.form-wrapper fieldset {margin-bottom:0;}
+.field-name-field-myr-date.form-wrapper fieldset .container-inline-date .date-padding {padding-left:0;}
+.field-name-field-myr-date.form-wrapper fieldset > legend {font-weight:bold;}
+#edit-field-loc-date-und-0-value label {display:none;}
+
+/* country / address / map */
+.field-name-field-myr-country {clear:left;width:375px;}
+.field-name-field-myr-country input {width:100%;}
+#edit-field-loc-loc-addr-und-0 > legend span.fieldset-legend {display:none;}
+fieldset#edit-field-loc-loc-addr-und-0,
+fieldset#node_locality_form_group_loc_loc_tab1 {border:0 none;padding:0;margin:5px;}
+fieldset#node_locality_form_group_loc_loc_tab1 .fieldset-wrapper {padding:5px;}
+
+table#field-loc-sp-values {
+  border: 0;
+  font-size: 1em;
+}
+table#field-loc-sp-values thead th {
+  text-transform: none;
+  background: none;
+  border-width: 0px;
+  padding: 0px;
+}
+table#field-loc-sp-values tbody {border-top:0;}
+table#field-loc-sp-values tr {
+  
+}
+table#field-loc-sp-values tr.even, tr.odd {
+  background-color: #fff;
+  border-bottom: 0px solid #ccc;
+  padding: 0;
+  border-width: 0;
+}
+table#field-loc-sp-values td {
+  padding: 2px 0;
+}
+table#field-loc-sp-values td span.warning.tabledrag-changed {}
+#edit-field-myr-links {margin-bottom:3em!important;}
+#edit-field-myr-links table {border:0;}
+#edit-field-myr-links table th {background-color: transparent;}
+.tabledrag-toggle-weight-wrapper {display:none;}
+
+/* My record */
+
+/*modal dialog*/
+/*more in references-dialog-search.css*/
+#references-dialog-page #section-content,
+#references-dialog-page #zone-content-wrapper,
+#references-dialog-page #zone-content,
+#references-dialog-page #region-content,
+#references-dialog-page .region-inner.region-content-inner {
+  border-top:0;
+  background-color: #fff !important;
+  /*background: #fff url(../../../../../misc/throbber.gif) no-repeat 50% 50% !important;*/
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+#references-dialog-page .region-inner.region-content-inner {
+  padding: 15px 36px 15px 10px;
+  /*margin: 0 15px 0 0;*/
+}
+.node-type-locality .ui-widget-overlay {
+  opacity: .20;
+  filter: Alpha(Opacity=20);
+}
+/*iframe.references-dialog-iframe html #references-dialog-page div.region.region-content {
+  margin-right: 15px !important;
+}
+iframe.references-dialog-iframe,
+iframe.references-dialog-iframe .ui-dialog .ui-dialog-content {padding:0!important;}*/
+
+#edit-field-myr-sp.field-name-field-myr-sp {
+  float: left;
+  width: 80%;
+  padding-right: 5px;
+}
+#edit-field-myr-nb {float: right !important; clear: right !important;}
+#edit-field-myr-nb input {width: 45px;}
+input#edit-field-myr-nb-und-0-value {
+  text-align: right;
+  margin-right: 2px;
+}
+/*fieldset*/
+fieldset#node_my_record_form_group_myr_gr_options {clear:left;}
+fieldset.group-myr-gr-options {
+  
+}
+#edit-field-myr-date fieldset legend .fieldset-legend,
+.form-item-field-myr-date-und-0 > label {
+  display: none;
+}
+#edit-field-myr-date-und-0-value label {font-weight:normal;}
+#field-myr-date-add-more-wrapper fieldset,
+#field-myr-date-add-more-wrapper fieldset .fieldset-wrapper {border:0; padding:0; margin:0;}
+.container-inline-date .date-padding {padding: 0px;}
+#my-record-node-form .form-item-field-myr-date-und-0-value .description,
+#my-record-node-form #edit-field-myr-date-und-0-value .description {
+  display: none;
+}
+.form-item-field-myr-date-und-0-value-date > label {
+  font-weight: bold;
+}
+#rule-seen-alert.avis {
+  max-width: 500px;
+}
+.node-my_record-form #edit-body {
+  max-width: 500px;
+}
+/*map*/
+.openlayers-map-geofield-widget-map {
+  
+}
+#my-record-node-form .openlayers-container.openlayers-container-map-geofield-widget-mapmodal,
+#my-record-node-form .openlayers-map.openlayers-map-geofield-widget-mapmodal {width:100% !important;}
+#my-record-node-form #field-myr-map-add-more-wrapper .description p {
+  font-weight: bold !important;
+  margin-top: 1em !important;
+  font-size: 12px !important;
+}
+
+/*botó Add a record*/
+/*ul.references-dialog-links li a.add-dialog {
+background: #9FC748 url('/sites/all/modules/references_dialog/img/plus.png') 10px no-repeat;
+}
+a.add-dialog.references-dialog-activate {
+color: white !important;
+padding: 5px 15px 5px 30px !important;
+margin: 0;
+font-size: 1.077em;
+border: none;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-image: initial;
+text-decoration: none;
+outline: none;
+}*/
+
+
+/**
+ * Locality node display
+ * + My record
+ * + Trip
+ */
+
+/*titol de un myrecord en un full node Locality*/
+.field-name-field-loc-sp .field-item header {
+  display: none;
+}
+
+/*view mode Mini-teaser for Species in field_loc_sp*/
+.field-name-field-loc-sp .node-inner div.content div.left {
+  float: left !important;
+  width: 55%;
+  background: #FAFAFA;
+  padding: 20px;
+  margin: 10px 10px 0 0;
+}
+.field-name-field-loc-sp .field-name-field-myr-sp .ds-taxonomy span.label,
+.field-name-field-loc-sp .field-name-field-myr-sp .ds-taxonomy .descriptor p,
+.field-name-field-loc-sp .field-name-field-myr-sp .ds-taxonomy .name_desc p,
+.field-name-field-loc-sp .field-name-field-myr-sp .ds-taxonomy .year,
+.field-name-field-loc-sp .field-name-field-myr-sp .ds-taxonomy .type_locality p {
+  display: inline;
+}
+.field-name-field-loc-sp .node-inner div.content div.right {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px;
+  height: 80px;
+}
+.field-name-field-loc-sp .node-inner div.content div.right * {
+  vertical-align: middle;
+}
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail img {
+  width: 40%;
+  height: auto;
+}
+
+/*fields from the Locality node type full display*/
+.field-name-field-loc-sp .field-name-field-myr-nb {
+  clear: left;
+}
+.field-name-field-loc-sp .field-name-field-myr-nb,
+.field-name-field-loc-sp .field-name-field-myr-heard,
+.field-name-field-loc-sp .field-name-field-myr-captive {
+  float: left;
+  display: inline;
+  margin: 5px 15px 10px 0;
+}
+.field-name-field-loc-sp .field-name-body {
+  clear: left;
+}
+.field-name-field-loc-sp .field-name-body div.field-label {
+  float: left;
+  margin-right: 10px;
 }
