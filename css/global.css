@@ -38,9 +38,11 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizelegibility;
 }
 
-body a:link, 
-body a:visited {
+body a:link {
   color: #C4202B;
+}
+body a:visited {
+  color: #AF787D;
 }
 a {text-decoration: none !important;}
 
@@ -62,6 +64,13 @@ a {text-decoration: none !important;}
 .content-inner form fieldset .fieldset-wrapper,
 .content-inner .node-inner fieldset .fieldset-wrapper {
   padding: 0 13px 13px 15px;
+}
+.content-inner form fieldset .fieldset-legend,
+.content-inner .node-inner fieldset .fieldset-legend {
+  margin-top: 0.5em;
+  padding-left: 15px;
+  position: absolute;
+  text-transform: uppercase;
 }
 html.js .content-inner form fieldset.collapsible .fieldset-legend,
 .content-inner .node-inner fieldset.collapsible .fieldset-legend {
@@ -87,13 +96,6 @@ html.js .content-inner form fieldset.collapsed .fieldset-legend,
 .content-inner form fieldset.collapsible .fieldset-legend,
 .content-inner .node-inner fieldset.collapsible .fieldset-legend {
   display: block;
-}
-.content-inner form fieldset .fieldset-legend,
-.content-inner .node-inner fieldset .fieldset-legend {
-  margin-top: 0.5em;
-  padding-left: 15px;
-  position: absolute;
-  text-transform: uppercase;
 }
 .content-inner form fieldset .fieldset-legend a,
 .content-inner .node-inner fieldset .fieldset-legend a {
@@ -2196,7 +2198,7 @@ div.title-sec {
 }
 
 body.node-type-family ul.vertical-tabs-list {
-  min-height: 160px !important;
+  /*min-height: 160px !important;*/
   padding: 10px 0;
   position: relative; /* IE6 */
   list-style: none;
@@ -2249,7 +2251,7 @@ body.node-type-family #region-content ul.vertical-tabs-list li a:hover strong {
 }
 
 .node-type-family ul.vertical-tabs-list li.reset {
-  margin-top: -8.15em;
+  margin-top: -7.90em;
 }
 
 body .vertical-tabs ul.vertical-tabs-list strong {
@@ -2275,6 +2277,13 @@ body.context-family #region-content .region-inner {
 
 body.context-family #region-content .region-inner a {
   color: #fc6f03;
+}
+
+/*titols de fieldset*/
+body.context-family #region-content .region-inner fieldset span.fieldset-legend {
+  margin-top: 0;
+  position: relative;
+  text-transform: none;
 }
 
 /*fieldset General*/
@@ -4100,6 +4109,10 @@ font-size: 0.7em;
 
 /* Locality */
 
+/*Seven theme only*/
+.page-node-edit.node-type-locality #content .region-content #block-system-main .content {float:left; max-width: 600px;}
+.page-node-edit.node-type-locality #content .region-content #block-views-my-checklists-block {float:left;}
+
 /*Link to add an entity reference with Reference Dialog module*/
 /*div.form-item-field-loc-sp-und-0-target-id,
 div.form-item-field-loc-sp-und-1-target-id,*/
@@ -4161,42 +4174,80 @@ input#edit-field-myr-trip-und-0-target-id {width:100%;}
 .field-name-field-myr-date.form-wrapper fieldset > legend {font-weight:bold;}
 #edit-field-loc-date-und-0-value label {display:none;}
 
-/* country / address / map */
+/* fields: Country / Map bounding / Exact location */
 .field-name-field-myr-country {clear:left;width:375px;}
 .field-name-field-myr-country input {width:100%;}
 #edit-field-loc-loc-addr-und-0 > legend span.fieldset-legend {display:none;}
+.group-loc-loc-group div.horizontal-tabs {
+  border-top: 0 none;
+}
+.group-loc-loc-group .horizontal-tabs fieldset.horizontal-tabs-pane {
+  padding: 0;
+}
+.group-loc-loc-group .horizontal-tabs ul.horizontal-tabs-list {
+  background-color: #fff;
+  border-bottom: 1px solid #dedede;
+  border-right: 1px solid #FFF;
+}
+.group-loc-loc-group .horizontal-tabs ul.horizontal-tabs-list li {
+  border-top: 1px solid #DEDEDE;
+}
+.group-loc-loc-group .horizontal-tabs ul.horizontal-tabs-list li.selected a {
+  
+}
+/*.group-loc-loc-group .horizontal-tabs .horizontal-tabs-panes {border-top: 1px solid #DEDEDE;}*/
+.group-loc-loc-group .horizontal-tabs .horizontal-tabs-panes > fieldset {}
 fieldset#edit-field-loc-loc-addr-und-0,
 fieldset#node_locality_form_group_loc_loc_tab1 {border:0 none;padding:0;margin:5px;}
 fieldset#node_locality_form_group_loc_loc_tab1 .fieldset-wrapper {padding:5px;}
-
-table#field-loc-sp-values {
+.form-item.geofield-openlayers-map > div {} /*map*/
+.page-node-add-locality .description.geofield-help {display:none;}
+/*SP entity reference*/
+#edit-field-loc-sp {
+  border: 1px solid #CCC;
+  padding: 10px;
+}
+#edit-field-loc-sp table {
   border: 0;
   font-size: 1em;
 }
-table#field-loc-sp-values thead th {
+#edit-field-loc-sp table#field-loc-sp-values thead th {
   text-transform: none;
   background: none;
   border-width: 0px;
   padding: 0px;
 }
-table#field-loc-sp-values tbody {border-top:0;}
-table#field-loc-sp-values tr {
+#edit-field-loc-sp table#field-loc-sp-values tbody {border-top:0;}
+#edit-field-loc-sp table#field-loc-sp-values tr {
   
 }
-table#field-loc-sp-values tr.even, tr.odd {
+#edit-field-loc-sp table#field-loc-sp-values tr.even, tr.odd {
   background-color: #fff;
   border-bottom: 0px solid #ccc;
   padding: 0;
   border-width: 0;
 }
-table#field-loc-sp-values td {
+#edit-field-loc-sp table#field-loc-sp-values td {
   padding: 2px 0;
 }
-table#field-loc-sp-values td span.warning.tabledrag-changed {}
+#edit-field-loc-sp table#field-loc-sp-values td span.warning.tabledrag-changed {}
+/*links?*/
 #edit-field-myr-links {margin-bottom:3em!important;}
 #edit-field-myr-links table {border:0;}
 #edit-field-myr-links table th {background-color: transparent;}
 .tabledrag-toggle-weight-wrapper {display:none;}
+
+/*Block: My Checklists*/
+#block-views-my-checklists-block .view-grouping-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+  border-bottom: 2px solid #111;
+}
+#block-views-my-checklists-block .view-grouping-content .views-row {
+  padding-left: 20px;
+  background: url(../../../../../misc/menu-collapsed.png) 10px 65% no-repeat;
+}
 
 /* My record */
 
@@ -4359,3 +4410,25 @@ outline: none;
   float: left;
   margin-right: 10px;
 }
+
+/*throbber while loading Myrecord form modal frame*/
+/*#preloader {
+	position:fixed;
+	left:0px; 
+	top:0px; 
+	width:100%; 
+	height:100%; 
+	text-align:center;
+}
+#preloader div {
+	width:400px;
+	margin:auto;
+	height: 3px;
+	text-align:center;
+	overflow:hidden;
+}
+#preloader_image {
+	position: relative;
+	left:0px;
+	top:-10px;
+}*/
