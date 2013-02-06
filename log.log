@@ -1,0 +1,19 @@
+can't read "some_heads_tracking": no such variable
+can't read "some_heads_tracking": no such variable
+    while executing
+"if {!$some_heads_tracking || ![is_tracking_branch $line]} {
+			lappend all_heads [string range $line $rh_len end]
+		}"
+    (procedure "load_all_heads" line 9)
+    invoked from within
+"load_all_heads"
+    (procedure "do_push_anywhere" line 25)
+    invoked from within
+"do_push_anywhere"
+    invoked from within
+".vpane.lower.commarea.buttons.push invoke "
+    invoked from within
+".vpane.lower.commarea.buttons.push instate !disabled { .vpane.lower.commarea.buttons.push invoke } "
+    invoked from within
+".vpane.lower.commarea.buttons.push instate pressed { .vpane.lower.commarea.buttons.push state !pressed; .vpane.lower.commarea.buttons.push instate !di..."
+    (command bound to event)
