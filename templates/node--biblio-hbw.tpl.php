@@ -60,6 +60,7 @@
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
+<<<<<<< HEAD
       global $user;
       if (empty($user->roles[6]) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) {
         print '<div id="members-info">The advance bibliographic search is only available for <a href="/tour">Supporting members</a></div>';
@@ -72,6 +73,22 @@
         $refe = render($content['field_bib_ref_name'][0]);
         $refe_stripped = strip_tags($refe);
         print 'Search this reference on the web:<ul>';
+=======
+      
+      print render($content);
+
+      global $user;
+      if (empty($user->roles[6]) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) {
+        print '<br><br><div id="members-info">There is an advanced bibliographic search, only available for <a href="/tour">Supporting members</a>.</div><br>';
+      }
+      else {
+        if ($page): ?>
+          <p class="more-info">More information coming soon!</p>
+        <?php endif;
+        $refe = render($content['field_bib_ref_name'][0]);
+        $refe_stripped = strip_tags($title.' '.$refe);
+        print 'Find the reference on the web:<ul>';
+>>>>>>> d00311bdd152dd5f12beb92aa46830edfdc9964d
         print '<li><a href="http://scholar.google.com/scholar?hl=en&q='.$refe_stripped.'%29&btnG=&as_sdt=1%2C5&as_sdtp=" title="Search this reference on Google Scholar">Google Scholar</a></li>';
         print '<li><a href="https://www.google.com/search?hl=en&as_q='.$refe_stripped.'&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=off&tbs=rl%3A1%2Crls%3A2&as_filetype=pdf&as_rights=#q='.$refe_stripped.'+filetype:pdf&hl=en&lr=&safe=off&as_qdr=all&prmd=imvns&tbas=0&sa=X&ei=23A3UIvqJ5Ck0AWllIGACQ&ved=0CCsQuAs&bav=on.2,or.r_gc.r_pw.&fp=d058f6d271e1b243&biw=1269&bih=669" title="Search PDFs for this reference on Google">PDFs on Google</a></li>';
         print '</ul>';
@@ -103,9 +120,19 @@
   ?>
 
   <?php
+<<<<<<< HEAD
     // View Other references with the same title (possible duplicates nodes for editors to review)
     $block = block_load('views', 'nodes_where_this_biblio-block_5', $node->nid);
     print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+=======
+  
+    if (in_array('editor', $user->roles) || in_array('administrator', $user->roles)) {
+        // View Other references with the same title (possible duplicates nodes for editors to review)
+        $block = block_load('views', 'nodes_where_this_biblio-block_5', $node->nid);
+        print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+    }
+
+>>>>>>> d00311bdd152dd5f12beb92aa46830edfdc9964d
   ?>
 
   <?php print render($content['comments']); ?>

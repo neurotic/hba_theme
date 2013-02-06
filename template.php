@@ -28,6 +28,22 @@ function hba_theme_menu_link__menu_sections(array $variables) {
   return '<li' . drupal_attributes($element['#attributes']) . '><div class="wrapper clearfix"><span class="menu_image"></span>' . $output . $description . $sub_menu . "</div></li>\n";
 }
 
+<<<<<<< HEAD
+=======
+// Crear un template per node add/edit
+/*function hba_theme_theme() {
+  return array(
+    'my_record_node_form' => array(
+      'arguments' => array(
+          'form' => NULL,
+      ),
+      'template' => 'templates/my-record-node-form', // set the path here if not in root theme directory
+      'render element' => 'form',
+    ),
+  );
+}*/ // DO THE SAME FOR SEVEN THEME!!!
+
+>>>>>>> d00311bdd152dd5f12beb92aa46830edfdc9964d
 /**
  * @file
  * This file is empty by default because the base theme chain (Alpha & Omega) provides
@@ -268,3 +284,16 @@ function hba_theme_preprocess_search_result(&$vars) {
   // http://www.acquia.com/resources/acquia-tv/conference/apache-solr-search-mastery
   
 }
+<<<<<<< HEAD
+=======
+
+/**
+ * implements hook_css_alter()
+ */
+function hba_theme_css_alter(&$css) {
+  // Override the jquery.ui.dialog.css default file with a custom one
+  if (isset($css['misc/ui/jquery.ui.dialog.css'])) {
+    $css['misc/ui/jquery.ui.dialog.css']['data'] = drupal_get_path('theme', 'hba_theme') . '/css/jquery.ui/jquery-ui.dialog-custom.css';
+  }
+}
+>>>>>>> d00311bdd152dd5f12beb92aa46830edfdc9964d
