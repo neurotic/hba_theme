@@ -1059,7 +1059,7 @@ body .node-inner.full .content .field-group-format-wrapper {
 	background: #D9D609;
 }
 #block-global-filter-global-filter-1 h3 {
-  font-size: 12px;
+	font-size: 12px;
 	margin-bottom: -4px;
 	padding-top: 4px;
 	padding-left: 20px;
@@ -1076,7 +1076,7 @@ body .node-inner.full .content .field-group-format-wrapper {
 	background: #fff200;
 	margin: 6px 6px 0 0;
 	float: left;
-  font-size: 14px;
+	font-size: 14px;
 	margin-bottom: -2px;
 	padding-top: 2px;
 	padding-left: 20px;
@@ -4234,9 +4234,7 @@ outline: none;
 	left:0px;
 	top:-10px;
 }*/
-<<<<<<< HEAD 
-
-/*pricing *****/
+<<<<<<< HEAD /*pricing *****/
 div.view.view-pricing table {
  border: 0 none;
 }
@@ -4410,27 +4408,63 @@ body div#page #region-sidebar-third {
 body.context-frontpage #zone-content, body.context-frontpage #region-content {
 	width: 100%;
 	margin: 0;
+	padding: 0;
 }
 body.context-frontpage #region-content .region-inner {
 	border: 0;
 	background: none;
-	margin: 0 auto;
+	margin: 0;
 }
 body.context-frontpage div#breadcrumb, body.context-frontpage #region-content .region-inner h1.title {
 	display: none;
 }
-body.context-frontpage div.view-homepage div.views-row-1, body.context-frontpage div.view-homepage div.views-row-3 {
+body.context-frontpage div.view-homepage div.row-content {
 	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 40px;
 }
-
-body.context-frontpage div.view-homepage div.views-row-1 div.views-field-title {
-	font-size: 28px;
+body.context-frontpage div.view-homepage {
+	margin: 0;
+	padding: 0;
 }
-body.context-frontpage div.view-homepage div.views-row-1 div.views-field-field-homepage-desc {
+body.context-frontpage div.view-homepage div.views-row-odd {
+	width: 100%;
+	margin: 0;
+}
+body.context-frontpage div.view-homepage div.views-row-even {
+	background: #FFF;
+	width: 100%;
+	margin: 0;
+	padding: 20px 0 40px 0;
+}
+body.context-frontpage div#region-content div.region-inner {
+	margin: 0;
+	padding: 0;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.title {
+	font-size: 26px;
+	margin: 20px;
+}
+body.context-frontpage div.view-homepage div.views-row-even div.title {
+	font-size: 26px;
+	margin: 20px;
+	color: #D33C35;
+	width: 300px;
+	line-height: 1em;
+}
+body.context-frontpage div.view-homepage div.views-row-even div.desc {
+	margin: 20px;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.desc {
 	float: right;
-	margin: -90px 90px 0 0;
-	padding: 80px 40px 40px 40px;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	top: -20px;
+	padding: 60px 40px 40px 40px;
 	width: 250px;
+	font-size: 1.1em;
 	background: #fdfdfd; /* Old browsers */
 	background: -moz-linear-gradient(top, #fdfdfd 1%, #e8e8e8 91%, #e8e8e8 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #fdfdfd), color-stop(91%, #e8e8e8), color-stop(100%, #e8e8e8)); /* Chrome,Safari4+ */
@@ -4440,8 +4474,32 @@ body.context-frontpage div.view-homepage div.views-row-1 div.views-field-field-h
 	background: linear-gradient(to bottom, #fdfdfd 1%, #e8e8e8 91%, #e8e8e8 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#e8e8e8', GradientType=0 ); /* IE6-9 */
 }
-body.context-frontpage div.view-homepage div.views-row-1 div.views-field-field-homepage-desc div.field-content h3{
+body.context-frontpage div.view-homepage div.views-row-odd div.desc h3 {
 	color: #D33C35 !important;
-  border:0;
-	font-size: 22px;
+	border: 0;
+	font-size: 25px;
+	letter-spacing: normal;
+	font-weight: normal;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.link {
+	padding: 10px 0;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.link a {
+	background: #D33C35;
+	margin: 0;
+	padding: 12px 25px;
+	color: #FFF;
+	font-size: 18px;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.link a:hover {
+	background: #333;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.image img {
+	width: 651px;
+	height: 469px;
+}
+body.context-frontpage div.view-homepage div.views-row-even div.image {
+	position: absolute;
+	right: 0;
+	top: 50px;
 }
