@@ -2,7 +2,7 @@
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->name == $name || in_array('administrator', $user->roles)) {
+if ($user->uid = $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>
@@ -47,7 +47,7 @@ else {
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->name == $name || in_array('administrator', $user->roles)) {
+if ($user->uid = $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>
@@ -78,19 +78,36 @@ if ($user->name == $name || in_array('administrator', $user->roles)) {
       </div>
       
       <div class="right">
-        <div class="dialog-links edit-field-loc-sp-und-0-target-id"><ul class="references-dialog-links"><li><a href="/node/<?php print $node->nid ?>/edit" class="edit-dialog">Edit this record</a></li></ul></div>
-        <div class="field_myr_nb"><?php print render($content['field_myr_nb'][0]); ?>
-        <div class="field_myr_heard"><?php print render($content['field_myr_heard'][0]); ?>
-        <div class="field_myr_captive"><?php print render($content['field_myr_captive'][0]); ?>
-        <div class="field_myr_date"><?php print render($content['field_myr_date'][0]); ?>
+        <div class="field_myr_nb"><?php print render($content['field_myr_nb'][0]); ?></div>
+        <?php
+          if (isset($node->field_myr_heard['und'][0]['value']) && $node->field_myr_heard['und'][0]['value'] === '1') {
+            print '<div class="field_myr_heard">Heard only</div>';
+          }
+        ?>
+        <?php
+          if (isset($node->field_myr_captive['und'][0]['value']) && $node->field_myr_captive['und'][0]['value'] === '1') {
+            print '<div class="field_myr_captive">Captive</div>';
+          }
+        ?>
+        <div class="field_myr_date">
+          <?php print render($content['field_myr_date'][0]); ?>
+        </div>
+        
+        <!--<div class="edit-record"><a href="/node/ php print $node->nid /edit" class="edit-dialog">Edit this record</a></div>-->
       </div>
       
       <div class="bottom">
-        <div class="body"><?php print render($content['body'][0]); ?>
-        <div class="field_myr_map"><?php print render($content['field_myr_map'][0]); ?>
+        <div class="body"><?php print render($content['body'][0]); ?></div>
+        <?php
+          // We show the map wether the user gave an exact address or not
+          if (isset($node->field_myr_map['und'][0]['lat'])) {
+          // si no esta definida la latitud, no mostrem el mapa
+            print '<div class="field_myr_map">' . render($content['field_myr_map'][0]) . '</div>';
+          }
+        ?>
       </div>
       
-      <?php print render($content); ?>
+      <?php //print render($content); ?>
     </div>
 
   </div>
@@ -99,7 +116,7 @@ if ($user->name == $name || in_array('administrator', $user->roles)) {
 <?php }
 else {
   // The other users should not find in the website any link to this full node, but just in case we do a redirect...
-  drupal_goto('/my-record/list');
+  drupal_goto('checklist');
 }
 ?>
 

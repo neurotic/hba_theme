@@ -14,7 +14,7 @@
     <?php
       //trim the text with http://api.drupalize.me/api/drupal/function/views_trim_text/7
       $alter_taxo_c = array('max_length' => 225, 'word_boundary' => TRUE, 'ellipsis' => TRUE, 'html' => TRUE);
-      print '<div class="ds-taxonomy"><span class="label">Taxonomy: </span> <span class="name_desc">' . render($content['field_sp_name_desc'][0]) . '</span> <span class="descriptor">' . render($content['field_sp_descriptor'][0]) . '</span>, <span class="year">' . render($content['field_sp_year'][0]) . '</span>, <span class="type_locality">' . render($content['field_sp_type_locality'][0]) . '</span>.<div class="taxo_comments">' . views_trim_text($alter_taxo_c, render($content['field_sp_taxo_comments'][0])) . '</div></div>';
+      print '<div class="ds-taxonomy"><span class="label">Taxonomy: </span> <span class="name_desc">' . render($content['field_sp_name_desc'][0]) . '</span> <span class="descriptor">' . render($content['field_sp_descriptor'][0]) . ',</span> <span class="year">' . render($content['field_sp_year'][0]) . '</span>, <span class="type_locality">' . render($content['field_sp_type_locality'][0]) . ',</span><div class="taxo_comments">' . views_trim_text($alter_taxo_c, render($content['field_sp_taxo_comments'][0])) . '</div></div>';
 
       $alter_dn = array('max_length' => 225, 'word_boundary' => TRUE, 'ellipsis' => TRUE, 'html' => TRUE);
       print '<strong>Descriptive notes:</strong> ' . views_trim_text($alter_dn, render($content['field_sp_descr_notes'][0]));
