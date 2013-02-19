@@ -2036,7 +2036,7 @@ padding: 10px;
 
 /* SP node teaser */
 
-.node-inner.teaser {
+.node-species.node-teaser .node-inner.teaser {
   /*background: #FFF5E9;
   padding: 15px 25px 15px 25px;
   margin-bottom: 20px;
@@ -2530,6 +2530,17 @@ article.node-species div.ds-ssp_comp span.label {float: none;}
 article.node-species div p {margin: 0;}
 article.node-species div.ds-other-names p {display: inline; margin: 0;}
 
+/*icones del status*/
+.EW {background: transparent url(images/status/status-ew.png) no-repeat left center;}
+.CR {background: transparent url(images/status/status-cr.png) no-repeat left center;}
+.EN {background: transparent url(images/status/status-en.png) no-repeat left center;}
+.VU {background: transparent url(images/status/status-vu.png) no-repeat left center;}
+.CD {background: transparent url(images/status/status-cd.png) no-repeat left center;}
+.NT {background: transparent url(images/status/status-nt.png) no-repeat left center;}
+.LC {background: transparent url(images/status/status-lc.png) no-repeat left center;}
+.DD {background: transparent url(images/status/status-dd.png) no-repeat left center;}
+.NE {background: transparent url(images/status/status-ne.png) no-repeat left center;}
+.NA {background: transparent url(images/status/status-na.png) no-repeat left center;}
 
 /* seccio Bibliography */
 .node-type-species .field-name-field-sp-biblio-new .field-name-title {float: left; padding-right: 10px;}
@@ -2766,7 +2777,6 @@ body #region-content a.unflag-action:hover {
   font-size: 12px;
   font-weight: normal;
   padding: 5px 2px 5px 0;
-
   line-height: 120%;
 	text-decoration: none;
 }
@@ -2962,17 +2972,6 @@ th.views-field-ops {width: 30px !important; padding-right: 20px;}
   margin: 1em auto 0.6em auto;
 }
 
-/* Bloc Mynotes */
-
-div.view-empty .add,
-div.view-footer .add {
-text-align: right;
-padding-top: 1em;
-font-size: 0.85em;
-}
-#block-views-mynotes-block div.view-empty {
-font-style: italic;
-}
 /*ctools modal for mynote*/
 #ctools-main-dialog-box form#mynote-node-form .filter-help {display: none;}
 #ctools-main-dialog-box form#mynote-node-form input#edit-submit--2.form-submit,
@@ -3428,12 +3427,6 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 }
 
 /* Page: New bibliographic references (/reference/all /reference/new /reference/outstanding) */
-.page-reference .view-header,
-.view-taxonomy-term .view-header {
-  padding: 10px;
-  margin: 10px 0 15px 0;
-  background: #F2F2F2;
-}
 .view-id-biblio_node_references .views-row {
   padding-bottom: 15px;
 }
@@ -3482,7 +3475,51 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
  * Views
  */
 
-/* Exposed filters */
+/*counter*/
+.view-header .counter {
+  padding: 10px;
+  margin: 10px 0 15px 0;
+  background: #F2F2F2;
+}
+
+/*more*/
+.view > .more-link {
+  margin: 10px 0;
+}
+.view .view-footer .more-link {
+  text-align: right;
+  margin: 10px 0;
+}
+.view-flag-nodes.view-display-id-block_4 .more-link {
+  margin-right: 10px;
+}
+
+/*no result*/
+.view-empty {
+  border: 1px solid rgb(236, 216, 179);
+  background: rgba(252, 248, 209, 0.55);
+  padding: 10px;
+  margin: 15px 0;
+}
+div.view-empty .add,
+div.view-footer .add {
+  text-align: right;
+  padding-top: 1em;
+  font-size: 0.9em;
+}
+#block-views-mynotes-block div.view-empty {
+  font-style: italic;
+}
+
+/* Exposed filters (no block) */
+.view-filters .views-exposed-form {
+  border: 6px solid rgba(102, 102, 102, 0.57);
+  padding: 10px;
+  margin: 20px 0;
+}
+
+/*View: block Latest news on species*/
+.views-field-created {text-align: right;margin-bottom: 5px;}
 
 /*bloc sp search*/
 #block-views-024b51b0948df12f8903897e79946969,
@@ -3508,7 +3545,8 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
   margin-bottom: 20px;
 }
 
-/*block Search on common name, incrustat en Taxonomic Tree*/
+/* block Search on common name, incrustat en Taxonomic Tree */
+
 .block-28,
 .block-28 .content,
 .block-28 .views-exposed-widgets {
@@ -3516,6 +3554,7 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
   margin: 0 !important;
 }
 .block-28 .views-exposed-widgets {padding-top: 3px !important;}
+.block-28 .views-exposed-form .views-exposed-widget {float: none;}
 /*.block-28 .views-exposed-form #edit-genus-wrapper,*/
 .block-28 .views-exposed-form #edit-species-wrapper,
 /*.block-28 .views-exposed-form #edit-other-wrapper,*/
@@ -3531,29 +3570,29 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 .block-28 .views-exposed-widget.views-widget-filter-field_sp_name_common_value,
 .block-28 .views-exposed-widget.views-widget-filter-field_sp_names_other_common_value {
   padding: 0 !important;
-  float: left !important;
+  /*float: left !important;
   width: 80% !important;
-  padding-right: 5px !important;
+  padding-right: 5px !important;*/
 }
-.block-28 .content > .label {
-
-}
-.block-28 .views-exposed-widgets #edit-sp-wrapper .views-widget input.form-autocomplete,
-.block-28 .views-exposed-widgets #edit-other-wrapper .views-widget input.form-autocomplete {
+.block-28 .views-exposed-widgets .views-widget input.form-autocomplete {
   width: 100% !important;
   padding: 0 !important;
 }
-.block-28 .views-exposed-widget.views-submit-button {
+.block-28 .views-exposed-form .views-exposed-widget.views-submit-button,
+.block-28 .views-exposed-form .views-exposed-widget.views-reset-button {
   float: right !important;
   padding: 0 !important;
-  margin: 0 !important;
-  display: block !important;
 }
-.block-28 .views-exposed-widget.views-submit-button input {
-  margin: 0 !important;
+.block-28 .views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 1em;
+  margin-left: 5px;
+}
+.block-28 .views-exposed-form .views-exposed-widget.views-reset-button input[type="reset"] {
+  font-weight: normal;
 }
 
 /* Block: Search (exposed filters from biblio_node_references view) */
+
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .views-exposed-widget,
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .views-widget,
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .form-type-textfield,
@@ -3909,22 +3948,6 @@ float: left;
 width: 25%;
 }
 
-/**
- * Dialog API
- */
-
-/*modal del flag Mark as Viewed*/
-/*.page-node div.ui-dialog {min-height: 500px !important; min-width: 450px !important;}
-.page-node div#dialog.ui-dialog-content {min-height: 450px !important; min-width: 430px !important;}*/
-.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container.chzn-container-multi.chzn-container-active {padding-bottom: 135px;}
-.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container.chzn-container-multi,
-.page-node div#edit-field-flag-viewed-country-und-dialog_chzn.chzn-container ul.chzn-choices,
-.page-node div.chzn-drop ul.chzn-results {width: 100% !important;}
-/*.page-node div.form-item.form-type-select.form-item-field-flag-viewed-country-und {float: left; padding-right: 20px;}*/
-.page-node form#flagging-form-flagging-form-dialog div#edit-actions-dialog.form-actions.form-wrapper {float: right;}
-
-
-
 
  /*  Imagenes en el Foreword o otras paginas de texto  */
 
@@ -4020,10 +4043,6 @@ padding: 0 !important;
 height: 25px;
 padding-left: 60px;
 background:url(/sites/all/themes/hba_theme/css/images/external/scholar.gif) no-repeat left center transparent;
-}
-.more-link {
-float: right;
-margin: 0 20px 10px 0;
 }
 
 /* Page: External ressources */
@@ -4505,6 +4524,7 @@ fieldset#node_locality_full_group_loc_group_myr {
   border-radius: 0 0 0 5px;
   background: #666;
   color: #FFF;
+  font-size: 0.8em;
 }
 .field-name-field-loc-sp .field-name-field-myr-nb,
 .field-name-field-loc-sp .field-name-field-myr-heard,
@@ -4538,6 +4558,7 @@ div.field_myr_map .openlayers-map {
 .page-node-edit.node-type-locality #content .region-content #block-system-main {float:left; max-width: 600px;}
 .page-node-add-locality #content .region-content #block-views-my-record-block-3,
 .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3 {float: left;}
+#block-views-my-record-block-2 .view-grouping-header,
 #block-views-my-record-block-3 .view-grouping-header,
 #block-views-my-record-block-4 .view-grouping-header {
   font-size: 1.2em;
@@ -4545,6 +4566,7 @@ div.field_myr_map .openlayers-map {
   margin-top: 10px;
   border-bottom: 1px solid #111;
 }
+#block-views-my-record-block-2 .view-grouping-content h3,
 #block-views-my-record-block-3 .view-grouping-content h3,
 #block-views-my-record-block-4 .view-grouping-content h3 {
   font-size: 1.05em;
@@ -4553,8 +4575,10 @@ div.field_myr_map .openlayers-map {
   border-bottom: 0 none;
   letter-spacing: 0;
 }
+#block-views-my-record-block-2 .view-grouping-content .views-row .field-content,
 #block-views-my-record-block-3 .view-grouping-content .views-row .field-content,
-#block-views-my-record-block-4 .view-grouping-content .views-row .field-content {
+#block-views-my-record-block-4 .view-grouping-content .views-row .field-content, 
+#block-block-31 .field-content {
   background: url("../../../../../misc/menu-leaf.png") no-repeat scroll 10px 7px transparent;
   display: inline-block;
   padding-left: 25px;
@@ -4613,6 +4637,18 @@ div.field_myr_map .openlayers-map {
 .view-my-record th.views-field-field-myr-captive {width: 40px; line-height: 100%; font-size: 0.8em;}
 .view-my-record th.views-field-field-myr-nb {width: 20px;}
 .view-my-record th.views-field-edit-node {width: 35px;}
+
+/*Block wikipedia + map*/
+#block-block-30 {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #EEE;
+}
+.geo-map {
+  float: right;
+  padding: 0 0 15px 15px;
+  width: 40%;
+}
 
 /*popup calendar*/
 .form-type-date-popup input {
@@ -4785,10 +4821,6 @@ div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper di
 #block-views-log-updated-nodes-block-3 {
 	background: none;
 	border: 0;
-}
-#block-views-log-updated-nodes-block-3 h2 {
-	font-weight: normal;
-	font-size: 1.7em;
 }
 #block-views-log-updated-nodes-block-3 div.view.view-log-updated-nodes div.view-content {
 	border: 0;

@@ -274,7 +274,9 @@ node/*/revisions/list -->
           hide($content['group_sp_tab_taxo']['field_sp_subspecies_comp']);
           hide($content['group_sp_tab_taxo']['field_sp_ssp_comments']);
           
-          $tpl_taxo = '<div class="ds-names"><span class="label">French:</span> <span class="name">' . render($content['group_sp_tab_taxo']['field_sp_name_french'][0]) . '</span> <span class="label">German:</span> <span class="name">' . render($content['group_sp_tab_taxo']['field_sp_name_german'][0]) . '</span> <span class="label">Spanish:</span> <span class="name">' . render($content['group_sp_tab_taxo']['field_sp_name_spanish'][0]) . '</span></div>';
+          $tpl_taxo = '<div id="status" class="ds-status">' . render($content['group_sp_tab_taxo']['field_sp_status'][0]) . '</div>';
+          
+          $tpl_taxo .= '<div class="ds-names"><span class="label">French:</span> <span class="name">' . render($content['group_sp_tab_taxo']['field_sp_name_french'][0]) . '</span> <span class="label">German:</span> <span class="name">' . render($content['group_sp_tab_taxo']['field_sp_name_german'][0]) . '</span> <span class="label">Spanish:</span> <span class="name">' . render($content['group_sp_tab_taxo']['field_sp_name_spanish'][0]) . '</span></div>';
           
           if (!empty($content['group_sp_tab_taxo']['field_sp_names_other_common'])) {
             // ATENCIO, per aquest camp multiple utilitzem el template field--field-sp-names-other-common.tpl.php

@@ -2,7 +2,7 @@
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->uid = $uid || in_array('administrator', $user->roles)) {
+if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>
@@ -23,6 +23,20 @@ if ($user->uid = $uid || in_array('administrator', $user->roles)) {
         // We hide the links now so that we can render them later.
         hide($content['links']);
         print render($content);
+        
+        // Inline delete
+        // FALTA POSAR TOT AIXO DINS DUN MODAL; I CREAR EL LINK A AQUEST MODAL. http://drupal.org/node/1046120
+        // http://drupal.stackexchange.com/questions/34750/how-to-make-node-delete-confirmation-inline
+        $item = menu_get_item("node/$nid/delete");
+        if ($item['access']) {
+            include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
+            $page_title = drupal_get_title();
+            $delete_form = drupal_get_form('node_delete_confirm', $node);
+            //print render($delete_form, t('Are you sure you want to delete %title?', array('%title' => $node->title)), 'node/' . $node->nid, t('This action cannot be undone.'), t('Delete'), t('Cancel'));
+            print render($delete_form);
+            drupal_set_title($page_title, PASS_THROUGH);
+            drupal_goto('checklist');
+        }
       ?>
     </div>
     
@@ -47,7 +61,7 @@ else {
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->uid = $uid || in_array('administrator', $user->roles)) {
+if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>
