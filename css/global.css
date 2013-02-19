@@ -20,7 +20,7 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   outline: 0 none;
   padding: 0;
   vertical-align: baseline;
-  
+
   font-family:'lucida grande',tahoma,verdana,arial,sans-serif;
   color: #505050;
   font: 13px/1.231 sans-serif;
@@ -130,7 +130,7 @@ h1#page-title {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  
+
   padding: 0 20px;
   display: block;
 }
@@ -209,11 +209,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   /*border: 1px solid #c2c2c2;*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;  
+  border-radius: 4px;
   padding: 15px;
   -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
-  box-shadow: 0px 1px 1px 1px #e8e8e8; 
+  box-shadow: 0px 1px 1px 1px #e8e8e8;
 }
 
 #region-sidebar-first .block {
@@ -359,7 +359,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 }
 
 
-#block-menu-menu-sections ul li.menu_newsletters_and_warnings .menu_image {  
+#block-menu-menu-sections ul li.menu_newsletters_and_warnings .menu_image {
   background-position: -347px 0;
 }
 
@@ -424,7 +424,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;
-  
+
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(243, 238, 236);
   /* RGBa with 0.6 opacity */
@@ -570,7 +570,7 @@ body.context-species #region-content .region-inner h2 {
 }
 
 .context-species #region-content a {
-  /*color: #EE9C31;  
+  /*color: #EE9C31;
   color: #FF6600;
   color: #FC6F03;
   color: #FA991B;
@@ -605,7 +605,7 @@ body #block-block-2 .content-toc ul li {
   line-height: 1.5em; /* Stipulate the height of each item so that vertical return = items * height */
   margin: 0;
   padding: 0;
-  
+
   /*float: left;
   width: 180px;
   margin-right: 15px;*/
@@ -669,7 +669,7 @@ body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   border-bottom-left-radius: 5px;
   -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
-  box-shadow: 0px 1px 1px 1px #e8e8e8; 
+  box-shadow: 0px 1px 1px 1px #e8e8e8;
 }
 
 #region-sidebar-second .block,
@@ -710,11 +710,11 @@ body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   -moz-border-radius-bottomright: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  
+
   border: 1px solid #c8c5c5;
   font-weight: normal;
   color: #707070;
-  
+
   /*margin-bottom: 5px;*/
   text-transform: uppercase;
   font-size: 13px;
@@ -856,7 +856,7 @@ body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
 }
 */
 
-body .node-links ul li a, 
+body .node-links ul li a,
 body .comment-links ul li a {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -925,7 +925,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   color: black;
   float: right;
   background-color: transparent;
-  border: none;	
+  border: none;
   padding: 0;
 }
 
@@ -985,7 +985,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   margin-top: 0;
   padding-top: 7px;
 }
-  
+
 #block-bird-taxonomies-bird-orders .content ul.species em {
   display: block;
   margin: 0 0 3px 4px;
@@ -1024,7 +1024,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   color: black;
   text-decoration: none;
   padding-left: 7px;
-  
+
 }
 
 #block-bird-taxonomies-bird-orders .content li:hover {
@@ -1117,12 +1117,12 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 /*Seccions Sp collapsible / collapsed*/
 /*#region-content #node_species_full_group_sp_tab_taxo h3,
 #region-content #node_species_full_group_sp_tab_descr_notes h3,
-#region-content #node_species_full_group_sp_tab_voice h3, 
-#region-content #node_species_full_group_sp_tab_habitat h3, 
-#region-content #node_species_full_group_sp_tab_food h3, 
-#region-content #node_species_full_group_sp_tab_breeding h3, 
-#region-content #node_species_full_group_sp_tab_move h3, 
-#region-content #node_species_full_group_sp_tab_status h3, 
+#region-content #node_species_full_group_sp_tab_voice h3,
+#region-content #node_species_full_group_sp_tab_habitat h3,
+#region-content #node_species_full_group_sp_tab_food h3,
+#region-content #node_species_full_group_sp_tab_breeding h3,
+#region-content #node_species_full_group_sp_tab_move h3,
+#region-content #node_species_full_group_sp_tab_status h3,
 #region-content #node_species_full_group_sp_tab_biblio h3*/
 #region-content .field-group-div h3 {
   margin: 10px 0 5px;
@@ -1133,7 +1133,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   border-radius: 5px;
   -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
-  box-shadow: 0px 1px 1px 1px #e8e8e8; 
+  box-shadow: 0px 1px 1px 1px #e8e8e8;
 }
 #region-content .field-group-div h3 {
   clear: both;
@@ -1141,12 +1141,12 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 
 /*#region-content #node_species_full_group_sp_tab_taxo h3:after,
 #region-content #node_species_full_group_sp_tab_descr_notes h3:after,
-#region-content #node_species_full_group_sp_tab_voice h3:after, 
-#region-content #node_species_full_group_sp_tab_habitat h3:after, 
-#region-content #node_species_full_group_sp_tab_food h3:after, 
-#region-content #node_species_full_group_sp_tab_breeding h3:after, 
-#region-content #node_species_full_group_sp_tab_move h3:after, 
-#region-content #node_species_full_group_sp_tab_status h3:after, 
+#region-content #node_species_full_group_sp_tab_voice h3:after,
+#region-content #node_species_full_group_sp_tab_habitat h3:after,
+#region-content #node_species_full_group_sp_tab_food h3:after,
+#region-content #node_species_full_group_sp_tab_breeding h3:after,
+#region-content #node_species_full_group_sp_tab_move h3:after,
+#region-content #node_species_full_group_sp_tab_status h3:after,
 #region-content #node_species_full_group_sp_tab_biblio h3:after*/
 #region-content .field-group-div h3:after {
   background: url("images/icons.png") no-repeat scroll 0px -85px;
@@ -1162,12 +1162,12 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 
 /*#region-content #node_species_full_group_sp_tab_taxo .collapsed h3:after,
 #region-content #node_species_full_group_sp_tab_descr_notes .collapsed h3:after,
-#region-content #node_species_full_group_sp_tab_voice .collapsed h3:after, 
-#region-content #node_species_full_group_sp_tab_habitat .collapsed h3:after, 
-#region-content #node_species_full_group_sp_tab_food .collapsed h3:after, 
-#region-content #node_species_full_group_sp_tab_breeding .collapsed h3:after, 
-#region-content #node_species_full_group_sp_tab_move .collapsed h3:after, 
-#region-content #node_species_full_group_sp_tab_status .collapsed h3:after, 
+#region-content #node_species_full_group_sp_tab_voice .collapsed h3:after,
+#region-content #node_species_full_group_sp_tab_habitat .collapsed h3:after,
+#region-content #node_species_full_group_sp_tab_food .collapsed h3:after,
+#region-content #node_species_full_group_sp_tab_breeding .collapsed h3:after,
+#region-content #node_species_full_group_sp_tab_move .collapsed h3:after,
+#region-content #node_species_full_group_sp_tab_status .collapsed h3:after,
 #region-content #node_species_full_group_sp_tab_biblio .collapsed h3:after*/
 #region-content .field-group-div.collapsed h3:after {
   background-position: 0px -140px;
@@ -1194,26 +1194,26 @@ body #region-content .region-inner h3 a {
   text-decoration: none;
 }
 
-#region-content h1, 
-#region-content h2, 
-#region-content h3, 
-#region-content h4, 
-#region-content h5, 
+#region-content h1,
+#region-content h2,
+#region-content h3,
+#region-content h4,
+#region-content h5,
 #region-content h6 {
   font-family: "Trebuchet MS" ,sans-serif;
 }
 
-body.page-node-201985 #region-content h1 { 
+body.page-node-201985 #region-content h1 {
   float: left;
   margin-bottom: 8px;
-} 
+}
 
-body.page-node-201985 #region-content h2 { 
+body.page-node-201985 #region-content h2 {
   float: left;
   color: #717070;
   margin-left: 15px;
   margin-top: 5px;
-} 
+}
 
 .view-content h3 {
   border-bottom: 2px solid #666;
@@ -1299,7 +1299,7 @@ body .node-inner.full .content .field-group-format-wrapper {
 #block-global-filter-global-filter-1 #edit-inputs .fieldset-wrapper {
   padding: 10px 20px 15px 20px;
   background: #535151;
-  position: absolute; 
+  position: absolute;
   left: -999em;
   color: black;
   -webkit-border-top-right-radius: 4px;
@@ -1344,9 +1344,9 @@ body .chzn-choices {
   margin-top: 2px;
 }
 
-body button, 
-body input[type="reset"], 
-body input[type="submit"], 
+body button,
+body input[type="reset"],
+body input[type="submit"],
 body input[type="button"] {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -1382,13 +1382,13 @@ body input[type="button"] {
   color: #535151;
   background: #FFCD61;
   color: #9E6F09;*/
-  
+
   border-top: 1px solid #FAC95E;
   border-right: 1px solid #DFB65E;
   border-bottom: 1px solid #DFB65E;
   border-left: 1px solid #FAC95E;
   /*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);*/
- 
+
   /*background: url(images/states.png) no-repeat scroll -323px -80px transparent;
   font-family: 'UniversLTW01-57Condense 723821', Arial, Helvetica;*/
   font-family: Verdana, Arial, Helvetica,"Lucida Grande", Lucida, sans-serif;
@@ -1444,7 +1444,7 @@ body input[type="button"] {
 #block-views-flag-nodes-block-6 .content,
 #block-views-flag-nodes-block-5 .content {
   background: #535151;
-  position: absolute; 
+  position: absolute;
   left: -999em;
   color: black;
   -webkit-border-bottom-right-radius: 4px;
@@ -1495,7 +1495,7 @@ body input[type="button"] {
   /*Add another block-level blank space*/
   content:"\00a0";
   display:block;
-  
+
   width: 10px;
   height: 10px;
   background: #e3e6e6;
@@ -1519,13 +1519,69 @@ body input[type="button"] {
 /**
  * Plate view (gallery fluid)
  */
- 
+
+body.page-plate #zone-content,
 body.page-plate #region-content {
   width: 99%;
+  padding-top: 0;
 }
 
 body.page-plate #region-content .view-content {
   border: none;
+  padding: 5px 10px;
+  background: white;
+}
+
+body.page-plate #region-content .item-list {
+  background: white;
+}
+
+body.page-plate #region-content .view-filters {
+  display: none;
+}
+
+body.page-plate h1#page-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 8px 5px 5px 20px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+body.page-plate #btn-div {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+body.page-plate #region-content .region-inner {
+  -webkit-border-radius: 10px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius: 10px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top: none;
+  border: 1px solid #ededed;
+  padding: 0;
+
+  background: #f9f9f9; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #f9f9f9 0%, #eaeaea 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9f9f9 0%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9f9f9 0%,#eaeaea 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9f9f9 0%,#eaeaea 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9f9f9 0%,#eaeaea 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea',GradientType=0 ); /* IE6-8 */
+
+}
+
+body.page-plate #messages {
+  margin: 0;
 }
 
 body.page-plate #region-content .region-inner {
@@ -1545,7 +1601,7 @@ body.page-plate #region-content .region-inner {
 body.page-plate #block-views-exp-galley-fluid-page {
   border: 0;
   border-bottom: 2px solid #f4f4f4;
-  
+
   background: rgb(250,250,250); /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmOGY3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -1718,7 +1774,7 @@ margin: auto 0;
   border-bottom: 1px solid #d9d9d9;*/
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  border-radius: 15px; 
+  border-radius: 15px;
   /*-webkit-border-bottom-right-radius: 5px;
   -webkit-border-top-right-radius: 5px;
   -moz-border-radius-bottomright: 5px;
@@ -1989,7 +2045,7 @@ padding: 10px;
   border-radius: 5px;
   -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
-  box-shadow: 0px 1px 1px 1px #e8e8e8; 
+  box-shadow: 0px 1px 1px 1px #e8e8e8;
   -webkit-box-shadow: 0px 1px 1px 1px #F1E6D7;
   -moz-box-shadow: 0px 1px 1px 1px #F1E6D7;
   box-shadow: 0px 1px 1px 1px #F1E6D7;*/
@@ -2062,7 +2118,7 @@ ul.tabs.secondary {
 display: inline-block;
 padding: 8px 5px;
 margin: 0;
-background: #E1ECEF; 
+background: #E1ECEF;
 border: 1px solid #B8E0ED;
 }
 /*tabs secundaries de un node display, si Node Pending */
@@ -2072,7 +2128,7 @@ text-align: center !important;
 display: inline-block;
 padding: 5px 0 8px 5px;
 margin: 0;
-background-color: #FFFDDB !important; 
+background-color: #FFFDDB !important;
 border-left: 1px solid #B8E0ED;
 border-right: 1px solid #B8E0ED;
 border-top: 1px solid #CCC;
@@ -2090,10 +2146,10 @@ clear: left;
  * diff
  */
 
-.content table.diff, 
+.content table.diff,
 div.diff-section-title {
 font-size: 1.1em;
-background: #E1ECEF; 
+background: #E1ECEF;
 border: 1px solid #B8E0ED;}
 .content table.diff td.diff-section-title {font-size: 0.95em; padding: 10px 5px 5px 5px;}
 div.diff-section-title {margin-bottom: 10px;}
@@ -2436,7 +2492,7 @@ a#family_prev_tab.nav_prev_general {display: none;}
 /*
  * SP
  */
- 
+
 /* DS > Extras > Code field > sp_section_1_taxonomy */
 .field-name-sp-section-1-taxonomy span.label {float: left; padding-right: 3px; font-weight: bold;}
 .field-name-sp-section-1-taxonomy div.ds-names span.label {float: none;}
@@ -2551,7 +2607,7 @@ width: 90px;
 
 /*
  * Sidebar second (derecha)
- * 
+ *
  */
 
 /* Colorbox / Shadowbox */
@@ -2640,7 +2696,7 @@ margin-top: 15px !important;
 .view-compare.view-display-id-page table th {
 width: 75px;
 }
-.view-compare.view-display-id-page table tr.title.odd th, 
+.view-compare.view-display-id-page table tr.title.odd th,
 .view-compare.view-display-id-page table tr.ops.even th,
 .view-compare.view-display-id-page table tr.ops.even,
 .view-compare.view-display-id-page table tr.title {
@@ -2668,7 +2724,7 @@ height: 70px !important;
 .view-compare.view-display-id-page table td a.flag.unflag-action {
 color: #555;
 }
-.page-node-revisions li.flag-compare .flag-action, 
+.page-node-revisions li.flag-compare .flag-action,
 .page-node-revisions li.flag-compare .unflag-action {
   display: none;
 }
@@ -2863,7 +2919,7 @@ body #region-content .flag-message {
 th.views-field-field-sp-name-common-1,
 td.views-field-field-sp-name-common-1 {width: 165px;}
 .view-species-table-by-family td.views-field-ops,
-.view-my-list td.views-field-ops, 
+.view-my-list td.views-field-ops,
 th.views-field-ops {width: 30px !important; padding-right: 20px;}
 .view-my-list td.views-field-ops span,
 .view-my-list td.views-field-ops span span {width: 25px !important;}
@@ -2937,7 +2993,7 @@ margin: 25px 0 30px 0;
   padding: 10px;
   margin: 0 20px 15px 0;
   background: rgb(241, 241, 156);*/
-  
+
   float: left;
   text-align: center;
   width: 225px;
@@ -2975,7 +3031,7 @@ margin: 25px 0 30px 0;
 }
 .view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick:after,
 .view-mynotes.view-display-id-attachment_1 .views-row:after,
-.postit:after {     
+.postit:after {
   /*content: "";
   position:absolute;
   z-index:-1;
@@ -3016,7 +3072,7 @@ margin: 25px 0 30px 0;
 /*
  * START cosas de (http://webdesignerwall.com/tutorials/responsive-design-with-css3-media-queries)
  * no lo incorpora el tema Omega (probado con viewport de movil)
- * 
+ *
  */
 
 /*flexible images*/
@@ -3277,7 +3333,7 @@ a.hide_links_plate:active:focus,
   text-decoration:none;
   outline:none;
 }
-#region-content .content a.disabled, 
+#region-content .content a.disabled,
 #region-content .content a.disabled:hover {
   color: #3D3C3C;
   font-weight: normal;
@@ -3503,7 +3559,7 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .form-type-textfield,
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form input,
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form select {
-  
+
 }
 #views-exposed-form-biblio-node-references-page-2 .views-exposed-form .views-widget-filter-field_bib_year_value {
   float: left;
@@ -4032,8 +4088,8 @@ form#signupform-M6JL4NGD {text-align: center;}
 #site-desc-M6JL4NGD li {list-style: none; list-style-type: none; line-height: 90%;}
 input#email-M6JL4NGD.field.blink {width: 360px !important; color: #111; line-height: 110%; height: 40px; text-align: center;}
 
-/*	BigVideo Styles 
-	You may need to adjust these styles to get this working right in your design. 
+/*	BigVideo Styles
+	You may need to adjust these styles to get this working right in your design.
 */
 #big-video-wrap{overflow:hidden;position:fixed;height:100%;width:100%;top:0;left:0;}
 #big-video-vid,#big-video-image{position:absolute;}
@@ -4112,7 +4168,7 @@ vertical-align: super;
 font-size: 0.7em;
 }
 
-/** 
+/**
  * Locality node form
  * + My record
  * + Trip
@@ -4205,7 +4261,7 @@ input#edit-field-myr-trip-und-0-target-id {width:100%;}
   border-top: 1px solid #DEDEDE;
 }
 .group-loc-loc-group .horizontal-tabs ul.horizontal-tabs-list li.selected a {
-  
+
 }
 /*.group-loc-loc-group .horizontal-tabs .horizontal-tabs-panes {border-top: 1px solid #DEDEDE;}*/
 .group-loc-loc-group .horizontal-tabs .horizontal-tabs-panes > fieldset {}
@@ -4231,7 +4287,7 @@ fieldset#node_locality_form_group_loc_loc_tab1 .fieldset-wrapper {padding:5px;}
 }
 #edit-field-loc-sp table#field-loc-sp-values tbody {border-top:0;}
 #edit-field-loc-sp table#field-loc-sp-values tr {
-  
+
 }
 #edit-field-loc-sp table#field-loc-sp-values tr.even, tr.odd {
   background-color: #fff;
@@ -4293,7 +4349,7 @@ input#edit-field-myr-nb-und-0-value {
 /*fieldset*/
 fieldset#node_my_record_form_group_myr_gr_options {clear:left;}
 fieldset.group-myr-gr-options {
-  
+
 }
 #edit-field-myr-date fieldset legend .fieldset-legend,
 .form-item-field-myr-date-und-0 > label {
@@ -4349,10 +4405,10 @@ outline: none;
 /*throbber while loading Myrecord form modal frame*/
 /*#preloader {
 	position:fixed;
-	left:0px; 
-	top:0px; 
-	width:100%; 
-	height:100%; 
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
 	text-align:center;
 }
 #preloader div {
@@ -4400,7 +4456,7 @@ fieldset#node_locality_full_group_loc_group_myr {
 }
 /*view mode Mini-teaser for Species in field_loc_sp*/
 .field-name-field-loc-sp .node-my-record .node-inner div.content {
-  
+
 }
 .field-name-field-loc-sp .node-inner div.content > div.left { /*mini-teaser*/
   float: left !important;
@@ -4453,7 +4509,7 @@ fieldset#node_locality_full_group_loc_group_myr {
 .field-name-field-loc-sp .field-name-field-myr-nb,
 .field-name-field-loc-sp .field-name-field-myr-heard,
 .field-name-field-loc-sp .field-name-field-myr-captive {
-  
+
 }
 .node-type-locality .field-name-field-loc-sp .node-inner div.content div.bottom {
   clear: left;
