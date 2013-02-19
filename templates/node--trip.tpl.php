@@ -2,7 +2,7 @@
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->uid = $uid || in_array('administrator', $user->roles)) {
+if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>
@@ -47,7 +47,7 @@ else {
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->uid = $uid || in_array('administrator', $user->roles)) {
+if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>

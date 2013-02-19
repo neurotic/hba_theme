@@ -2,7 +2,7 @@
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->uid = $uid || in_array('administrator', $user->roles)) {
+if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>
@@ -47,7 +47,7 @@ else {
 
 global $user;
 // content only visible if current user if node author or admin
-if ($user->uid = $uid || in_array('administrator', $user->roles)) {
+if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
 <article<?php print $attributes; ?>>
@@ -89,9 +89,15 @@ if ($user->uid = $uid || in_array('administrator', $user->roles)) {
         }
       ?>
       <?php
-        // If the user gave an exact address, we show it in all case
-        if (isset($node->field_loc_loc_addr['und'][0]['value'])) {
+        // If the user gave an exact address (at least zipcode o street name), we show it in all case
+        if ($node->field_loc_loc_addr['und'][0]['postal_code'] > '' || $node->field_loc_loc_addr['und'][0]['thoroughfare'] > '') {
           print '<div class="field_loc_loc_addr">' . render($content['field_loc_loc_addr'][0]) . '</div>';
+        }
+      ?>
+      <?php
+        // If the user gave an exact address + didn't draw on the Bounding map + map2 has a latitud, then we show map2
+        if ( (isset($node->field_loc_loc_addr['und'][0]['postal_code']) || isset($node->field_loc_loc_addr['und'][0]['thoroughfare'])) && !isset($node->field_loc_loc_map['und'][0]['lat']) && isset($node->field_loc_loc_addr_map['und'][0]['lat']) ) {
+          print '<div class="field_loc_loc_addr_map">' . render($content['field_loc_loc_addr_map'][0]) . '</div>';
         }
       ?>
       <?php
@@ -103,7 +109,20 @@ if ($user->uid = $uid || in_array('administrator', $user->roles)) {
       ?>
       <div class="body"><?php print render($content['body'][0]); ?></div>
       <?php
-        print '<div class="group_loc_group_myr">' . render($content['group_loc_group_myr']) . '</div>';
+        if (isset($node->field_loc_sp['und'][0]['target_id'])) {
+          print '<div class="group_loc_group_myr">' . render($content['group_loc_group_myr']) . '</div>';
+        }
+        else {
+          // Emular el fieldset que es genera quand l'usuari ja té un my-record creat
+          $fieldset['element'] = array(
+            '#title' => t('My records'),
+            '#attributes' => array('class' => array('my-records', 'collapsible')),
+            '#value' => 'No records created yet. Edit this checklist in order to add one.',
+            '#children' => '',
+          );
+
+          print theme('fieldset', $fieldset);
+        }
       ?>
       
       <div class="field_myr_links"><?php print render($content['field_myr_links'][0]); ?></div>
