@@ -2531,16 +2531,16 @@ article.node-species div p {margin: 0;}
 article.node-species div.ds-other-names p {display: inline; margin: 0;}
 
 /*icones del status*/
-.EW {background: transparent url(images/status/status-ew.png) no-repeat left center;}
-.CR {background: transparent url(images/status/status-cr.png) no-repeat left center;}
-.EN {background: transparent url(images/status/status-en.png) no-repeat left center;}
-.VU {background: transparent url(images/status/status-vu.png) no-repeat left center;}
-.CD {background: transparent url(images/status/status-cd.png) no-repeat left center;}
-.NT {background: transparent url(images/status/status-nt.png) no-repeat left center;}
-.LC {background: transparent url(images/status/status-lc.png) no-repeat left center;}
-.DD {background: transparent url(images/status/status-dd.png) no-repeat left center;}
-.NE {background: transparent url(images/status/status-ne.png) no-repeat left center;}
-.NA {background: transparent url(images/status/status-na.png) no-repeat left center;}
+.EW {background: transparent url(images/status/status-ew.png) no-repeat left center; padding-left: 20px;}
+.CR {background: transparent url(images/status/status-cr.png) no-repeat left center; padding-left: 20px;}
+.EN {background: transparent url(images/status/status-en.png) no-repeat left center; padding-left: 20px;}
+.VU {background: transparent url(images/status/status-vu.png) no-repeat left center; padding-left: 20px;}
+.CD {background: transparent url(images/status/status-cd.png) no-repeat left center; padding-left: 20px;}
+.NT {background: transparent url(images/status/status-nt.png) no-repeat left center; padding-left: 20px;}
+.LC {background: transparent url(images/status/status-lc.png) no-repeat left center; padding-left: 20px;}
+.DD {background: transparent url(images/status/status-dd.png) no-repeat left center; padding-left: 20px;}
+.NE {background: transparent url(images/status/status-ne.png) no-repeat left center; padding-left: 20px;}
+.NA {background: transparent url(images/status/status-na.png) no-repeat left center; padding-left: 20px;}
 
 /* seccio Bibliography */
 .node-type-species .field-name-field-sp-biblio-new .field-name-title {float: left; padding-right: 10px;}
