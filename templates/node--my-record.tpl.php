@@ -22,11 +22,11 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
       <?php
         // We hide the links now so that we can render them later.
         hide($content['links']);
-        print render($content);
         
         // Inline delete
         // FALTA POSAR TOT AIXO DINS DUN MODAL; I CREAR EL LINK A AQUEST MODAL. http://drupal.org/node/1046120
         // http://drupal.stackexchange.com/questions/34750/how-to-make-node-delete-confirmation-inline
+        
         $item = menu_get_item("node/$nid/delete");
         if ($item['access']) {
             include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
@@ -37,6 +37,9 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
             drupal_set_title($page_title, PASS_THROUGH);
             drupal_goto('checklist');
         }
+        
+        print render($content);
+        
       ?>
     </div>
     

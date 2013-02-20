@@ -1383,17 +1383,6 @@ body.page-plate .views-exposed-widgets {
 body.page-plate .views-exposed-widgets > .views-exposed-widget {
 	float: left;
 }
-body.page-plate #edit-submit-galley-fluid {
-	background: #25ade2;
-	color: white;
-	border-color: #25ade3;
-	text-shadow: none;
-}
-body.page-plate #edit-reset {
-	background: #fdfdfd;
-	color: #cecdcd;
-	border-color: #cecdcd;
-}
 body.page-plate .color-bkg-selector {
 	float: right;
 }
@@ -1774,6 +1763,7 @@ position:absolute;
 .group-sp-tab-descr-notes .footer span.link {
 	float: right;
 }
+
 /**
  * sidebar izquierda
  */
@@ -1784,6 +1774,7 @@ position:absolute;
 	border: 1px dashed #D38C9B;
 	padding: 10px;
 }
+
 /**
  * parte central
  */
@@ -2233,114 +2224,60 @@ a#family_prev_tab.nav_prev_general {
 .nav_prev_section {
 	padding-left: 5px;
 }
+
 /*
  * SP
  */
 
 /* DS > Extras > Code field > sp_section_1_taxonomy */
-.field-name-sp-section-1-taxonomy span.label {
-	float: left;
-	padding-right: 3px;
-	font-weight: bold;
-}
-.field-name-sp-section-1-taxonomy div.ds-names span.label {
-	float: none;
-}
-.field-name-sp-section-1-taxonomy div.ds-names span.name {
-	padding-right: 20px;
-}
-.field-name-sp-section-1-taxonomy div.ds-taxonomy .label {
-	float: left;
-}
-.field-name-sp-section-1-taxonomy div.ds-taxonomy span.name_desc p, #mini-teaser div.ds-taxonomy span.name_desc p, .field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p, #mini-teaser div.ds-taxonomy span.descriptor p, .field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p, #mini-teaser div.ds-taxonomy span.type_locality, #mini-teaser div.ds-taxonomy span.type_locality p {
-	display: inline;
-	margin: 0;
-}
-.field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p, .view-subspecies-of-the-species div.ds-taxonomy span.descriptor p, #mini-teaser div.ds-taxonomy span.descriptor p, .view-subspecies-of-the-species div.ds-taxonomy span.year, .field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p, .view-subspecies-of-the-species div.ds-taxonomy span.type_locality p, #mini-teaser div.ds-taxonomy span.type_locality p {
-	margin-right: -3px;
-}
+.field-name-sp-section-1-taxonomy span.label {float: left; padding-right: 3px; font-weight: bold;}
+.field-name-sp-section-1-taxonomy div.ds-names span.label {float: none;}
+.field-name-sp-section-1-taxonomy div.ds-names span.name {padding-right: 20px;}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy .label {float: left;}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.name_desc p,
+#mini-teaser div.ds-taxonomy span.name_desc p,
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p,
+#mini-teaser div.ds-taxonomy span.descriptor p,
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p,
+#mini-teaser div.ds-taxonomy span.type_locality,
+#mini-teaser div.ds-taxonomy span.type_locality p {display: inline; margin: 0;}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p,
+.view-subspecies-of-the-species div.ds-taxonomy span.descriptor p,
+#mini-teaser div.ds-taxonomy span.descriptor p,
+.view-subspecies-of-the-species div.ds-taxonomy span.year,
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p,
+.view-subspecies-of-the-species div.ds-taxonomy span.type_locality p,
+#mini-teaser div.ds-taxonomy span.type_locality p {margin-right: -3px;}
 /*.field-name-sp-section-1-taxonomy div.ds-taxonomy .taxo_comments {padding-top: 8px;}*/
-.field-name-sp-section-1-taxonomy div.ds-ssp_comp span.label {
-	float: none;
-}
-.field-name-sp-section-1-taxonomy div p {
-	margin: 0;
-}
-.field-name-sp-section-1-taxonomy div.ds-other-names p {
-	display: inline;
-	margin: 0;
-}
+.field-name-sp-section-1-taxonomy div.ds-ssp_comp span.label {float: none;}
+.field-name-sp-section-1-taxonomy div p {margin: 0;}
+.field-name-sp-section-1-taxonomy div.ds-other-names p {display: inline; margin: 0;}
+
 /* el mateix pero amb template node--species.tpl.php */
-article.node-species span.label {
-	float: left;
-	padding-right: 3px;
-	font-weight: bold;
-}
-article.node-species div.ds-names span.label {
-	float: none;
-}
-article.node-species div.ds-names span.name {
-	padding-right: 20px;
-}
-article.node-species div.ds-taxonomy .label {
-	float: left;
-}
-article.node-species div.ds-taxonomy span.name_desc p, article.node-species div.ds-taxonomy span.descriptor p, article.node-species div.ds-taxonomy span.type_locality p {
-	display: inline;
-	margin: 0;
-}
+article.node-species span.label {float: left; padding-right: 3px; font-weight: bold;}
+article.node-species div.ds-names span.label {float: none;}
+article.node-species div.ds-names span.name {padding-right: 20px;}
+article.node-species div.ds-taxonomy .label {float: left;}
+article.node-species div.ds-taxonomy span.name_desc p,
+article.node-species div.ds-taxonomy span.descriptor p,
+article.node-species div.ds-taxonomy span.type_locality p {display: inline; margin: 0;}
 /*article.node-species div.ds-taxonomy .taxo_comments {padding-top: 8px;}*/
-article.node-species div.ds-ssp_comp span.label {
-	float: none;
-}
-article.node-species div p {
-	margin: 0;
-}
-article.node-species div.ds-other-names p {
-	display: inline;
-	margin: 0;
-}
+article.node-species div.ds-ssp_comp span.label {float: none;}
+article.node-species div p {margin: 0;}
+article.node-species div.ds-other-names p {display: inline; margin: 0;}
+
 /*icones del status*/
-.EW {
-	background: transparent url(images/status/status-ew.png) no-repeat left center;
-	padding-left: 20px;
-}
-.CR {
-	background: transparent url(images/status/status-cr.png) no-repeat left center;
-	padding-left: 20px;
-}
-.EN {
-	background: transparent url(images/status/status-en.png) no-repeat left center;
-	padding-left: 20px;
-}
-.VU {
-	background: transparent url(images/status/status-vu.png) no-repeat left center;
-	padding-left: 20px;
-}
-.CD {
-	background: transparent url(images/status/status-cd.png) no-repeat left center;
-	padding-left: 20px;
-}
-.NT {
-	background: transparent url(images/status/status-nt.png) no-repeat left center;
-	padding-left: 20px;
-}
-.LC {
-	background: transparent url(images/status/status-lc.png) no-repeat left center;
-	padding-left: 20px;
-}
-.DD {
-	background: transparent url(images/status/status-dd.png) no-repeat left center;
-	padding-left: 20px;
-}
-.NE {
-	background: transparent url(images/status/status-ne.png) no-repeat left center;
-	padding-left: 20px;
-}
-.NA {
-	background: transparent url(images/status/status-na.png) no-repeat left center;
-	padding-left: 20px;
-}
+.EW {background: transparent url(images/status/status-ew.png) no-repeat left center; padding-left: 20px;}
+.CR {background: transparent url(images/status/status-cr.png) no-repeat left center; padding-left: 20px;}
+.EN {background: transparent url(images/status/status-en.png) no-repeat left center; padding-left: 20px;}
+.VU {background: transparent url(images/status/status-vu.png) no-repeat left center; padding-left: 20px;}
+.CD {background: transparent url(images/status/status-cd.png) no-repeat left center; padding-left: 20px;}
+.NT {background: transparent url(images/status/status-nt.png) no-repeat left center; padding-left: 20px;}
+.LC {background: transparent url(images/status/status-lc.png) no-repeat left center; padding-left: 20px;}
+.DD {background: transparent url(images/status/status-dd.png) no-repeat left center; padding-left: 20px;}
+.NE {background: transparent url(images/status/status-ne.png) no-repeat left center; padding-left: 20px;}
+.NA {background: transparent url(images/status/status-na.png) no-repeat left center; padding-left: 20px;}
+
 /* seccio Bibliography */
 .node-type-species .field-name-field-sp-biblio-new .field-name-title {
 	float: left;
@@ -2419,8 +2356,6 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
 	width: 90px;
 }
 /* Nav previous / next entre vertical tabs de Family */
-.family_nav_tab {
-}
 .family_nav_tab a#family_prev_tab {
 	float: left;
 }
@@ -3222,6 +3157,19 @@ div.view-empty .add, div.view-footer .add {
 #block-views-mynotes-block div.view-empty {
 	font-style: italic;
 }
+/*Buttons*/
+.views-submit-button input.form-submit {
+  background: #25ade2;
+  color: white;
+  border-color: #25ade3;
+  text-shadow: none;
+}
+.views-reset-button input#edit-reset {
+  background: #fdfdfd;
+  color: #cecdcd;
+  border-color: #cecdcd;
+}
+
 /* Exposed filters (no block) */
 .view-filters .views-exposed-form {
 	border: 6px solid rgba(102, 102, 102, 0.57);
@@ -3236,8 +3184,8 @@ div.view-empty .add, div.view-footer .add {
 /*bloc sp search*/
 #block-views-024b51b0948df12f8903897e79946969, /*blocs /reference*/ #block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ .view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ .view-id-my_record.view-display-id-page .views-exposed-widgets {
 	background: #EEE;
-	margin-bottom: 2em;
-	padding: 5px 15px;
+	margin: 0;
+  padding: 5px 15px 10px 15px;
 	border: 1px solid #CCC;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
@@ -3309,8 +3257,6 @@ div.view-empty .add, div.view-footer .add {
 .views-exposed-widget.views-widget-filter-field_bib_hbw_volume_value {
 }
 .views-exposed-widget.views-widget-sort-by {
-}
-.views-exposed-widget.views-widget-sort-order {
 }
 .views-exposed-widget.views-submit-button {/*float: right;*/
 }
@@ -4420,9 +4366,10 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .view-my-record .view-content table.views-table > caption {
 	text-align: left;
 	margin: 3px 0 2px 0;
-	font-size: 1.1em !important;/*border-bottom: 1px solid green;*/
+	font-size: 1.1em !important;
+  /*border-bottom: 1px solid green;*/
 }
-.view-my-record .view-content table.views-table > caption a span.label {
+.view-my-record .view-content table.views-table > caption span.label {
 	padding: 5px;
 	margin-right: 5px;
 	color: #FFF;
