@@ -1331,6 +1331,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 body.page-plate #messages {
   margin: 0;
 }
+
+body.page-plate .view-filters .views-exposed-form {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
 body.page-plate #region-content .region-inner {
   -webkit-border-radius: 10px;
   -webkit-border-bottom-right-radius: 5px;
@@ -2193,6 +2200,12 @@ body.context-family #region-content .region-inner fieldset span.fieldset-legend 
 .view-species-table-by-family.view-display-id-block_1 .view-content table {
   width: 100% !important;
 }
+
+table.small {
+  display: block;
+  overflow: hidden;
+}
+
 /*View: species table (display: page)*/
 .view-species-table.view-id-species_table.view-display-id-page .view-content {
   width: 100% !important;
