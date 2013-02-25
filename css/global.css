@@ -3911,19 +3911,8 @@ sup {
 #edit-body-und-0-format, #edit-field-trip-private-desc-und-0-format {
   display: none;
 }
-/* Locality */
 
-/*Link to add an entity reference with Reference Dialog module*/
-/*div.form-item-field-loc-sp-und-0-target-id,
-div.form-item-field-loc-sp-und-1-target-id,*/
-#field-loc-sp-values td > div.form-item.form-type-textfield {
-  float: left;
-  padding-right: 5px;
-}
-/*.form-item.form-type-textfield.form-item-field-loc-sp-und-0-target-id {
-  width: 425px;
-  float: left;
-}*/
+/* Locality */
 
 .form-item-field-myr-trip-und-0-target-id {
   float: left;
@@ -4039,36 +4028,101 @@ fieldset#node_locality_form_group_loc_loc_tab1 .fieldset-wrapper {
   display: none;
 }
 /*SP entity reference*/
-#edit-field-loc-sp {
+.field-name-field-loc-sp {
   border: 1px solid #CCC;
   padding: 10px;
 }
-#edit-field-loc-sp table {
+.field-name-field-loc-sp table {
   border: 0;
   font-size: 1em;
 }
-#edit-field-loc-sp table#field-loc-sp-values thead th {
+.field-name-field-loc-sp table thead th {
   text-transform: none;
   background: none;
   border-width: 0px;
   padding: 0px;
 }
-#edit-field-loc-sp table#field-loc-sp-values tbody {
-  border-top: 0;
+.field-name-field-loc-sp table label {
+  padding-bottom: 15px;
 }
-#edit-field-loc-sp table#field-loc-sp-values tr {
+.field-name-field-loc-sp table tbody {border-top:0;}
+.field-name-field-loc-sp table tr {
+  
 }
-#edit-field-loc-sp table#field-loc-sp-values tr.even, tr.odd {
+.field-name-field-loc-sp table tr.even, tr.odd {
   background-color: #fff;
   border-bottom: 0px solid #ccc;
   padding: 0;
   border-width: 0;
 }
-#edit-field-loc-sp table#field-loc-sp-values td {
+.field-name-field-loc-sp table td {
   padding: 2px 0;
 }
-#edit-field-loc-sp table#field-loc-sp-values td span.warning.tabledrag-changed {
+.field-name-field-loc-sp table td span.warning.tabledrag-changed {}
+.field-name-field-loc-sp .form-disabled input.form-autocomplete {
+  width: 100%;
+  background-image: none;
+  background-color: transparent;
+  color: #111;
+  padding: 0;
+  border: 0 none;
+  border-top-color: none;
 }
+/*dialog to choose a my-record from search button*/
+#references-dialog-page .view-id-my_records.view-display-id-references_dialog_1 .view-content h3 {
+  clear: left;
+}
+/*botó Add a record*/
+/*ul.references-dialog-links li a.add-dialog {
+background: #9FC748 url('/sites/all/modules/references_dialog/img/plus.png') 10px no-repeat;
+}
+a.add-dialog.references-dialog-activate {
+color: white !important;
+padding: 5px 15px 5px 30px !important;
+margin: 0;
+font-size: 1.077em;
+border: none;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-image: initial;
+text-decoration: none;
+outline: none;
+}*/
+/*remove a record, from field_remove_item module*/
+#locality-node-form div.field-name-field-loc-sp .dialog-links {
+  float: left;
+  margin-left: 10px;
+  background: #EEE;
+  padding-left: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+#locality-node-form .dialog-links ul {
+  margin: 0.25em 0 0.25em 1em;
+}
+.field-remove-item-wrapper {
+  padding: 2px 10px 5px 5px;
+  float: left;
+  background: #EEE;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.field-remove-item-wrapper label.option {
+  padding-left: 20px;
+  cursor: pointer;
+  color: #0074BD;
+  background: transparent url('/sites/all/modules/field_remove_item/remove.png') top left no-repeat;
+  /*display: block;*/
+}
+.field-remove-item-wrapper input.form-checkbox {
+  display: none;
+}
+.field-remove-item-wrapper div.description {
+  display: inline;
+}
+/*END remove*/
+
 /*links?*/
 #edit-field-myr-links {
   margin-bottom: 3em!important;
@@ -4167,23 +4221,6 @@ div#edit-field-myr-map {
   margin-top: 1em !important;
   font-size: 12px !important;
 }
-/*botó Add a record*/
-/*ul.references-dialog-links li a.add-dialog {
-background: #9FC748 url('/sites/all/modules/references_dialog/img/plus.png') 10px no-repeat;
-}
-a.add-dialog.references-dialog-activate {
-color: white !important;
-padding: 5px 15px 5px 30px !important;
-margin: 0;
-font-size: 1.077em;
-border: none;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-border-image: initial;
-text-decoration: none;
-outline: none;
-}*/
 
 /*throbber while loading Myrecord form modal frame*/
 /*#preloader {
@@ -4310,8 +4347,10 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 }
 /**
  * View My checklists:
- * - bloc en Checklist node form)
+ * - bloc en Checklist node form
  * - bloc en Species node display
+ * - bloc My trips (#block-views-my-record-block-1)?
+ * - bloc Orphan records (#block-block-31)
  */
 .page-node-add-locality #content .region-content #block-system-main, .page-node-edit.node-type-locality #content .region-content #block-system-main {
   float: left;
@@ -4333,11 +4372,25 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   border-bottom: 0 none;
   letter-spacing: 0;
 }
-#block-views-my-record-block-2 .view-grouping-content .views-row .field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .field-content, #block-block-31 .field-content {
+#block-block-31 div.content div.node-inner.teaser {
+  border: 1px solid rgb(236, 216, 179);
+  background: rgba(252, 248, 209, 0.55);
+  padding: 10px;
+  margin: 5px 0;
+}
+#block-views-my-record-block-2 .view-grouping-content .views-row .views-field-title-1, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-title-1, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-title-1 {
+  float: left;
+  width: 70%;
+}
+#block-views-my-record-block-2 .view-grouping-content .views-row .field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .field-content {
   background: url("../../../../../misc/menu-leaf.png") no-repeat scroll 10px 7px transparent;
   display: inline-block;
   padding-left: 25px;
 }
+#block-views-my-record-block-2 .view-grouping-content .views-row .views-field-field-figure-img, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-field-figure-img, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-field-figure-img {
+  float: right;
+}
+#block-block-31 .field-name-field-myr-sp .field-item a {font-weight: bold;}
 #current-checklist {
 /*background: #FFFF66;
   background: #FCF8D1;
@@ -4402,6 +4455,9 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .view-my-record th.views-field-edit-node {
   width: 35px;
 }
+.view-my-record div.more-link {
+  clear: both;
+}
 /*Block wikipedia + map*/
 #block-block-30 {
   padding: 20px;
@@ -4432,6 +4488,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   cursor: pointer;
   overflow: visible;
 }
+
 <<<<<<< HEAD  /*pricing *****/
  body.page-pricing div#breadcrumb, body.page-pricing h1#page-title {
  display:none;
