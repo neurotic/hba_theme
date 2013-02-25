@@ -36,13 +36,13 @@
         $('body.page-plate #region-content .view-filters').slideToggle("slow");
       });
 
-      $('table.small').hover(
+      $('.view.small table.views-table').hover(
         function () {
           //$(this).addClass("big");
-          $(this).removeClass('small');
+          $(this).parents('.view').removeClass('small');
         },
         function () {
-          $(this).addClass("small");
+          $(this).parents('.view').addClass("small");
         }
       );
   }

@@ -2201,7 +2201,7 @@ body.context-family #region-content .region-inner fieldset span.fieldset-legend 
   width: 100% !important;
 }
 
-table.small {
+.view.small table.views-table {
   display: block;
   overflow: hidden;
 }
