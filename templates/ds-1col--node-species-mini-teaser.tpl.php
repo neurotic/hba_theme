@@ -1,3 +1,16 @@
+<?php
+
+/**
+ * Este template existe porque se ha activado un Layout para el view-mode "mini-teaser" del tipo de contenido "species"
+ * mediante el módulo Display Suite, desde http://alive.hbw.com/admin/structure/types/manage/my-record/display
+ * El layout es "One column". El view-mode "mini-teaser" también se ha creado mediante el módulo Display Suite.
+ * No se podria colocar el código directamente node--species.tpl.php con algo tipo "<?php if ($mini-teaser): ?>"
+ * 
+ * El view-mode mini-teaser se usa en el full node display de los tipos de contenido "Checklist" y "My record", 
+ * para visualizar algunos datos de la especie relacionada a cada "my record".
+ */
+?>
+
 <div id="mini-teaser">
 
 <div class="left">

@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Este template existe porque se ha activado un Layout para el teaser de my-record
+ * mediante el módulo Display Suite, desde http://alive.hbw.com/admin/structure/types/manage/my-record/display
+ * El layout es "One column".
+ * Desactiva la parte del template para teaser del archivo node--my-record.tpl.php
+ */
+
 global $user;
 // content only visible if current user if node author or admin
 if ($user->uid == $uid || in_array('administrator', $user->roles)) {
@@ -25,21 +33,10 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
           print render($delete_form);
           drupal_set_title($page_title, PASS_THROUGH);
           //drupal_goto('checklist');
-      }
-      */
-      
-
-      //print '<a href="/node/' . $node->nid . '/delete?destination=checklist">Delete</a>';
-      
+      }*/
     ?>
   </div>
-  
-  <div class="clearfix">
-    <?php if (!empty($content['links'])): ?>
-      <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
-    <?php endif; ?>
-  </div>
-  
+
 </div>
 
 <?php }

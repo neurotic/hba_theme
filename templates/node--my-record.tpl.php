@@ -27,7 +27,7 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
         // FALTA POSAR TOT AIXO DINS DUN MODAL; I CREAR EL LINK A AQUEST MODAL. http://drupal.org/node/1046120
         // http://drupal.stackexchange.com/questions/34750/how-to-make-node-delete-confirmation-inline
         
-        $item = menu_get_item("node/$nid/delete");
+        /*$item = menu_get_item("node/$nid/delete");
         if ($item['access']) {
             include_once(drupal_get_path('module', 'node') . '/node.pages.inc');
             $page_title = drupal_get_title();
@@ -36,7 +36,7 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
             print render($delete_form);
             drupal_set_title($page_title, PASS_THROUGH);
             drupal_goto('checklist');
-        }
+        }*/
         
         print render($content);
         
@@ -121,6 +121,7 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
           // si no esta definida la latitud, no mostrem el mapa
             print '<div class="field_myr_map">' . render($content['field_myr_map'][0]) . '</div>';
           }
+          //print '<a href="/node/202682/edit?render=references-dialog">edit node in dialog</a>';
         ?>
       </div>
       
