@@ -4839,7 +4839,10 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
   border-bottom: 1px solid #E3E1E2;
 }
 .region-sidebar-first #block-block-28 .block-inner {
-  padding: 0 15px 0px 15px;
+  padding: 10px 15px 0px 15px;
+}
+.region-sidebar-first #block-block-28 form div.views-exposed-form {
+  margin: 15px 0 0 0;
 }
 .region-sidebar-first #block-block-28 form div.views-exposed-form input.form-text {
   max-width: 210px;
@@ -4853,13 +4856,177 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
   color: #A7A7A7;
   font-weight: bold;
   padding: 0;
-  line-height: 35px;
+  line-height: 15px;
   font-size: 15px;
+}
+.region-sidebar-first #block-block-28 h2 a {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+.region-sidebar-first #block-block-28 h2.collapsiblock a:after {
+  display: none;
 }
 #block-bird-taxonomies-bird-orders div.block-inner ul {
   margin-top: 15px;
 }
 .region-sidebar-first #block-block-28 h2 span.plus {
   color: #A7A7A7;
-  top: 0;
+  top: -15px;
+}
+
+
+/**** plates ***/
+div.view.view-galley-fluid ul.pager {
+  background: none;
+}
+div.view.view-galley-fluid ul.pager li {
+  background: #FFF;
+  color: #333;
+  font-weight: normal;
+  border: 1px solid #CCC;
+  -webkit-border-radius: none;
+  margin: 0 5px 0 0;
+  position: relative;
+}
+div.view.view-galley-fluid ul.pager li a {
+  background: none;
+  color: #333;
+}
+div.view.view-galley-fluid ul.pager li a:hover {
+  background: #C4202B;
+  color: #FFF;
+}
+body.page-plate div#region-content h1:after {
+  content: " show filters";
+  font-size: .9em;
+  font-weight: normal;
+  margin: 0 0 0 20px;
+  padding: 0 20px 0 0;
+  background: url("images/icons.png") no-repeat scroll 80px -90px transparent;
+}
+body.page-plate div#region-content h1:hover:after {
+  color: #333;
+}
+div.view.view-galley-fluid div.views-exposed-widget {
+  margin-left: 20px;
+}
+div.view.view-galley-fluid div.views-widget-filter-field_sp_name_common_value, div.view.view-galley-fluid div.views-reset-button {
+  clear: left;
+}
+div.view.view-galley-fluid form#views-exposed-form-galley-fluid-page input.form-text, div.view.view-galley-fluid form#views-exposed-form-galley-fluid-page select {
+  border-radius: 5px;
+  height: 28px;
+  border: 1px solid #AAA;
+  -webkit-box-shadow: inset 0px 2px 1px 0px #EEE;
+  box-shadow: inset 0px 2px 1px 0px #EEE;
+}
+div.view.view-galley-fluid form#views-exposed-form-galley-fluid-page select {
+  padding-top: 4px;
+}
+form#views-exposed-form-galley-fluid-page .form-item input.form-autocomplete {
+  background-position: right 6px;
+}
+form#views-exposed-form-galley-fluid-page .form-item input.form-autocomplete.throbbing {
+  background-position: right -14px;
+}
+
+
+/**** checkout ****/
+
+body.page-checkout #zone-content {
+  padding-left: 245px;
+  background: url("images/bg-register.png") no-repeat 0 150px;
+}
+body.page-checkout #region-content div.region-inner {
+  border-top: 32px solid #E4E5E5;
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+body.page-checkout #region-content div.region-inner h1#page-title {
+  color: #D52D37;
+  font-size: 28px;
+  margin: 10px 0px;
+}
+body.page-checkout #region-content div.region-inner fieldset {
+  border: 0;
+  border-bottom: 2px solid #FAFAFA;
+}
+body.page-checkout #region-content div.region-inner fieldset .fieldset-wrapper {
+  margin: 0;
+  padding: 20px 0;
+}
+body.page-checkout #region-content div.region-inner fieldset legend {
+  font-size: 16px;
+  font-weight: bold;
+  color: #AAA;
+  float: left;
+  margin: -25px 0 0 -15px;
+}
+body.page-checkout #region-content input.form-text, body.page-checkout #region-content select, body.page-checkout #region-content textarea {
+  border-radius: 5px;
+  height: auto;
+  border: 0;
+  background: #FAFAFA;
+  padding: 10px;
+  font-size: 16px;
+  -webkit-box-shadow: inset 0px 2px 1px 0px #EEE;
+  box-shadow: inset 0px 2px 1px 0px #EEE;
+}
+body.page-checkout #region-content label {
+  font-size: 16px;
+  font-weight: bold;
+}
+body.page-checkout #region-content div.view-commerce-cart-summary {
+  font-size: 15px;
+}
+body.page-checkout #region-content tr.component-type-commerce-price-formatted-amount.odd {
+  white-space: nowrap;
+}
+body.page-checkout #region-content fieldset#edit-buttons {
+  margin: 0 5px;
+  font-size: 16px;
+  text-align: right;
+}
+body.page-checkout #region-content fieldset#edit-buttons input.form-submit {
+  margin: 0 5px;
+  font-size: 16px;
+}
+body.page-checkout #region-content fieldset#edit-buttons input.form-submit.checkout-continue {
+  background: #D33C35;
+  padding: 12px 25px;
+  color: #FFF;
+  font-size: 18px;
+  text-shadow: none;
+  -webkit-text-shadow: none;
+}
+body.page-checkout #region-content fieldset#edit-buttons input.form-submit.checkout-cancel, body.page-checkout #region-content fieldset#edit-buttons input.form-submit.checkout-back {
+  color: #AAA;
+  font-weight: normal;
+}
+body.page-checkout #region-content fieldset#edit-buttons input.form-submit.checkout-continue:hover {
+  background: #333;
+}
+body.page-checkout #region-content form#commerce-checkout-form-review table.checkout-review {
+  background: none;
+  border: 0;
+  font-size: 14px;
+}
+body.page-checkout #region-content form#commerce-checkout-form-review div.checkout-help {
+  font-size: 14px;
+}
+body.page-checkout #region-content form#commerce-checkout-form-review table tr {
+  background: none;
+}
+body.page-checkout #region-content form#commerce-checkout-form-review table tr td {
+  background: none;
+  padding: 10px 0;
+}
+body.page-checkout #region-content form#commerce-checkout-form-review table.checkout-review table tr td {
+  padding: 10px 5px;
+  margin: 0;
+}
+body.page-checkout #region-content form#commerce-checkout-form-review table.checkout-review tr.pane-title td {
+  color: #AAA;
+  font-size: 16px;
 }
