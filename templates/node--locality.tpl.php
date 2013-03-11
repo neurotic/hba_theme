@@ -9,7 +9,7 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
   <?php if (!$page && $title): ?>
   <header>
     <?php print render($title_prefix); ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print  'Checklist ' . $title ?>"><?php print  'Checklist ' . $title ?></a></h2>
     <?php print render($title_suffix); ?>
   </header>
   <?php endif; ?>
@@ -54,7 +54,7 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
   <?php if (!$page && $title): ?>
   <header>
     <?php print render($title_prefix); ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print $title ?>"><?php print $title ?></a></h2>
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url ?>" title="<?php print  'Checklist ' . $title ?>"><?php print 'Checklist ' . $title ?></a></h2>
     <?php print render($title_suffix); ?>
   </header>
   <?php endif; ?>

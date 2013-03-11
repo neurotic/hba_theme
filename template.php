@@ -184,16 +184,20 @@ function hba_theme_preprocess_page(&$variables, $hook) {
     $variables['title'] = '';
   }
   
-  if(isset($variables['node']) && $variables['node']->type == 'family') {
+  if(isset($variables['node']) && ($variables['node']->type == 'family' || $variables['node']->type == 'species')) {
     $variables['title'] = '';
   }
 
-  if(arg(0) == 'node' && arg(1) == '201985' && arg(2) == '') {
+  /*if(arg(0) == 'node' && arg(1) == '201985' && arg(2) == '') {
     $variables['title'] = '';
-  }
+  }*/
   
-  if(isset($variables['node']) && $variables['node']->type == 'species') {
-    $variables['title'] = '';
+  // El módulo Taxonomy Views Switcher hace desparecer el titulo de la página
+  if ( (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) || (arg(0) == 'vid' && is_numeric(arg(1)) && is_numeric(arg(2))) ) {
+    // el titol de la página en la regió $content
+    $variables['title'] = db_query('SELECT name FROM {taxonomy_term_data} where tid = :tid limit 1',array(':tid' =>arg(2)))->fetchField();
+    // el titol que mostra el navigador web
+    drupal_set_title($variables['title']);
   }
   
   drupal_add_library('hoverintent', 'hoverintent', TRUE);

@@ -43,6 +43,9 @@ body a:visited {
 a {
   text-decoration: none !important;
 }
+
+textarea, select, input[type="text"], input[type="url"] {width: 100%;}
+
 /* fieldset */
 .content-inner form fieldset, .content-inner .node-inner fieldset {
   border: 1px solid #ccc;
@@ -169,6 +172,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
   margin-right: auto;
   width: 416px;
   float: none;
+}
+#region-sidebar-first, #region-content {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+body div#page #region-sidebar-third {
+  margin-left: 5px;
+  float: left;
 }
 #region-sidebar-first, #region-content, #slidemarginleft {
   width: 570px;
@@ -463,6 +474,10 @@ body.context-species #region-content .region-inner h1 {
 body.context-species #region-content .region-inner h1 em {
   color: #8a8989;
   font-weight: normal;
+}
+body.context-family #region-content .region-inner h2 {
+  font-size: 15px;
+  margin-bottom: 0;
 }
 body.context-species #region-content .region-inner h2 {
   color: #c02a35;
@@ -1285,25 +1300,62 @@ body.page-plate #zone-content, body.page-plate #region-content {
 body.page-plate #region-content .view-content {
   border: none;
   padding: 5px 10px;
-  background: white;
+  background: transparent;
+  /*min-height: 75px;*/
+  height: auto !important;
+  clear: both;
 }
 body.page-plate #region-content .item-list {
-  background: white;
+  /*background: white;*/
+  background: transparent;
 }
 body.page-plate #region-content .view-filters {
   display: none;
+  clear: left;
+  margin-left: 20px;
 }
 body.page-plate h1#page-title {
+  float: left;
   font-size: 16px;
   text-transform: uppercase;
   padding: 8px 5px 5px 20px;
   margin-bottom: 0;
   cursor: pointer;
 }
-body.page-plate #btn-div {
-  margin-left: 10px;
-  margin-top: 10px;
+body.page-plate #info {
+  float: left;
+  padding: 8px 5px 5px 20px; 
 }
+body.page-plate #info .btn {
+  float: left;
+  margin-right: 10px;
+  background: url(/sites/all/themes/hba_theme/css/images/info-plate.gif) no-repeat left center transparent;
+  background-color: #EEE;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+body.page-plate #info .text {
+  display: none;
+  width: 500px;
+  height: 15px;
+  padding-left: 40px;
+  background-color: #EEE;
+  padding-bottom: 5px;
+  border-top: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  -webkit-border-bottom-right-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-topright: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
 body.page-plate #region-content .region-inner {
   -webkit-border-radius: 10px;
   -webkit-border-bottom-right-radius: 5px;
@@ -1474,12 +1526,6 @@ select#edit-field-figure-order-sp-value.form-select {
   margin: 10px 8px 5px 5px;
   display: none;
 }
-/*contingut de la view*/
-.page-plate #region-content .view-content {
-  border: 1px solid #CCC;
-  padding: 15px;
-  min-height: 50px;
-}
 /*.view-display-id-block_1 .view-content,
 .view-display-id-block_1 .view-content .views_fluidgrid_galley_fluid_block_1 {
   margin: 0 auto !important;
@@ -1494,82 +1540,17 @@ select#edit-field-figure-order-sp-value.form-select {
   margin: auto !important;
   display: block !important;
 }
+.colorbox-plate {
+  width: 350px; /*provisional*/
+}
 /* text dins del colorbox*/
 .colorbox-text {
   background-color: #EEE;
   padding: 10px;
-}
-/* antic tip
-.page-plate #region-content .plate-tip {
-background-color: #E0EAF1;
-border: 1px solid #3E6D8E;
-color: #33333A;
-text-align: center;
-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-padding: 8px;
-margin: 5px;
-letter-spacing: 0.1em;
-}
-.page-plate #region-content .plate-tip .close-plate-img {
-float: right;
-cursor: pointer;
-margin: auto 0;
-}*/
-/* tip for plate */
-.page-plate div.view-footer {
-  height: 20px;
-  padding: 10px;
-}
-#btn-div {
-  background: url(/sites/all/themes/hba_theme/css/images/info-plate.gif) no-repeat left center transparent;
-  background-color: #EEE;
-  padding-right: 0px;
-  float: left;
-  height: 20px;
-  width: 20px;
-  cursor: pointer;
-  /*border-left: 1px solid #d9d9d9;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;*/
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;/*-webkit-border-bottom-right-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-topright: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 15px;
-  -webkit-border-top-left-radius: 15px;
-  -moz-border-radius-bottomleft: 15px;
-  -moz-border-radius-topleft: 15px;
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;*/
-}
-#content-div {
-  display: none;
-  width: 500px;
-  height: 15px;
-  padding-left: 40px;
-  background-color: #EEE;
-  padding-bottom: 5px;
-  border-top: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-  -webkit-border-bottom-right-radius: 15px;
-  -webkit-border-top-right-radius: 15px;
-  -moz-border-radius-bottomright: 15px;
-  -moz-border-radius-topright: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
-}
-#content-div.expanded {
-  height: 15px;
-  width: 100%;
-  padding-bottom: 5px;
-}
-.clear {
-  clear: both;
+  margin-right: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*plate > beautytip*/
 #views_fluidgrid_galley_fluid_page .plate-hovertip .text .tip {
@@ -1583,6 +1564,9 @@ margin: auto 0;
 }
 .colorbox-plate .descr-notes {
   padding-top: 10px !important;
+}
+.colorbox-plate .descr-notes p {
+  width: 380px !important;
 }
 /*bloc Figures*/
 .views_slideshow_cycle_main, .views-slideshow-cycle-main-frame, .views_slideshow_cycle_teaser_section, .views-slideshow-cycle-main-frame-row-item, .views-field-colorbox, .views-field-colorbox .field-content, .views-field-colorbox .field-content .colorbox-inline, .views-field-colorbox .field-content img {
@@ -1809,7 +1793,7 @@ position:absolute;
 .page-node-external-resources .node-inner.teaser {
   border-bottom: 0;
 }
-.node-inner.teaser div.content div.left {
+.node-species .node-inner.teaser div.content div.left {
   float: left !important;
   width: 55%;
   background: #FAFAFA;
@@ -1820,7 +1804,7 @@ position:absolute;
   font-size: 14px;
 }
 /* http://www.brunildo.org/test/img_center.html */
-.node-inner.teaser div.content div.right {
+.node-species .node-inner.teaser div.content div.right {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -1839,13 +1823,7 @@ position:absolute;
   right: 0;
   position: absolute;*/
 }
-.node-inner.teaser div.content div.more, .view-footer .more {
-  text-align: right;
-  padding-top: 1em;
-}
-span.more {
-  float: right;
-}
+
 /* Full node */
 
 .tabs ul.tabs.primary {
@@ -2204,6 +2182,7 @@ body.context-family #region-content .region-inner fieldset span.fieldset-legend 
 .view.small table.views-table {
   display: block;
   overflow: hidden;
+  z-index: 0;
 }
 
 /*View: species table (display: page)*/
@@ -2454,14 +2433,37 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
   margin-top: 1.5em;
 }
 /*page*/
+body.page-species-comparison #region-content {
+  width: 74%;
+  margin-bottom: 0;
+}
+body.page-species-comparison #region-content .region-inner {
+  background: none repeat scroll 0 0 transparent;
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+}
 .page-species-comparison table {
   width: 100%;
   padding: 0;
   margin: 10px 0;
   list-style: none;
+  border-left: 0 none;
 }
 .page-species-comparison table td {
   width: 200px; /*Set default width*/
+}
+.view-compare.view-display-id-page table tr.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  height: 50px !important;
+}
+.view-compare tr.title.odd td {
+  vertical-align: middle;
+}
+.view-compare tr.title.odd,
+.view-compare th {
+  border-bottom: 0px solid #ccc;
 }
 .page-species-comparison table td .col img {
   /*Flexible image size with border*/
@@ -2483,18 +2485,16 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
   color: #333;
   font-size: 1.05em;
   border-right: 0 !important;
-  padding-right: 0 !important;
-  margin-right: 0 !important;
 }
 .view-compare.view-display-id-page table td {
   border-left: 1px transparent solid;
   border-right: 1px transparent solid;
   vertical-align: top;
 }
-.view-compare.view-display-id-page table tr.title {
-  font-size: 1.2em;
-  font-weight: bold;
-  height: 70px !important;
+.view-compare .view-display-id-page table td:hover {background: none;}
+.view-compare tr.ops.even td.col.col_0, .view-compare tr.ops.even td.col.col_1, .view-compare tr.ops.even td.col.col_2 {
+  background: none;
+  padding-bottom: 15px;
 }
 .view-compare.view-display-id-page table td a.flag.unflag-action {
   color: #555;
@@ -2502,6 +2502,7 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
 .page-node-revisions li.flag-compare .flag-action, .page-node-revisions li.flag-compare .unflag-action {
   display: none;
 }
+
 /**
  * Node links
  */
@@ -3028,8 +3029,8 @@ a.hide_links_plate:active:focus, .page-plate .reset a:active:focus {
   text-decoration: none;
   outline: none;
 }
-#region-content .content a.disabled, #region-content .content a.disabled:hover {
-  color: #3D3C3C;
+#region-content .node-inner a.disabled, #region-content .node-inner a.disabled:hover {
+  color: #3D3C3C !important;
   font-weight: normal;
   text-decoration: none;
   background: none;
@@ -3148,15 +3149,19 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 .view > .more-link {
   margin: 10px 0;
 }
-.view .view-footer .more-link {
+.view .view-footer .more-link,
+div.content div.more, .view-footer .more {
   text-align: right;
-  margin: 10px 0;
+  margin: 10px 0 7px 0;
 }
 .view-flag-nodes.view-display-id-block_4 .more-link {
   margin-right: 10px;
 }
+span.more {
+  float: right;
+}
 /*no result*/
-.view-empty {
+.content-inner .content .view-empty {
   border: 1px solid rgb(236, 216, 179);
   background: rgba(252, 248, 209, 0.55);
   padding: 10px;
@@ -3194,8 +3199,11 @@ div.view-empty .add, div.view-footer .add {
   text-align: right;
   margin-bottom: 5px;
 }
-/*bloc sp search*/
-#block-views-024b51b0948df12f8903897e79946969, /*blocs /reference*/ #block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ .view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ .view-id-my_record.view-display-id-page .views-exposed-widgets {
+.block-views-exp-family-search-page, /*block Family search*/
+#block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/ 
+#block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ 
+.view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ 
+.view-id-my_record.view-display-id-page .views-exposed-widgets {
   background: #EEE;
   margin: 0;
   padding: 5px 15px 10px 15px;
@@ -3207,10 +3215,38 @@ div.view-empty .add, div.view-footer .add {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
+.block-views-exp-family-search-page,
 #block-views-024b51b0948df12f8903897e79946969 {
+  clear: left;
   padding-bottom: 5px;
   margin-bottom: 20px;
+  background: #F8F8F8;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border-top: 1px solid #E3E1E2;
+  border-bottom: 1px solid #E3E1E2;
 }
+.block-views-exp-family-search-page.collapsiblock-processed div.views-submit-button,
+#block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button {
+  margin-bottom: 20px;
+}
+.block-views-exp-family-search-page .collapsiblock a:after,
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after {
+  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -198px transparent !important;
+}
+.block-views-exp-family-search-page .collapsiblock.collapsiblockCollapsed a:after,
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after {
+  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -244px transparent !important;
+}
+.block-views-exp-family-search-page .collapsiblock.collapsiblock-processed,
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed {
+  padding-bottom: 10px;
+}
+.block-views-exp-family-search-page .block-inner .content {
+  clear: left;
+}
+
 /* block Search on common name, incrustat en Taxonomic Tree */
 
 .block-28, .block-28 .content, .block-28 .views-exposed-widgets {
@@ -3914,16 +3950,21 @@ sup {
 
 /* Locality */
 
+/*fieldset basic info*/
+.content-inner form fieldset.group-loc-basic {padding: 0;}
+.content-inner form fieldset.group-loc-basic .fieldset-wrapper {padding-top: 15px;}
 .form-item-field-myr-trip-und-0-target-id {
   float: left;
   width: 375px;
 }
+/*trip*/
 input#edit-field-myr-trip-und-0-target-id {
   width: 100%;
 }
 .dialog-links.edit-field-myr-trip-und-0-target-id {
   padding-top: 30px;
 }
+/*date*/
 #field-loc-date-add-more-wrapper fieldset, #field-loc-date-add-more-wrapper fieldset .fieldset-wrapper {
   border: 0;
   padding: 0;
@@ -4009,57 +4050,69 @@ input#edit-field-myr-trip-und-0-target-id {
 .group-loc-loc-group .horizontal-tabs ul.horizontal-tabs-list li {
   border-top: 1px solid #DEDEDE;
 }
-.group-loc-loc-group .horizontal-tabs ul.horizontal-tabs-list li.selected a {
-}
 /*.group-loc-loc-group .horizontal-tabs .horizontal-tabs-panes {border-top: 1px solid #DEDEDE;}*/
-.group-loc-loc-group .horizontal-tabs .horizontal-tabs-panes > fieldset {
+.content-inner form .group-loc-loc-group fieldset {
+  margin: 0;
 }
 fieldset#edit-field-loc-loc-addr-und-0, fieldset#node_locality_form_group_loc_loc_tab1 {
   border: 0 none;
   padding: 0;
-  margin: 5px;
 }
-fieldset#node_locality_form_group_loc_loc_tab1 .fieldset-wrapper {
-  padding: 5px;
+fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {padding: 0;}
+.content-inner form .group-loc-loc-group fieldset .fieldset-wrapper {
+  padding-top: 15px 5px 5px 5px;
 }
 .form-item.geofield-openlayers-map > div {
-} /*map*/
+}
+/*map*/
 .description.geofield-help {
   display: none;
 }
 /*SP entity reference*/
-.field-name-field-loc-sp {
+#locality-node-form .field-name-field-loc-sp .description {
+  padding-top: 15px
+}
+#locality-node-form .field-name-field-loc-sp table th label {
+  padding-left: 10px;
+}
+/*#locality-node-form .field-name-field-loc-sp {
   border: 1px solid #CCC;
   padding: 10px;
 }
-.field-name-field-loc-sp table {
+#locality-node-form .field-name-field-loc-sp table {
   border: 0;
   font-size: 1em;
 }
-.field-name-field-loc-sp table thead th {
+#locality-node-form .field-name-field-loc-sp table thead th {
   text-transform: none;
   background: none;
   border-width: 0px;
   padding: 0px;
 }
-.field-name-field-loc-sp table label {
+#locality-node-form .field-name-field-loc-sp table label {
   padding-bottom: 15px;
 }
-.field-name-field-loc-sp table tbody {border-top:0;}
-.field-name-field-loc-sp table tr {
+#locality-node-form .field-name-field-loc-sp table tbody {border-top:0;}
+#locality-node-form .field-name-field-loc-sp table tr {
   
 }
-.field-name-field-loc-sp table tr.even, tr.odd {
+#locality-node-form .field-name-field-loc-sp table tr.even, tr.odd {
   background-color: #fff;
   border-bottom: 0px solid #ccc;
   padding: 0;
   border-width: 0;
 }
-.field-name-field-loc-sp table td {
+#locality-node-form .field-name-field-loc-sp table td {
   padding: 2px 0;
 }
-.field-name-field-loc-sp table td span.warning.tabledrag-changed {}
-.field-name-field-loc-sp .form-disabled input.form-autocomplete {
+#locality-node-form tr.even td, #locality-node-form tr td:hover {
+    background: none repeat scroll 0 0 transparent;
+}
+#locality-node-form td.field-multiple-drag {
+  display: none !important;
+}
+#locality-node-form .field-name-field-loc-sp table td span.warning.tabledrag-changed {}
+#locality-node-form .field-name-field-loc-sp .form-disabled input.form-autocomplete {
   width: 100%;
   background-image: none;
   background-color: transparent;
@@ -4067,7 +4120,7 @@ fieldset#node_locality_form_group_loc_loc_tab1 .fieldset-wrapper {
   padding: 0;
   border: 0 none;
   border-top-color: none;
-}
+}*/
 /*dialog to choose a my-record from search button*/
 #references-dialog-page .view-id-my_records.view-display-id-references_dialog_1 .view-content h3 {
   clear: left;
@@ -4089,29 +4142,30 @@ border-image: initial;
 text-decoration: none;
 outline: none;
 }*/
+
 /*remove a record, from field_remove_item module*/
 #locality-node-form div.field-name-field-loc-sp .dialog-links {
   float: left;
   margin-left: 10px;
-  background: #EEE;
   padding-left: 0;
+  /*background: #EEE;
   border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;*/
 }
 #locality-node-form .dialog-links ul {
-  margin: 0.25em 0 0.25em 1em;
+  margin: 0.25em 0 0.25em .4em;
 }
 .field-remove-item-wrapper {
   padding: 2px 10px 5px 5px;
   float: left;
-  background: #EEE;
+  /*background: #EEE;
   border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;*/
 }
 .field-remove-item-wrapper label.option {
   padding-left: 20px;
   cursor: pointer;
-  color: #0074BD;
+  color: #C4202B;
   background: transparent url('/sites/all/modules/field_remove_item/remove.png') top left no-repeat;
   /*display: block;*/
 }
@@ -4270,20 +4324,23 @@ fieldset#node_locality_full_group_loc_group_myr {
 .node-type-locality div.field-name-field-loc-sp.field-type-entityreference div.field-label {
   display: none;
 }
-.node-type-locality .field-name-field-loc-sp .field-items > .field-item {
-  border-radius: 4px;
-  margin-bottom: 20px;
-  border: 1px solid #666;
+.node-type-locality .field-name-field-loc-sp .field-items > .field-item, /*my record item on full node display*/
+.references-thumbnail .node-my-record .content { /*my record item on node form*/
   background: #EEE;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  margin-bottom: 20px;
+}
+.references-thumbnail .node-my-record .content {
+  margin: 5px 0 10px 0;
 }
 /*view mode Mini-teaser for Species in field_loc_sp*/
 .field-name-field-loc-sp .node-my-record .node-inner div.content {
 }
-.field-name-field-loc-sp .node-inner div.content > div.left { /*mini-teaser*/
+.field-name-field-loc-sp .node-inner div.content > div.left,
+.references-thumbnail .node-my-record .content .left #mini-teaser .left { /*mini-teaser*/
   float: left !important;
   width: 60%;
-  margin: 0 0 10px 0;
-  padding: 0 10px;
   background: #EEE;/*border-top: 1px solid #FAFAFA;
   border-left: 1px solid #EEE !important;
   border-right: 1px solid #FAFAFA;
@@ -4294,32 +4351,36 @@ fieldset#node_locality_full_group_loc_group_myr {
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
   box-shadow: 0px 1px 1px 1px #e8e8e8;*/
 }
+#mini-teaser {
+  margin: 10px;
+}
 #mini-teaser div.left { /*text a l'esquerra de l'ocell*/
   float: left !important;
   width: 60%;
-  padding: 10px 10px 10px 0;
 }
 #mini-teaser div.right { /*ocell*/
-  padding: 5px 0 10px 10px;
   display: table-cell;
   text-align: center;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   width: 150px;
-  height: 110px;
+  max-height: 90px;
 }
 #mini-teaser div.right * {
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
-.field-name-field-loc-sp .node-inner div.content div.right .thumbnail {
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail,
+.references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail {
   text-align: center;
   margin-bottom: 5px;
 }
-.field-name-field-loc-sp .node-inner div.content div.right .thumbnail img {
-  width: 100%;
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail img,
+.references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail img {
+  width: 70%;
   height: auto;
 }
 /*sp nb, heard, captive, date*/
-.node-locality .field-name-field-loc-sp .node-inner div.content > div.right {
+.node-locality .field-name-field-loc-sp .node-inner div.content > div.right,
+.references-thumbnail .node-my-record .content > .right  {
   float: right;
   padding: 10px 10px 15px 15px;
   border-radius: 0 0 0 5px;
@@ -4345,6 +4406,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   width: 100% !important;
   height: 100px !important;
 }
+
 /**
  * View My checklists:
  * - bloc en Checklist node form
@@ -4359,16 +4421,25 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .page-node-add-locality #content .region-content #block-views-my-record-block-3, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3 {
   float: left;
 }
+.page-node-add-locality #content .region-content #block-views-my-record-block-3 .view-content, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3  .view-content {
+  float: left;
+}
 #block-views-my-record-block-2 .view-grouping-header, #block-views-my-record-block-3 .view-grouping-header, #block-views-my-record-block-4 .view-grouping-header {
+  clear: left;
   font-size: 1.2em;
   font-weight: bold;
   margin-top: 10px;
   border-bottom: 1px solid #111;
 }
+#block-views-my-record-block-2  .view-footer, #block-views-my-record-block-3 .view-footer, #block-views-my-record-block-4  .view-footer {
+  clear: left;
+}
 #block-views-my-record-block-2 .view-grouping-content h3, #block-views-my-record-block-3 .view-grouping-content h3, #block-views-my-record-block-4 .view-grouping-content h3 {
+  clear: left;
   font-size: 1.05em;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 0 0 5px;
+  padding-left: 10px;
   border-bottom: 0 none;
   letter-spacing: 0;
 }
@@ -4378,11 +4449,19 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   padding: 10px;
   margin: 5px 0;
 }
+#block-views-my-record-block-3 .view-grouping-content .views-row {
+  font-size: 1em;
+  height: 35px;
+  display: block;
+}
 #block-views-my-record-block-2 .view-grouping-content .views-row .views-field-title-1, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-title-1, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-title-1 {
   float: left;
   width: 70%;
 }
-#block-views-my-record-block-2 .view-grouping-content .views-row .field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .field-content {
+#block-views-my-record-block-2 .view-grouping-content .views-row.views-row-last .views-field-title-1, #block-views-my-record-block-3 .view-grouping-content .views-row.views-row-last .views-field-title-1, #block-views-my-record-block-4 .view-grouping-content .views-row.views-row-last .views-field-title-1 {
+  margin-bottom: 15px;
+}
+#block-views-my-record-block-2 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-title-1  span.field-content {
   background: url("../../../../../misc/menu-leaf.png") no-repeat scroll 10px 7px transparent;
   display: inline-block;
   padding-left: 25px;
@@ -4469,13 +4548,14 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   padding: 0 0 15px 15px;
   width: 40%;
 }
+
 /*popup calendar*/
 .form-type-date-popup input {
   background: url("/sites/all/themes/hba_theme/css/images/calendar.png") -0px -0px no-repeat;
   background-position: 7px 7px;
   display: inline-block;
   width: auto;
-  height: 27px;
+  height: 22px;
   line-height: 25px;
   vertical-align: middle;
   padding-left: 25px;
@@ -4487,6 +4567,10 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   border-radius: 1px;
   cursor: pointer;
   overflow: visible;
+}
+input#edit-field-myr-date-und-0-value-timeEntry-popup-1 {
+  background: none;
+  padding-left: 5px;
 }
 
 <<<<<<< HEAD  /*pricing *****/
@@ -4661,28 +4745,7 @@ div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper di
   margin: 20px 35px;
   width: 450px;
 }
-/** advanced search ***/
 
-#block-views-024b51b0948df12f8903897e79946969 {
-  background: #F8F8F8;
-  border: none;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  border-top: 1px solid #E3E1E2;
-  border-bottom: 1px solid #E3E1E2;
-}
-#block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button {
-  margin-bottom: 20px;
-}
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after {
-  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -198px transparent !important;
-}
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after {
-  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -244px transparent !important;
-}
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed {
-  padding-bottom: 10px;
-}
 /** latest updated species **/
 #block-views-log-updated-nodes-block-3 {
   background: none;
@@ -4695,11 +4758,7 @@ div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper di
   width: 25%;
   text-align: center;
 }
-/** ajustes sidebar third **/
-body div#page #region-sidebar-third {
-  margin-left: 8px;
-  float: left;
-}
+
 /** landing page ***/
 
 body.context-frontpage #zone-content, body.context-frontpage #region-content {
@@ -5029,4 +5088,46 @@ body.page-checkout #region-content form#commerce-checkout-form-review table.chec
 body.page-checkout #region-content form#commerce-checkout-form-review table.checkout-review tr.pane-title td {
   color: #AAA;
   font-size: 16px;
+}
+
+
+/*proves amb /plate 1 i /plate2*/
+.page-plate1 #region-content,
+.page-plate2 #region-content {
+  width: 1400px !important;
+}
+.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row {
+  float: left;
+  padding: 0;
+  margin: 0;
+  line-height: 90%;
+  border: 0;
+  
+  height: 200px;
+}
+.page-plate2 #region-content h3 {
+  /*clear: left;*/
+  float: left;
+  letter-spacing: -0.5em;
+  font-weight: normal;
+  border-bottom: 0 none;
+  padding: 0 !important;
+  margin: 0 !important;
+  
+  display: none;
+}
+div#views_infinite_scroll-ajax-loader {
+  clear: left;
+}
+
+/*proves amb /plate*/
+.views_fluidgrid_galley_fluid_page {
+  /*position: inherit;
+  width: 100% !important;
+  height: 100% !important;*/
+}
+.masonry.masonry-brick,
+#views_fluidgrid_galley_fluid_page {
+  float: left !important;
+  display: inline !important;
 }
