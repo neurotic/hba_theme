@@ -1289,15 +1289,18 @@ body button, body input[type="reset"], body input[type="submit"], body input[typ
 #block-views-species-test-block-2 .view-footer {
   padding: 0 10px 10px 10px;
 }
+
 /**
- * Plate view (gallery fluid)
+ * Plate
  */
 
-body.page-plate #zone-content, body.page-plate #region-content {
+body.page-plate #zone-content, body.page-plate #region-content,
+body.page-plate2 #zone-content, body.page-plate2 #region-content {
   width: 99%;
   padding-top: 0;
 }
-body.page-plate #region-content .view-content {
+body.page-plate #region-content .view-content,
+body.page-plate2 #region-content .view-content {
   border: none;
   padding: 5px 10px;
   background: transparent;
@@ -1305,16 +1308,18 @@ body.page-plate #region-content .view-content {
   height: auto !important;
   clear: both;
 }
-body.page-plate #region-content .item-list {
+body.page-plate #region-content .item-list,
+body.page-plate2 #region-content .item-list {
   /*background: white;*/
   background: transparent;
 }
-body.page-plate #region-content .view-filters {
+.view.view-galley-fluid .view-filters {
   display: none;
   clear: left;
   margin-left: 20px;
 }
-body.page-plate h1#page-title {
+body.page-plate h1#page-title,
+body.page-plate2 h1#page-title {
   float: left;
   font-size: 16px;
   text-transform: uppercase;
@@ -1322,11 +1327,26 @@ body.page-plate h1#page-title {
   margin-bottom: 0;
   cursor: pointer;
 }
-body.page-plate #info {
+body.page-plate div#region-content h1:after,
+body.page-plate2 div#region-content h1:after {
+  content: " show filters";
+  font-size: .9em;
+  font-weight: normal;
+  margin: 0 0 0 20px;
+  padding: 0 20px 0 0;
+  background: url("images/icons.png") no-repeat scroll 80px -90px transparent;
+}
+body.page-plate div#region-content h1:hover:after,
+body.page-plate2 div#region-content h1:hover:after {
+  color: #333;
+}
+body.page-plate #info,
+body.page-plate2 #info {
   float: left;
   padding: 8px 5px 5px 20px; 
 }
-body.page-plate #info .btn {
+body.page-plate #info .btn,
+body.page-plate2 #info .btn {
   float: left;
   margin-right: 10px;
   background: url(/sites/all/themes/hba_theme/css/images/info-plate.gif) no-repeat left center transparent;
@@ -1338,7 +1358,8 @@ body.page-plate #info .btn {
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
-body.page-plate #info .text {
+body.page-plate #info .text,
+body.page-plate2 #info .text {
   display: none;
   width: 500px;
   height: 15px;
@@ -1356,7 +1377,8 @@ body.page-plate #info .text {
   border-top-right-radius: 15px;
 }
 
-body.page-plate #region-content .region-inner {
+body.page-plate #region-content .region-inner,
+body.page-plate2 #region-content .region-inner {
   -webkit-border-radius: 10px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -1380,17 +1402,19 @@ body.page-plate #region-content .region-inner {
   background: linear-gradient(to bottom, #f9f9f9 0%, #eaeaea 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea', GradientType=0 ); /* IE6-8 */
 }
-body.page-plate #messages {
+body.page-plate #messages,
+body.page-plate2 #messages {
   margin: 0;
 }
 
-body.page-plate .view-filters .views-exposed-form {
-    border: 0;
-    padding: 0;
-    margin: 0;
+.view.view-galley-fluid .view-filters .views-exposed-form {
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
-body.page-plate #region-content .region-inner {
+body.page-plate #region-content .region-inner,
+body.page-plate2 #region-content .region-inner {
   -webkit-border-radius: 10px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -1403,46 +1427,44 @@ body.page-plate #region-content .region-inner {
   border-top: none;
   border: 1px solid #ededed;
 }
-body.page-plate #block-views-exp-galley-fluid-page {
-  border: 0;
-  border-bottom: 2px solid #f4f4f4;
-  background: rgb(250,250,250); /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmOGY3ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(248,247,247,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(250,250,250,1)), color-stop(100%, rgba(248,247,247,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(248,247,247,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(248,247,247,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(248,247,247,1) 100%); /* IE10+ */
-  background: linear-gradient(top, rgba(250,250,250,1) 0%, rgba(248,247,247,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#f8f7f7', GradientType=0 ); /* IE6-8 */
-  padding: 10px;
-}
-body.page-plate #block-system-main {
+body.page-plate #block-system-main,
+body.page-plate2 #block-system-main {
   padding: 10px 0;
 }
-body.page-plate #block-views-exp-galley-fluid-page h2 {
-  width: 120px;
-  float: left;
-  margin-right: 1em;
-  border-right: 1px solid white;
-}
-body.page-plate #block-views-exp-galley-fluid-page h2 a {
-  text-transform: uppercase;
-  font-style: normal;
-  color: #4e4f4e;
-  font-size: 14px;
-}
-body.page-plate #block-views-exp-galley-fluid-page .content {
-  float: left;
-}
-body.page-plate .views-exposed-widgets {
+.view.view-galley-fluid .views-exposed-widgets {
   padding-bottom: 1.5em;
 }
-body.page-plate .views-exposed-widgets > .views-exposed-widget {
+.view.view-galley-fluid .views-exposed-widgets > .views-exposed-widget {
   float: left;
 }
-body.page-plate .color-bkg-selector {
+
+/*filtros de plate*/
+div.view.view-galley-fluid div.views-exposed-widget {
+  margin-left: 20px;
+}
+div.view.view-galley-fluid div.views-widget-filter-field_sp_name_common_value, div.view.view-galley-fluid div.views-reset-button {
+  clear: left;
+}
+div.view.view-galley-fluid .views-exposed-widgets input.form-text,
+div.view.view-galley-fluid .views-exposed-widgets select {
+  border-radius: 5px;
+  height: 28px;
+  border: 1px solid #AAA;
+  -webkit-box-shadow: inset 0px 2px 1px 0px #EEE;
+  box-shadow: inset 0px 2px 1px 0px #EEE;
+}
+div.view.view-galley-fluid .views-exposed-widgets select {
+  padding-top: 4px;
+}
+div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete {
+  background-position: right 6px;
+}
+div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete.throbbing {
+  background-position: right -14px;
+}
+
+/*background selector*/
+.view.view-galley-fluid .color-bkg-selector {
   float: right;
 }
 ul#BGSelector {
@@ -1474,61 +1496,14 @@ ul#BGSelector li:hover {
   background-color: #423F3F !important;
   background: #423F3F !important;
 }
-/*filtros de la view*/
-#block-views-exp-galley-fluid-page .views-exposed-widget label {
-  font-weight: normal;
-}
-#block-views-exp-galley-fluid-page .views-widget-filter-title {
-/*float: none;*/
-}
-#block-views-exp-galley-fluid-page #edit-fam-wrapper {
-  float: none;
-}
-#block-views-exp-galley-fluid-page #edit-field-figure-hbw-vol-value-wrapper.views-widget-filter-field_figure_hbw_vol_value {
-  /*float: left;*/
-  width: 123px;
-  padding-right: 5px;
-}
-#block-views-exp-galley-fluid-page #edit-field-figure-hbw-plate-value-wrapper.views-widget-filter-field_figure_hbw_plate_value {
-  width: 123px;
-}
-#block-views-exp-galley-fluid-page input#edit-field-figure-hbw-vol-value.form-text, #block-views-exp-galley-fluid-page input#edit-field-figure-hbw-plate-value.form-text {
-  width: 93px;
-}
-#block-views-exp-galley-fluid-page select#edit-field-figure-morph-value {
-  height: 120px;
-}
-.views-widget-filter-field_figure_order_sp_value input#edit-show {
-  width: 30px;
-}
-#block-views-exp-galley-fluid-page select.form-select {
-  font-size: 0.85em;
-}
-.views-widget-filter-field_figure_order_sp_value input#edit-show {
-  width: 30px;
-}
-#block-views-exp-galley-fluid-page .views-exposed-widget.views-submit-button, #block-views-exp-galley-fluid-page .views-exposed-widget.views-reset-button {
-/*float: right;
-clear: left;*/
-}
-select#edit-field-figure-order-sp-value.form-select {
-  background-image: url(/sites/all/themes/omega/omega/images/select-arrow.gif);
-  background-repeat: no-repeat;
-  background-position: right center;
-  padding-right: 20px;
-}
+
 /*boto Reset drags*/
-.page-plate h1#page-title.title button {
+div.view.view-galley-fluid h1#page-title.title button {
   float: right;
   margin: 10px 8px 5px 5px;
   display: none;
 }
-/*.view-display-id-block_1 .view-content,
-.view-display-id-block_1 .view-content .views_fluidgrid_galley_fluid_block_1 {
-  margin: 0 auto !important;
-  text-align: center !important;
-}*/
-.view-galley-fluid.view-display-id-page .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a {
+div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a {
   z-index: 0;
   cursor: move;
 }
@@ -1539,6 +1514,39 @@ select#edit-field-figure-order-sp-value.form-select {
 }
 .colorbox-plate {
   /*width: 350px;*/ /*provisional*/
+}
+
+/*camps de la view plate*/
+
+div.view.view-galley-fluid div.view-content h3 {
+  clear: left;
+}
+div.view.view-galley-fluid .views-field.views-field-field-figure-order {
+  white-space: nowrap;
+  font-family: "arial";
+  font-size: 0.8em;
+  line-height: 95%;
+  padding: 0px;
+  margin: 0 2px;
+  z-index: 1;
+  text-align: center;
+}
+div.view.view-galley-fluid .views-field.views-field-field-figure-order .text {
+  background-color: white !important;
+  padding: 6px;
+  margin: 0 auto;
+}
+span.order {
+  margin-right: 5px;
+}
+div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender {
+  font-size: 110%;
+  position: absolute;
+  right: 10px;
+}
+div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender * {
+  vertical-align: middle;
+  float: right;
 }
 /* text dins del colorbox*/
 .colorbox-text {
@@ -1579,37 +1587,8 @@ select#edit-field-figure-order-sp-value.form-select {
 .colorbox-slideshow .links {
   text-align: center;
 }
-/*
-body.page-plate #edit-field-figure-morph-value-wrapper {
-  border-right: 1px solid red;
-}
-
-body.page-plate #edit-field-figure-gender-value-wrapper {
-  border-left: 1px solid #eae8e8;
-}*/
-
-/* codi per mostrar el nom de la subspecies o especie al fer un hover damunt de les figures, a la pagina de plate */
-/*.view-galley-fluid .views-field-title-1 {
-background-color:rgba(0,0,0,0.5);
-padding:5px;
-text-align:center;
-opacity:0.1;
-position:absolute;
-top:40%;
-font-size:130%;
-}
-.view-galley-fluid .views-field-title-1:hover {
-padding:5px;
-text-align:center;
-opacity:0.8;
-background-color:white;
-position:absolute;
- top:40%;
- z-index:1;
-}*/
 
 /* Plate: Image caption overlay */
-
 .description_overlay {
   position: relative;
   /*margin-left: 21em;
@@ -1651,6 +1630,61 @@ position:absolute;
   font-style: italic;
   font-size: 0.95em;
 }
+
+/*pager plate*/
+div.view.view-galley-fluid ul.pager {
+  background: none;
+}
+div.view.view-galley-fluid ul.pager li {
+  background: #FFF;
+  color: #333;
+  font-weight: normal;
+  border: 1px solid #CCC;
+  -webkit-border-radius: none;
+  margin: 0 5px 0 0;
+  position: relative;
+}
+div.view.view-galley-fluid ul.pager li a {
+  background: none;
+  color: #333;
+}
+div.view.view-galley-fluid ul.pager li a:hover {
+  background: #C4202B;
+  color: #FFF;
+}
+
+/*proves amb Josep*/
+.view.view-galley-fluid1 #region-content,
+.view.view-galley-fluid2 #region-content,
+.view.view-galley-fluid3 #region-content {
+  width: 1400px !important;
+}
+.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row,
+.view-plate.view-id-plate.view-display-id-page_1 .views-row {
+  float: left;
+  padding: 0;
+  margin: 0;
+  line-height: 90%;
+  border: 0;
+  
+  /*height: 200px;*/
+}
+.view.view-galley-fluid2 #region-content h3 {
+  /*clear: left;*/
+  float: left;
+  letter-spacing: -0.5em;
+  font-weight: normal;
+  border-bottom: 0 none;
+  padding: 0 !important;
+  margin: 0 !important;
+  
+  display: none;
+}
+div#views_infinite_scroll-ajax-loader {
+  clear: left;
+}
+/*END proves josep*/
+
 /**
  * mini plate in Species nodes (view plate_node_sp)
  */
@@ -3001,7 +3035,7 @@ a.shadowbox.video.disabled, a.shadowbox.pic.disabled, a.shadowbox.sound.disabled
   text-align: right;
 }
 /* Boton Reset drags (en plate) */
-a.hide_links_plate, .page-plate .reset a {
+a.hide_links_plate, .view.view-galley-fluid .reset a {
   float: right;
   color: white !important;
   background: #9FC748 !important;
@@ -3017,24 +3051,24 @@ a.hide_links_plate, .page-plate .reset a {
   text-decoration: none;
   outline: none;
 }
-a.hide_links_plate, .page-plate .reset a {
+a.hide_links_plate, .view.view-galley-fluid .reset a {
   margin: 0.5em 0 0.9em 0.8em;
 }
-.page-plate .reset a {
+.view.view-galley-fluid .reset a {
   background: #CECDCD;
   color: #FDFDFD;
 }
-a.hide_links_plate:hover, .page-plate .reset a:hover {
+a.hide_links_plate:hover, .view.view-galley-fluid .reset a:hover {
   background: #8AAF3C;
   color: white;
   text-decoration: none;
   outline: none;
 }
-.page-plate .reset a:hover {
+.view.view-galley-fluid .reset a:hover {
   background: #BFBDBD;
   color: #FDFDFD;
 }
-a.hide_links_plate:active:focus, .page-plate .reset a:active:focus {
+a.hide_links_plate:active:focus, .view.view-galley-fluid .reset a:active:focus {
   text-decoration: none;
   outline: none;
 }
@@ -4943,63 +4977,6 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
   top: -15px;
 }
 
-/**** plates ***/
-
-div.view.view-galley-fluid ul.pager {
-  background: none;
-}
-div.view.view-galley-fluid ul.pager li {
-  background: #FFF;
-  color: #333;
-  font-weight: normal;
-  border: 1px solid #CCC;
-  -webkit-border-radius: none;
-  margin: 0 5px 0 0;
-  position: relative;
-}
-div.view.view-galley-fluid ul.pager li a {
-  background: none;
-  color: #333;
-}
-div.view.view-galley-fluid ul.pager li a:hover {
-  background: #C4202B;
-  color: #FFF;
-}
-body.page-plate div#region-content h1:after {
-  content: " show filters";
-  font-size: .9em;
-  font-weight: normal;
-  margin: 0 0 0 20px;
-  padding: 0 20px 0 0;
-  background: url("images/icons.png") no-repeat scroll 80px -90px transparent;
-}
-body.page-plate div#region-content h1:hover:after {
-  color: #333;
-}
-div.view.view-galley-fluid div.views-exposed-widget {
-  margin-left: 20px;
-}
-div.view.view-galley-fluid div.views-widget-filter-field_sp_name_common_value, div.view.view-galley-fluid div.views-reset-button {
-  clear: left;
-}
-div.view.view-galley-fluid form#views-exposed-form-galley-fluid-page input.form-text, div.view.view-galley-fluid form#views-exposed-form-galley-fluid-page select {
-  border-radius: 5px;
-  height: 28px;
-  border: 1px solid #AAA;
-  -webkit-box-shadow: inset 0px 2px 1px 0px #EEE;
-  box-shadow: inset 0px 2px 1px 0px #EEE;
-}
-div.view.view-galley-fluid form#views-exposed-form-galley-fluid-page select {
-  padding-top: 4px;
-}
-form#views-exposed-form-galley-fluid-page .form-item input.form-autocomplete {
-  background-position: right 6px;
-}
-form#views-exposed-form-galley-fluid-page .form-item input.form-autocomplete.throbbing {
-  background-position: right -14px;
-}
-
-
 /**** checkout ****/
 
 body.page-checkout #zone-content {
@@ -5098,51 +5075,6 @@ body.page-checkout #region-content form#commerce-checkout-form-review table.chec
   color: #AAA;
   font-size: 16px;
 }
-
-/*proves amb /plate1 i /plate2*/
-.page-plate1 #region-content,
-.page-plate2 #region-content,
-.page-plate3 #region-content {
-  width: 1400px !important;
-}
-.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row,
-.view-plate.view-id-plate.view-display-id-page_1 .views-row {
-  float: left;
-  padding: 0;
-  margin: 0;
-  line-height: 90%;
-  border: 0;
-  
-  /*height: 200px;*/
-}
-.page-plate2 #region-content h3 {
-  /*clear: left;*/
-  float: left;
-  letter-spacing: -0.5em;
-  font-weight: normal;
-  border-bottom: 0 none;
-  padding: 0 !important;
-  margin: 0 !important;
-  
-  display: none;
-}
-div#views_infinite_scroll-ajax-loader {
-  clear: left;
-}
-
-/*proves amb /plate*/
-.views_fluidgrid_galley_fluid_page {
-  /*position: inherit;
-  width: 100% !important;
-  height: 100% !important;*/
-}
-.masonry.masonry-brick,
-#views_fluidgrid_galley_fluid_page {
-  /*float: left !important;
-  display: inline !important;*/
-}
-
-
 
 /** pricing plan comparison **/
 
