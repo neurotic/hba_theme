@@ -1298,6 +1298,36 @@ body.page-plate #zone-content, body.page-plate #region-content {
   width: 99%;
   padding-top: 0;
 }
+body.page-plate #region-content .region-inner {
+  -webkit-border-radius: 10px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius: 10px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top: none;
+  border: 1px solid #ededed;
+  padding: 0;
+  background: #F8F8F8; /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #eaeaea)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #f9f9f9 0%, #eaeaea 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea', GradientType=0 ); /* IE6-8 */
+}
+body.page-plate.page-plate-all #region-content .region-inner {
+  background: #F8F8F8 !important; /*if not, unable to see the last boxes*/
+}
+body.page-plate #region-content .region-inner .view-content {
+  clear: left;
+}
 body.page-plate.view-display-id-page #region-content .view-content,
 body.page-plate.view-display-id-page_1 #region-content .view-content {
   border: none;
@@ -1369,30 +1399,6 @@ body.page-plate #info .text {
   border-top-right-radius: 15px;
 }
 
-body.page-plate #region-content .region-inner {
-  -webkit-border-radius: 10px;
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius: 10px;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-radius: 10px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top: none;
-  border: 1px solid #ededed;
-  padding: 0;
-  background: #F8F8F8; /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(100%, #eaeaea)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #f9f9f9 0%, #eaeaea 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #f9f9f9 0%, #eaeaea 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea', GradientType=0 ); /* IE6-8 */
-}
 body.page-plate #messages {
   margin: 0;
 }
@@ -1403,19 +1409,6 @@ body.page-plate #messages {
   margin: 0;
 }
 
-body.page-plate #region-content .region-inner {
-  -webkit-border-radius: 10px;
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius: 10px;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-radius: 10px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top: none;
-  border: 1px solid #ededed;
-}
 body.page-plate #block-system-main {
   padding: 10px 0;
 }
@@ -1444,6 +1437,12 @@ div.view.view-galley-fluid .views-exposed-widgets select {
 div.view.view-galley-fluid .views-exposed-widgets select {
   padding-top: 4px;
 }
+div.view.view-galley-fluid .views-exposed-widgets select#edit-f[size],
+div.view.view-galley-fluid .views-exposed-widgets select#edit-f[multiple] {
+  background-image: url('/sites/all/themes/omega/omega/images/select-arrow.gif');
+  padding: 2px;
+  width: 100px;
+}
 div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete {
   background-position: right 6px;
 }
@@ -1453,7 +1452,10 @@ div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete.
 
 /*background selector*/
 .view.view-galley-fluid .color-bkg-selector {
-  float: right;
+  float: left;
+  margin-top: 1.6em;
+  margin-left: 25px;
+  padding: .5em 1em 0 0;
 }
 ul#BGSelector {
   display: inline;
@@ -1491,7 +1493,8 @@ div.view.view-galley-fluid h1#page-title.title button {
   margin: 10px 8px 5px 5px;
   display: none;
 }
-div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a {
+div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a,
+.view-galley-fluid.view-id-galley_fluid.view-display-id-page_2 .view-content .sp-row-wrapper {
   z-index: 0;
   cursor: move;
 }
@@ -1506,10 +1509,6 @@ div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.fie
 
 /* Plate content */
 
-div.view.view-galley-fluid .view-content {
-  clear: left;
-  background: #F8F8F8 !important;
-}
 div.view.view-galley-fluid .views-row {
   float: left;
   padding: 0;
@@ -1519,14 +1518,14 @@ div.view.view-galley-fluid .views-row {
   
   /*height: 200px;*/
 }
-.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row {
+div.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row {
   margin-bottom: 15px;
 }
 .page-plate-5 .views-row.views-row-first { /*si volem que les figures surtin en vertical i només la 1a figura sorti junt amb la 2a*/
   /*float: left;
   clear: left;*/
 }
-.view.view-galley-fluid2 #region-content h3 {
+div.view.view-galley-fluid2 #region-content h3 {
   /*clear: left;*/
   float: left;
   letter-spacing: -0.5em;
@@ -1540,7 +1539,7 @@ div.view.view-galley-fluid .views-row {
 div.view.view-galley-fluid div.view-content h3 {
   clear: left;
 }
-.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .view-content h3 {
+div.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .view-content h3 {
   font-size: 15px;
   border-bottom: 0 none;
   border-top: 2px solid #666;
@@ -1552,7 +1551,8 @@ div.view.view-galley-fluid div.view-content h3 {
 .view-galley-fluid.view-id-galley_fluid.view-display-id-page_2 .view-content h3 {
   float: left;
   width: 90%;
-  font-size: 11px;
+  line-height: 100%;
+  font-size: 1em;
   font-weight: normal;
   border-bottom: 0 none;
   padding: 0 !important;
@@ -1565,7 +1565,8 @@ div.view.view-galley-fluid div.view-content h3 {
   float: left;
   border: 5px solid rgb(235, 235, 235);
   padding: 10px;
-  margin: 0 10px 10px 0;
+  margin: 0 8px 8px 0;
+  border-radius: 5px;
 }
 .sp-row-wrapper ul {
   list-style: none;
@@ -1590,7 +1591,7 @@ div.view.view-galley-fluid .views-field-field-figure-gender {
   position: absolute;
   right: 10px;
 }
-.page-plate .views-field-field-figure-gender,
+.page-plate .views-field-field-figure-gender *,
 div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender * {
   vertical-align: middle;
   float: right;
@@ -1605,7 +1606,7 @@ div.view.view-galley-fluid .views-field.views-field-nothing {
   font-family: "arial";
   font-size: 0.8em;
   line-height: 95%;
-  padding: 0px;
+  padding: 2px 5px;
   margin: 0 2px;
   z-index: 1;
   text-align: center;
@@ -1624,21 +1625,14 @@ div.view.view-galley-fluid .views-field.views-field-counter .text span.order,
 div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
   margin-right: 5px;
 }
-/* text dins del colorbox*/
-.colorbox-text {
-  width: 450px;
-  background-color: #EEE;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/*plate > beautytip*/
-#views_fluidgrid_galley_fluid_page .plate-hovertip .text .tip {
-  padding-top: 8px !important;
-  font-style: italic !important;
-  font-size: 0.85em !important;
-}
+
 /*plate > colorbox*/
+.colorbox-plate .gender {
+  font-size: 130%;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
 .colorbox-plate .text .tip {
   display: none;
 }
@@ -1649,6 +1643,22 @@ div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
   /*width: 380px !important;*/
   margin-bottom: 10px;
 }
+/* text dins del colorbox*/
+.colorbox-text {
+  width: 450px;
+  background-color: #EEE;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*plate > beautytip*/
+#views_fluidgrid_galley_fluid_page .plate-hovertip .text .tip {
+  padding-top: 8px !important;
+  font-style: italic !important;
+  font-size: 0.85em !important;
+}
+
 /*bloc Figures*/
 .views_slideshow_cycle_main, .views-slideshow-cycle-main-frame, .views_slideshow_cycle_teaser_section, .views-slideshow-cycle-main-frame-row-item, .views-field-colorbox, .views-field-colorbox .field-content, .views-field-colorbox .field-content .colorbox-inline, .views-field-colorbox .field-content img {
   text-align: center;
@@ -3097,8 +3107,14 @@ a.hide_links_plate, .view.view-galley-fluid .reset a {
   outline: none;
 }
 .view.view-galley-fluid a.hide_links_plate, .view.view-galley-fluid .reset a {
+  float: left;
   /*margin: 0.5em 0 0.9em 0.8em;*/
-  margin: 0 0 0 0.8em;
+  margin-top: 2.1em;
+  margin-left: 25px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font: normal 12px/1.2 Arial, sans-serif;
 }
 a.hide_links_plate:hover, .view.view-galley-fluid .reset a:hover {
   background: #8AAF3C;
@@ -3547,6 +3563,31 @@ select#edit-field-myr-date-value-op {
   border: 0 solid;
   border-color: #FFF;
 }
+
+/*view set-records*/
+#views-form-set-records-default .item-list li {
+  list-style: inherit;
+}
+div.hide_list_wrapper {
+  float: right;
+  margin: 0.3em;
+}
+body.node-type-locality article.node-my-record header h2 {
+  margin-bottom: 0;
+  letter-spacing: 0em;
+  font: 13px/1.5 Verdana, Helvetica, Arial, sans-serif;
+}
+.node-type-locality .field-name-field-loc-sp .field-items > .field-item.list {
+  background: none;
+  border-radius: 0px;
+  border: 0 none;
+  margin-bottom: 5px;
+}
+#views-form-set-records-default td.views-empty {
+  text-align: center;
+  padding: 20px 5px 5px 5px;
+}
+
 /**
  * Wikicontributions
  */
@@ -3980,7 +4021,7 @@ input#email-M6JL4NGD.field.blink {
 }
 /* Google Analytics */
 /* Block: Most viewed (references, sp, families) */
-.views-field-counter span.field-content {
+.block-inner .views-field-counter span.field-content {
   background: #F2F2F2;
   padding: 2px 3px;
   margin-right: 2px;
@@ -4414,7 +4455,7 @@ fieldset#node_locality_full_group_loc_group_myr {
   background: #EEE;
   border-radius: 4px;
   border: 1px solid #CCC;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .references-thumbnail .node-my-record .content {
   margin: 5px 0 10px 0;
@@ -4442,6 +4483,15 @@ fieldset#node_locality_full_group_loc_group_myr {
 #mini-teaser div.left { /*text a l'esquerra de l'ocell*/
   float: left !important;
   width: 60%;
+  margin-bottom: 10px;
+}
+#mini-teaser div.left > div {
+  
+}
+#mini-teaser div.left > div.ds-taxonomy {
+  line-height: 95%;
+  margin-top: 5px;
+  font-size: 0.95em;
 }
 #mini-teaser div.right { /*ocell*/
   display: table-cell;
@@ -4460,20 +4510,22 @@ fieldset#node_locality_full_group_loc_group_myr {
 }
 .field-name-field-loc-sp .node-inner div.content div.right .thumbnail img,
 .references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail img {
-  width: 70%;
+  width: 40%;
   height: auto;
 }
 /*sp nb, heard, captive, date*/
 .node-locality .field-name-field-loc-sp .node-inner div.content > div.right,
 .references-thumbnail .node-my-record .content > .right  {
   float: right;
-  padding: 10px 10px 15px 15px;
+  padding: 5px 10px;
   border-radius: 0 0 0 5px;
   background: #666;
   color: #FFF;
   font-size: 0.8em;
 }
 .field-name-field-loc-sp .field-name-field-myr-nb, .field-name-field-loc-sp .field-name-field-myr-heard, .field-name-field-loc-sp .field-name-field-myr-captive {
+
+  line-height: 80%;
 }
 .node-type-locality .field-name-field-loc-sp .node-inner div.content div.bottom {
   clear: left;
@@ -4489,11 +4541,12 @@ fieldset#node_locality_full_group_loc_group_myr {
 }
 div.field_myr_map > div, div.field_myr_map .openlayers-map {
   width: 100% !important;
-  height: 100px !important;
+  height: 70px !important;
 }
 
 /**
  * View My checklists:
+ * - pàgina /checklist
  * - bloc en Checklist node form
  * - bloc en Species node display
  * - bloc My trips (#block-views-my-record-block-1)?
@@ -4581,14 +4634,16 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .view-my-record .view-content table {
   border: 1px solid green;
 }
-.view-my-record .view-grouping-header {
+.view-my-record .view-grouping-header, /*page ppl*/
+.view-id-my_record.view-display-id-attachment_2 .view-content h3 { /*attachement*/
   font-size: 1.2em;
   font-weight: bold;
   margin: 15px 0;
   border-bottom: 2px solid #666;
 }
-.view-my-record .view-grouping-header span.label {
-  padding: 5px;
+.view-my-record .view-grouping-header span.label,
+.view-id-my_record.view-display-id-attachment_2 .view-content h3 span.label {
+  padding: 4px 5px 4px 5px;
   margin-right: 5px;
   color: #FFF;
   background: #666;
@@ -4597,10 +4652,16 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   text-align: left;
   margin: 3px 0 2px 0;
   font-size: 1.1em !important;
-  /*border-bottom: 1px solid green;*/
+}
+.view-my-record .view-content table.views-table caption span.edit,
+.view-id-my_record.view-display-id-attachment_2 .view-content .views-field-edit-node {
+  float: right;
+}
+.view-my-record .view-content table.views-table tr.views-row-last {
+  border-bottom: 0 none;
 }
 .view-my-record .view-content table.views-table > caption span.label {
-  padding: 5px;
+  padding: 4px 5px 4px 5px;
   margin-right: 5px;
   color: #FFF;
   background: green;
@@ -4622,6 +4683,22 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .view-my-record div.more-link {
   clear: both;
 }
+/*Attachement a viewpage: My checklists*/
+.view-id-my_record.view-display-id-attachment_2 {
+  border: 1px solid orange;
+  background: #FCFAE5;
+  padding: 0 15px 25px 15px;
+  margin: 2em 0 5em 0;
+  clear: both;
+}
+.view-id-my_record.view-display-id-attachment_2 .view-header {
+  float: none;
+  font-style: italic;
+}
+.view-id-my_record.view-display-id-attachment_2 .view-content {
+  clear: left;
+}
+
 /*Block wikipedia + map*/
 #block-block-30 {
   padding: 20px;
