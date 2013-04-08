@@ -97,6 +97,7 @@ html.js .content-inner form fieldset.collapsed .fieldset-legend, .content-inner 
 #section-header {
   margin-bottom: 10px;
 }
+h1#site-name {display: none;}
 h1#page-title {
   margin-bottom: 10px;
 }
@@ -964,8 +965,6 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
   box-shadow: 0px 1px 1px 1px #e8e8e8;
-}
-#region-content .field-group-div h3 {
   clear: both;
 }
 /*#region-content #node_species_full_group_sp_tab_taxo h3:after,
@@ -3273,9 +3272,7 @@ div.view-empty .add, div.view-footer .add {
   padding-top: 1em;
   font-size: 0.9em;
 }
-#block-views-mynotes-block div.view-empty {
-  font-style: italic;
-}
+
 /*Buttons*/
 .views-submit-button input.form-submit {
   background: #25ade2;
@@ -3694,14 +3691,6 @@ padding: 0;
 }
 .node-wikinote .ds-2col.user-profile.view-mode-token .group-left, .node-wikinote .ds-2col.user-profile.view-mode-token .field-name-ds-user-picture.field-type-ds, .node-wikinote .ds-2col.user-profile.view-mode-token div.field-name-name.field-type-ds, .node-wikinote div.ds-2col.user-profile.view-mode-token h3, .node-wikinote div.ds-2col.user-profile.view-mode-token dl.user-profile-category {
   display: none;
-}
-/* Bloc WIKICONTRIBUTIONS */
-#block-views-wikicontribution-block div.view-empty {
-  font-style: italic;
-}
-#block-views-wikicontribution-block div.view-footer {
-  text-align: right;
-  font-size: 0.85em;
 }
 /* Pàgina Wikicontributions */
 .view-wikicontribution .views-row {
@@ -4684,18 +4673,18 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   clear: both;
 }
 /*Attachement a viewpage: My checklists*/
-.view-id-my_record.view-display-id-attachment_2 {
+div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-attachment_2 {
   border: 1px solid orange;
   background: #FCFAE5;
   padding: 0 15px 25px 15px;
   margin: 2em 0 5em 0;
   clear: both;
 }
-.view-id-my_record.view-display-id-attachment_2 .view-header {
+div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-attachment_2 .view-header {
   float: none;
   font-style: italic;
 }
-.view-id-my_record.view-display-id-attachment_2 .view-content {
+div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-attachment_2 .view-content {
   clear: left;
 }
 

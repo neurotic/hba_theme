@@ -38,10 +38,10 @@ zones[postscript] = 'Postscript'
 css[global.css][name] = 'Your custom global styles'
 css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
 css[global.css][options][weight] = '10'
-
-css[julien.css][name] = 'Fichero CSS de Julien'
-css[julien.css][description] = 'Fichero de CSS que habra que ir pasando al global.'
-css[julien.css][options][weight] = '9'
+css[print.css][name] = 'print.css'
+css[print.css][description] = ''
+css[print.css][options][weight] = '10'
+css[print.css][options][media] = 'print'
 
 scripts[] = js/actions.js
 ;scripts[] = /../../sites/all/modules/bird_taxonomies/bird_taxonomies.js

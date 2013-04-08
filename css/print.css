@@ -1,0 +1,122 @@
+/* base */
+
+body {margin:0; padding:0; line-height: 1.4em; word-spacing:1px; letter-spacing:0.2px; font: 13px Arial, Helvetica,"Lucida Grande", serif; color: #000;}
+
+/* Links */
+a:link, a:visited {background: transparent; color:#333; text-decoration:none;}
+a:link[href^="http://"]:after, a[href^="http://"]:visited:after {content: " (" attr(href) ") "; font-size: 11px;}
+a[href^="http://"] {color:#000;} 
+
+span.lm-wrapper span.lm-number,
+.bt-content span.link-arroba a.ext {background:none;}
+.node .content div.field-group-format-wrapper div.field div.field-items div.field-item a, .node a.none,
+.colorbox-video a.colorbox-load, .node .shadowbox.video,
+.colorbox-pic a.colorbox-load, .node .shadowbox.pic,
+.colorbox-sound a.colorbox-load, .node .shadowbox.sound,
+.bt.biblio {
+  padding-right: 0;
+  background: none !important;
+}
+a.shadowbox.video.disabled, a.shadowbox.pic.disabled, a.shadowbox.sound.disabled, a.biblio.disabled, a.none.disabled {
+  background: none !important;
+  background-image: none !important;
+}
+
+/*Image*/
+img, img a, .more-link a {border:none;}
+
+/*Comment Section*/
+#comments {page-break-before: always;}
+
+/* hba_theme specific items */
+
+#absolute-messages-messages,
+#zone-user-wrapper,
+#zone-header-wrapper,
+#zone-branding-wrapper #zone-branding #region-menu,
+#zone-menu-wrapper,
+#zone-preface-wrapper,
+#zone-preface,
+#zone-content #breadcrumb,
+#zone-content #messages,
+#region-content .tabs,
+#region-content .node-inner .links,
+#region-content .node-inner .bottom_links,
+#region-content #block-block-2,
+#region-content #block-block-20,
+#region-sidebar-first,
+#region-sidebar-second,
+#region-sidebar-third,
+#zone-postscript-wrapper,
+#section-footer,
+#slidebox {
+	display: none;
+}
+#section-header,
+#zone-branding-wrapper,
+#zone-branding-wrapper #zone-branding {
+	width: 200px;
+	height: 42px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#zone-branding-wrapper #region-branding img#logo {
+  width: 200px;
+  height: auto;
+}
+#region-content {
+	width: 100%;
+	clear: both;
+	display: block;
+	position: relative;
+	/*top: 50px;*/
+}
+
+/* Species stuff */
+body.context-species #region-content .field-group-div h3 {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 4px solid #FFF !important;
+  border-width: 4px !important;
+  border-style: solid !important;
+  border-color: #FFF !important;
+  border-top: 4px solid #FFF !important;
+  border-bottom: 4px solid #FFF !important;
+  border-left: 4px solid #FFF !important;
+  border-right: 4px solid #FFF !important;
+  border-top-color: #FFF !important;
+  border-top-width: 4px !important;
+  border-top-style: solid !important;
+  border-bottom-color: #FFF !important;
+  border-bottom-width: 4px !important;
+  border-bottom-style: solid !important;
+  border-left-color: #FFF !important;
+  border-left-width: 4px !important;
+  border-left-style: solid !important;
+  border-right-color: #FFF !important;
+  border-right-width: 4px !important;
+  border-right-style: solid !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  box-shadow: 0px none !important;
+  -webkit-box-shadow: 0px #FFF !important;
+  -moz-box-shadow: 0px #FFF !important;
+}
+body.context-species #region-content .field-group-div h3:after {
+  background: none;
+}
+body.context-species #region-content .region-inner h3 a {
+  font-size: 16px;
+  color: #3D3C3C;
+}
+body.context-species .node-inner.full .content .field-group-format-wrapper {
+  margin: 10px 0;
+}
+
+/* Family stuff */
+body.context-family .vertical-tabs-list {display:none;}
+body.context-family .vertical-tabs .vertical-tabs-panes > *{display:block !important;} /*mostrar totes les vtabs*/
+body.context-family fieldset#node_family_full_group_fam_view_vt_sp_table {display:none;}
