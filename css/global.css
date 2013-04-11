@@ -43,9 +43,9 @@ body a:visited {
 a {
   text-decoration: none !important;
 }
-
-textarea, select, input[type="text"], input[type="url"] {width: 100%;}
-
+textarea, select, input[type="text"], input[type="url"] {
+  width: 100%;
+}
 /* fieldset */
 .content-inner form fieldset, .content-inner .node-inner fieldset {
   border: 1px solid #ccc;
@@ -97,7 +97,9 @@ html.js .content-inner form fieldset.collapsed .fieldset-legend, .content-inner 
 #section-header {
   margin-bottom: 10px;
 }
-h1#site-name {display: none;}
+h1#site-name {
+  display: none;
+}
 h1#page-title {
   margin-bottom: 10px;
 }
@@ -156,6 +158,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 }
 #region-menu ul#main-menu li:hover a {
   border-bottom: 5px solid #c4464f;
+}
+#region-menu ul#main-menu li.menu-2745:hover a, #region-menu ul#main-menu li.menu-2745.active a {
+  border-bottom: 5px solid #009DE0;
+}
+#region-menu ul#main-menu li.menu-4522:hover a, #region-menu ul#main-menu li.menu-4522.active a {
+  border-bottom: 5px solid #FC6F03;
 }
 #region-menu ul#secondary-menu {
   float: right;
@@ -487,13 +495,13 @@ body.context-species #region-content .region-inner h2 {
 }
 .context-species #region-content a {
 /*color: #EE9C31;
-  color: #FF6600;
+  color: #FC6F03;
   color: #FC6F03;
   color: #FA991B;
   font-weight: bold;*/
 }
 .context-species #region-content a:hover {
-/*color: #FF6600;
+/*color: #FC6F03;
   color: gray;*/
 }
 /* Navigation menu for Species full node display */
@@ -562,6 +570,9 @@ body #section-content #region-sidebar-second h2 span, body #section-content #reg
 }
 body #section-content #region-sidebar-second h2.collapsiblockCollapsed span, body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   border-color: #b7b4b4;
+}
+body.context-species #region-sidebar-second h2.block-title.collapsiblock a span {
+	 border-color: #CA4C55 !important;
 }
 .not-front #region-sidebar-second .block .block-inner > .content, .not-front #region-sidebar-third .block .block-inner > .content {
   background: white;
@@ -1288,7 +1299,6 @@ body button, body input[type="reset"], body input[type="submit"], body input[typ
 #block-views-species-test-block-2 .view-footer {
   padding: 0 10px 10px 10px;
 }
-
 /**
  * Plate
  */
@@ -1327,8 +1337,7 @@ body.page-plate.page-plate-all #region-content .region-inner {
 body.page-plate #region-content .region-inner .view-content {
   clear: left;
 }
-body.page-plate.view-display-id-page #region-content .view-content,
-body.page-plate.view-display-id-page_1 #region-content .view-content {
+body.page-plate.view-display-id-page #region-content .view-content, body.page-plate.view-display-id-page_1 #region-content .view-content {
   border: none;
   padding: 5px 10px;
   background: transparent;
@@ -1366,7 +1375,7 @@ body.page-plate div#region-content h1:hover:after {
 }
 body.page-plate #info {
   float: left;
-  padding: 8px 5px 5px 20px; 
+  padding: 8px 5px 5px 20px;
 }
 body.page-plate #info .btn {
   float: left;
@@ -1397,17 +1406,14 @@ body.page-plate #info .text {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
 }
-
 body.page-plate #messages {
   margin: 0;
 }
-
 .view.view-galley-fluid .view-filters .views-exposed-form {
   border: 0;
   padding: 0;
   margin: 0;
 }
-
 body.page-plate #block-system-main {
   padding: 10px 0;
 }
@@ -1417,7 +1423,6 @@ body.page-plate #block-system-main {
 .view.view-galley-fluid .views-exposed-widgets > .views-exposed-widget {
   float: left;
 }
-
 /*filtros de plate*/
 div.view.view-galley-fluid div.views-exposed-widget {
   margin-left: 20px;
@@ -1425,8 +1430,7 @@ div.view.view-galley-fluid div.views-exposed-widget {
 div.view.view-galley-fluid div.views-widget-filter-field_sp_name_common_value, div.view.view-galley-fluid div.views-reset-button {
   clear: left;
 }
-div.view.view-galley-fluid .views-exposed-widgets input.form-text,
-div.view.view-galley-fluid .views-exposed-widgets select {
+div.view.view-galley-fluid .views-exposed-widgets input.form-text, div.view.view-galley-fluid .views-exposed-widgets select {
   border-radius: 5px;
   height: 28px;
   border: 1px solid #AAA;
@@ -1436,8 +1440,7 @@ div.view.view-galley-fluid .views-exposed-widgets select {
 div.view.view-galley-fluid .views-exposed-widgets select {
   padding-top: 4px;
 }
-div.view.view-galley-fluid .views-exposed-widgets select#edit-f[size],
-div.view.view-galley-fluid .views-exposed-widgets select#edit-f[multiple] {
+div.view.view-galley-fluid .views-exposed-widgets select#edit-f[size], div.view.view-galley-fluid .views-exposed-widgets select#edit-f[multiple] {
   background-image: url('/sites/all/themes/omega/omega/images/select-arrow.gif');
   padding: 2px;
   width: 100px;
@@ -1448,7 +1451,6 @@ div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete 
 div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete.throbbing {
   background-position: right -14px;
 }
-
 /*background selector*/
 .view.view-galley-fluid .color-bkg-selector {
   float: left;
@@ -1485,15 +1487,13 @@ ul#BGSelector li:hover {
   background-color: #423F3F !important;
   background: #423F3F !important;
 }
-
 /*boto Reset drags*/
 div.view.view-galley-fluid h1#page-title.title button {
   float: right;
   margin: 10px 8px 5px 5px;
   display: none;
 }
-div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a,
-.view-galley-fluid.view-id-galley_fluid.view-display-id-page_2 .view-content .sp-row-wrapper {
+div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a, .view-galley-fluid.view-id-galley_fluid.view-display-id-page_2 .view-content .sp-row-wrapper {
   z-index: 0;
   cursor: move;
 }
@@ -1503,9 +1503,8 @@ div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.fie
   display: block !important;
 }
 .colorbox-plate {
-  /*width: 350px;*/ /*provisional*/
+/*width: 350px;*/ /*provisional*/
 }
-
 /* Plate content */
 
 div.view.view-galley-fluid .views-row {
@@ -1513,15 +1512,13 @@ div.view.view-galley-fluid .views-row {
   padding: 0;
   margin: 0;
   line-height: 90%;
-  border: 0;
-  
-  /*height: 200px;*/
+  border: 0;/*height: 200px;*/
 }
 div.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row {
   margin-bottom: 15px;
 }
 .page-plate-5 .views-row.views-row-first { /*si volem que les figures surtin en vertical i només la 1a figura sorti junt amb la 2a*/
-  /*float: left;
+/*float: left;
   clear: left;*/
 }
 div.view.view-galley-fluid2 #region-content h3 {
@@ -1532,7 +1529,6 @@ div.view.view-galley-fluid2 #region-content h3 {
   border-bottom: 0 none;
   padding: 0 !important;
   margin: 0 !important;
-  
   display: none;
 }
 div.view.view-galley-fluid div.view-content h3 {
@@ -1576,31 +1572,25 @@ div.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .view-content 
   clear: left;
 }
 .figure-item {
-
 }
-
 div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender {
   font-size: 110%;
   position: relative;
   right: initial;
 }
-.page-plate .views-field-field-figure-gender,
-div.view.view-galley-fluid .views-field-field-figure-gender {
+.page-plate .views-field-field-figure-gender, div.view.view-galley-fluid .views-field-field-figure-gender {
   font-size: 110%;
   position: absolute;
   right: 10px;
 }
-.page-plate .views-field-field-figure-gender *,
-div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender * {
+.page-plate .views-field-field-figure-gender *, div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender * {
   vertical-align: middle;
   float: right;
 }
-div.view.view-galley-fluid div.views-field-counter.disabled,
-div.view.view-galley-fluid div.views-field-nothing.disabled {
+div.view.view-galley-fluid div.views-field-counter.disabled, div.view.view-galley-fluid div.views-field-nothing.disabled {
   display: none;
 }
-div.view.view-galley-fluid .views-field.views-field-counter,
-div.view.view-galley-fluid .views-field.views-field-nothing {
+div.view.view-galley-fluid .views-field.views-field-counter, div.view.view-galley-fluid .views-field.views-field-nothing {
   white-space: nowrap;
   font-family: "arial";
   font-size: 0.8em;
@@ -1611,20 +1601,16 @@ div.view.view-galley-fluid .views-field.views-field-nothing {
   text-align: center;
   background-color: #F2F2F2;
 }
-div.view.view-galley-fluid .views-field.views-field-counter .text,
-div.view.view-galley-fluid .views-field.views-field-nothing .text {
+div.view.view-galley-fluid .views-field.views-field-counter .text, div.view.view-galley-fluid .views-field.views-field-nothing .text {
   /*padding: 6px;*/
   margin: 0 auto;
 }
-div.view.view-galley-fluid .views-field.views-field-counter .text .sp,
-div.view.view-galley-fluid .views-field.views-field-nothing .text .sp {
+div.view.view-galley-fluid .views-field.views-field-counter .text .sp, div.view.view-galley-fluid .views-field.views-field-nothing .text .sp {
   padding: 2px 0;
 }
-div.view.view-galley-fluid .views-field.views-field-counter .text span.order,
-div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
+div.view.view-galley-fluid .views-field.views-field-counter .text span.order, div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
   margin-right: 5px;
 }
-
 /*plate > colorbox*/
 .colorbox-plate .gender {
   font-size: 130%;
@@ -1650,14 +1636,12 @@ div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
   margin-left: auto;
   margin-right: auto;
 }
-
 /*plate > beautytip*/
 #views_fluidgrid_galley_fluid_page .plate-hovertip .text .tip {
   padding-top: 8px !important;
   font-style: italic !important;
   font-size: 0.85em !important;
 }
-
 /*bloc Figures*/
 .views_slideshow_cycle_main, .views-slideshow-cycle-main-frame, .views_slideshow_cycle_teaser_section, .views-slideshow-cycle-main-frame-row-item, .views-field-colorbox, .views-field-colorbox .field-content, .views-field-colorbox .field-content .colorbox-inline, .views-field-colorbox .field-content img {
   text-align: center;
@@ -1672,11 +1656,9 @@ div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
 .colorbox-slideshow .links {
   text-align: center;
 }
-
 /* Plate: Image caption overlay */
 .description_overlay {
-  position: relative;
-  /*margin-left: 21em;
+  position: relative;/*margin-left: 21em;
   margin-top: 5em;*/
   /*margin-left: 5px;
   margin-top: 3px;*/
@@ -1716,7 +1698,6 @@ div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
   font-size: 0.95em;
   margin: 5px;
 }
-
 /*pager plate*/
 div.view.view-galley-fluid ul.pager {
   background: none;
@@ -1738,7 +1719,6 @@ div.view.view-galley-fluid ul.pager li a:hover {
   background: #C4202B;
   color: #FFF;
 }
-
 /**
  * mini plate in Species nodes (view plate_node_sp)
  */
@@ -1843,7 +1823,6 @@ div.view.view-galley-fluid ul.pager li a:hover {
 .group-sp-tab-descr-notes .footer span.link {
   float: right;
 }
-
 /**
  * sidebar izquierda
  */
@@ -1854,7 +1833,6 @@ div.view.view-galley-fluid ul.pager li a:hover {
   border: 1px dashed #D38C9B;
   padding: 10px;
 }
-
 /**
  * parte central
  */
@@ -1885,7 +1863,7 @@ div.view.view-galley-fluid ul.pager li a:hover {
 .node-species .node-inner.teaser div.content div.left {
   float: left !important;
   width: 55%;
-  background: #FAFAFA;
+  background: #FFF;
   padding: 20px;
   margin: 10px 10px 0 0;
 }
@@ -1912,7 +1890,6 @@ div.view.view-galley-fluid ul.pager li a:hover {
   right: 0;
   position: absolute;*/
 }
-
 /* Full node */
 
 .tabs ul.tabs.primary {
@@ -2018,10 +1995,10 @@ body .view-families-of-the-order .view-content > .views-row {
   padding: 5px 10px;
   margin-bottom: 10px;
   color: #333333;
-  border: 0.11em solid #DDDDDD;
+  /*border: 0.11em solid #DDDDDD;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
+  border-radius: 3px;*/
   overflow: hidden;
 }
 .view-families-of-the-order .views-field-title, .view-families-of-the-order .views-field-field-fam-summary, .view-families-of-the-order .views-field-php {
@@ -2267,13 +2244,11 @@ body.context-family #region-content .region-inner fieldset span.fieldset-legend 
 .view-species-table-by-family.view-display-id-block_1 .view-content table {
   width: 100% !important;
 }
-
 .view.small table.views-table {
   display: block;
   overflow: hidden;
   z-index: 0;
 }
-
 /*View: species table (display: page)*/
 .view-species-table.view-id-species_table.view-display-id-page .view-content {
   width: 100% !important;
@@ -2305,7 +2280,6 @@ a#family_prev_tab.nav_prev_general {
 .nav_prev_section {
   padding-left: 5px;
 }
-
 /*full table*/
 .node-type-family .content .vertical-tabs .view-species-table-full-on-family-page- fieldset {
   border: 1px solid #CCC !important;
@@ -2313,60 +2287,114 @@ a#family_prev_tab.nav_prev_general {
 .node-type-family .vertical-tabs .view-species-table-full-on-family-page- legend {
   font-size: 1em;
 }
-
 /*
  * SP
  */
 
 /* DS > Extras > Code field > sp_section_1_taxonomy */
-.field-name-sp-section-1-taxonomy span.label {float: left; padding-right: 3px; font-weight: bold;}
-.field-name-sp-section-1-taxonomy div.ds-names span.label {float: none;}
-.field-name-sp-section-1-taxonomy div.ds-names span.name {padding-right: 20px;}
-.field-name-sp-section-1-taxonomy div.ds-taxonomy .label {float: left;}
-.field-name-sp-section-1-taxonomy div.ds-taxonomy span.name_desc p,
-#mini-teaser div.ds-taxonomy span.name_desc p,
-.field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p,
-#mini-teaser div.ds-taxonomy span.descriptor p,
-.field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p,
-#mini-teaser div.ds-taxonomy span.type_locality,
-#mini-teaser div.ds-taxonomy span.type_locality p {display: inline; margin: 0;}
-.field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p,
-.view-subspecies-of-the-species div.ds-taxonomy span.descriptor p,
-#mini-teaser div.ds-taxonomy span.descriptor p,
-.view-subspecies-of-the-species div.ds-taxonomy span.year,
-.field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p,
-.view-subspecies-of-the-species div.ds-taxonomy span.type_locality p,
-#mini-teaser div.ds-taxonomy span.type_locality p {margin-right: -3px;}
+.field-name-sp-section-1-taxonomy span.label {
+  float: left;
+  padding-right: 3px;
+  font-weight: bold;
+}
+.field-name-sp-section-1-taxonomy div.ds-names span.label {
+  float: none;
+}
+.field-name-sp-section-1-taxonomy div.ds-names span.name {
+  padding-right: 20px;
+}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy .label {
+  float: left;
+}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.name_desc p, #mini-teaser div.ds-taxonomy span.name_desc p, .field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p, #mini-teaser div.ds-taxonomy span.descriptor p, .field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p, #mini-teaser div.ds-taxonomy span.type_locality, #mini-teaser div.ds-taxonomy span.type_locality p {
+  display: inline;
+  margin: 0;
+}
+.field-name-sp-section-1-taxonomy div.ds-taxonomy span.descriptor p, .view-subspecies-of-the-species div.ds-taxonomy span.descriptor p, #mini-teaser div.ds-taxonomy span.descriptor p, .view-subspecies-of-the-species div.ds-taxonomy span.year, .field-name-sp-section-1-taxonomy div.ds-taxonomy span.type_locality p, .view-subspecies-of-the-species div.ds-taxonomy span.type_locality p, #mini-teaser div.ds-taxonomy span.type_locality p {
+  margin-right: -3px;
+}
 /*.field-name-sp-section-1-taxonomy div.ds-taxonomy .taxo_comments {padding-top: 8px;}*/
-.field-name-sp-section-1-taxonomy div.ds-ssp_comp span.label {float: none;}
-.field-name-sp-section-1-taxonomy div p {margin: 0;}
-.field-name-sp-section-1-taxonomy div.ds-other-names p {display: inline; margin: 0;}
-
+.field-name-sp-section-1-taxonomy div.ds-ssp_comp span.label {
+  float: none;
+}
+.field-name-sp-section-1-taxonomy div p {
+  margin: 0;
+}
+.field-name-sp-section-1-taxonomy div.ds-other-names p {
+  display: inline;
+  margin: 0;
+}
 /* el mateix pero amb template node--species.tpl.php */
-article.node-species span.label {float: left; padding-right: 3px; font-weight: bold;}
-article.node-species div.ds-names span.label {float: none;}
-article.node-species div.ds-names span.name {padding-right: 20px;}
-article.node-species div.ds-taxonomy .label {float: left;}
-article.node-species div.ds-taxonomy span.name_desc p,
-article.node-species div.ds-taxonomy span.descriptor p,
-article.node-species div.ds-taxonomy span.type_locality p {display: inline; margin: 0;}
+article.node-species span.label {
+  float: left;
+  padding-right: 3px;
+  font-weight: bold;
+}
+article.node-species div.ds-names span.label {
+  float: none;
+}
+article.node-species div.ds-names span.name {
+  padding-right: 20px;
+}
+article.node-species div.ds-taxonomy .label {
+  float: left;
+}
+article.node-species div.ds-taxonomy span.name_desc p, article.node-species div.ds-taxonomy span.descriptor p, article.node-species div.ds-taxonomy span.type_locality p {
+  display: inline;
+  margin: 0;
+}
 /*article.node-species div.ds-taxonomy .taxo_comments {padding-top: 8px;}*/
-article.node-species div.ds-ssp_comp span.label {float: none;}
-article.node-species div p {margin: 0;}
-article.node-species div.ds-other-names p {display: inline; margin: 0;}
-
+article.node-species div.ds-ssp_comp span.label {
+  float: none;
+}
+article.node-species div p {
+  margin: 0;
+}
+article.node-species div.ds-other-names p {
+  display: inline;
+  margin: 0;
+}
 /*icones del status*/
-.EW {background: transparent url(images/status/status-ew.png) no-repeat left center; padding-left: 20px;}
-.CR {background: transparent url(images/status/status-cr.png) no-repeat left center; padding-left: 20px;}
-.EN {background: transparent url(images/status/status-en.png) no-repeat left center; padding-left: 20px;}
-.VU {background: transparent url(images/status/status-vu.png) no-repeat left center; padding-left: 20px;}
-.CD {background: transparent url(images/status/status-cd.png) no-repeat left center; padding-left: 20px;}
-.NT {background: transparent url(images/status/status-nt.png) no-repeat left center; padding-left: 20px;}
-.LC {background: transparent url(images/status/status-lc.png) no-repeat left center; padding-left: 20px;}
-.DD {background: transparent url(images/status/status-dd.png) no-repeat left center; padding-left: 20px;}
-.NE {background: transparent url(images/status/status-ne.png) no-repeat left center; padding-left: 20px;}
-.NA {background: transparent url(images/status/status-na.png) no-repeat left center; padding-left: 20px;}
-
+.EW {
+  background: transparent url(images/status/status-ew.png) no-repeat left center;
+  padding-left: 20px;
+}
+.CR {
+  background: transparent url(images/status/status-cr.png) no-repeat left center;
+  padding-left: 20px;
+}
+.EN {
+  background: transparent url(images/status/status-en.png) no-repeat left center;
+  padding-left: 20px;
+}
+.VU {
+  background: transparent url(images/status/status-vu.png) no-repeat left center;
+  padding-left: 20px;
+}
+.CD {
+  background: transparent url(images/status/status-cd.png) no-repeat left center;
+  padding-left: 20px;
+}
+.NT {
+  background: transparent url(images/status/status-nt.png) no-repeat left center;
+  padding-left: 20px;
+}
+.LC {
+  background: transparent url(images/status/status-lc.png) no-repeat left center;
+  padding-left: 20px;
+}
+.DD {
+  background: transparent url(images/status/status-dd.png) no-repeat left center;
+  padding-left: 20px;
+}
+.NE {
+  background: transparent url(images/status/status-ne.png) no-repeat left center;
+  padding-left: 20px;
+}
+.NA {
+  background: transparent url(images/status/status-na.png) no-repeat left center;
+  padding-left: 20px;
+}
 /* seccio Bibliography */
 .node-type-species .field-name-field-sp-biblio-new .field-name-title {
   float: left;
@@ -2508,8 +2536,7 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
 
 /*block*/
 #block-views-compare-block-1 .view-content div.item-list ul li.views-row {
-  clear: left;
-  background-color: #FCEFF1;
+  clear: left;/*background-color: #FCEFF1;*/
 }
 #block-views-compare-block-1 .view-content div.item-list ul li {
   margin-left: 0;
@@ -2558,8 +2585,7 @@ body.page-species-comparison #region-content .region-inner {
 .view-compare tr.title.odd td {
   vertical-align: middle;
 }
-.view-compare tr.title.odd,
-.view-compare th {
+.view-compare tr.title.odd, .view-compare th {
   border-bottom: 0px solid #ccc;
 }
 .page-species-comparison table td .col img {
@@ -2588,7 +2614,9 @@ body.page-species-comparison #region-content .region-inner {
   border-right: 1px transparent solid;
   vertical-align: top;
 }
-.view-compare .view-display-id-page table td:hover {background: none;}
+.view-compare .view-display-id-page table td:hover {
+  background: none;
+}
 .view-compare tr.ops.even td.col.col_0, .view-compare tr.ops.even td.col.col_1, .view-compare tr.ops.even td.col.col_2 {
   background: none;
   padding-bottom: 15px;
@@ -2599,7 +2627,6 @@ body.page-species-comparison #region-content .region-inner {
 .page-node-revisions li.flag-compare .flag-action, .page-node-revisions li.flag-compare .unflag-action {
   display: none;
 }
-
 /**
  * Node links
  */
@@ -2774,8 +2801,12 @@ th.views-field-field-sp-name-common-1, td.views-field-field-sp-name-common-1 {
 }
 /*flag Seen en full node i taules*/
 .flag-seen .flag-action {
-  background: url("/sites/all/themes/hba_theme/css/images/flag-not-seen.png") no-repeat 0 center transparent !important; /* LTR */
+  background: url("/sites/all/themes/hba_theme/css/images/flag-not-seen.png") no-repeat 0 0 transparent !important; /* LTR */
   padding-left: 20px;
+}
+table .flag-seen .flag-action {
+  background: none;
+  padding: 0;
 }
 .flag-seen.upgrade .icon {
   float: left;
@@ -2784,9 +2815,18 @@ th.views-field-field-sp-name-common-1, td.views-field-field-sp-name-common-1 {
   padding-left: 20px;
 }
 .flag-seen .unflag-action {
-  background: url("/sites/all/themes/hba_theme/css/images/flag-seen.png") no-repeat 0 center transparent !important; /* LTR */
+  background: url("/sites/all/themes/hba_theme/css/images/flag-seen.png") no-repeat 0 0 transparent !important; /* LTR */
   padding-left: 20px;
 }
+table .flag-seen .unflag-action {
+  background: none;
+  padding: 0;
+}
+
+div.flag-wrapper a.flag-link-toggle:before{
+	 background:none !important;
+}
+
 /*Flag: Users you are following*/
 /*en dashboard -> seven > style.css*/
 
@@ -3249,8 +3289,7 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 .view > .more-link {
   margin: 10px 0;
 }
-.view .view-footer .more-link,
-div.content div.more, .view-footer .more {
+.view .view-footer .more-link, div.content div.more, .view-footer .more {
   text-align: right;
   margin: 10px 0 7px 0;
 }
@@ -3272,12 +3311,11 @@ div.view-empty .add, div.view-footer .add {
   padding-top: 1em;
   font-size: 0.9em;
 }
-
 /*Buttons*/
 .views-submit-button input.form-submit {
-  background: #25ade2;
+  background: #C4202B;
   color: white;
-  border-color: #25ade3;
+  border-color: #C4202B;
   text-shadow: none;
 }
 .views-reset-button input#edit-reset {
@@ -3285,7 +3323,6 @@ div.view-empty .add, div.view-footer .add {
   color: #cecdcd;
   border-color: #cecdcd;
 }
-
 /* Exposed filters (no block) */
 .view-filters .views-exposed-form {
   border: 6px solid rgba(102, 102, 102, 0.57);
@@ -3297,11 +3334,7 @@ div.view-empty .add, div.view-footer .add {
   text-align: right;
   margin-bottom: 5px;
 }
-.block-views-exp-family-search-page, /*block Family search*/
-#block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/ 
-#block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ 
-.view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ 
-.view-id-my_record.view-display-id-page .views-exposed-widgets {
+.block-views-exp-family-search-page, /*block Family search*/ #block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/ #block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ .view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ .view-id-my_record.view-display-id-page .views-exposed-widgets {
   background: #EEE;
   margin: 0;
   padding: 5px 15px 10px 15px;
@@ -3313,8 +3346,7 @@ div.view-empty .add, div.view-footer .add {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.block-views-exp-family-search-page,
-#block-views-024b51b0948df12f8903897e79946969 {
+.block-views-exp-family-search-page, #block-views-024b51b0948df12f8903897e79946969 {
   clear: left;
   padding-bottom: 5px;
   margin-bottom: 20px;
@@ -3325,26 +3357,26 @@ div.view-empty .add, div.view-footer .add {
   border-top: 1px solid #E3E1E2;
   border-bottom: 1px solid #E3E1E2;
 }
-.block-views-exp-family-search-page.collapsiblock-processed div.views-submit-button,
-#block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button {
+.block-views-exp-family-search-page.collapsiblock-processed div.views-submit-button, #block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button {
   margin-bottom: 20px;
 }
-.block-views-exp-family-search-page .collapsiblock a:after,
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after {
+.block-views-exp-family-search-page .collapsiblock a:after, #block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after {
   background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -198px transparent !important;
 }
-.block-views-exp-family-search-page .collapsiblock.collapsiblockCollapsed a:after,
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after {
+.block-views-exp-family-search-page .collapsiblock.collapsiblockCollapsed a:after, #block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after {
   background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -244px transparent !important;
 }
-.block-views-exp-family-search-page .collapsiblock.collapsiblock-processed,
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed {
+.block-views-exp-family-search-page .collapsiblock.collapsiblock-processed, #block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed {
   padding-bottom: 10px;
 }
 .block-views-exp-family-search-page .block-inner .content {
   clear: left;
 }
-
+#block-views-exp-family-search-page h2.block-title.collapsiblock {
+  width: 100%;
+  display: block;
+  margin: 5px 0;
+}
 /* block Search on common name, incrustat en Taxonomic Tree */
 
 .block-28, .block-28 .content, .block-28 .views-exposed-widgets {
@@ -3560,7 +3592,6 @@ select#edit-field-myr-date-value-op {
   border: 0 solid;
   border-color: #FFF;
 }
-
 /*view set-records*/
 #views-form-set-records-default .item-list li {
   list-style: inherit;
@@ -3584,7 +3615,6 @@ body.node-type-locality article.node-my-record header h2 {
   text-align: center;
   padding: 20px 5px 5px 5px;
 }
-
 /**
  * Wikicontributions
  */
@@ -4062,12 +4092,15 @@ sup {
 #edit-body-und-0-format, #edit-field-trip-private-desc-und-0-format {
   display: none;
 }
-
 /* Locality */
 
 /*fieldset basic info*/
-.content-inner form fieldset.group-loc-basic {padding: 0;}
-.content-inner form fieldset.group-loc-basic .fieldset-wrapper {padding-top: 15px;}
+.content-inner form fieldset.group-loc-basic {
+  padding: 0;
+}
+.content-inner form fieldset.group-loc-basic .fieldset-wrapper {
+  padding-top: 15px;
+}
 .form-item-field-myr-trip-und-0-target-id {
   float: left;
   width: 375px;
@@ -4173,7 +4206,9 @@ fieldset#edit-field-loc-loc-addr-und-0, fieldset#node_locality_form_group_loc_lo
   border: 0 none;
   padding: 0;
 }
-fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {padding: 0;}
+fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {
+  padding: 0;
+}
 .content-inner form .group-loc-loc-group fieldset .fieldset-wrapper {
   padding-top: 15px 5px 5px 5px;
 }
@@ -4262,8 +4297,7 @@ outline: none;
 #locality-node-form div.field-name-field-loc-sp .dialog-links {
   float: left;
   margin-left: 10px;
-  padding-left: 0;
-  /*background: #EEE;
+  padding-left: 0;/*background: #EEE;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;*/
 }
@@ -4272,8 +4306,7 @@ outline: none;
 }
 .field-remove-item-wrapper {
   padding: 2px 10px 5px 5px;
-  float: left;
-  /*background: #EEE;
+  float: left;/*background: #EEE;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;*/
 }
@@ -4281,8 +4314,7 @@ outline: none;
   padding-left: 20px;
   cursor: pointer;
   color: #C4202B;
-  background: transparent url('/sites/all/modules/field_remove_item/remove.png') top left no-repeat;
-  /*display: block;*/
+  background: transparent url('/sites/all/modules/field_remove_item/remove.png') top left no-repeat;/*display: block;*/
 }
 .field-remove-item-wrapper input.form-checkbox {
   display: none;
@@ -4390,7 +4422,6 @@ div#edit-field-myr-map {
   margin-top: 1em !important;
   font-size: 12px !important;
 }
-
 /*throbber while loading Myrecord form modal frame*/
 /*#preloader {
   position:fixed;
@@ -4439,8 +4470,7 @@ fieldset#node_locality_full_group_loc_group_myr {
 .node-type-locality div.field-name-field-loc-sp.field-type-entityreference div.field-label {
   display: none;
 }
-.node-type-locality .field-name-field-loc-sp .field-items > .field-item, /*my record item on full node display*/
-.references-thumbnail .node-my-record .content { /*my record item on node form*/
+.node-type-locality .field-name-field-loc-sp .field-items > .field-item, /*my record item on full node display*/ .references-thumbnail .node-my-record .content { /*my record item on node form*/
   background: #EEE;
   border-radius: 4px;
   border: 1px solid #CCC;
@@ -4452,8 +4482,7 @@ fieldset#node_locality_full_group_loc_group_myr {
 /*view mode Mini-teaser for Species in field_loc_sp*/
 .field-name-field-loc-sp .node-my-record .node-inner div.content {
 }
-.field-name-field-loc-sp .node-inner div.content > div.left,
-.references-thumbnail .node-my-record .content .left #mini-teaser .left { /*mini-teaser*/
+.field-name-field-loc-sp .node-inner div.content > div.left, .references-thumbnail .node-my-record .content .left #mini-teaser .left { /*mini-teaser*/
   float: left !important;
   width: 60%;
   background: #EEE;/*border-top: 1px solid #FAFAFA;
@@ -4475,7 +4504,6 @@ fieldset#node_locality_full_group_loc_group_myr {
   margin-bottom: 10px;
 }
 #mini-teaser div.left > div {
-  
 }
 #mini-teaser div.left > div.ds-taxonomy {
   line-height: 95%;
@@ -4490,21 +4518,18 @@ fieldset#node_locality_full_group_loc_group_myr {
   max-height: 90px;
 }
 #mini-teaser div.right * {
-  /*vertical-align: middle;*/
+/*vertical-align: middle;*/
 }
-.field-name-field-loc-sp .node-inner div.content div.right .thumbnail,
-.references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail {
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail, .references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail {
   text-align: center;
   margin-bottom: 5px;
 }
-.field-name-field-loc-sp .node-inner div.content div.right .thumbnail img,
-.references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail img {
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail img, .references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail img {
   width: 40%;
   height: auto;
 }
 /*sp nb, heard, captive, date*/
-.node-locality .field-name-field-loc-sp .node-inner div.content > div.right,
-.references-thumbnail .node-my-record .content > .right  {
+.node-locality .field-name-field-loc-sp .node-inner div.content > div.right, .references-thumbnail .node-my-record .content > .right {
   float: right;
   padding: 5px 10px;
   border-radius: 0 0 0 5px;
@@ -4513,7 +4538,6 @@ fieldset#node_locality_full_group_loc_group_myr {
   font-size: 0.8em;
 }
 .field-name-field-loc-sp .field-name-field-myr-nb, .field-name-field-loc-sp .field-name-field-myr-heard, .field-name-field-loc-sp .field-name-field-myr-captive {
-
   line-height: 80%;
 }
 .node-type-locality .field-name-field-loc-sp .node-inner div.content div.bottom {
@@ -4532,7 +4556,6 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   width: 100% !important;
   height: 70px !important;
 }
-
 /**
  * View My checklists:
  * - pàgina /checklist
@@ -4548,7 +4571,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .page-node-add-locality #content .region-content #block-views-my-record-block-3, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3 {
   float: left;
 }
-.page-node-add-locality #content .region-content #block-views-my-record-block-3 .view-content, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3  .view-content {
+.page-node-add-locality #content .region-content #block-views-my-record-block-3 .view-content, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3 .view-content {
   float: left;
 }
 #block-views-my-record-block-2 .view-grouping-header, #block-views-my-record-block-3 .view-grouping-header, #block-views-my-record-block-4 .view-grouping-header {
@@ -4558,7 +4581,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   margin-top: 10px;
   border-bottom: 1px solid #111;
 }
-#block-views-my-record-block-2  .view-footer, #block-views-my-record-block-3 .view-footer, #block-views-my-record-block-4  .view-footer {
+#block-views-my-record-block-2 .view-footer, #block-views-my-record-block-3 .view-footer, #block-views-my-record-block-4 .view-footer {
   clear: left;
 }
 #block-views-my-record-block-2 .view-grouping-content h3, #block-views-my-record-block-3 .view-grouping-content h3, #block-views-my-record-block-4 .view-grouping-content h3 {
@@ -4588,7 +4611,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 #block-views-my-record-block-2 .view-grouping-content .views-row.views-row-last .views-field-title-1, #block-views-my-record-block-3 .view-grouping-content .views-row.views-row-last .views-field-title-1, #block-views-my-record-block-4 .view-grouping-content .views-row.views-row-last .views-field-title-1 {
   margin-bottom: 15px;
 }
-#block-views-my-record-block-2 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-title-1  span.field-content {
+#block-views-my-record-block-2 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-title-1 span.field-content {
   background: url("../../../../../misc/menu-leaf.png") no-repeat scroll 10px 7px transparent;
   display: inline-block;
   padding-left: 25px;
@@ -4596,7 +4619,9 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 #block-views-my-record-block-2 .view-grouping-content .views-row .views-field-field-figure-img, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-field-figure-img, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-field-figure-img {
   float: right;
 }
-#block-block-31 .field-name-field-myr-sp .field-item a {font-weight: bold;}
+#block-block-31 .field-name-field-myr-sp .field-item a {
+  font-weight: bold;
+}
 #current-checklist {
 /*background: #FFFF66;
   background: #FCF8D1;
@@ -4623,15 +4648,13 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .view-my-record .view-content table {
   border: 1px solid green;
 }
-.view-my-record .view-grouping-header, /*page ppl*/
-.view-id-my_record.view-display-id-attachment_2 .view-content h3 { /*attachement*/
+.view-my-record .view-grouping-header, /*page ppl*/ .view-id-my_record.view-display-id-attachment_2 .view-content h3 { /*attachement*/
   font-size: 1.2em;
   font-weight: bold;
   margin: 15px 0;
   border-bottom: 2px solid #666;
 }
-.view-my-record .view-grouping-header span.label,
-.view-id-my_record.view-display-id-attachment_2 .view-content h3 span.label {
+.view-my-record .view-grouping-header span.label, .view-id-my_record.view-display-id-attachment_2 .view-content h3 span.label {
   padding: 4px 5px 4px 5px;
   margin-right: 5px;
   color: #FFF;
@@ -4642,8 +4665,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   margin: 3px 0 2px 0;
   font-size: 1.1em !important;
 }
-.view-my-record .view-content table.views-table caption span.edit,
-.view-id-my_record.view-display-id-attachment_2 .view-content .views-field-edit-node {
+.view-my-record .view-content table.views-table caption span.edit, .view-id-my_record.view-display-id-attachment_2 .view-content .views-field-edit-node {
   float: right;
 }
 .view-my-record .view-content table.views-table tr.views-row-last {
@@ -4687,7 +4709,6 @@ div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-at
 div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-attachment_2 .view-content {
   clear: left;
 }
-
 /*Block wikipedia + map*/
 #block-block-30 {
   padding: 20px;
@@ -4699,7 +4720,6 @@ div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-at
   padding: 0 0 15px 15px;
   width: 40%;
 }
-
 /*popup calendar*/
 .form-type-date-popup input {
   background: url("/sites/all/themes/hba_theme/css/images/calendar.png") -0px -0px no-repeat;
@@ -4723,11 +4743,14 @@ input#edit-field-myr-date-und-0-value-timeEntry-popup-1 {
   background: none;
   padding-left: 5px;
 }
-
-<<<<<<< HEAD  /*pricing *****/
+ <<<<<<< HEAD  /*pricing *****/
  body.page-pricing div#breadcrumb, body.page-pricing h1#page-title {
  display:none;
 }
+#block-bird-taxonomies-prices-table h2.block-title {
+	margin:20px 0 -40px 0;
+}
+
 div.view.view-pricing div.view-header {
   color: #4E4E4D;
   font-size: 18px;
@@ -4748,6 +4771,11 @@ div.view.view-pricing table.views-view-grid:hover tr td {
 }
 div.view.view-pricing table tr td {
   width: 25%;
+  vertical-align: top;
+  padding-top: 20px;
+}
+div.view.view-pricing table tr td.col-3 {
+  padding-top: 0px;
 }
 div.view.view-pricing table tr td div.pricing {
   background: none repeat scroll 0 0 #FFFFFF;
@@ -4806,7 +4834,32 @@ div.view.view-pricing table tr td.col-3 div.pricing:hover div.title {
 div.view.view-pricing table tr td.col-3 div.pricing div.body {
   padding-bottom: 50px;
 }
-div.view.view-pricing table tr td.col-3 div.pricing div.body:after {
+div.view.view-pricing table tr td.col-3 div.pricing div.body {
+  padding-bottom: 50px;
+}
+div.view.view-pricing table tr td div.pricing div.body ul li{
+  margin-left:10px;
+}
+div.view.view-pricing table tr td.col-3 div.pricing div.title{
+  padding:20px 0;
+}
+
+div.view.view-pricing table tr td div.pricing div.year {
+  text-align: center;
+  margin: 20px 0;
+  color: #C0C0C0;
+  font-size: .9em;
+}
+div.view.view-pricing table tr td div.pricing div.year strong {
+  color: #000;
+  font-size:.9em;
+}
+div.view.view-pricing table tr td.col-3 div.pricing div.year {
+  position: relative;
+  text-align: left;
+  padding: 0 0 0 45px;
+}
+div.view.view-pricing table tr td.col-3 div.pricing div.year:after {
   content: " ";
   background: url("/sites/all/themes/hba_theme/css/images/recommended.png") no-repeat right top;
   width: 98px;
@@ -4815,8 +4868,9 @@ div.view.view-pricing table tr td.col-3 div.pricing div.body:after {
   /*margin:-50px -30px 0 105px;*/
   position: absolute;
   right: 0;
-  bottom: -2px;
+  bottom: -21px;
 }
+
 div.view.view-pricing table tr td.col-4 div.pricing div.title {
   border-bottom: 6px solid #0B799C;
 }
@@ -4827,7 +4881,6 @@ div.view.view-pricing table tr td.col-4 div.pricing:hover div.title {
   background: #0B799C;
 }
 body.context-pricing div.view.view-pricing table tr td div.body, body.context-pricing div.view.view-pricing table tr td:hover div.body {
-  border-bottom-color: transparent;
   position: relative;
 }
 div.view.view-pricing div.view-footer p {
@@ -4896,7 +4949,6 @@ div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper di
   margin: 20px 35px;
   width: 450px;
 }
-
 /** latest updated species **/
 #block-views-log-updated-nodes-block-3 {
   background: none;
@@ -4909,7 +4961,6 @@ div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper di
   width: 25%;
   text-align: center;
 }
-
 /** landing page ***/
 
 body.context-frontpage #zone-content, body.context-frontpage #region-content {
@@ -5059,6 +5110,11 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
 }
 .region-sidebar-first #block-block-28 form div.views-exposed-form input.form-submit {
   margin: 10px 27px 20px 0;
+  padding-top: 5px;
+}
+.region-sidebar-first #block-block-28 form div.views-exposed-form input.form-submit#edit-reset {
+  margin: 10px 5px 20px 0;
+  padding-top: 5px;
 }
 .region-sidebar-first #block-block-28 h2 {
   background: none;
@@ -5084,7 +5140,6 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
   color: #A7A7A7;
   top: -15px;
 }
-
 /**** checkout ****/
 
 body.page-checkout #zone-content {
@@ -5183,7 +5238,6 @@ body.page-checkout #region-content form#commerce-checkout-form-review table.chec
   color: #AAA;
   font-size: 16px;
 }
-
 /** pricing plan comparison **/
 
 #block-block-32 h2.block-title {
@@ -5216,13 +5270,13 @@ table#plan-comparison tr.row1 th div {
   background: #ffffff; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 ); /* IE6-8 */
 }
 table#plan-comparison tr.row1 th.col1 {
   width: 30%;
@@ -5289,7 +5343,7 @@ table#plan-comparison tr.row-last td.col1 {
 table#plan-comparison tr.row-last td.col1 div {
   border: 0;
   background: none;
-  font-weight:bold;
+  font-weight: bold;
 }
 table#plan-comparison tr.row10 td.col1 div {
   border-bottom: 1px solid #7A7A7A;
@@ -5322,7 +5376,7 @@ table#plan-comparison tr.row-last td a {
   border: 1px solid #DDD;
   display: block;
   padding: 12px 0;
-  margin: 	5px;
+  margin: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   color: #000;
@@ -5332,13 +5386,13 @@ table#plan-comparison tr.row-last td a {
   background: #ffffff; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 ); /* IE6-8 */
 }
 table#plan-comparison tr.row-last td a:hover {
   background: rgb(255,255,255); /* Old browsers */
@@ -5350,5 +5404,16 @@ table#plan-comparison tr.row-last td a:hover {
   background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* IE10+ */
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); /* IE6-8 */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); /* IE6-8 */
+}
+
+/*** status ***/
+
+div#status.ds-status {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: .95em;
+  color: #999;
+  white-space: nowrap;
 }
