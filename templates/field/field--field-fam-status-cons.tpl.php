@@ -13,8 +13,9 @@
   if ( arg(0) == 'node' && is_numeric(arg(1)) ) {
     $node = node_load(arg(1));
     $flag = flag_get_flag('highlighted');
+    //dsm($flag);
   }
-  if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && ($flag && !$flag->is_flagged($node->nid))) {
+  if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && (isset($flag) && !$flag->is_flagged($node->nid))) {
     print views_trim_text($items_trim, render($items));
     print '<p class="avis">You are reading a trimmed version of the Status and Conservation section.<br />Only members are able to see the rest of the content. Login or register to access to a lot of extra features !</p>';
   }

@@ -52,7 +52,7 @@ function hba_theme_menu_link__menu_sections(array $variables) {
  * for more information on this topic.
  */
 
-function hba_theme_form_alter(&$form, &$form_state, $form_id) {  
+function hba_theme_form_alter(&$form, &$form_state, $form_id) {
   switch($form_id) {
     /**
       * Make some adjustments to the login form to use HTML5 Placeholder values. 
@@ -65,10 +65,35 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
     $form['pass']['#attributes']['placeholder'] = t('Password...');
     break;
     
-  case 'search_block_form':
+  /*case 'search_block_form':
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
-    break;
-    
+    break;*/
+  
+  /*case 'views_exposed_form':
+    // Redirect to /plate if user choose <All> figures, other redirect to /plate/all (if user choose 1 figure per species)
+    //if (isset($form[$field_id .'_value']) && $form[$field_id .'_value'] == 1) { // isset imposible si <All>
+    //if ($form[$field_id .'_value'] == 1) {
+    //if( (isset($form_state['values']['field_figure_order_sp_value'])) && ($form_state['values']['field_figure_order_sp_value'] != '') ) {
+    // http://eureka.ykyuen.info/2012/01/25/drupal-show-exposed-filter-value-in-views-headerfooter/
+    $view = views_get_current_view();
+    if($view->exposed_input['field_figure_order_sp_value'] == 1) {
+      dpm($form);
+      dpm($form_state);
+      drupal_set_message('[hba_theme/template.tpl.php] Value for Figures per species is: ' . $view->exposed_input['field_figure_order_sp_value'] . '<br />#info: ' . $form['#info']['filter-field_figure_order_sp_value']['value'] . '<br />form_state: ' . $form_state['input']['field_figure_order_sp_value'], $type = 'status', $repeat = FALSE);
+      //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?') . '/plate' . url($_GET['q']);
+      //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?') . '/plate' . request_uri();
+      //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?');
+      //$form['#action'] = url($_GET['q']);
+      //$form['#action'] = 'plate';
+      //$form['#action'] = 'http://alive.hbw.com/plate';
+      $form['#action'] = '/plate';
+      //drupal_goto('checklist');
+    }
+    else {
+      $form['#action'] = '/plate/all';
+    }
+    break;*/
+  
   case 'global_filter_1':
     
     /*dsm(count($_SESSION['global_filter']['view_taxo_paisos']));
@@ -184,7 +209,7 @@ function hba_theme_preprocess_page(&$variables, $hook) {
     $variables['title'] = '';
   }
   
-  if(isset($variables['node']) && ($variables['node']->type == 'family' || $variables['node']->type == 'species')) {
+  if( isset($variables['node']) && ($variables['node']->type == 'family' || $variables['node']->type == 'species') ) {
     $variables['title'] = '';
   }
 
@@ -217,12 +242,15 @@ function configure_comment_form(&$form) {
 /**
  * http://drupal.org/node/796530#comment-5116106
  * Inconsistent behavior with exposed filter in block AJAX
+ * Se usa para poder fer funcionar els exposed filters de la view incrustada en los nodes Locality (checklist)
  */
-/*function hba_theme_form_views_exposed_form_alter(&$form , &$form_state){
+function seven_form_views_exposed_form_alter(&$form , &$form_state){
   // Overrides the views exposed form url to be the current one
   // Avoids odd views redirect to views page from an exposed form in block
-  $form['#action'] = request_uri();
-}*/
+  if($form_id == 'views-exposed-form-set-records-default') {
+    $form['#action'] = request_uri();
+  }
+}
 
 /*
 CRS: Esto hace que salgan unos cuantos warnings

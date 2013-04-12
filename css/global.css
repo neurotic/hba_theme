@@ -1299,6 +1299,7 @@ body button, body input[type="reset"], body input[type="submit"], body input[typ
 #block-views-species-test-block-2 .view-footer {
   padding: 0 10px 10px 10px;
 }
+
 /**
  * Plate
  */
@@ -1337,7 +1338,8 @@ body.page-plate.page-plate-all #region-content .region-inner {
 body.page-plate #region-content .region-inner .view-content {
   clear: left;
 }
-body.page-plate.view-display-id-page #region-content .view-content, body.page-plate.view-display-id-page_1 #region-content .view-content {
+body.page-plate.view-display-id-page #region-content .view-content,
+body.page-plate.view-display-id-page_1 #region-content .view-content {
   border: none;
   padding: 5px 10px;
   background: transparent;
@@ -2241,13 +2243,32 @@ body.context-family #region-content .region-inner fieldset span.fieldset-legend 
   margin: 0 0 1.5em 0;
 }
 /* seccio Species table */
-.view-species-table-by-family.view-display-id-block_1 .view-content table {
+.node-locality .set-records fieldset {width: 95%;}
+.view-species-table-by-family.view-display-id-block_1 .view-content table,
+#views-form-set-records-default table.views-table {
   width: 100% !important;
 }
 .view.small table.views-table {
   display: block;
   overflow: hidden;
   z-index: 0;
+}
+form#views-form-set-records-default table.views-table tr.even,
+form#views-form-set-records-default table.views-table tr.odd {
+  padding: 0;
+  border-bottom: 0 none;
+}
+form#views-form-set-records-default table.views-table tr.even.selected-row,
+form#views-form-set-records-default table.views-table tr.odd.selected-row {
+  background-color:rgb(200, 245, 186);
+}
+form#views-form-set-records-default table.views-table td {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 1px 8px;
+}
+form#views-form-set-records-default table.views-table tr.even td {
+  background: transparent;
 }
 /*View: species table (display: page)*/
 .view-species-table.view-id-species_table.view-display-id-page .view-content {
@@ -3318,6 +3339,15 @@ div.view-empty .add, div.view-footer .add {
   border-color: #C4202B;
   text-shadow: none;
 }
+form#views-form-set-records-default input#edit-actionsetrecords2 {
+  float: right;
+  margin-bottom: 10px;
+  background: #9FC748;
+  color: white;
+  border-color: #9FC748;
+  text-shadow: none;
+  font-size: 1.1em;
+}
 .views-reset-button input#edit-reset {
   background: #fdfdfd;
   color: #cecdcd;
@@ -4225,7 +4255,8 @@ fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {
 #locality-node-form .field-name-field-loc-sp table th label {
   padding-left: 10px;
 }
-/*#locality-node-form .field-name-field-loc-sp {
+/*START style multipe ER for field_loc_sp
+#locality-node-form .field-name-field-loc-sp {
   border: 1px solid #CCC;
   padding: 10px;
 }
@@ -4270,7 +4301,9 @@ fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {
   padding: 0;
   border: 0 none;
   border-top-color: none;
-}*/
+}
+END style multipe ER for field_loc_sp*/
+
 /*dialog to choose a my-record from search button*/
 #references-dialog-page .view-id-my_records.view-display-id-references_dialog_1 .view-content h3 {
   clear: left;
@@ -4484,7 +4517,7 @@ fieldset#node_locality_full_group_loc_group_myr {
 }
 .field-name-field-loc-sp .node-inner div.content > div.left, .references-thumbnail .node-my-record .content .left #mini-teaser .left { /*mini-teaser*/
   float: left !important;
-  width: 60%;
+  width: 70%;
   background: #EEE;/*border-top: 1px solid #FAFAFA;
   border-left: 1px solid #EEE !important;
   border-right: 1px solid #FAFAFA;
@@ -4503,7 +4536,8 @@ fieldset#node_locality_full_group_loc_group_myr {
   width: 60%;
   margin-bottom: 10px;
 }
-#mini-teaser div.left > div {
+#mini-teaser div.left > div.node-title {
+  line-height: 90%;
 }
 #mini-teaser div.left > div.ds-taxonomy {
   line-height: 95%;
