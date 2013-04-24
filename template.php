@@ -244,10 +244,10 @@ function configure_comment_form(&$form) {
  * Inconsistent behavior with exposed filter in block AJAX
  * Se usa para poder fer funcionar els exposed filters de la view incrustada en los nodes Locality (checklist)
  */
-function seven_form_views_exposed_form_alter(&$form , &$form_state){
+function hba_theme_form_views_exposed_form_alter(&$form, &$form_state){
   // Overrides the views exposed form url to be the current one
   // Avoids odd views redirect to views page from an exposed form in block
-  if($form_id == 'views-exposed-form-set-records-default') {
+  if ($form['#id'] == 'views-exposed-form-set-records-default') {
     $form['#action'] = request_uri();
   }
 }

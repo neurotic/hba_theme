@@ -327,8 +327,9 @@ node/*/revisions/list -->
           print render($content['group_sp_tab_descr_notes']);
           
           //TO-DO find a better way to include this embeded sound...
+          // $node->field_sp_nid_ibc['und'][0]['value']
           if(isset($content['group_sp_tab_voice']['field_sp_voice'][0])){ //check if we have a voice section...
-              $content['group_sp_tab_voice']['field_sp_voice'][0]['#markup'].='<iframe src="http://ibc.lynxeds.com/embed_best_sound_s.php?sp='.$node->field_sp_nid_ibc['und'][0]['value'].'" width="520" height="40" frameborder="0" scrolling="no"></iframe>';
+              $content['group_sp_tab_voice']['field_sp_voice'][0]['#markup'].='<iframe src="http://ibc.lynxeds.com/embed_best_sound_s.php?sp='.render($content['field_sp_nid_ibc'][0]).'" width="520" height="40" frameborder="0" scrolling="no"></iframe>';
           }
           
           //print the rest of the fields of the species.

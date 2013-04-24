@@ -43,9 +43,9 @@ body a:visited {
 a {
   text-decoration: none !important;
 }
-textarea, select, input[type="text"], input[type="url"] {
-  width: 100%;
-}
+
+textarea, select, input[type="text"], input[type="url"] {width: 100%;}
+
 /* fieldset */
 .content-inner form fieldset, .content-inner .node-inner fieldset {
   border: 1px solid #ccc;
@@ -97,9 +97,7 @@ html.js .content-inner form fieldset.collapsed .fieldset-legend, .content-inner 
 #section-header {
   margin-bottom: 10px;
 }
-h1#site-name {
-  display: none;
-}
+h1#site-name {display: none;}
 h1#page-title {
   margin-bottom: 10px;
 }
@@ -158,12 +156,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 }
 #region-menu ul#main-menu li:hover a {
   border-bottom: 5px solid #c4464f;
-}
-#region-menu ul#main-menu li.menu-2745:hover a, #region-menu ul#main-menu li.menu-2745.active a {
-  border-bottom: 5px solid #009DE0;
-}
-#region-menu ul#main-menu li.menu-4522:hover a, #region-menu ul#main-menu li.menu-4522.active a {
-  border-bottom: 5px solid #FC6F03;
 }
 #region-menu ul#secondary-menu {
   float: right;
@@ -495,13 +487,13 @@ body.context-species #region-content .region-inner h2 {
 }
 .context-species #region-content a {
 /*color: #EE9C31;
-  color: #FC6F03;
+  color: #FF6600;
   color: #FC6F03;
   color: #FA991B;
   font-weight: bold;*/
 }
 .context-species #region-content a:hover {
-/*color: #FC6F03;
+/*color: #FF6600;
   color: gray;*/
 }
 /* Navigation menu for Species full node display */
@@ -570,9 +562,6 @@ body #section-content #region-sidebar-second h2 span, body #section-content #reg
 }
 body #section-content #region-sidebar-second h2.collapsiblockCollapsed span, body #section-content #region-sidebar-third h2.collapsiblockCollapsed span {
   border-color: #b7b4b4;
-}
-body.context-species #region-sidebar-second h2.block-title.collapsiblock a span {
-	 border-color: #CA4C55 !important;
 }
 .not-front #region-sidebar-second .block .block-inner > .content, .not-front #region-sidebar-third .block .block-inner > .content {
   background: white;
@@ -1377,7 +1366,7 @@ body.page-plate div#region-content h1:hover:after {
 }
 body.page-plate #info {
   float: left;
-  padding: 8px 5px 5px 20px;
+  padding: 8px 5px 5px 20px; 
 }
 body.page-plate #info .btn {
   float: left;
@@ -1408,14 +1397,17 @@ body.page-plate #info .text {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
 }
+
 body.page-plate #messages {
   margin: 0;
 }
+
 .view.view-galley-fluid .view-filters .views-exposed-form {
   border: 0;
   padding: 0;
   margin: 0;
 }
+
 body.page-plate #block-system-main {
   padding: 10px 0;
 }
@@ -1425,6 +1417,7 @@ body.page-plate #block-system-main {
 .view.view-galley-fluid .views-exposed-widgets > .views-exposed-widget {
   float: left;
 }
+
 /*filtros de plate*/
 div.view.view-galley-fluid div.views-exposed-widget {
   margin-left: 20px;
@@ -1432,7 +1425,8 @@ div.view.view-galley-fluid div.views-exposed-widget {
 div.view.view-galley-fluid div.views-widget-filter-field_sp_name_common_value, div.view.view-galley-fluid div.views-reset-button {
   clear: left;
 }
-div.view.view-galley-fluid .views-exposed-widgets input.form-text, div.view.view-galley-fluid .views-exposed-widgets select {
+div.view.view-galley-fluid .views-exposed-widgets input.form-text,
+div.view.view-galley-fluid .views-exposed-widgets select {
   border-radius: 5px;
   height: 28px;
   border: 1px solid #AAA;
@@ -1442,7 +1436,8 @@ div.view.view-galley-fluid .views-exposed-widgets input.form-text, div.view.view
 div.view.view-galley-fluid .views-exposed-widgets select {
   padding-top: 4px;
 }
-div.view.view-galley-fluid .views-exposed-widgets select#edit-f[size], div.view.view-galley-fluid .views-exposed-widgets select#edit-f[multiple] {
+div.view.view-galley-fluid .views-exposed-widgets select#edit-f[size],
+div.view.view-galley-fluid .views-exposed-widgets select#edit-f[multiple] {
   background-image: url('/sites/all/themes/omega/omega/images/select-arrow.gif');
   padding: 2px;
   width: 100px;
@@ -1453,6 +1448,7 @@ div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete 
 div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete.throbbing {
   background-position: right -14px;
 }
+
 /*background selector*/
 .view.view-galley-fluid .color-bkg-selector {
   float: left;
@@ -1489,24 +1485,19 @@ ul#BGSelector li:hover {
   background-color: #423F3F !important;
   background: #423F3F !important;
 }
+
 /*boto Reset drags*/
 div.view.view-galley-fluid h1#page-title.title button {
   float: right;
   margin: 10px 8px 5px 5px;
   display: none;
 }
-div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a, .view-galley-fluid.view-id-galley_fluid.view-display-id-page_2 .view-content .sp-row-wrapper {
+div.view-galley-fluid .views-fluidgrid-item-inner .views-field-colorbox span.field-content > a,
+.view-galley-fluid.view-id-galley_fluid.view-display-id-page_2 .view-content .sp-row-wrapper {
   z-index: 0;
   cursor: move;
 }
-/*figure dins del colorbox*/
-.colorbox-plate .description_overlay img {
-  margin: auto !important;
-  display: block !important;
-}
-.colorbox-plate {
-/*width: 350px;*/ /*provisional*/
-}
+
 /* Plate content */
 
 div.view.view-galley-fluid .views-row {
@@ -1514,13 +1505,15 @@ div.view.view-galley-fluid .views-row {
   padding: 0;
   margin: 0;
   line-height: 90%;
-  border: 0;/*height: 200px;*/
+  border: 0;
+  
+  /*height: 200px;*/
 }
 div.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row {
   margin-bottom: 15px;
 }
 .page-plate-5 .views-row.views-row-first { /*si volem que les figures surtin en vertical i només la 1a figura sorti junt amb la 2a*/
-/*float: left;
+  /*float: left;
   clear: left;*/
 }
 div.view.view-galley-fluid2 #region-content h3 {
@@ -1531,6 +1524,7 @@ div.view.view-galley-fluid2 #region-content h3 {
   border-bottom: 0 none;
   padding: 0 !important;
   margin: 0 !important;
+  
   display: none;
 }
 div.view.view-galley-fluid div.view-content h3 {
@@ -1574,25 +1568,31 @@ div.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .view-content 
   clear: left;
 }
 .figure-item {
+
 }
+
 div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender {
   font-size: 110%;
   position: relative;
   right: initial;
 }
-.page-plate .views-field-field-figure-gender, div.view.view-galley-fluid .views-field-field-figure-gender {
+.page-plate .views-field-field-figure-gender,
+div.view.view-galley-fluid .views-field-field-figure-gender {
   font-size: 110%;
   position: absolute;
   right: 10px;
 }
-.page-plate .views-field-field-figure-gender *, div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender * {
+.page-plate .views-field-field-figure-gender *,
+div.view.view-galley-fluid.view-display-id-page_1 .views-field-field-figure-gender * {
   vertical-align: middle;
   float: right;
 }
-div.view.view-galley-fluid div.views-field-counter.disabled, div.view.view-galley-fluid div.views-field-nothing.disabled {
+div.view.view-galley-fluid div.views-field-counter.disabled,
+div.view.view-galley-fluid div.views-field-nothing.disabled {
   display: none;
 }
-div.view.view-galley-fluid .views-field.views-field-counter, div.view.view-galley-fluid .views-field.views-field-nothing {
+div.view.view-galley-fluid .views-field.views-field-counter,
+div.view.view-galley-fluid .views-field.views-field-nothing {
   white-space: nowrap;
   font-family: "arial";
   font-size: 0.8em;
@@ -1603,17 +1603,36 @@ div.view.view-galley-fluid .views-field.views-field-counter, div.view.view-galle
   text-align: center;
   background-color: #F2F2F2;
 }
-div.view.view-galley-fluid .views-field.views-field-counter .text, div.view.view-galley-fluid .views-field.views-field-nothing .text {
+div.view.view-galley-fluid .views-field.views-field-counter .text,
+div.view.view-galley-fluid .views-field.views-field-nothing .text {
   /*padding: 6px;*/
   margin: 0 auto;
 }
-div.view.view-galley-fluid .views-field.views-field-counter .text .sp, div.view.view-galley-fluid .views-field.views-field-nothing .text .sp {
+div.view.view-galley-fluid .views-field.views-field-counter .text .sp,
+div.view.view-galley-fluid .views-field.views-field-nothing .text .sp {
   padding: 2px 0;
 }
-div.view.view-galley-fluid .views-field.views-field-counter .text span.order, div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
+div.view.view-galley-fluid .views-field.views-field-counter .text span.order,
+div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
   margin-right: 5px;
 }
+
 /*plate > colorbox*/
+
+#cboxLoadedContent {overflow-x: hidden !important;}
+.clrbx-img-height {float: left; width: 0;}
+/*figure dins del colorbox*/
+.colorbox-plate .description_overlay img {
+  margin: auto !important;
+  display: block !important;
+}
+.colorbox-plate {
+  /*width: 350px;*/ /*provisional*/
+  /*max-width: 475px;*/
+}
+.colorbox-plate > div {
+  text-align: center;
+}
 .colorbox-plate .gender {
   font-size: 130%;
   position: absolute;
@@ -1631,19 +1650,28 @@ div.view.view-galley-fluid .views-field.views-field-counter .text span.order, di
   margin-bottom: 10px;
 }
 /* text dins del colorbox*/
-.colorbox-text {
-  width: 450px;
+.colorbox-plate > div.colorbox-text {
+  /*width: 70%;*/
+  width: 515px;
+  border: 1px solid gainsboro;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
   background-color: #EEE;
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
+.clrbox-height {display: none;}
+
 /*plate > beautytip*/
 #views_fluidgrid_galley_fluid_page .plate-hovertip .text .tip {
   padding-top: 8px !important;
   font-style: italic !important;
   font-size: 0.85em !important;
 }
+
 /*bloc Figures*/
 .views_slideshow_cycle_main, .views-slideshow-cycle-main-frame, .views_slideshow_cycle_teaser_section, .views-slideshow-cycle-main-frame-row-item, .views-field-colorbox, .views-field-colorbox .field-content, .views-field-colorbox .field-content .colorbox-inline, .views-field-colorbox .field-content img {
   text-align: center;
@@ -1658,9 +1686,11 @@ div.view.view-galley-fluid .views-field.views-field-counter .text span.order, di
 .colorbox-slideshow .links {
   text-align: center;
 }
+
 /* Plate: Image caption overlay */
 .description_overlay {
-  position: relative;/*margin-left: 21em;
+  position: relative;
+  /*margin-left: 21em;
   margin-top: 5em;*/
   /*margin-left: 5px;
   margin-top: 3px;*/
@@ -1700,6 +1730,7 @@ div.view.view-galley-fluid .views-field.views-field-counter .text span.order, di
   font-size: 0.95em;
   margin: 5px;
 }
+
 /*pager plate*/
 div.view.view-galley-fluid ul.pager {
   background: none;
@@ -1721,6 +1752,7 @@ div.view.view-galley-fluid ul.pager li a:hover {
   background: #C4202B;
   color: #FFF;
 }
+
 /**
  * mini plate in Species nodes (view plate_node_sp)
  */
@@ -1825,6 +1857,7 @@ div.view.view-galley-fluid ul.pager li a:hover {
 .group-sp-tab-descr-notes .footer span.link {
   float: right;
 }
+
 /**
  * sidebar izquierda
  */
@@ -1835,6 +1868,7 @@ div.view.view-galley-fluid ul.pager li a:hover {
   border: 1px dashed #D38C9B;
   padding: 10px;
 }
+
 /**
  * parte central
  */
@@ -1892,6 +1926,7 @@ div.view.view-galley-fluid ul.pager li a:hover {
   right: 0;
   position: absolute;*/
 }
+
 /* Full node */
 
 .tabs ul.tabs.primary {
@@ -1941,6 +1976,9 @@ ul.tabs.secondary.pending {
 fieldset#node_species_full_group_sp_admin_display {
   clear: left;
 }
+
+div.colorbox-map {margin: 20px 0;}
+
 /**
  * diff
  */
@@ -2270,6 +2308,7 @@ form#views-form-set-records-default table.views-table td {
 form#views-form-set-records-default table.views-table tr.even td {
   background: transparent;
 }
+
 /*View: species table (display: page)*/
 .view-species-table.view-id-species_table.view-display-id-page .view-content {
   width: 100% !important;
@@ -2301,6 +2340,7 @@ a#family_prev_tab.nav_prev_general {
 .nav_prev_section {
   padding-left: 5px;
 }
+
 /*full table*/
 .node-type-family .content .vertical-tabs .view-species-table-full-on-family-page- fieldset {
   border: 1px solid #CCC !important;
@@ -2308,6 +2348,7 @@ a#family_prev_tab.nav_prev_general {
 .node-type-family .vertical-tabs .view-species-table-full-on-family-page- legend {
   font-size: 1em;
 }
+
 /*
  * SP
  */
@@ -2375,6 +2416,21 @@ article.node-species div.ds-other-names p {
   display: inline;
   margin: 0;
 }
+/*sp status*/
+div#status.ds-status {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: .95em;
+  color: #999;
+  white-space: nowrap;
+}
+td.views-field-field-sp-status div#status.ds-status {
+  position: initial;
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+}
 /*icones del status*/
 .EW {
   background: transparent url(images/status/status-ew.png) no-repeat left center;
@@ -2416,6 +2472,7 @@ article.node-species div.ds-other-names p {
   background: transparent url(images/status/status-na.png) no-repeat left center;
   padding-left: 20px;
 }
+
 /* seccio Bibliography */
 .node-type-species .field-name-field-sp-biblio-new .field-name-title {
   float: left;
@@ -2500,7 +2557,8 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
 .family_nav_tab a#family_next_tab {
   float: right;
 }
-/*
+
+/**
  * Sidebar second (derecha)
  *
  */
@@ -2557,7 +2615,7 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
 
 /*block*/
 #block-views-compare-block-1 .view-content div.item-list ul li.views-row {
-  clear: left;/*background-color: #FCEFF1;*/
+  clear: left;
 }
 #block-views-compare-block-1 .view-content div.item-list ul li {
   margin-left: 0;
@@ -2606,7 +2664,8 @@ body.page-species-comparison #region-content .region-inner {
 .view-compare tr.title.odd td {
   vertical-align: middle;
 }
-.view-compare tr.title.odd, .view-compare th {
+.view-compare tr.title.odd,
+.view-compare th {
   border-bottom: 0px solid #ccc;
 }
 .page-species-comparison table td .col img {
@@ -2635,9 +2694,7 @@ body.page-species-comparison #region-content .region-inner {
   border-right: 1px transparent solid;
   vertical-align: top;
 }
-.view-compare .view-display-id-page table td:hover {
-  background: none;
-}
+.view-compare .view-display-id-page table td:hover {background: none;}
 .view-compare tr.ops.even td.col.col_0, .view-compare tr.ops.even td.col.col_1, .view-compare tr.ops.even td.col.col_2 {
   background: none;
   padding-bottom: 15px;
@@ -2648,6 +2705,7 @@ body.page-species-comparison #region-content .region-inner {
 .page-node-revisions li.flag-compare .flag-action, .page-node-revisions li.flag-compare .unflag-action {
   display: none;
 }
+
 /**
  * Node links
  */
@@ -2806,6 +2864,7 @@ th.views-field-field-sp-name-common-1, td.views-field-field-sp-name-common-1 {
 .view-species-table-by-family td.views-field-ops, .view-my-list td.views-field-ops, th.views-field-ops {
   width: 30px !important;
   padding-right: 20px;
+  vertical-align: middle;
 }
 .view-my-list td.views-field-ops span, .view-my-list td.views-field-ops span span {
   width: 25px !important;
@@ -2846,6 +2905,17 @@ table .flag-seen .unflag-action {
 
 div.flag-wrapper a.flag-link-toggle:before{
 	 background:none !important;
+}
+body.context-family td.views-field-ops .flag-seen a {
+  float: left;
+  width: 25px;
+  height: 25px;
+  display: block;
+  padding-top: 6px;
+}
+body.context-family td.views-field-ops .flag-seen a.flag-action,
+body.context-family td.views-field-ops .flag-seen a.unflag-action {
+  padding: 0 !important;
 }
 
 /*Flag: Users you are following*/
@@ -3310,7 +3380,8 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
 .view > .more-link {
   margin: 10px 0;
 }
-.view .view-footer .more-link, div.content div.more, .view-footer .more {
+.view .view-footer .more-link,
+div.content div.more, .view-footer .more {
   text-align: right;
   margin: 10px 0 7px 0;
 }
@@ -3332,6 +3403,7 @@ div.view-empty .add, div.view-footer .add {
   padding-top: 1em;
   font-size: 0.9em;
 }
+
 /*Buttons*/
 .views-submit-button input.form-submit {
   background: #C4202B;
@@ -3353,6 +3425,7 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   color: #cecdcd;
   border-color: #cecdcd;
 }
+
 /* Exposed filters (no block) */
 .view-filters .views-exposed-form {
   border: 6px solid rgba(102, 102, 102, 0.57);
@@ -3364,7 +3437,11 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   text-align: right;
   margin-bottom: 5px;
 }
-.block-views-exp-family-search-page, /*block Family search*/ #block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/ #block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ .view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ .view-id-my_record.view-display-id-page .views-exposed-widgets {
+.block-views-exp-family-search-page, /*block Family search*/
+#block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/ 
+#block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ 
+.view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ 
+.view-id-my_record.view-display-id-page .views-exposed-widgets {
   background: #EEE;
   margin: 0;
   padding: 5px 15px 10px 15px;
@@ -3376,7 +3453,8 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-.block-views-exp-family-search-page, #block-views-024b51b0948df12f8903897e79946969 {
+.block-views-exp-family-search-page,
+#block-views-024b51b0948df12f8903897e79946969 {
   clear: left;
   padding-bottom: 5px;
   margin-bottom: 20px;
@@ -3387,16 +3465,20 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   border-top: 1px solid #E3E1E2;
   border-bottom: 1px solid #E3E1E2;
 }
-.block-views-exp-family-search-page.collapsiblock-processed div.views-submit-button, #block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button {
+.block-views-exp-family-search-page.collapsiblock-processed div.views-submit-button,
+#block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button {
   margin-bottom: 20px;
 }
-.block-views-exp-family-search-page .collapsiblock a:after, #block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after {
+.block-views-exp-family-search-page .collapsiblock a:after,
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after {
   background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -198px transparent !important;
 }
-.block-views-exp-family-search-page .collapsiblock.collapsiblockCollapsed a:after, #block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after {
+.block-views-exp-family-search-page .collapsiblock.collapsiblockCollapsed a:after,
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after {
   background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -244px transparent !important;
 }
-.block-views-exp-family-search-page .collapsiblock.collapsiblock-processed, #block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed {
+.block-views-exp-family-search-page .collapsiblock.collapsiblock-processed,
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed {
   padding-bottom: 10px;
 }
 .block-views-exp-family-search-page .block-inner .content {
@@ -3407,6 +3489,12 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   display: block;
   margin: 5px 0;
 }
+
+/*Family search*/
+body.page-family-search #edit-vol-wrapper {
+  width: 70%º;
+}
+
 /* block Search on common name, incrustat en Taxonomic Tree */
 
 .block-28, .block-28 .content, .block-28 .views-exposed-widgets {
@@ -3622,6 +3710,7 @@ select#edit-field-myr-date-value-op {
   border: 0 solid;
   border-color: #FFF;
 }
+
 /*view set-records*/
 #views-form-set-records-default .item-list li {
   list-style: inherit;
@@ -3645,6 +3734,7 @@ body.node-type-locality article.node-my-record header h2 {
   text-align: center;
   padding: 20px 5px 5px 5px;
 }
+
 /**
  * Wikicontributions
  */
@@ -4122,6 +4212,7 @@ sup {
 #edit-body-und-0-format, #edit-field-trip-private-desc-und-0-format {
   display: none;
 }
+
 /* Locality */
 
 /*fieldset basic info*/
@@ -4236,9 +4327,7 @@ fieldset#edit-field-loc-loc-addr-und-0, fieldset#node_locality_form_group_loc_lo
   border: 0 none;
   padding: 0;
 }
-fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {
-  padding: 0;
-}
+fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {padding: 0;}
 .content-inner form .group-loc-loc-group fieldset .fieldset-wrapper {
   padding-top: 15px 5px 5px 5px;
 }
@@ -4330,7 +4419,8 @@ outline: none;
 #locality-node-form div.field-name-field-loc-sp .dialog-links {
   float: left;
   margin-left: 10px;
-  padding-left: 0;/*background: #EEE;
+  padding-left: 0;
+  /*background: #EEE;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;*/
 }
@@ -4339,7 +4429,8 @@ outline: none;
 }
 .field-remove-item-wrapper {
   padding: 2px 10px 5px 5px;
-  float: left;/*background: #EEE;
+  float: left;
+  /*background: #EEE;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;*/
 }
@@ -4347,7 +4438,8 @@ outline: none;
   padding-left: 20px;
   cursor: pointer;
   color: #C4202B;
-  background: transparent url('/sites/all/modules/field_remove_item/remove.png') top left no-repeat;/*display: block;*/
+  background: transparent url('/sites/all/modules/field_remove_item/remove.png') top left no-repeat;
+  /*display: block;*/
 }
 .field-remove-item-wrapper input.form-checkbox {
   display: none;
@@ -4455,6 +4547,7 @@ div#edit-field-myr-map {
   margin-top: 1em !important;
   font-size: 12px !important;
 }
+
 /*throbber while loading Myrecord form modal frame*/
 /*#preloader {
   position:fixed;
@@ -4503,7 +4596,8 @@ fieldset#node_locality_full_group_loc_group_myr {
 .node-type-locality div.field-name-field-loc-sp.field-type-entityreference div.field-label {
   display: none;
 }
-.node-type-locality .field-name-field-loc-sp .field-items > .field-item, /*my record item on full node display*/ .references-thumbnail .node-my-record .content { /*my record item on node form*/
+.node-type-locality .field-name-field-loc-sp .field-items > .field-item, /*my record item on full node display*/
+.references-thumbnail .node-my-record .content { /*my record item on node form*/
   background: #EEE;
   border-radius: 4px;
   border: 1px solid #CCC;
@@ -4515,7 +4609,8 @@ fieldset#node_locality_full_group_loc_group_myr {
 /*view mode Mini-teaser for Species in field_loc_sp*/
 .field-name-field-loc-sp .node-my-record .node-inner div.content {
 }
-.field-name-field-loc-sp .node-inner div.content > div.left, .references-thumbnail .node-my-record .content .left #mini-teaser .left { /*mini-teaser*/
+.field-name-field-loc-sp .node-inner div.content > div.left,
+.references-thumbnail .node-my-record .content .left #mini-teaser .left { /*mini-teaser*/
   float: left !important;
   width: 70%;
   background: #EEE;/*border-top: 1px solid #FAFAFA;
@@ -4552,18 +4647,21 @@ fieldset#node_locality_full_group_loc_group_myr {
   max-height: 90px;
 }
 #mini-teaser div.right * {
-/*vertical-align: middle;*/
+  /*vertical-align: middle;*/
 }
-.field-name-field-loc-sp .node-inner div.content div.right .thumbnail, .references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail {
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail,
+.references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail {
   text-align: center;
   margin-bottom: 5px;
 }
-.field-name-field-loc-sp .node-inner div.content div.right .thumbnail img, .references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail img {
+.field-name-field-loc-sp .node-inner div.content div.right .thumbnail img,
+.references-thumbnail .node-my-record .content .left #mini-teaser .right .thumbnail img {
   width: 40%;
   height: auto;
 }
 /*sp nb, heard, captive, date*/
-.node-locality .field-name-field-loc-sp .node-inner div.content > div.right, .references-thumbnail .node-my-record .content > .right {
+.node-locality .field-name-field-loc-sp .node-inner div.content > div.right,
+.references-thumbnail .node-my-record .content > .right  {
   float: right;
   padding: 5px 10px;
   border-radius: 0 0 0 5px;
@@ -4572,6 +4670,7 @@ fieldset#node_locality_full_group_loc_group_myr {
   font-size: 0.8em;
 }
 .field-name-field-loc-sp .field-name-field-myr-nb, .field-name-field-loc-sp .field-name-field-myr-heard, .field-name-field-loc-sp .field-name-field-myr-captive {
+
   line-height: 80%;
 }
 .node-type-locality .field-name-field-loc-sp .node-inner div.content div.bottom {
@@ -4590,6 +4689,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   width: 100% !important;
   height: 70px !important;
 }
+
 /**
  * View My checklists:
  * - pàgina /checklist
@@ -4605,7 +4705,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .page-node-add-locality #content .region-content #block-views-my-record-block-3, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3 {
   float: left;
 }
-.page-node-add-locality #content .region-content #block-views-my-record-block-3 .view-content, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3 .view-content {
+.page-node-add-locality #content .region-content #block-views-my-record-block-3 .view-content, .page-node-edit.node-type-locality #content .region-content #block-views-my-record-block-3  .view-content {
   float: left;
 }
 #block-views-my-record-block-2 .view-grouping-header, #block-views-my-record-block-3 .view-grouping-header, #block-views-my-record-block-4 .view-grouping-header {
@@ -4615,7 +4715,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   margin-top: 10px;
   border-bottom: 1px solid #111;
 }
-#block-views-my-record-block-2 .view-footer, #block-views-my-record-block-3 .view-footer, #block-views-my-record-block-4 .view-footer {
+#block-views-my-record-block-2  .view-footer, #block-views-my-record-block-3 .view-footer, #block-views-my-record-block-4  .view-footer {
   clear: left;
 }
 #block-views-my-record-block-2 .view-grouping-content h3, #block-views-my-record-block-3 .view-grouping-content h3, #block-views-my-record-block-4 .view-grouping-content h3 {
@@ -4645,7 +4745,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 #block-views-my-record-block-2 .view-grouping-content .views-row.views-row-last .views-field-title-1, #block-views-my-record-block-3 .view-grouping-content .views-row.views-row-last .views-field-title-1, #block-views-my-record-block-4 .view-grouping-content .views-row.views-row-last .views-field-title-1 {
   margin-bottom: 15px;
 }
-#block-views-my-record-block-2 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-title-1 span.field-content {
+#block-views-my-record-block-2 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-title-1 span.field-content, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-title-1  span.field-content {
   background: url("../../../../../misc/menu-leaf.png") no-repeat scroll 10px 7px transparent;
   display: inline-block;
   padding-left: 25px;
@@ -4653,9 +4753,7 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 #block-views-my-record-block-2 .view-grouping-content .views-row .views-field-field-figure-img, #block-views-my-record-block-3 .view-grouping-content .views-row .views-field-field-figure-img, #block-views-my-record-block-4 .view-grouping-content .views-row .views-field-field-figure-img {
   float: right;
 }
-#block-block-31 .field-name-field-myr-sp .field-item a {
-  font-weight: bold;
-}
+#block-block-31 .field-name-field-myr-sp .field-item a {font-weight: bold;}
 #current-checklist {
 /*background: #FFFF66;
   background: #FCF8D1;
@@ -4682,13 +4780,15 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
 .view-my-record .view-content table {
   border: 1px solid green;
 }
-.view-my-record .view-grouping-header, /*page ppl*/ .view-id-my_record.view-display-id-attachment_2 .view-content h3 { /*attachement*/
+.view-my-record .view-grouping-header, /*page ppl*/
+.view-id-my_record.view-display-id-attachment_2 .view-content h3 { /*attachement*/
   font-size: 1.2em;
   font-weight: bold;
   margin: 15px 0;
   border-bottom: 2px solid #666;
 }
-.view-my-record .view-grouping-header span.label, .view-id-my_record.view-display-id-attachment_2 .view-content h3 span.label {
+.view-my-record .view-grouping-header span.label,
+.view-id-my_record.view-display-id-attachment_2 .view-content h3 span.label {
   padding: 4px 5px 4px 5px;
   margin-right: 5px;
   color: #FFF;
@@ -4699,7 +4799,8 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   margin: 3px 0 2px 0;
   font-size: 1.1em !important;
 }
-.view-my-record .view-content table.views-table caption span.edit, .view-id-my_record.view-display-id-attachment_2 .view-content .views-field-edit-node {
+.view-my-record .view-content table.views-table caption span.edit,
+.view-id-my_record.view-display-id-attachment_2 .view-content .views-field-edit-node {
   float: right;
 }
 .view-my-record .view-content table.views-table tr.views-row-last {
@@ -4743,6 +4844,7 @@ div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-at
 div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-attachment_2 .view-content {
   clear: left;
 }
+
 /*Block wikipedia + map*/
 #block-block-30 {
   padding: 20px;
@@ -4754,6 +4856,7 @@ div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-at
   padding: 0 0 15px 15px;
   width: 40%;
 }
+
 /*popup calendar*/
 .form-type-date-popup input {
   background: url("/sites/all/themes/hba_theme/css/images/calendar.png") -0px -0px no-repeat;
@@ -4777,6 +4880,7 @@ input#edit-field-myr-date-und-0-value-timeEntry-popup-1 {
   background: none;
   padding-left: 5px;
 }
+
  <<<<<<< HEAD  /*pricing *****/
  body.page-pricing div#breadcrumb, body.page-pricing h1#page-title {
  display:none;
@@ -5441,13 +5545,150 @@ table#plan-comparison tr.row-last td a:hover {
  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); /* IE6-8 */
 }
 
-/*** status ***/
+/*de copia local*/
+/*body.node-type-locality #region-content .region-inner,
+body.page-checklist-submit #region-content .region-inner {
+  width: 1200px;
+}
+body.page-checklist-submit #region-content .region-inner table.views-table {
+  clear: left;
+}
+body.page-checklist-submit #region-content .region-inner table.views-table td.views-field-field-sp-genus,
+body.page-checklist-submit #region-content .region-inner table.views-table td.views-field-field-sp-species,
+body.page-checklist-submit #region-content .region-inner table.views-table td.views-field-field-sp-name-common,
+body.page-checklist-submit #region-content .region-inner table.views-table td.views-field-field-figure-img {
+  width: 90px;
+}
+body.page-checklist-submit #region-content .region-inner table.views-table td.views-field-field-sp-name-spanish {
+  width: 150px;
+}
+.view-species-table-by-family.view-display-id-page_3 td.views-field-php {
+  width: inherit !important;
+}*/
 
-div#status.ds-status {
+/*throbber in plate*/
+/*div.view div.ajax-progress {
+  background: rgba(0,0,0,0.3);
+  -pie-background: rgba(0,0,0,0.3);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9998;
+}
+div.view div.throbber {
+  background: url("/sites/all/themes/hba_theme/css/images/ajax-loader.gif") no-repeat scroll 50% 50%;
+  background-color: rgb(0,0,0);
+  border-radius: 16px;
+  height: 32px;
+  left: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  width: 32px;
+  z-index: 9999;
+}*/
+
+/*page_throbber*/
+#lean_overlay {
+    position: fixed;
+    z-index:900;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #FFF;
+    display: none;
+}
+#throbber-message {
+  display: none;
+  width:auto;
+  background:white;
+  position:relative;
+  padding:15px;
+  padding-top:60px;
+  box-shadow: 1px 1px 5px #CCC;
+  font-size:1.1em;
+  font-weight: bold;
+  color:#999;
+}
+#throbber-message .spinner {
+  top:20px;
+}
+#throbber-message p {
+  margin-bottom:0px;
+  color:#444;
+}
+#throbber-message #throbber-close {
+  background:url(/sites/all/themes/hba_theme/css/images/close-throbber.png) left bottom no-repeat;
+  width:20px;
+  height:20px;
+  overflow: hidden;
+  cursor: pointer;
+  text-indent:-9999px;
   position: absolute;
-  right: 10px;
-  top: 20px;
-  font-size: .95em;
-  color: #999;
-  white-space: nowrap;
+  top:-8px;
+  right:-8px;
+}
+
+/*megarow*/
+tr.megarow td {background-color: rgb(235, 252, 228);}
+div.views-megarow-content {
+  padding: 0 10px 5px 10px;
+  background: none;
+}
+div.views-megarow-content .megarow-header {
+  float: right;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+}
+div.views-megarow-content .megarow-content {
+  padding-top: 0;
+  width: 100%;
+}
+div.views-megarow-content .megarow-title {
+  display: none;
+}
+div.views-megarow-content .form-item-field-myr-nb-und-0-value input {
+  width: 40px;
+  text-align: right;
+}
+div.views-megarow-content textarea {
+  min-height: initial;
+  height: 23px;
+}
+div.views-megarow-content .resizable-textarea {
+  margin-left: 0;
+  margin-right: 0;
+}
+div.views-megarow-content .resizable-textarea .grippie {
+  display: none;
+}
+div.views-megarow-content .form-item, div.views-megarow-content .form-item .form-item {
+  margin-top: 0;
+}
+div.views-megarow-content .form-item label {
+  width: auto;
+  float: none;
+  font-weight: normal;
+}
+body.page-checklist-set-records .field-name-field-myr-nb,
+body.page-checklist-set-records .field-name-body {
+  float: left !important;
+  clear: none !important;
+  margin-right: 10px;
+}
+body.page-checklist-set-records #edit-field-myr-nb { /*necessary for the first opened megarow*/
+  float: left !important;
+  clear: none !important;
+}
+div.views-megarow-content .form-actions {
+  /*margin-top: 25px;
+  width: 40px;
+  float: right;*/
+  padding-top: 20px;
 }
