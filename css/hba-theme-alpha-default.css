@@ -49,4 +49,10 @@ body #zone-user-wrapper {
  margin-top: 0;
 }
 
-/**/
+body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
+  background-position: 132px -600px;
+}
+
+body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
+  background-position: 154px -600px;
+}

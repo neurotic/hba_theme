@@ -44,3 +44,11 @@ body #region-menu {
   padding-left: 50px;
   width: auto;
 }
+
+body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
+  background-position: 212px -600px;
+}
+
+body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
+  background-position: 234px -600px;
+}

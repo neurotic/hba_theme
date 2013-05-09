@@ -944,7 +944,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 }
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   color: white;
-  background: url("images/icons.png") no-repeat 173px -417px;
+  background: url("images/icons.png") no-repeat 135px -600px;
   background-color: #8C8C8C;
   padding: 4px 35px 4px 26px;
   -webkit-border-top-right-radius: 10px;
@@ -959,7 +959,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 }
 
 #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
-  background-position: 195px -417px;
+  background-position: 154px -600px;
 }
 
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
@@ -1560,7 +1560,7 @@ body.page-plate div#region-content h1:hover:after {
 }
 body.page-plate #info {
   float: left;
-  padding: 8px 5px 5px 20px; 
+  padding: 8px 5px 5px 20px;
 }
 body.page-plate #info .btn {
   float: left;
@@ -1700,7 +1700,7 @@ div.view.view-galley-fluid .views-row {
   margin: 0;
   line-height: 90%;
   border: 0;
-  
+
   /*height: 200px;*/
 }
 div.view-galley-fluid.view-id-galley_fluid.view-display-id-page_1 .views-row {
@@ -1718,7 +1718,7 @@ div.view.view-galley-fluid2 #region-content h3 {
   border-bottom: 0 none;
   padding: 0 !important;
   margin: 0 !important;
-  
+
   display: none;
 }
 div.view.view-galley-fluid div.view-content h3 {
@@ -3632,9 +3632,9 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   margin-bottom: 5px;
 }
 .block-views-exp-family-search-page, /*block Family search*/
-#block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/ 
-#block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ 
-.view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ 
+#block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/
+#block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/
+.view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/
 .view-id-my_record.view-display-id-page .views-exposed-widgets {
   background: #EEE;
   margin: 0;
@@ -4558,7 +4558,7 @@ fieldset#edit-field-loc-loc-addr-und-0 .fieldset-wrapper {padding: 0;}
 }
 #locality-node-form .field-name-field-loc-sp table tbody {border-top:0;}
 #locality-node-form .field-name-field-loc-sp table tr {
-  
+
 }
 #locality-node-form .field-name-field-loc-sp table tr.even, tr.odd {
   background-color: #fff;

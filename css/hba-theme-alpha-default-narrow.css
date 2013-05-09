@@ -91,3 +91,11 @@ body .logo-img {
   width: auto;
   margin: 0;
 }
+
+body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
+  background-position: 624px -600px;
+}
+
+body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
+  background-position: 624px -600px;
+}
