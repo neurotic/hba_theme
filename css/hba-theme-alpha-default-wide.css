@@ -16,7 +16,7 @@ body #zone-content aside.region {
 }
 
 #block-bird-taxonomies-bird-orders .content {
-  width: 236px;
+  /*width: 236px;*/
 }
 
 body #region-menu {
@@ -65,9 +65,21 @@ body #region-menu {
 }
 
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
-  padding-left: 7px;
+  /*padding-left: 7px;*/
 }
 
 #block-bird-taxonomies-bird-orders .a-wrapper a {
-  width: 86%;
+  /*width: 86%;*/
+}
+
+body #block-bird-taxonomies-bird-orders .content {
+  width: 277px;
+}
+
+body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
+  background-position: 212px -417px;
+}
+
+body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
+  background-position: 234px -417px;
 }
