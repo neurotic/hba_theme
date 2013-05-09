@@ -192,7 +192,7 @@ body div#page #region-sidebar-third {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  padding: 15px;
+  padding: 15px 0;
   -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
   box-shadow: 0px 1px 1px 1px #e8e8e8;
@@ -794,7 +794,34 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   float: right;
   background-color: transparent;
   border: none;
-  padding: 0;
+  padding: 0 7px;
+  position: relative;
+  margin-top: -28px;
+  height: 28px;
+  border-left: 3px solid transparent;
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go {
+  /*border-left: 3px solid white;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go:hover {
+  /*background-color: #A8A8A8;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul.families > li.selected > span > a.go {
+  /*margin-top: -27px;
+  height: 27px;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul.families > li.selected > span > a.go:hover {
+  /*background-color: #FF984A;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul li span.plus {
+  position: relative;
+  margin-top: -28px;
+  height: 28px;
 }
 #block-bird-taxonomies-bird-orders .orders .item-list {
 /*display: none;*/
@@ -802,9 +829,11 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
 #block-bird-taxonomies-bird-orders .a-wrapper {
   display: block;
 }
-#block-bird-taxonomies-bird-orders .a-wrapper a {
-  float: left;
-  width: 85%;/*font-size: 17px;*/
+body #block-bird-taxonomies-bird-orders .a-wrapper a {
+  /*float: left;
+  width: 85%;*/
+  /*font-size: 17px;*/
+  display: block;
 }
 #block-bird-taxonomies-bird-orders h2 {
   background: rgb(193,49,39); /* Old browsers */
@@ -826,7 +855,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   border-radius: 4px;
 }
 #block-bird-taxonomies-bird-orders .content {
-  padding: 15px 5px 5px 5px;
+  padding: 15px 0px 5px 0px;
   /*border: 1px solid #a0a0a0;*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -853,18 +882,18 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   line-height: 95%;
 }
 #block-bird-taxonomies-bird-orders .content ul.subspecies {
-  border-color: #EE9C31;
 }
 #block-bird-taxonomies-bird-orders .content ul.orders ul {
-  border-left: 1px solid #b2b1b1;
 }
 #block-bird-taxonomies-bird-orders .content ul.families ul {
-  border-color: #CF3F3A;
 }
+
 #block-bird-taxonomies-bird-orders .content ul.species ul {
-  border-color: #EE9C31;
 }
-#block-bird-taxonomies-bird-orders .content ul li {
+
+#block-bird-taxonomies-bird-orders .content ul.subspecies {
+  margin-top: 5px;
+}#block-bird-taxonomies-bird-orders .content ul li {
   margin-left: 0;
   padding-left: 10px;
 }
@@ -883,7 +912,7 @@ body.context-family #region-content .region-inner {
   border-color: #ca4c55;
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content .go {
-  background: url(images/icons.png) no-repeat -438px 2px;
+  background: url(images/icons.png) no-repeat -432px -54px;
   width: 14px;
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content span.plus {
@@ -897,10 +926,11 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content span.plu
   visibility: hidden;
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content li > span:hover > .go {
-  background-position: -438px -29px;
+  /*background-position: -438px -29px;*/
 }
 #block-bird-taxonomies-bird-orders .content .species {
-  padding-top: 7px;
+  margin-top: 7px;
+  margin-bottom: 5px;
   padding-right: 5px;
   max-height: 325px;
   overflow-y: auto;/*background: #F5F5F5 none repeat scroll 0 0;*/
@@ -908,32 +938,196 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #block-bird-taxonomies-bird-orders .content .subspecies {
   padding-top: 7px;
 }
+
+#block-bird-taxonomies-bird-orders .content li > .a-wrapper > a {
+  padding-left: 26px;
+}
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   color: white;
-  background: #8C8C8C;
-  padding: 2px 4px 2px 30px;
+  background: url("images/icons.png") no-repeat 173px -417px;
+  background-color: #8C8C8C;
+  padding: 4px 35px 4px 26px;
   -webkit-border-top-right-radius: 10px;
   -webkit-border-bottom-right-radius: 7px;
   -moz-border-radius-topright: 7px;
   -moz-border-radius-bottomright: 7px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
+  margin-right: 30px;
+  height: 20px;
+  height: auto;
 }
+
+#block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
+  background-position: 195px -417px;
+}
+
+#block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
+  background-image: none;
+}
+
+
+#block-bird-taxonomies-bird-orders .content ul.families li > .a-wrapper > a {
+  padding-left: 40px;
+  color: #ff7b01;
+  margin-right: 10px;
+}
+
 #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-color: #fc6f03;
+  color: white;
 }
+
+#block-bird-taxonomies-bird-orders .content ul.species li > .a-wrapper > a {
+  color: #ca4c55;
+  margin-left: 40px;
+  padding-left: 14px;
+}
+
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
   background-color: #ca4c55;
+  padding: 4px 10px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  display: block;
+  margin-right: 20px;
+  height: auto;
 }
-#block-bird-taxonomies-bird-orders .content ul.subspecies a {
+
+#block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a em {
+  color: white;
+  display: block;
+}
+
+#block-bird-taxonomies-bird-orders .content ul.subspecies span.a-wrapper {
+  padding-left: 67px;
   font-style: italic;
+  font-size: 11px;
 }
-#block-bird-taxonomies-bird-orders .content ul.subspecies a.selected {
-  font-weight: bold;
-}
+
 #block-bird-taxonomies-bird-orders .content ul a:hover {
   color: gray;
 }
+
+#overlay {
+    position: fixed;
+    z-index: 10;
+    background: black;
+    display: block;
+    opacity: .20;
+    filter: alpha(opacity=75);
+    width: 100%;
+    height: 100%;
+}
+
+#bowlG{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width:128px;
+  height:128px;
+}
+
+#bowl_ringG{
+position:absolute;
+width:128px;
+height:128px;
+border:11px solid #000000;
+-moz-border-radius:128px;
+-webkit-border-radius:128px;
+-ms-border-radius:128px;
+-o-border-radius:128px;
+border-radius:128px;
+}
+
+.ball_holderG{
+position:absolute;
+width:34px;
+height:128px;
+left:47px;
+top:0px;
+-moz-animation-name:ball_moveG;
+-moz-animation-duration:1.3s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-timing-function:linear;
+-webkit-animation-name:ball_moveG;
+-webkit-animation-duration:1.3s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:linear;
+-ms-animation-name:ball_moveG;
+-ms-animation-duration:1.3s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-timing-function:linear;
+-o-animation-name:ball_moveG;
+-o-animation-duration:1.3s;
+-o-animation-iteration-count:infinite;
+-o-animation-timing-function:linear;
+animation-name:ball_moveG;
+animation-duration:1.3s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+}
+
+.ballG{
+position:absolute;
+left:0px;
+top:-30px;
+width:51px;
+height:51px;
+background:#FFFFFF;
+-moz-border-radius:43px;
+-webkit-border-radius:43px;
+-ms-border-radius:43px;
+-o-border-radius:43px;
+border-radius:43px;
+}
+
+@-moz-keyframes ball_moveG{
+0%{
+-moz-transform:rotate(0deg)}
+
+100%{
+-moz-transform:rotate(360deg)}
+
+}
+
+@-webkit-keyframes ball_moveG{
+0%{
+-webkit-transform:rotate(0deg)}
+
+100%{
+-webkit-transform:rotate(360deg)}
+
+}
+
+@-ms-keyframes ball_moveG{
+0%{
+-ms-transform:rotate(0deg)}
+
+100%{
+-ms-transform:rotate(360deg)}
+
+}
+
+@-o-keyframes ball_moveG{
+0%{
+-o-transform:rotate(0deg)}
+
+100%{
+-o-transform:rotate(360deg)}
+
+}
+
+@keyframes ball_moveG{
+0%{
+transform:rotate(0deg)}
+
+100%{
+transform:rotate(360deg)}
+
+}
+
 /*
 #block-bird-taxonomies-bird-orders .content ul li.selected > .a-wrapper > a:hover {
   color: black;
@@ -1359,7 +1553,7 @@ body.page-plate div#region-content h1:after {
   font-weight: normal;
   margin: 0 0 0 20px;
   padding: 0 20px 0 0;
-  background: url("images/icons.png") no-repeat scroll 80px -90px transparent;
+  background: url("images/icons.png") no-repeat scroll 84px -90px transparent;
 }
 body.page-plate div#region-content h1:hover:after {
   color: #333;
@@ -4881,7 +5075,7 @@ input#edit-field-myr-date-und-0-value-timeEntry-popup-1 {
   padding-left: 5px;
 }
 
- <<<<<<< HEAD  /*pricing *****/
+/*pricing *****/
  body.page-pricing div#breadcrumb, body.page-pricing h1#page-title {
  display:none;
 }
@@ -5019,6 +5213,7 @@ div.view.view-pricing table tr td.col-4 div.pricing:hover div.title {
   background: #0B799C;
 }
 body.context-pricing div.view.view-pricing table tr td div.body, body.context-pricing div.view.view-pricing table tr td:hover div.body {
+  border-bottom-color: transparent;
   position: relative;
 }
 div.view.view-pricing div.view-footer p {
@@ -5271,7 +5466,7 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
 .region-sidebar-first #block-block-28 h2.collapsiblock a:after {
   display: none;
 }
-#block-bird-taxonomies-bird-orders div.block-inner ul {
+#block-bird-taxonomies-bird-orders .content ul.orders {
   margin-top: 15px;
 }
 .region-sidebar-first #block-block-28 h2 span.plus {
