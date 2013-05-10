@@ -115,14 +115,6 @@ body #region-sidebar-third {
   top: -7px;
 }
 
-#block-block-2 .content-toc ul {
-  margin-left: 20px;
-}
-
-#block-block-2 .content-toc ul li {
-  width: 180px;
-}
-
 #block-views-frontpage-content-blocks-block .view-content .views-row {
   width: 225px;
 }
@@ -168,4 +160,20 @@ body #region-sidebar-third {
 
 #block-menu-menu-sections .content ul li:nth-child(odd) {
   margin-right: 0;
+}
+
+/*menu nav en species node*/
+
+.node-species div#block-block-2 .content-toc {
+  margin-right: 1em;
+}
+#block-block-2 .content-toc ul {
+  /*margin-left: 20px;*/
+}
+
+#block-block-2 .content-toc ul li {
+  width: 140px !important;
+}
+body #block-block-2 .content-toc ul li.column2 {
+  margin-left: 15em;
 }
