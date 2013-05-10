@@ -24,12 +24,11 @@ body #region-menu {
   padding-left: 50px;
 }
 
-#block-block-2 .content-toc ul {
-  margin-left: 68px;
-}
-
 #block-block-2 .content-toc ul li {
-  width: 190px;
+  width: 180px !important;
+}
+body #block-block-2 .content-toc ul li.column2 {
+  margin-left: 16em;
 }
 
 #block-views-frontpage-content-blocks-block .view-content .views-row {
@@ -71,3 +70,16 @@ body #region-menu {
 #block-bird-taxonomies-bird-orders .a-wrapper a {
   width: 86%;
 }
+
+body #block-bird-taxonomies-bird-orders .content {
+  width: 277px;
+}
+
+body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
+  background-position: 212px -600px;
+}
+
+body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
+  background-position: 234px -600px;
+}
+

@@ -192,7 +192,7 @@ body div#page #region-sidebar-third {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  padding: 15px;
+  padding: 15px 0;
   -webkit-box-shadow: 0px 1px 1px 1px #e8e8e8;
   -moz-box-shadow: 0px 1px 1px 1px #e8e8e8;
   box-shadow: 0px 1px 1px 1px #e8e8e8;
@@ -518,8 +518,9 @@ body #block-block-2 .content-toc ul li {
   list-style: none;
   line-height: 1.5em; /* Stipulate the height of each item so that vertical return = items * height */
   margin: 0;
-  padding: 0;/*float: left;
+  padding: 0;
   width: 180px;
+  /*float: left;
   margin-right: 15px;*/
 }
 * html ul li {
@@ -529,10 +530,11 @@ body #block-block-2 .content-toc ul li.column1 {
   margin-left: 0em;
 }
 body #block-block-2 .content-toc ul li.column2 {
-  margin-left: 14em;
+  margin-left: 18em;
 }
 body #block-block-2 .content-toc ul li.reset {
-  margin-top: -7.7em;
+  margin-top: -7.8em;
+  /*margin-top: -6.2em; Valid if no Voice section!*/
 }
 body #block-block-2 .content-toc ul li a {
   color: #111111;
@@ -541,11 +543,13 @@ body #block-block-2 .content-toc ul li a {
 }
 /*figure decorativa dins del menu*/
 body #block-block-2 .thumbnail {
-  float: left;
+  float: right;
   position: relative;
   display: block;
-  width: 100px;
 }
+/*body #block-block-2 .thumbnail .view-id-species_figure.view-display-id-block_10 {
+  float: right;
+}*/
 #region-content h3, #region-content h3 a {
   color: black;
 }
@@ -564,6 +568,7 @@ body #section-content #region-sidebar-second h2.collapsiblockCollapsed span, bod
   border-color: #b7b4b4;
 }
 .not-front #region-sidebar-second .block .block-inner > .content, .not-front #region-sidebar-third .block .block-inner > .content {
+  /*clear: both;*/
   background: white;
   padding: 14px 25px 16px;
   margin: 0 4px 0 4px;
@@ -794,7 +799,34 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   float: right;
   background-color: transparent;
   border: none;
-  padding: 0;
+  padding: 0 7px;
+  position: relative;
+  margin-top: -28px;
+  height: 28px;
+  border-left: 3px solid transparent;
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go {
+  /*border-left: 3px solid white;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go:hover {
+  /*background-color: #A8A8A8;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul.families > li.selected > span > a.go {
+  /*margin-top: -27px;
+  height: 27px;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul.families > li.selected > span > a.go:hover {
+  /*background-color: #FF984A;*/
+}
+
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul li span.plus {
+  position: relative;
+  margin-top: -28px;
+  height: 28px;
 }
 #block-bird-taxonomies-bird-orders .orders .item-list {
 /*display: none;*/
@@ -802,9 +834,11 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
 #block-bird-taxonomies-bird-orders .a-wrapper {
   display: block;
 }
-#block-bird-taxonomies-bird-orders .a-wrapper a {
-  float: left;
-  width: 85%;/*font-size: 17px;*/
+body #block-bird-taxonomies-bird-orders .a-wrapper a {
+  /*float: left;
+  width: 85%;*/
+  /*font-size: 17px;*/
+  display: block;
 }
 #block-bird-taxonomies-bird-orders h2 {
   background: rgb(193,49,39); /* Old browsers */
@@ -826,7 +860,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   border-radius: 4px;
 }
 #block-bird-taxonomies-bird-orders .content {
-  padding: 15px 5px 5px 5px;
+  padding: 15px 0px 5px 0px;
   /*border: 1px solid #a0a0a0;*/
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -852,17 +886,17 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
   font-size: 0.95em !important;
   line-height: 95%;
 }
-#block-bird-taxonomies-bird-orders .content ul.subspecies {
-  border-color: #EE9C31;
-}
 #block-bird-taxonomies-bird-orders .content ul.orders ul {
-  border-left: 1px solid #b2b1b1;
+
 }
 #block-bird-taxonomies-bird-orders .content ul.families ul {
-  border-color: #CF3F3A;
+
 }
 #block-bird-taxonomies-bird-orders .content ul.species ul {
-  border-color: #EE9C31;
+
+}
+#block-bird-taxonomies-bird-orders .content ul.subspecies {
+  margin-top: 5px;
 }
 #block-bird-taxonomies-bird-orders .content ul li {
   margin-left: 0;
@@ -883,7 +917,7 @@ body.context-family #region-content .region-inner {
   border-color: #ca4c55;
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content .go {
-  background: url(images/icons.png) no-repeat -438px 2px;
+  background: url(images/icons.png) no-repeat -432px -54px;
   width: 14px;
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content span.plus {
@@ -897,10 +931,11 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content span.plu
   visibility: hidden;
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content li > span:hover > .go {
-  background-position: -438px -29px;
+  /*background-position: -438px -29px;*/
 }
 #block-bird-taxonomies-bird-orders .content .species {
-  padding-top: 7px;
+  margin-top: 7px;
+  margin-bottom: 5px;
   padding-right: 5px;
   max-height: 325px;
   overflow-y: auto;/*background: #F5F5F5 none repeat scroll 0 0;*/
@@ -908,32 +943,196 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #block-bird-taxonomies-bird-orders .content .subspecies {
   padding-top: 7px;
 }
+
+#block-bird-taxonomies-bird-orders .content li > .a-wrapper > a {
+  padding-left: 26px;
+}
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   color: white;
-  background: #8C8C8C;
-  padding: 2px 4px 2px 30px;
+  background: url("images/icons.png") no-repeat 135px -600px;
+  background-color: #8C8C8C;
+  padding: 4px 35px 4px 26px;
   -webkit-border-top-right-radius: 10px;
   -webkit-border-bottom-right-radius: 7px;
   -moz-border-radius-topright: 7px;
   -moz-border-radius-bottomright: 7px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
+  margin-right: 30px;
+  height: 20px;
+  height: auto;
 }
+
+#block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
+  background-position: 154px -600px;
+}
+
+#block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
+  background-image: none;
+}
+
+
+#block-bird-taxonomies-bird-orders .content ul.families li > .a-wrapper > a {
+  padding-left: 40px;
+  color: #ff7b01;
+  margin-right: 10px;
+}
+
 #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-color: #fc6f03;
+  color: white;
 }
+
+#block-bird-taxonomies-bird-orders .content ul.species li > .a-wrapper > a {
+  color: #ca4c55;
+  margin-left: 40px;
+  padding-left: 14px;
+}
+
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
   background-color: #ca4c55;
+  padding: 4px 10px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  display: block;
+  margin-right: 20px;
+  height: auto;
 }
-#block-bird-taxonomies-bird-orders .content ul.subspecies a {
+
+#block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a em {
+  color: white;
+  display: block;
+}
+
+#block-bird-taxonomies-bird-orders .content ul.subspecies span.a-wrapper {
+  padding-left: 67px;
   font-style: italic;
+  font-size: 11px;
 }
-#block-bird-taxonomies-bird-orders .content ul.subspecies a.selected {
-  font-weight: bold;
-}
+
 #block-bird-taxonomies-bird-orders .content ul a:hover {
   color: gray;
 }
+
+#overlay {
+    position: fixed;
+    z-index: 10;
+    background: black;
+    display: block;
+    opacity: .20;
+    filter: alpha(opacity=75);
+    width: 100%;
+    height: 100%;
+}
+
+#bowlG{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width:128px;
+  height:128px;
+}
+
+#bowl_ringG{
+position:absolute;
+width:128px;
+height:128px;
+border:11px solid #000000;
+-moz-border-radius:128px;
+-webkit-border-radius:128px;
+-ms-border-radius:128px;
+-o-border-radius:128px;
+border-radius:128px;
+}
+
+.ball_holderG{
+position:absolute;
+width:34px;
+height:128px;
+left:47px;
+top:0px;
+-moz-animation-name:ball_moveG;
+-moz-animation-duration:1.3s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-timing-function:linear;
+-webkit-animation-name:ball_moveG;
+-webkit-animation-duration:1.3s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:linear;
+-ms-animation-name:ball_moveG;
+-ms-animation-duration:1.3s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-timing-function:linear;
+-o-animation-name:ball_moveG;
+-o-animation-duration:1.3s;
+-o-animation-iteration-count:infinite;
+-o-animation-timing-function:linear;
+animation-name:ball_moveG;
+animation-duration:1.3s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+}
+
+.ballG{
+position:absolute;
+left:0px;
+top:-30px;
+width:51px;
+height:51px;
+background:#FFFFFF;
+-moz-border-radius:43px;
+-webkit-border-radius:43px;
+-ms-border-radius:43px;
+-o-border-radius:43px;
+border-radius:43px;
+}
+
+@-moz-keyframes ball_moveG{
+0%{
+-moz-transform:rotate(0deg)}
+
+100%{
+-moz-transform:rotate(360deg)}
+
+}
+
+@-webkit-keyframes ball_moveG{
+0%{
+-webkit-transform:rotate(0deg)}
+
+100%{
+-webkit-transform:rotate(360deg)}
+
+}
+
+@-ms-keyframes ball_moveG{
+0%{
+-ms-transform:rotate(0deg)}
+
+100%{
+-ms-transform:rotate(360deg)}
+
+}
+
+@-o-keyframes ball_moveG{
+0%{
+-o-transform:rotate(0deg)}
+
+100%{
+-o-transform:rotate(360deg)}
+
+}
+
+@keyframes ball_moveG{
+0%{
+transform:rotate(0deg)}
+
+100%{
+transform:rotate(360deg)}
+
+}
+
 /*
 #block-bird-taxonomies-bird-orders .content ul li.selected > .a-wrapper > a:hover {
   color: black;
@@ -1040,7 +1239,7 @@ body.page-node-201985 #region-content h2 {
   font-size: 13px;
 }
 body .node-inner.full .content .field-group-format-wrapper {
-  margin: 30px 0;
+  margin: 10px 0 30px;
 }
 #zone-user-wrapper {
   background: #535151;
@@ -1359,7 +1558,7 @@ body.page-plate div#region-content h1:after {
   font-weight: normal;
   margin: 0 0 0 20px;
   padding: 0 20px 0 0;
-  background: url("images/icons.png") no-repeat scroll 80px -90px transparent;
+  background: url("images/icons.png") no-repeat scroll 84px -90px transparent;
 }
 body.page-plate div#region-content h1:hover:after {
   color: #333;
@@ -1675,9 +1874,10 @@ div.view.view-galley-fluid .views-field.views-field-nothing .text span.order {
 /*bloc Figures*/
 .views_slideshow_cycle_main, .views-slideshow-cycle-main-frame, .views_slideshow_cycle_teaser_section, .views-slideshow-cycle-main-frame-row-item, .views-field-colorbox, .views-field-colorbox .field-content, .views-field-colorbox .field-content .colorbox-inline, .views-field-colorbox .field-content img {
   text-align: center;
-  margin: auto !important;
+  margin: 0 auto !important;
   display: block !important;
 }
+#views_slideshow_cycle_main_species_figure-block_3 .views-slideshow-cycle-main-frame-row {margin:0 auto;}
 /*node > colorbox*/
 .colorbox-slideshow img {
   margin: auto !important;
@@ -2101,7 +2301,7 @@ body.node-type-family ul.vertical-tabs-list {
   list-style-image: none; /* IE6 */
   padding: 10px 25px 13px 0;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 5em;
   width: auto;
   float: none;
   border: 0;
@@ -2139,7 +2339,7 @@ body.node-type-family #region-content ul.vertical-tabs-list li.selected, body.no
 }
 body.node-type-family #region-content ul.vertical-tabs-list li.selected strong, body.node-type-family #region-content ul.vertical-tabs-list li a:hover strong {
   text-decoration: none;
-  font-weight: normal !important;
+  font-weight: bold !important;
 }
 .node-type-family .content .vertical-tabs fieldset .field-type-text-long.field-label-above .field-label {
   display: block;
@@ -2147,7 +2347,7 @@ body.node-type-family #region-content ul.vertical-tabs-list li.selected strong, 
   margin-bottom: 7px;
 }
 .node-type-family ul.vertical-tabs-list li.reset {
-  margin-top: -7.90em;
+  margin-top: -7.9em;
 }
 body .vertical-tabs ul.vertical-tabs-list strong {
   padding: 4px 10px 4px 15px;
@@ -2314,6 +2514,31 @@ form#views-form-set-records-default table.views-table tr.even td {
   width: 100% !important;
   overflow-x: scroll !important;
 }
+/*Species table en Country term page*/
+.view-country-term-page table caption {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+.view-country-term-page table td {
+  border-top: 1px solid #ccc;
+}
+.view-country-term-page td.views-field-field-figure-img {
+  width: 50px;
+  text-align: center;
+  background: #f1f1f1;
+}
+.view-country-term-page td.views-field-field-sp-genus,
+.view-country-term-page td.views-field-field-sp-species {
+  width: 80px;
+}
+.view-country-term-page td.views-field-field-sp-map {
+  text-align: right;
+}
+.view-country-term-page td.views-field-php {
+  width: 90px;
+  text-align: right;
+  padding-right: 20px;
+}
 /* no mostrar numero dordenacio */
 .group-fam-view-vt-sp-table .field-name-field-fam-ordenacio {
   display: none;
@@ -2349,7 +2574,33 @@ a#family_prev_tab.nav_prev_general {
   font-size: 1em;
 }
 
-/*
+/* Species table (Search) + Species table (Section in Family node) + My list */
+th.views-field-field-sp-name-common-1, td.views-field-field-sp-name-common-1 {
+  width: 165px;
+}
+.view-species-table-by-family td.views-field-ops, .view-my-list td.views-field-ops {
+  /*width: 30px !important;
+  padding-right: 20px;
+  vertical-align: middle;*/
+}
+.view-my-list th.views-field-ops {
+
+}
+.view-my-list td.views-field-ops span, .view-my-list td.views-field-ops span span {
+  width: 25px !important;
+}
+.view-species-table-by-family td.views-field-field-figure-img {
+  text-align: center;
+}
+.view-my-list .flag-seen, .view-my-list .flag-seen .flag-action, .view-my-list .flag-seen .unflag-action {
+  /*padding: 0 0 5px 5px;*/
+}
+.view-species-table-by-family table a:hover, .view-my-list table a:hover {
+  background-color: transparent !important;
+}
+.view-my-list td.views-field-php {width: 90px;}
+
+/**
  * SP
  */
 
@@ -2733,11 +2984,12 @@ body.page-species-comparison #region-content .region-inner {
 body #region-content a.flag-action, body #region-content a.flag-action:hover, body #region-content a.unflag-action, body #region-content a.unflag-action:hover {
   background: none;
   text-shadow: none;
-  color: #c6c6c6;
+  /*color: #c6c6c6;*/
+  color: transparent;
   border: none;
   font-size: 12px;
   font-weight: normal;
-  padding: 5px 2px 5px 0;
+  padding: 5px 2px 8px 0;
   line-height: 120%;
   text-decoration: none;
 }
@@ -2837,8 +3089,8 @@ body #region-content .flag-message {
   left: -80px;
   width: auto;
 }
-/* Flag: Useful */
 
+/* Flag: Useful */
 #region-content .flag-useful a.flag-action, .flag-useful a.flag-action {
   color: #333;
   padding: 5px 20px 5px 5px;
@@ -2855,30 +3107,7 @@ body #region-content .flag-message {
   text-decoration: none;
   background: transparent url("/sites/all/themes/hba_theme/css/images/star_yellow.gif") right center no-repeat;
 }
-/* Flag: Seen */
-/*pestanya Species table del node Family i pagina my-list*/
 
-th.views-field-field-sp-name-common-1, td.views-field-field-sp-name-common-1 {
-  width: 165px;
-}
-.view-species-table-by-family td.views-field-ops, .view-my-list td.views-field-ops, th.views-field-ops {
-  width: 30px !important;
-  padding-right: 20px;
-  vertical-align: middle;
-}
-.view-my-list td.views-field-ops span, .view-my-list td.views-field-ops span span {
-  width: 25px !important;
-}
-.view-species-table-by-family td.views-field-php, .view-my-list td.views-field-php {
-  width: 50px !important;
-}
-.view-my-list .flag-seen, .view-my-list .flag-seen .flag-action, .view-my-list .flag-seen .unflag-action {
-  padding: 0 0 5px 5px;
-  width: 10px;
-}
-.view-species-table-by-family table a:hover, .view-my-list table a:hover {
-  background-color: transparent !important;
-}
 /*flag Seen en full node i taules*/
 .flag-seen .flag-action {
   background: url("/sites/all/themes/hba_theme/css/images/flag-not-seen.png") no-repeat 0 0 transparent !important; /* LTR */
@@ -2955,6 +3184,7 @@ body.context-family td.views-field-ops .flag-seen a.unflag-action {
   padding-top: 35px;
   border-top: 60px solid #fdfd86;*/
   position: relative;
+  overflow: hidden;
   border: 1px solid #E8E8E8;
   font-family: 'Reenie Beanie';
   font-size: 22px;
@@ -2977,6 +3207,18 @@ body.context-family td.views-field-ops .flag-seen a.unflag-action {
   zoom: 1;
   box-shadow: 2px 7px 4px rgba(0, 0, 0, 0.40);
 }
+/*postit en bloc*/
+.not-front #region-sidebar-second .block#block-views-mynotes-block .block-inner > .content,
+.not-front #region-sidebar-third .block#block-views-mynotes-block .block-inner > .content {
+  padding: 14px 25px 16px 15px;
+}
+.view-mynotes.view-display-id-block .postit {
+  height: 105px;
+  font-size: 18px;
+  line-height: 95%;
+}
+.view-mynotes.view-display-id-block .postit .views-field-title {margin: 10px;}
+.view-mynotes.view-display-id-block .postit .views-field-body {margin: 5px;}
 .view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick:after, .view-mynotes.view-display-id-attachment_1 .views-row:after, .postit:after {
 /*content: "";
   position:absolute;
@@ -3399,6 +3641,7 @@ span.more {
   margin: 15px 0;
 }
 div.view-empty .add, div.view-footer .add {
+  clear: left;
   text-align: right;
   padding-top: 1em;
   font-size: 0.9em;
@@ -3438,10 +3681,10 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   margin-bottom: 5px;
 }
 .block-views-exp-family-search-page, /*block Family search*/
-#block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/ 
-#block-views-258063f6767b6942b787998a1c928f07, /*wikicontributions exposed filters*/ 
-.view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*My Records exposed filters*/ 
-.view-id-my_record.view-display-id-page .views-exposed-widgets {
+#block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/
+#block-views-258063f6767b6942b787998a1c928f07, /*Search a reference*/
+.view-id-wikicontribution.view-display-id-page .views-exposed-widgets, /*Wikicontributions exposed filters*/
+.view-id-my_record.view-display-id-page .views-exposed-widgets { /*My Records exposed filters*/
   background: #EEE;
   margin: 0;
   padding: 5px 15px 10px 15px;
@@ -3454,7 +3697,8 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   border-bottom-right-radius: 4px;
 }
 .block-views-exp-family-search-page,
-#block-views-024b51b0948df12f8903897e79946969 {
+#block-views-024b51b0948df12f8903897e79946969,
+#block-views-258063f6767b6942b787998a1c928f07 {
   clear: left;
   padding-bottom: 5px;
   margin-bottom: 20px;
@@ -3466,19 +3710,30 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   border-bottom: 1px solid #E3E1E2;
 }
 .block-views-exp-family-search-page.collapsiblock-processed div.views-submit-button,
-#block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button {
+#block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button,
+#block-views-258063f6767b6942b787998a1c928f07.collapsiblock-processed div.views-submit-button {
   margin-bottom: 20px;
 }
 .block-views-exp-family-search-page .collapsiblock a:after,
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after {
-  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -198px transparent !important;
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock a:after,
+#block-views-258063f6767b6942b787998a1c928f07 .collapsiblock a:after {
+  content: "";
+  display: block;
+  float: right;
+  width: 15px;
+  height: 15px;
+  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll -5px -241px transparent;
+  position: relative;
+  margin-right: 12px;
 }
 .block-views-exp-family-search-page .collapsiblock.collapsiblockCollapsed a:after,
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after {
-  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll 0 -244px transparent !important;
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblockCollapsed a:after,
+#block-views-258063f6767b6942b787998a1c928f07 .collapsiblock.collapsiblockCollapsed a:after {
+  background: url("/sites/all/themes/hba_theme/css/images/icons.png") no-repeat scroll -5px -195px transparent;
 }
 .block-views-exp-family-search-page .collapsiblock.collapsiblock-processed,
-#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed {
+#block-views-024b51b0948df12f8903897e79946969 .collapsiblock.collapsiblock-processed,
+#block-views-258063f6767b6942b787998a1c928f07 .collapsiblock.collapsiblock-processed {
   padding-bottom: 10px;
 }
 .block-views-exp-family-search-page .block-inner .content {
@@ -3557,6 +3812,7 @@ body.page-family-search #edit-vol-wrapper {
 }
 .views-exposed-widget.views-submit-button {/*float: right;*/
 }
+
 /* Block/Page: Last species accounts updates */
 /* Block/Page: Outstanding new references */
 #block-views-log-updated-nodes-block-2, #block-views-biblio-node-references-block-2 {
@@ -3576,10 +3832,8 @@ body.page-family-search #edit-vol-wrapper {
   padding: 10px 20px 20px 20px;
 }
 #block-views-log-updated-nodes-block-2 .views-field-changed, .view-log-updated-nodes .views-field-changed {
-  margin: 10px auto 5px auto;
-  font-size: 0.95em;
-  font-weight: bold;
-  vertical-align: bottom !important;
+  margin: 0 auto 5px auto;
+  font-size: 0.90em;
 }
 .view-log-updated-nodes span.updates-nodes-ago {
   font-weight: normal;
@@ -3587,6 +3841,7 @@ body.page-family-search #edit-vol-wrapper {
 }
 #block-views-log-updated-nodes-block-2 .views-field-field-figure-img-jpg, #block-views-log-updated-nodes-block-2 .views-field-field-figure-img-jpg .field-content, #block-views-log-updated-nodes-block-2 .views-field-field-figure-img-jpg .field-content img, .view-log-updated-nodes .views-field-field-figure-img-jpg {
   vertical-align: top !important;
+  padding-top: 5px;
 }
 #block-views-log-updated-nodes-block-2 .sp_bibliolog_nid_to_link-item, .view-log-updated-nodes .sp_bibliolog_nid_to_link-item {
   display: inline;
@@ -3622,41 +3877,47 @@ body.page-family-search #edit-vol-wrapper {
 .page-species-updated .view-updated-species-by-family .view-footer {
   float: left;
 }
+
 /* Bloc Last updated species (thumbnails) - portada */
 #block-views-log-updated-nodes-block-3 {
+  border: 0;
   background: #e8e7e7;
   padding: 10px;
   margin: 15px auto;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
-#block-views-log-updated-nodes-block-3 .view-content {
+
+#block-views-log-updated-nodes-block-3 div.view.view-log-updated-nodes div.view-content {
   border: 1px solid #7a7a7a;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   background: white;
   margin: 0px auto;
-  text-align: left;
   padding: 0px;
 }
 #block-views-log-updated-nodes-block-3 .view-content table {
   border: 0;
   background: white;
+  margin-bottom: 0;
 }
 #block-views-log-updated-nodes-block-3 .view-content tr {
   background: white;
 }
 #block-views-log-updated-nodes-block-3 .view-content td {
-  vertical-align: bottom !important;
+  vertical-align: baseline !important;
   background: white;
+  width: 25%;
+  text-align: center;
+  padding: 4px 3px;
 }
 #block-views-log-updated-nodes-block-3 .view-content td:hover {
   cursor: pointer;
 }
 #block-views-log-updated-nodes-block-3 .view-content td .views-field-title {
-  padding: 5px 0 0 5px;
+  height: 35px;
+  overflow: hidden;
+  line-height: 110%;
+  padding: 10px 2px;
 }
 /* Views: eines admins */
 /* Pending revisions */
@@ -3930,16 +4191,25 @@ textarea#edit-comment-body-und-0-value {
 div#messages {
   float: none;
 }
-/* Bloc: Videos */
-#block-views-am-videos-for-species-block-1 .content, #block-views-am-videos-for-species-block-1 .content .view-content {
-  padding: 0 !important;
+
+#block-hbw-hbw-embed-best-video .content,
+#block-hbw-hbw-embed-best-photo .content {
+  text-align: center;
 }
 /* Block: External ressources */
-#block-views-flickr-photos-species-block .content, #block-views-flickr-photos-species-block .content .view-content, #block-block-14 .content, #block-block-14 .content .view-content {
+#block-hbw-hbw-embed-best-video .content,
+#block-hbw-hbw-embed-best-photo .content,
+#block-views-flickr-photos-species-block .content,
+#block-views-flickr-photos-species-block .content .view-content,
+#block-block-14 .content, #block-block-14 .content .view-content {
   padding: 0 !important;
   padding-top: 4px !important;
 }
-#block-views-flickr-photos-species-block .content .view-content .views-row, #block-views-flickr-photos-species-block .content .view-content .views-row div, #block-views-flickr-photos-species-block .content .view-content .views-row div span, #block-views-flickr-photos-species-block .content .view-content .views-row div span div, #block-views-ext-res-family-block .content .view-content .views-row {
+#block-views-flickr-photos-species-block .content .view-content .views-row,
+#block-views-flickr-photos-species-block .content .view-content .views-row div,
+#block-views-flickr-photos-species-block .content .view-content .views-row div span,
+#block-views-flickr-photos-species-block .content .view-content .views-row div span div,
+#block-views-ext-res-family-block .content .view-content .views-row {
   display: none;
 }
 .block #tabs, .block #tabs-photos {
@@ -3962,6 +4232,7 @@ div#messages {
 /*Blocs: content in tab*/
 #tabs-photos1 {
   padding: 0 !important;
+  margin-top: 10px;
 }
 #tabs #tabs-1 a, #block-views-ext-res-family-block .view-footer > a {
   height: 25px;
@@ -4487,40 +4758,40 @@ outline: none;
 iframe.references-dialog-iframe,
 iframe.references-dialog-iframe .ui-dialog .ui-dialog-content {padding:0!important;}*/
 
-#edit-field-myr-sp.field-name-field-myr-sp {
+body.page-node-add-my-record #edit-field-myr-sp.field-name-field-myr-sp {
   float: left;
   width: 80%;
   padding-right: 5px;
 }
-#edit-field-myr-nb {
+body.page-node-add-my-record #edit-field-myr-nb {
   float: right !important;
   clear: right !important;
 }
-#edit-field-myr-nb input {
+body.page-node-add-my-record #edit-field-myr-nb input {
   width: 45px;
 }
-input#edit-field-myr-nb-und-0-value {
+body.page-node-add-my-record input#edit-field-myr-nb-und-0-value {
   text-align: right;
   margin-right: 2px;
 }
 /*fieldset*/
-fieldset#node_my_record_form_group_myr_gr_options {
+body.page-node-add-my-record fieldset#node_my_record_form_group_myr_gr_options {
   clear: left;
 }
-fieldset.group-myr-gr-options {
+body.page-node-add-my-record fieldset.group-myr-gr-options {
 }
-#edit-field-myr-date fieldset legend .fieldset-legend, .form-item-field-myr-date-und-0 > label {
+body.page-node-add-my-record #edit-field-myr-date fieldset legend .fieldset-legend, .form-item-field-myr-date-und-0 > label {
   display: none;
 }
-#edit-field-myr-date-und-0-value label {
+body.page-node-add-my-record #edit-field-myr-date-und-0-value label {
   font-weight: normal;
 }
-#field-myr-date-add-more-wrapper fieldset, #field-myr-date-add-more-wrapper fieldset .fieldset-wrapper {
+body.page-node-add-my-record #field-myr-date-add-more-wrapper fieldset, #field-myr-date-add-more-wrapper fieldset .fieldset-wrapper {
   border: 0;
   padding: 0;
   margin: 0;
 }
-.container-inline-date .date-padding {
+body.page-node-add-my-record .container-inline-date .date-padding {
   padding: 0px;
 }
 #my-record-node-form .form-item-field-myr-date-und-0-value .description, #my-record-node-form #edit-field-myr-date-und-0-value .description {
@@ -4846,10 +5117,17 @@ div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-at
 }
 
 /*Block wikipedia + map*/
-#block-block-30 {
+body#page-taxonomy-term #breadcrumb {
+  display: none;
+}
+#block-block-30 #wikipedia {
+  float: left;
   padding: 20px;
   margin-bottom: 20px;
   background-color: #EEE;
+}
+#block-block-30 #breadcrumb {
+  margin-bottom: 20px;
 }
 .geo-map {
   float: right;
@@ -5071,11 +5349,10 @@ div.view.view-pricing table tr td div.pricing div.product input {
   border-top: 2px solid #faf9f9;
   border-bottom: 2px solid #faf9f9;
   padding: 8px;
-  margin: 0 40px 0 0;
+  margin-right: 1em;
 }
-.node-species div#block-block-2 .content-toc ul>:first-child a {
+.node-species div#block-block-2 .content-toc li a:hover {
   color: #c02a35;
-  font-weight: bold;
 }
 div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper div.view-content h3 {
   text-align: center;
@@ -5087,18 +5364,7 @@ div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper di
   margin: 20px 35px;
   width: 450px;
 }
-/** latest updated species **/
-#block-views-log-updated-nodes-block-3 {
-  background: none;
-  border: 0;
-}
-#block-views-log-updated-nodes-block-3 div.view.view-log-updated-nodes div.view-content {
-  border: 0;
-}
-#block-views-log-updated-nodes-block-3 table tr td {
-  width: 25%;
-  text-align: center;
-}
+
 /** landing page ***/
 
 body.context-frontpage #zone-content, body.context-frontpage #region-content {
@@ -5660,6 +5926,7 @@ div.views-megarow-content .form-item-field-myr-nb-und-0-value input {
 div.views-megarow-content textarea {
   min-height: initial;
   height: 23px;
+  width: 90%;
 }
 div.views-megarow-content .resizable-textarea {
   margin-left: 0;
@@ -5671,20 +5938,24 @@ div.views-megarow-content .resizable-textarea .grippie {
 div.views-megarow-content .form-item, div.views-megarow-content .form-item .form-item {
   margin-top: 0;
 }
-div.views-megarow-content .form-item label {
-  width: auto;
-  float: none;
-  font-weight: normal;
-}
 body.page-checklist-set-records .field-name-field-myr-nb,
 body.page-checklist-set-records .field-name-body {
   float: left !important;
   clear: none !important;
   margin-right: 10px;
+  padding-right: 5px;
 }
-body.page-checklist-set-records #edit-field-myr-nb { /*necessary for the first opened megarow*/
+body.context-checklist .field-name-body {float: left;}
+body.context-checklist #edit-field-myr-nb { /*necessary for the first opened megarow*/
   float: left !important;
   clear: none !important;
+  padding-right: 5px;
+}
+body.context-checklist #my-record-node-form label {
+  font-size: 0.8em;
+  width: auto;
+  float: none;
+  font-weight: normal;
 }
 div.views-megarow-content .form-actions {
   /*margin-top: 25px;
@@ -5693,6 +5964,7 @@ div.views-megarow-content .form-actions {
   padding-top: 20px;
 }
 
+<<<<<<< HEAD
 
  @media only screen and (max-width: 800px) {
 /*** frontpage ***/
@@ -5833,4 +6105,18 @@ padding-top:20px;
 
 
 
+=======
+/*Geographival tree*/
+section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu {
+  padding-right: 5px;
+  max-height: 325px;
+  overflow-y: auto;
+}
+section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trail {
+  background-color: #ca4c55;
+}
+section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trail a.active {
+  padding: 5px;
+  color: white;
+>>>>>>> 60ac46831f18b14637e6f5371420ad835e2f66d1
 }
