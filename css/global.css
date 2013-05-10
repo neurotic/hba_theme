@@ -5692,3 +5692,145 @@ div.views-megarow-content .form-actions {
   float: right;*/
   padding-top: 20px;
 }
+
+
+ @media only screen and (max-width: 800px) {
+/*** frontpage ***/
+body.context-frontpage div.view-homepage div.row-content {
+  width: 765px;
+}
+div.view.view-homepage div.views-field.views-field-field-homepage-link div.row-content .image {
+  text-align: center;
+}
+div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
+  position: relative;
+  clear: both;
+  float: none;
+}
+/*** families ***/
+
+
+#block-block-28 .views-exposed-form div.form-item.form-type-textfield input.form-text,
+#block-views-exp-family-search-page .views-exposed-form div.form-item.form-type-textfield input.form-text{
+  max-width: 100%;
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #DDD;
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/throbber.gif) no-repeat 99% 13px;
+}
+#block-views-exp-family-search-page div.views-exposed-widgets.clearfix div.form-item.form-type-select.form-item-order,
+#block-views-exp-family-search-page div.views-exposed-widget {
+clear:left;
+max-width: 100%;
+width: 100%;
+}
+#block-views-exp-family-search-page div.views-exposed-widget.views-submit-button,
+#block-views-exp-family-search-page div.views-exposed-widget.views-reset-button {
+width:auto;
+clear:none;
+}
+
+body #block-views-exp-family-search-page div.views-exposed-widget div.form-item-order div#edit-order_chzn{
+clear:left;
+max-width: 100%;
+width: 100% !important;
+height:35px;
+line-height:35px;
+}
+
+#block-views-exp-family-search-page div.views-exposed-widget select{
+height:35px;
+line-height:35px;
+}
+
+html.js #block-block-28 input.throbbing {
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/thobbering.gif) no-repeat 99% 13px !important;
+}
+body #region-sidebar-second, body #region-sidebar-third {
+  width: 100%;
+}
+body #region-sidebar-second h2.block-title a span, body #region-sidebar-third h2.block-title a span {
+  padding: 10px;
+}
+#region-sidebar-second .block-inner > h2.collapsiblockCollapsed a:after, #region-sidebar-third .block-inner > h2.collapsiblockCollapsed a:after {
+  background: url("images/icons.png") no-repeat scroll -5px -200px transparent;
+}
+#region-sidebar-second .block-inner > h2 a:after, #region-sidebar-third .block-inner > h2 a:after {
+  background: url("images/icons.png") no-repeat scroll -5px -248px transparent;
+  position: relative;
+}
+#block-bird-taxonomies-bird-orders h2.block-title, #block-views-family-node-info-block {
+  display: none;
+}
+#block-bird-taxonomies-bird-orders h2.block-title.collapsiblock {
+  display: block;
+}
+div.vertical-tabs-panes.vertical-tabs-processed {
+  border-top: 1px solid #DDD;
+  width: 100%;
+  margin: 50px 0 0 0;
+  min-width: 100%;
+  clear: both;
+}
+div.vertical-tabs-panes.vertical-tabs-processed fieldset legend {
+  font-size: 1.5em;
+  padding: 10px 0 0 0;
+  font-weight: normal;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget,
+body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi {
+width:100%;
+min-width:100%;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-submit-button,
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-reset-button{
+clear:none;
+width:auto;
+min-width:auto;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi ul li,
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  select {
+height:35px;
+line-height:35px;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  input.form-text {
+height:35px;
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/throbber.gif) no-repeat 99% 13px;
+}
+html.js form#views-exposed-form-family-search-page input.throbbing {
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/thobbering.gif) no-repeat 99% 13px !important;
+}
+
+/** pricing**/
+body div.view.view-pricing table.views-view-grid.cols-4 {
+width:115%;
+}
+body div.view.view-pricing table.views-view-grid.cols-4,
+body div.view.view-pricing table.views-view-grid.cols-4 tbody,
+body div.view.view-pricing table.views-view-grid.cols-4 th,
+body div.view.view-pricing table.views-view-grid.cols-4 tr, 
+body div.view.view-pricing table.views-view-grid.cols-4 td {
+display:block;
+display:inline-block;
+}
+
+body div.view.view-pricing table.views-view-grid.cols-4 td { 
+width:47%;
+padding-bottom:20px;
+}
+
+body div.view.view-pricing table.views-view-grid.cols-4 td.col-2,
+body div.view.view-pricing table.views-view-grid.cols-4 td.col-4 { 
+display:inline-block;
+}
+body div.view.view-pricing table.views-view-grid.cols-4 td.col-3 {
+padding-top:20px;
+}	
+
+
+
+}
