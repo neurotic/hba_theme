@@ -807,7 +807,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.
 }
 
 body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go {
-  /*border-left: 3px solid white;*/
+  border-left: 3px solid transparent;
 }
 
 body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go:hover {
@@ -824,6 +824,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content ul.famil
 }
 
 body #page #section-content #block-bird-taxonomies-bird-orders .content ul li span.plus {
+  float: right;
   position: relative;
   margin-top: -28px;
   height: 28px;
@@ -881,8 +882,8 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
 }
 #block-bird-taxonomies-bird-orders .content ul.species em {
   display: block;
-  margin: 0 0 3px 4px;
-  color: #666;
+  /*margin: 0 0 3px 4px;
+  color: #666;*/
   font-size: 0.95em !important;
   line-height: 95%;
 }
@@ -944,12 +945,15 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   padding-top: 7px;
 }
 
+#block-bird-taxonomies-bird-orders .content ul.families > li > a.wrapper {
+  line-height: 120%;
+}
 #block-bird-taxonomies-bird-orders .content li > .a-wrapper > a {
   padding-left: 26px;
 }
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   color: white;
-  background: url("images/icons.png") no-repeat 135px -600px;
+  /*background: url("images/icons.png") no-repeat 135px -600px;*/
   background-color: #8C8C8C;
   padding: 4px 35px 4px 26px;
   -webkit-border-top-right-radius: 10px;
@@ -963,6 +967,9 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   height: auto;
 }
 
+#block-bird-taxonomies-bird-orders .content ul.families > li.selected div.container {
+  margin-right: 22px;
+}
 #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-position: 154px -600px;
 }
@@ -970,7 +977,6 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
   background-image: none;
 }
-
 
 #block-bird-taxonomies-bird-orders .content ul.families li > .a-wrapper > a {
   padding-left: 40px;
@@ -981,6 +987,7 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-color: #fc6f03;
   color: white;
+  font-size: 0.95em;
 }
 
 #block-bird-taxonomies-bird-orders .content ul.species li > .a-wrapper > a {
@@ -992,9 +999,9 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
   background-color: #ca4c55;
   padding: 4px 10px;
-  -webkit-border-radius: 7px;
+  /*-webkit-border-radius: 7px;
   -moz-border-radius: 7px;
-  border-radius: 7px;
+  border-radius: 7px;*/
   display: block;
   margin-right: 20px;
   height: auto;
@@ -2288,6 +2295,18 @@ div.title-sec {
   margin-left: 0;
   border: 0;
 }
+div.vertical-tabs-panes.vertical-tabs-processed {
+  border-top: 1px solid #DDD;
+  width: 100%;
+  margin: 50px 0 0 0;
+  min-width: 100%;
+  clear: both;
+}
+div.vertical-tabs-panes.vertical-tabs-processed fieldset legend {
+  font-size: 1.5em;
+  padding: 10px 0 0 0;
+  font-weight: normal;
+}
 .node-type-family .vertical-tabs legend {
   display: block;
   font-size: 1.7em;
@@ -2592,8 +2611,12 @@ th.views-field-field-sp-name-common-1, td.views-field-field-sp-name-common-1 {
 .view-species-table-by-family td.views-field-field-figure-img {
   text-align: center;
 }
-.view-my-list .flag-seen, .view-my-list .flag-seen .flag-action, .view-my-list .flag-seen .unflag-action {
-  /*padding: 0 0 5px 5px;*/
+.view-my-list .flag-seen,
+.view-my-list .flag-seen .flag-action,
+body #region-content a.flag-action:hover,
+.view-my-list .flag-seen .unflag-action,
+body #region-content a.unflag-action:hover {
+  color: transparent !important;
 }
 .view-species-table-by-family table a:hover, .view-my-list table a:hover {
   background-color: transparent !important;
@@ -2984,8 +3007,7 @@ body.page-species-comparison #region-content .region-inner {
 body #region-content a.flag-action, body #region-content a.flag-action:hover, body #region-content a.unflag-action, body #region-content a.unflag-action:hover {
   background: none;
   text-shadow: none;
-  /*color: #c6c6c6;*/
-  color: transparent;
+  color: #c6c6c6;
   border: none;
   font-size: 12px;
   font-weight: normal;
@@ -3531,11 +3553,7 @@ body.widget-page #content, body.widget-page #sidebar-first, body.widget-page #si
   border-radius: 7px 7px 7px 7px;
   padding: 5px 10px;
 }
-/* My dashboard */
 
-.region-content #homebox #homebox-add {
-  float: left;
-}
 /**
  * Biblio / Reference full node
  */
@@ -3743,6 +3761,33 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   width: 100%;
   display: block;
   margin: 5px 0;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget,
+body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi {
+width:100%;
+min-width:100%;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-submit-button,
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-reset-button{
+clear:none;
+width:auto;
+min-width:auto;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi ul li,
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  select {
+height:35px;
+line-height:35px;
+}
+
+body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  input.form-text {
+height:35px;
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/throbber.gif) no-repeat 99% 13px;
+}
+html.js form#views-exposed-form-family-search-page input.throbbing {
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/thobbering.gif) no-repeat 99% 13px !important;
 }
 
 /*Family search*/
@@ -4173,6 +4218,7 @@ textarea#edit-comment-body-und-0-value {
 .node-type-foreword .image-small .caption {
   background-color: #f1efdd;
 }
+
 /* Dialog API */
 
 /*modal del flag Mark as Viewed*/
@@ -4196,6 +4242,25 @@ div#messages {
 #block-hbw-hbw-embed-best-photo .content {
   text-align: center;
 }
+
+/**
+ * Blocs
+ */
+
+body #region-sidebar-second, body #region-sidebar-third {
+  width: 100%;
+}
+body #region-sidebar-second h2.block-title a span, body #region-sidebar-third h2.block-title a span {
+  padding: 10px;
+}
+#region-sidebar-second .block-inner > h2.collapsiblockCollapsed a:after, #region-sidebar-third .block-inner > h2.collapsiblockCollapsed a:after {
+  background: url("images/icons.png") no-repeat scroll -5px -200px transparent;
+}
+#region-sidebar-second .block-inner > h2 a:after, #region-sidebar-third .block-inner > h2 a:after {
+  background: url("images/icons.png") no-repeat scroll -5px -248px transparent;
+  position: relative;
+}
+
 /* Block: External ressources */
 #block-hbw-hbw-embed-best-video .content,
 #block-hbw-hbw-embed-best-photo .content,
@@ -4239,6 +4304,26 @@ div#messages {
   padding-left: 60px;
   background: url(/sites/all/themes/hba_theme/css/images/external/scholar.gif) no-repeat left center transparent;
 }
+
+/*Block wikipedia + map*/
+body#page-taxonomy-term #breadcrumb {
+  display: none;
+}
+#block-block-30 #wikipedia {
+  float: left;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #EEE;
+}
+#block-block-30 #breadcrumb {
+  margin-bottom: 20px;
+}
+.geo-map {
+  float: right;
+  padding: 0 0 15px 15px;
+  width: 40%;
+}
+
 /* Page: External ressources */
 .view-flickr-photos-species.view-display-id-page_1 .view-footer, .view-flickr-photos-species.view-display-id-page_1 #tabs {
   padding: 0 !important;
@@ -5116,25 +5201,6 @@ div.view-id-my_record.view-display-id-page .view-id-my_record.view-display-id-at
   clear: left;
 }
 
-/*Block wikipedia + map*/
-body#page-taxonomy-term #breadcrumb {
-  display: none;
-}
-#block-block-30 #wikipedia {
-  float: left;
-  padding: 20px;
-  margin-bottom: 20px;
-  background-color: #EEE;
-}
-#block-block-30 #breadcrumb {
-  margin-bottom: 20px;
-}
-.geo-map {
-  float: right;
-  padding: 0 0 15px 15px;
-  width: 40%;
-}
-
 /*popup calendar*/
 .form-type-date-popup input {
   background: url("/sites/all/themes/hba_theme/css/images/calendar.png") -0px -0px no-repeat;
@@ -5159,7 +5225,9 @@ input#edit-field-myr-date-und-0-value-timeEntry-popup-1 {
   padding-left: 5px;
 }
 
- <<<<<<< HEAD  /*pricing *****/
+/**
+ * Pricing
+ */
  body.page-pricing div#breadcrumb, body.page-pricing h1#page-title {
  display:none;
 }
@@ -5364,9 +5432,34 @@ div#node_species_full_group_sp_tab_descr_notes div.field-group-format-wrapper di
   margin: 20px 35px;
   width: 450px;
 }
+body div.view.view-pricing table.views-view-grid.cols-4 {
+width:115%;
+}
+body div.view.view-pricing table.views-view-grid.cols-4,
+body div.view.view-pricing table.views-view-grid.cols-4 tbody,
+body div.view.view-pricing table.views-view-grid.cols-4 th,
+body div.view.view-pricing table.views-view-grid.cols-4 tr, 
+body div.view.view-pricing table.views-view-grid.cols-4 td {
+display:block;
+display:inline-block;
+}
 
-/** landing page ***/
+body div.view.view-pricing table.views-view-grid.cols-4 td { 
+width:47%;
+padding-bottom:20px;
+}
 
+body div.view.view-pricing table.views-view-grid.cols-4 td.col-2,
+body div.view.view-pricing table.views-view-grid.cols-4 td.col-4 { 
+display:inline-block;
+}
+body div.view.view-pricing table.views-view-grid.cols-4 td.col-3 {
+padding-top:20px;
+}	
+
+/**
+ * Landing page
+ */
 body.context-frontpage #zone-content, body.context-frontpage #region-content {
   width: 100%;
   margin: 0;
@@ -5469,6 +5562,21 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
   right: 0;
   top: 50px;
 }
+
+@media only screen and (max-width: 800px) {
+/*** frontpage ***/
+body.context-frontpage div.view-homepage div.row-content {
+  width: 765px;
+}
+div.view.view-homepage div.views-field.views-field-field-homepage-link div.row-content .image {
+  text-align: center;
+}
+div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
+  position: relative;
+  clear: both;
+  float: none;
+}
+
 /*** taxonomy tree search ***/
 
 .region-sidebar-first div#block-search-form form#search-block-form div div.container-inline {
@@ -5502,6 +5610,9 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
   -webkit-border-radius: 0;
   border-top: 1px solid #E3E1E2;
   border-bottom: 1px solid #E3E1E2;
+}
+html.js #block-block-28 input.throbbing {
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/thobbering.gif) no-repeat 99% 13px !important;
 }
 .region-sidebar-first #block-block-28 .block-inner {
   padding: 10px 15px 0px 15px;
@@ -5544,8 +5655,50 @@ body.context-frontpage div.view-homepage div.views-row-even div.image {
   color: #A7A7A7;
   top: -15px;
 }
-/**** checkout ****/
 
+#block-bird-taxonomies-bird-orders h2.block-title, #block-views-family-node-info-block {
+  display: none;
+}
+#block-bird-taxonomies-bird-orders h2.block-title.collapsiblock {
+  display: block;
+}
+
+#block-block-28 .views-exposed-form div.form-item.form-type-textfield input.form-text,
+#block-views-exp-family-search-page .views-exposed-form div.form-item.form-type-textfield input.form-text{
+  max-width: 100%;
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid #DDD;
+  background: #FFF url(/sites/all/themes/hba_theme/css/images/throbber.gif) no-repeat 99% 13px;
+}
+#block-views-exp-family-search-page div.views-exposed-widgets.clearfix div.form-item.form-type-select.form-item-order,
+#block-views-exp-family-search-page div.views-exposed-widget {
+clear:left;
+max-width: 100%;
+width: 100%;
+}
+#block-views-exp-family-search-page div.views-exposed-widget.views-submit-button,
+#block-views-exp-family-search-page div.views-exposed-widget.views-reset-button {
+width:auto;
+clear:none;
+}
+
+body #block-views-exp-family-search-page div.views-exposed-widget div.form-item-order div#edit-order_chzn{
+clear:left;
+max-width: 100%;
+width: 100% !important;
+height:35px;
+line-height:35px;
+}
+
+#block-views-exp-family-search-page div.views-exposed-widget select{
+height:35px;
+line-height:35px;
+}
+
+/**
+ * Checkout
+ */
 body.page-checkout #zone-content {
   padding-left: 245px;
   background: url("images/bg-register.png") no-repeat 0 150px;
@@ -5964,149 +6117,9 @@ div.views-megarow-content .form-actions {
   padding-top: 20px;
 }
 
-<<<<<<< HEAD
-
- @media only screen and (max-width: 800px) {
-/*** frontpage ***/
-body.context-frontpage div.view-homepage div.row-content {
-  width: 765px;
-}
-div.view.view-homepage div.views-field.views-field-field-homepage-link div.row-content .image {
-  text-align: center;
-}
-div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
-  position: relative;
-  clear: both;
-  float: none;
-}
-/*** families ***/
-
-
-#block-block-28 .views-exposed-form div.form-item.form-type-textfield input.form-text,
-#block-views-exp-family-search-page .views-exposed-form div.form-item.form-type-textfield input.form-text{
-  max-width: 100%;
-  width: 100%;
-  min-height: 40px;
-  border: 1px solid #DDD;
-  background: #FFF url(/sites/all/themes/hba_theme/css/images/throbber.gif) no-repeat 99% 13px;
-}
-#block-views-exp-family-search-page div.views-exposed-widgets.clearfix div.form-item.form-type-select.form-item-order,
-#block-views-exp-family-search-page div.views-exposed-widget {
-clear:left;
-max-width: 100%;
-width: 100%;
-}
-#block-views-exp-family-search-page div.views-exposed-widget.views-submit-button,
-#block-views-exp-family-search-page div.views-exposed-widget.views-reset-button {
-width:auto;
-clear:none;
-}
-
-body #block-views-exp-family-search-page div.views-exposed-widget div.form-item-order div#edit-order_chzn{
-clear:left;
-max-width: 100%;
-width: 100% !important;
-height:35px;
-line-height:35px;
-}
-
-#block-views-exp-family-search-page div.views-exposed-widget select{
-height:35px;
-line-height:35px;
-}
-
-html.js #block-block-28 input.throbbing {
-  background: #FFF url(/sites/all/themes/hba_theme/css/images/thobbering.gif) no-repeat 99% 13px !important;
-}
-body #region-sidebar-second, body #region-sidebar-third {
-  width: 100%;
-}
-body #region-sidebar-second h2.block-title a span, body #region-sidebar-third h2.block-title a span {
-  padding: 10px;
-}
-#region-sidebar-second .block-inner > h2.collapsiblockCollapsed a:after, #region-sidebar-third .block-inner > h2.collapsiblockCollapsed a:after {
-  background: url("images/icons.png") no-repeat scroll -5px -200px transparent;
-}
-#region-sidebar-second .block-inner > h2 a:after, #region-sidebar-third .block-inner > h2 a:after {
-  background: url("images/icons.png") no-repeat scroll -5px -248px transparent;
-  position: relative;
-}
-#block-bird-taxonomies-bird-orders h2.block-title, #block-views-family-node-info-block {
-  display: none;
-}
-#block-bird-taxonomies-bird-orders h2.block-title.collapsiblock {
-  display: block;
-}
-div.vertical-tabs-panes.vertical-tabs-processed {
-  border-top: 1px solid #DDD;
-  width: 100%;
-  margin: 50px 0 0 0;
-  min-width: 100%;
-  clear: both;
-}
-div.vertical-tabs-panes.vertical-tabs-processed fieldset legend {
-  font-size: 1.5em;
-  padding: 10px 0 0 0;
-  font-weight: normal;
-}
-
-body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget,
-body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi {
-width:100%;
-min-width:100%;
-}
-
-body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-submit-button,
-body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-reset-button{
-clear:none;
-width:auto;
-min-width:auto;
-}
-
-body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi ul li,
-body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  select {
-height:35px;
-line-height:35px;
-}
-
-body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  input.form-text {
-height:35px;
-  background: #FFF url(/sites/all/themes/hba_theme/css/images/throbber.gif) no-repeat 99% 13px;
-}
-html.js form#views-exposed-form-family-search-page input.throbbing {
-  background: #FFF url(/sites/all/themes/hba_theme/css/images/thobbering.gif) no-repeat 99% 13px !important;
-}
-
-/** pricing**/
-body div.view.view-pricing table.views-view-grid.cols-4 {
-width:115%;
-}
-body div.view.view-pricing table.views-view-grid.cols-4,
-body div.view.view-pricing table.views-view-grid.cols-4 tbody,
-body div.view.view-pricing table.views-view-grid.cols-4 th,
-body div.view.view-pricing table.views-view-grid.cols-4 tr, 
-body div.view.view-pricing table.views-view-grid.cols-4 td {
-display:block;
-display:inline-block;
-}
-
-body div.view.view-pricing table.views-view-grid.cols-4 td { 
-width:47%;
-padding-bottom:20px;
-}
-
-body div.view.view-pricing table.views-view-grid.cols-4 td.col-2,
-body div.view.view-pricing table.views-view-grid.cols-4 td.col-4 { 
-display:inline-block;
-}
-body div.view.view-pricing table.views-view-grid.cols-4 td.col-3 {
-padding-top:20px;
-}	
-
-
-
-=======
-/*Geographival tree*/
+/**
+ * Geographical tree
+ */
 section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu {
   padding-right: 5px;
   max-height: 325px;
@@ -6118,5 +6131,4 @@ section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trai
 section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trail a.active {
   padding: 5px;
   color: white;
->>>>>>> 60ac46831f18b14637e6f5371420ad835e2f66d1
 }
