@@ -23,6 +23,10 @@ body .logo-img {
   width: 100%;
   margin-bottom: 20px;
 }
+body.page-species-comparison #region-content,
+body.page-species-diff #region-content {
+  width: inherit;
+}
 
 #region-sidebar-second,
 #region-sidebar-third {

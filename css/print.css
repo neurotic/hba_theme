@@ -1,6 +1,6 @@
 /* base */
 
-body {margin:0; padding:0; line-height: 1.4em; word-spacing:1px; letter-spacing:0.2px; font: 13px Arial, Helvetica,"Lucida Grande", serif; color: #000;}
+body {margin:0; padding:0; line-height: 1.4em; word-spacing:1px; letter-spacing:0.2px; font: 13px Arial, Helvetica,"Lucida Grande", serif; color: #000; background-color: #FFF;}
 
 /* Links */
 a:link, a:visited {background: transparent; color:#333; text-decoration:none;}
@@ -49,6 +49,8 @@ img, img a, .more-link a {border:none;}
 #region-sidebar-third,
 #zone-postscript-wrapper,
 #section-footer,
+.family_nav_tab,
+#backtotop,
 #slidebox {
 	display: none;
 }
@@ -64,6 +66,9 @@ img, img a, .more-link a {border:none;}
 #zone-branding-wrapper #region-branding img#logo {
   width: 200px;
   height: auto;
+}
+#section-content {
+  background:#FFF;
 }
 #region-content {
 	width: 100%;
@@ -118,5 +123,5 @@ body.context-species .node-inner.full .content .field-group-format-wrapper {
 
 /* Family stuff */
 body.context-family .vertical-tabs-list {display:none;}
-body.context-family .vertical-tabs .vertical-tabs-panes > *{display:block !important;} /*mostrar totes les vtabs*/
+/*body.context-family .vertical-tabs .vertical-tabs-panes > *{display:block !important;}*/ /*mostrar totes les vtabs*/
 body.context-family fieldset#node_family_full_group_fam_view_vt_sp_table {display:none;}

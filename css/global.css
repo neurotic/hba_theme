@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Arial', sans-serif;
   text-rendering: optimizelegibility;
 }
+h2 {font-size: 20px;}
 body a:link {
   color: #C4202B;
 }
@@ -747,8 +748,10 @@ body .node-links ul li a, body .comment-links ul li a {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* Taxonomic tree */
 
+/**
+ * Taxonomic tree
+ */
 /*mini-buscador de especies */
 #views-exposed-form-species-table-by-family-page-2b .views-exposed-widget {
   padding-bottom: 10px;
@@ -777,7 +780,6 @@ ul.orders > li.active > .item-list > ul {
   display: block;
 }
 #block-bird-taxonomies-bird-orders h2, #block-bird-taxonomies-bird-orders .plus, #block-bird-taxonomies-bird-orders .go {
-  cursor: hand;
   cursor: pointer;
 }
 #block-bird-taxonomies-bird-orders .content {
@@ -797,17 +799,19 @@ body.context-order #block-bird-taxonomies-bird-orders .content, body.context-fam
 body #page #section-content #block-bird-taxonomies-bird-orders .content ul li a.go {
   color: black;
   float: right;
-  background-color: transparent;
   border: none;
   padding: 0 7px;
   position: relative;
-  margin-top: -28px;
-  height: 28px;
-  border-left: 3px solid transparent;
+  margin-top: -24px;
+  height: 22px;
 }
-
-body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go {
-  border-left: 3px solid transparent;
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul li.selected > span.a-wrapper > a.go {
+  margin-top: -29px;
+}
+/*body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go*/
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul.orders > li.selected > span.a-wrapper .go,
+body #page #section-content #block-bird-taxonomies-bird-orders .content ul.families > li.selected > span.a-wrapper .go {
+  border-left: 1px solid white;
 }
 
 body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected > span > .go:hover {
@@ -860,6 +864,9 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
+#block-bird-taxonomies-bird-orders h2.block-title.collapsiblock {
+  display: block;
+}
 #block-bird-taxonomies-bird-orders .content {
   padding: 15px 0px 5px 0px;
   /*border: 1px solid #a0a0a0;*/
@@ -870,6 +877,11 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
   position: relative;
   top: -3px;
 }
+#block-bird-taxonomies-bird-orders .content a {
+  color: black;
+  text-decoration: none;
+  padding-left: 12px;
+}
 #block-bird-taxonomies-bird-orders .content ul.orders {
   /*border-left: 1px solid #b2b1b1;
   margin-left: 10px;*/
@@ -878,7 +890,7 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
 #block-bird-taxonomies-bird-orders .content ul.families {
   border-color: #EE9C31;
   margin-top: 0;
-  padding-top: 7px;
+  /*padding-top: 7px;*/
 }
 #block-bird-taxonomies-bird-orders .content ul.species em {
   display: block;
@@ -887,17 +899,15 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
   font-size: 0.95em !important;
   line-height: 95%;
 }
-#block-bird-taxonomies-bird-orders .content ul.orders ul {
-
-}
 #block-bird-taxonomies-bird-orders .content ul.families ul {
-
+  background-color: #FFFBF5;
+  margin-top: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
-#block-bird-taxonomies-bird-orders .content ul.species ul {
-
-}
-#block-bird-taxonomies-bird-orders .content ul.subspecies {
-  margin-top: 5px;
+#block-bird-taxonomies-bird-orders .content ul.subspecies,
+#block-bird-taxonomies-bird-orders .content ul.subspecies li {
+  margin-bottom: 0;
 }
 #block-bird-taxonomies-bird-orders .content ul li {
   margin-left: 0;
@@ -906,20 +916,18 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
 #block-bird-taxonomies-bird-orders .content ul li ul li {
   padding-left: 20px;
 }
-#block-bird-taxonomies-bird-orders .content a {
-  color: black;
-  text-decoration: none;
-  padding-left: 7px;
-}
-#block-bird-taxonomies-bird-orders .content li:hover {
-/*background: #FCFCD7;*/
-}
 body.context-family #region-content .region-inner {
   border-color: #ca4c55;
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content .go {
-  background: url(images/icons.png) no-repeat -432px -54px;
+  background: url(/sites/all/themes/hba_theme/css/images/go.png) no-repeat 10px 10px;
+  background-color: transparent;
   width: 14px;
+}
+body #page #section-content #block-bird-taxonomies-bird-orders .content li.selected .go {
+  /*background: url(images/icons.png) no-repeat -432px -54px !important;
+  background-color: #CCC;
+  width: 14px;*/
 }
 body #page #section-content #block-bird-taxonomies-bird-orders .content span.plus {
   background: none;
@@ -934,88 +942,140 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content span.plu
 body #page #section-content #block-bird-taxonomies-bird-orders .content li > span:hover > .go {
   /*background-position: -438px -29px;*/
 }
+
 #block-bird-taxonomies-bird-orders .content .species {
   margin-top: 7px;
   margin-bottom: 5px;
-  padding-right: 5px;
+  padding-right: 10px;
+  margin-left: 6px;
   max-height: 325px;
-  overflow-y: auto;/*background: #F5F5F5 none repeat scroll 0 0;*/
-}
-#block-bird-taxonomies-bird-orders .content .subspecies {
-  padding-top: 7px;
-}
-
-#block-bird-taxonomies-bird-orders .content ul.families > li > a.wrapper {
-  line-height: 120%;
+  overflow-y: auto;
+  /*background: #F5F5F5 none repeat scroll 0 0;*/
+  border: 1px solid #CCC;
+  border-top: 0 none;
 }
 #block-bird-taxonomies-bird-orders .content li > .a-wrapper > a {
   padding-left: 26px;
 }
+
+/*orders + families + species*/
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
-  color: white;
   /*background: url("images/icons.png") no-repeat 135px -600px;*/
   background-color: #8C8C8C;
-  padding: 4px 35px 4px 26px;
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-bottom-right-radius: 7px;
-  -moz-border-radius-topright: 7px;
-  -moz-border-radius-bottomright: 7px;
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
-  margin-right: 30px;
-  height: 20px;
-  height: auto;
+  padding: 4px 27px 0 12px;
+  height: 26px;
+  /*border-right: 1px solid #CCC;*/
+  background: #FDFDFD;
 }
 
+/*orders*/
+#block-bird-taxonomies-bird-orders .content ul.orders > li {
+  margin: 2px 0 0;
+}
+#block-bird-taxonomies-bird-orders .content ul.orders > li.selected {
+  margin-top: 2px;
+}
+#block-bird-taxonomies-bird-orders .content ul.orders li.selected > .a-wrapper > a {
+  /*border-top: 1px solid #CCC;*/
+  border-left: 4px solid #8c8c8c;
+  background: rgb(255,255,255);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,1)),color-stop(100%,rgba(240,240,240,1)));
+  background: -webkit-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: -o-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: -ms-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f0f0f0',GradientType=0);
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/*families*/
+#block-bird-taxonomies-bird-orders .content ul.families > li > a.wrapper {
+  line-height: 120%;
+}
 #block-bird-taxonomies-bird-orders .content ul.families > li.selected div.container {
-  margin-right: 22px;
+  margin-right: 8px;
+}
+#block-bird-taxonomies-bird-orders .content ul.families li > .a-wrapper > a {
+  background-position: 154px -600px;
+  /*display: table-cell;
+  word-wrap: break-word;*/
+  /*margin-right: 10px;*/
+  padding-left: 23px;
+  padding-right: 13px;
+  margin-left: 3px;
 }
 #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-position: 154px -600px;
-}
-
-#block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
-  background-image: none;
-}
-
-#block-bird-taxonomies-bird-orders .content ul.families li > .a-wrapper > a {
-  padding-left: 40px;
-  color: #ff7b01;
-  margin-right: 10px;
-}
-
-#block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
-  background-color: #fc6f03;
-  color: white;
   font-size: 0.95em;
+  
+  color: inherit;
+  border-left: 4px solid #fc6f03;
+  /*border-top: 0 none;
+  border-bottom: 1px solid #CCC;*/
+  
+  background: rgb(255,255,255);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(255,255,255,1)),color-stop(100%,rgba(240,240,240,1)));
+  background: -webkit-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: -o-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: -ms-linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: linear-gradient(top,rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#f0f0f0',GradientType=0);
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  /*border: 1px solid #c8c5c5;*/
+  padding-left: 20px;
 }
 
+/*especies*/
 #block-bird-taxonomies-bird-orders .content ul.species li > .a-wrapper > a {
   color: #ca4c55;
-  margin-left: 40px;
-  padding-left: 14px;
+  padding-left: 36px;
+  padding-right: 0;
 }
-
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
-  background-color: #ca4c55;
-  padding: 4px 10px;
+  background-image: none;
   /*-webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   border-radius: 7px;*/
   display: block;
   margin-right: 20px;
   height: auto;
+  
+  /*border-left: 4px solid #ca4c55;*/
+  
+  border-left: 4px solid #ca4c55;
+  border-right: 0 none;
+  color: #ca4c55;
+  border-top: 0 none;
+  border-bottom: 0 none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0 0 0 35px;
 }
-
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a em {
-  color: white;
+  /*color: white;*/
   display: block;
 }
 
+/*subespecies*/
 #block-bird-taxonomies-bird-orders .content ul.subspecies span.a-wrapper {
-  padding-left: 67px;
+  padding-left: 46px;
   font-style: italic;
   font-size: 11px;
+  display: inline-block;
 }
 
 #block-bird-taxonomies-bird-orders .content ul a:hover {
@@ -1432,7 +1492,6 @@ body button, body input[type="reset"], body input[type="submit"], body input[typ
   font-size: 14px;
   font-weight: normal;
   cursor: pointer;
-  cursor: hand;
   letter-spacing: -0.02em;
 }
 #block-views-flag-nodes-block-6 .content, #block-views-flag-nodes-block-5 .content {
@@ -2084,7 +2143,7 @@ div.view.view-galley-fluid ul.pager li a:hover {
 
 /* SP node teaser */
 
-.node-species.node-teaser .node-inner.teaser {
+.node-species.node-teaser div.node-inner.teaser {
   /*background: #FFF5E9;
   padding: 15px 25px 15px 25px;
   margin-bottom: 20px;
@@ -2098,7 +2157,16 @@ div.view.view-galley-fluid ul.pager li a:hover {
   -moz-box-shadow: 0px 1px 1px 1px #F1E6D7;
   box-shadow: 0px 1px 1px 1px #F1E6D7;*/
   border-bottom: 1px solid #CCC;
-  padding-bottom: 10px;
+}
+#block-block-31 div.content div.node-inner.teaser {
+  border: 1px solid rgb(236, 216, 179);
+  background: rgba(252, 248, 209, 0.55);
+  padding: 10px;
+  margin: 5px 0;
+}
+.context-news div.content div.node-inner.teaser {
+  border: 1px solid rgb(236, 216, 179);
+  background: rgba(252, 248, 209, 0.55);
 }
 .page-node-external-resources .node-inner.teaser {
   border-bottom: 0;
@@ -2109,6 +2177,10 @@ div.view.view-galley-fluid ul.pager li a:hover {
   background: #FFF;
   padding: 20px;
   margin: 10px 10px 0 0;
+}
+.context-news .node-inner.teaser div.content div.left {
+  background: none;
+  margin: 0;
 }
 .node-inner.teaser div.content h2.node-title {
   font-size: 14px;
@@ -2216,6 +2288,9 @@ table.diff thead tr th {
 }
 .view-comparediff2 .view-content table th, .view-comparediff2 .view-content table td {
   vertical-align: top;
+}
+.view-comparediff2 tr.log {
+  color: rgb(33, 61, 131);
 }
 .view-comparediff2 .view-content table td.col_0, .view-comparediff2 .view-content table td.col_1 {
   width: 40%;
@@ -2700,7 +2775,7 @@ div#status.ds-status {
   white-space: nowrap;
 }
 td.views-field-field-sp-status div#status.ds-status {
-  position: initial;
+  position: inherit;
   width: 20px;
   height: 20px;
   background-position: center center;
@@ -2910,8 +2985,9 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
   margin-top: 1.5em;
 }
 /*page*/
-body.page-species-comparison #region-content {
-  width: 74%;
+body.page-species-comparison #region-content,
+body.page-species-diff #region-content {
+  width: 75%;
   margin-bottom: 0;
 }
 body.page-species-comparison #region-content .region-inner {
@@ -3340,7 +3416,7 @@ span.header-index {
 /* Beautytip */
 
 /*afegir un boto per poder tancar el popup*/
-#page #region-content .bt-content .close-plate-img {
+div.bt-content .close-plate-img {
   position: absolute;
   top: 4px;
   right: 6px;
@@ -3359,7 +3435,7 @@ span.lm-wrapper span.lm-number {
   cursor: pointer;
   opacity: 0.6;
 }
-.bt-content span.link-arroba a.ext {
+div.bt-content span.link-arroba a.ext {
   background: transparent url(/sites/all/modules/extlink/extlink.png) no-repeat right center;
   padding-right: 12px;
 }
@@ -3761,25 +3837,26 @@ form#views-form-set-records-default input#edit-actionsetrecords2 {
   width: 100%;
   display: block;
   margin: 5px 0;
+  cursor: pointer;
 }
 
 body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget,
 body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi {
-width:100%;
-min-width:100%;
+  width:100%;
+  min-width:100%;
 }
 
 body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-submit-button,
 body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget.views-reset-button{
-clear:none;
-width:auto;
-min-width:auto;
+  clear:none;
+  width:auto;
+  min-width:auto;
 }
 
 body form#views-exposed-form-family-search-page div.views-exposed-form  div.form-type-select div.chzn-container-multi ul li,
 body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  select {
-height:35px;
-line-height:35px;
+  height:35px;
+  line-height:35px;
 }
 
 body form#views-exposed-form-family-search-page div.views-exposed-form div.views-exposed-widget div.form-item  input.form-text {
@@ -4039,6 +4116,15 @@ body.node-type-locality article.node-my-record header h2 {
 #views-form-set-records-default td.views-empty {
   text-align: center;
   padding: 20px 5px 5px 5px;
+}
+
+/**
+ * News
+ */
+div.view-id-news.view-display-id-block_1 article h2.node-title {
+  font-size: 20px;
+  margin-bottom: 0;
+  line-height: 105%;
 }
 
 /**
@@ -4545,7 +4631,7 @@ input#email-M6JL4NGD.field.blink {
 }
 .node-type-news .node-inner.full #match .label {
   margin-bottom: 0.5em;
-  color: #8C7E7E;
+  font-weight: bold;
 }
 /*Block: Content I follow*/
 .block.block-flag-nodes-block-4 .block-inner > .content, .block.block-flag-nodes-block-4 .block-inner > .content table {
@@ -5083,12 +5169,6 @@ div.field_myr_map > div, div.field_myr_map .openlayers-map {
   border-bottom: 0 none;
   letter-spacing: 0;
 }
-#block-block-31 div.content div.node-inner.teaser {
-  border: 1px solid rgb(236, 216, 179);
-  background: rgba(252, 248, 209, 0.55);
-  padding: 10px;
-  margin: 5px 0;
-}
 #block-views-my-record-block-3 .view-grouping-content .views-row {
   font-size: 1em;
   height: 35px;
@@ -5445,7 +5525,7 @@ display:inline-block;
 }
 
 body div.view.view-pricing table.views-view-grid.cols-4 td { 
-width:47%;
+width:23%; /* aumentar a medida que la tabla se hace más pequeña... y así las celdas se desplazan a la segunda fila */
 padding-bottom:20px;
 }
 
@@ -5543,39 +5623,40 @@ body.context-frontpage div.view-homepage div.views-row-odd div.link {
   padding: 10px 0;
   text-align: center;
 }
-body.context-frontpage div.view-homepage div.views-row-odd div.link a {
+body.context-frontpage div.view-homepage div.link a {
   background: #D33C35;
   margin: 0;
   padding: 12px 25px;
   color: #FFF;
   font-size: 18px;
+  border-radius:10px;
 }
-body.context-frontpage div.view-homepage div.views-row-odd div.link a:hover {
+body.context-frontpage div.view-homepage div.link a:hover {
   background: #333;
 }
+/*   
 body.context-frontpage div.view-homepage div.views-row-odd div.image img {
   width: 651px;
   height: 469px;
-}
+}*/
 body.context-frontpage div.view-homepage div.views-row-even div.image {
   position: absolute;
   right: 0;
   top: 50px;
 }
 
-@media only screen and (max-width: 800px) {
 /*** frontpage ***/
-body.context-frontpage div.view-homepage div.row-content {
+/*body.context-frontpage div.view-homepage div.row-content {
   width: 765px;
-}
+}*/
 div.view.view-homepage div.views-field.views-field-field-homepage-link div.row-content .image {
   text-align: center;
 }
-div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
+/*div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
   position: relative;
   clear: both;
   float: none;
-}
+}*/
 
 /*** taxonomy tree search ***/
 
@@ -5648,19 +5729,13 @@ html.js #block-block-28 input.throbbing {
 .region-sidebar-first #block-block-28 h2.collapsiblock a:after {
   display: none;
 }
-#block-bird-taxonomies-bird-orders div.block-inner ul {
-  margin-top: 15px;
-}
 .region-sidebar-first #block-block-28 h2 span.plus {
   color: #A7A7A7;
   top: -15px;
 }
 
-#block-bird-taxonomies-bird-orders h2.block-title, #block-views-family-node-info-block {
+#block-views-family-node-info-block {
   display: none;
-}
-#block-bird-taxonomies-bird-orders h2.block-title.collapsiblock {
-  display: block;
 }
 
 #block-block-28 .views-exposed-form div.form-item.form-type-textfield input.form-text,
@@ -5803,6 +5878,7 @@ body.page-checkout #region-content form#commerce-checkout-form-review table.chec
   font-size: 21px;
   padding: 0 0 0 20px;
 }
+
 table#plan-comparison, table#plan-comparison tr {
   margin: 0px 0 0 0;
   border: 0;
@@ -6131,4 +6207,181 @@ section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trai
 section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trail a.active {
   padding: 5px;
   color: white;
+}
+
+/**
+ * Family index
+ */
+body.page-family-index #zone-content, body.page-family-index #region-content {
+  width: 99%;
+  padding-top: 0;
+}
+body.page-family-index .family-row-wrapper {
+  /*float: left;
+  height: 135px;*/
+}
+ /* break row after 3rd family (only useful if viewport has always the same width...) */
+/*body.page-family-index .family-row-wrapper:nth-child(3):after {
+  content:"\A";
+  white-space:pre;
+}*/
+body.page-family-index .family-row-wrapper h3 {
+  border-bottom: 0 none;
+  margin-bottom: 0;
+  font-size: 1.2em;
+  text-align: center;
+  width: 120px;
+  color: white !important;
+  background-color: #fc6f03;
+  padding: 5px;
+  float: left;
+  margin: 40px -35px 0 -45px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+/*make Opisthocomiformes smaller*/
+body.page-family-index .family-row-wrapper h3:nth-child(13) {
+  letter-spacing: -1px;
+}
+body.page-family-index .family-row-wrapper ul {
+  float: left;
+  list-style: none;
+  /*display: inline-block;*/
+  display: compact;
+  /*margin-left: 90px;*/
+}
+body.page-family-index .family-row-wrapper li {
+  float: left;
+  text-align: center;
+  line-height: 90%;
+}
+body.page-family-index .family-row-wrapper li div.views-field views-field-field-fam-sci div.field-content {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body.page-family-index .family-row-wrapper li div.views-field-field-fam-eng div.field-content {
+  word-wrap: break-word;
+  max-width: 100px;
+}
+
+/* with tables */
+
+body.page-family-index table {
+  border: 0 none;
+  width: inherit;
+  float: left;
+}
+body.page-family-index tbody {
+  border: 0 none;
+}
+body.page-family-index caption {
+  -webkit-transform: rotate(-90deg);
+  border-bottom: 0 none;
+  margin-bottom: 0;
+  font-size: 1.1em;
+  text-align: center;
+  width: 120px;
+  background-color: #fc6f03;
+  padding: 5px;
+  float: left;
+  margin: 50px 0px -100px -45px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+body.page-family-index caption a {
+  color: white !important;
+}
+/*make Opisthocomiformes smaller*/
+/*body.page-family-index .view-content caption:nth-child(13) { doesn't work with caption..?
+  letter-spacing: -1px;
+}*/
+body.page-family-index tr {
+  background-color: transparent;
+  border-bottom: 0 none;
+  display: inline; /*no millora gaire*/
+}
+body.page-family-index tr:hover td,
+body.page-family-index tr.even:hover td.active,
+body.page-family-index tr.odd:hover td.active {
+  background: none;
+}
+body.page-family-index td {
+  display: inline-table;
+  vertical-align: bottom;
+  text-align: center;
+  /*float: left;*/
+  text-align: center;
+  line-height: 90%;
+  margin: 0 3px;
+}
+body.page-family-index td a {
+  color: inherit !important;
+}
+body.page-family-index td:hover {
+  background: #EEE !important;
+}
+/*body.page-family-index td:nth-child(1), also ok*/
+body.page-family-index td.col_0 {
+  margin-left: 50px;
+}
+body.page-family-index td .img {
+  min-height: 100px; /*provisional xq content no baseline*/
+}
+body.page-family-index td div.sci {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+body.page-family-index td div.eng {
+  height: 20px;
+  word-wrap: break-word;
+  max-width: 100px;
+}
+
+/*
+ * Pagina de usuario
+ */
+
+/* Bloc Your subscription */
+
+.btn {
+  background: -moz-linear-gradient(center top , #F7F7F7 0%, #F7F7F7 30%, #E1E1E1 100%) repeat-x scroll 0 0 #E1E1E1;
+  border-color: #CACACA;
+  border-radius: 2px 2px 2px 2px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #666666 !important;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 0;
+  padding: 7px 13px;
+  position: relative;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle;
 }

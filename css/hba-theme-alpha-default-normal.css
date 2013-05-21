@@ -94,22 +94,23 @@ body #region-sidebar-third {
   padding-left: 16px;
 }
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
-  /*padding-left: 4px;*/
-  margin-right: 0;
-  padding: 4px 35px 4px 16px;
+  /*padding-left: 4px;
+  margin-right: 0;*/
+  /*padding: 4px 35px 4px 16px;*/
 }
-#block-bird-taxonomies-bird-orders .content ul.families li > .a-wrapper > a {
+/*#block-bird-taxonomies-bird-orders .content ul.families li > .a-wrapper > a {
   padding-left: 26px;
 }
 #block-bird-taxonomies-bird-orders .content ul.species li > .a-wrapper > a {
   margin-left: 10px;
+  padding-left: 36px;
 }
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
-  padding: 4px 5px 4px 16px;
+  padding: 4px 5px 4px 36px;
 }
 #block-bird-taxonomies-bird-orders .content ul.subspecies span.a-wrapper {
   padding-left: 32px;
-}
+}*/
 #block-views-flag-nodes-block-6 h2, #block-views-flag-nodes-block-5 h2 {
   font-size: 12px;
   padding-top: 3px;

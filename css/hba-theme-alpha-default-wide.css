@@ -14,6 +14,10 @@ body #zone-content aside.region {
 #region-content {
   width: 580px;
 }
+body.page-species-comparison #region-content,
+body.page-species-diff #region-content {
+  width: 75%;
+}
 
 #block-bird-taxonomies-bird-orders .content {
   width: 236px;

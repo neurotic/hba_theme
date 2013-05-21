@@ -247,6 +247,7 @@ function configure_comment_form(&$form) {
 function hba_theme_form_views_exposed_form_alter(&$form, &$form_state){
   // Overrides the views exposed form url to be the current one
   // Avoids odd views redirect to views page from an exposed form in block
+  // cas del bloc de les pagines /reference/xx: es perque utilitzem el mateix bloc (el de /reference/all) per les 3 pagines
   if ($form['#id'] == 'views-exposed-form-set-records-default') {
     $form['#action'] = request_uri();
   }
