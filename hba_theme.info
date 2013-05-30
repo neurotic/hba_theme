@@ -39,9 +39,14 @@ css[global.css][name] = 'Your custom global styles'
 css[global.css][description] = 'This file holds all the globally active custom CSS of your theme.'
 css[global.css][options][weight] = '10'
 css[print.css][name] = 'print.css'
+
 css[print.css][description] = ''
 css[print.css][options][weight] = '10'
 css[print.css][options][media] = 'print'
+
+css[carlos.css][name] = 'Carlos CSS'
+css[carlos.css][description] = 'CSS con modificaciones de Carlos Neurotic'
+css[carlos.css][options][weight] = '11'
 
 scripts[] = js/actions.js
 ;scripts[] = /../../sites/all/modules/bird_taxonomies/bird_taxonomies.js

@@ -1,0 +1,85 @@
+body.page-plate div#region-content h1:after {
+  background: url("images/icons.png") no-repeat scroll -5px -200px transparent;
+  content: "";
+  display: block;
+  float: right;
+  height: 15px;
+  margin-right: 7px;
+  position: relative;
+  width: 15px;
+  margin-top: 6px;
+}
+
+body.page-plate h1#page-title {
+  width: 98%;
+}
+
+body.page-plate div#region-content.desplegado h1:after {
+  background: url("images/icons.png") no-repeat scroll -5px -248px transparent
+}
+
+body div.view.view-galley-fluid div.views-widget-filter-field_sp_name_common_value,
+body div.view.view-galley-fluid div.views-reset-button {
+  clear: none;
+}
+
+body div.view.view-galley-fluid #edit-image-style-wrapper {
+  clear: left;
+}
+
+body.page-plate #region-content .region-inner {
+}
+
+body.page-plate #region-content .region-inner .view-content {
+  background: white;
+}
+
+body.page-plate #region-content .region-inner .views-submit-button {
+  float: right;
+  padding-right: 0;
+}
+
+body.page-plate #region-content .region-inner .views-reset-button {
+  float: right;
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+body.page-plate .view-filters #checkboxes-wrapper {
+  margin: 20px 0 0 10px;
+}
+
+body.page-plate .view-filters #checkboxes-wrapper .form-type-checkbox {
+  margin-right: 10px;
+  display: inline;
+}
+
+body.block-inner .views-field-counter span.field-content {
+  background: none;
+}
+
+body.page-plate #region-content .region-inner .view-content:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+body.page-plate #region-content .region-inner .view-content {
+  display: inline-block;
+}
+
+html[xmlns] body.page-plate #region-content .region-inner .view-content {
+  display: block;
+}
+
+* html body.page-plate #region-content .region-inner .view-content {
+  height: 1%;
+}
+
+body div.view.view-galley-fluid .views-field.views-field-counter,
+body div.view.view-galley-fluid .views-field.views-field-nothing {
+  background: none;
+}
