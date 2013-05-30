@@ -92,7 +92,7 @@
       if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && ($flag && !$flag->is_flagged($node->nid))) {
       
           // GROUP General
-          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing an unrestricted family content. ... ...</p>';
+          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing an restricted family content. ... ...</p>';
           
           // Altres grups
           /*hide($content['group_fam_view_vt']['group_fam_view_vt_syst']['field_fam_systematics']);
@@ -128,6 +128,10 @@
       
       else {
         //hide($content['group_fam_view_vt']['group_fam_view_vt_sp_table']['field_fam_ordenacio']); // ho ocultem via el template field--field-fam-ordenacio.tpl.php
+        // Informar als rols free que estan veient un contingut gratis
+        if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && ($flag && $flag->is_flagged($node->nid))) {
+          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing an unrestricted family content.</p>';
+        }
         print render($content);
         print '<div class="family_nav_tab"><a href="#" class="prev_tab" id="family_prev_tab">← </a> <a href="#" class="next_tab" id="family_next_tab"> →</a></div>';
       }

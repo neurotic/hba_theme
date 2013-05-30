@@ -61,7 +61,7 @@
       hide($content['comments']);
       hide($content['links']);
       
-      print render($content);
+      print '<div id="biblio-main-info">' . render($content) . '</div>';
 
       global $user;
       if (empty($user->roles[6]) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) {

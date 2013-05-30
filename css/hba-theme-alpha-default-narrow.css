@@ -112,3 +112,6 @@ body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wr
 #block-block-2 .content-toc ul li {
   width: 120px !important;
 }
+table#plan-comparison, table#plan-comparison tr {
+  width:100%;
+}

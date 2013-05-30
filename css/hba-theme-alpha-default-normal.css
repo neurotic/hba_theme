@@ -198,3 +198,6 @@ body #region-sidebar-third {
 body #block-block-2 .content-toc ul li.column2 {
   margin-left: 15em;
 }
+table#plan-comparison, table#plan-comparison tr {
+  width:85%;
+}

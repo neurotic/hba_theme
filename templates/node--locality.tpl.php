@@ -145,14 +145,15 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
             $fieldset['element'] = array(
               '#title' => t('Set new records'),
               '#description' => '<p class="help">Here are the species present in ' . render($content['field_myr_country'][0]) . '. You can now proceed to add species to the checklist. Note that those species you already added to the checklist are not available in the following table (click <span class="add-record"><a title="Add a single record" href="/node/add/my-record?field_myr_checklist=' . $_SESSION['hbw_action']['checklist_nid'] . '" class="add-dialog">here</a> to add a single species that is not officially classified in ' . render($content['field_myr_country'][0]) . '</span>).</p>',
+              // $_SESSION['hbw_action']['checklist_nid'] ===> canviar per if (isset($_GET['field_myr_country']) { print $_GET['field_myr_country']; }
               '#attributes' => array('class' => array('set-records', 'collapsible', 'collapsed')),
               '#value' => views_embed_view('set_records','default'),
               '#children' => '',
             );
             print theme('fieldset', $fieldset);
             
-            // Definir el checklist nid com variable de sessió si l'usuari vol crear més node my-record + filtrar la view set-records
-            $_SESSION['hbw_action']['checklist_nid'] = arg(1);
+            // Definir el checklist nid com variable de sessió si l'usuari vol crear més nodes my-record + filtrar la view set-records
+            //$_SESSION['hbw_action']['checklist_nid'] = arg(1);
           ?>
         </div>
         

@@ -30,8 +30,8 @@
       $('#block-views-flag-nodes-block-5').hoverIntent(config);
       $('#block-views-flag-nodes-block-6').hoverIntent(config);
 
-      $('body.page-plate h1#page-title,body.page-plate2 h1#page-title').unbind('click');
-      $('body.page-plate h1#page-title,body.page-plate2 h1#page-title').click(function() {
+      $('body.page-plate h1#page-title').unbind('click');
+      $('body.page-plate h1#page-title').click(function() {
         //$('body.page-plate #region-content .view-filters').show();
         $('div.view.view-galley-fluid .view-filters').slideToggle("slow");
       });
@@ -49,3 +49,4 @@
  };
 
 }(jQuery));
+

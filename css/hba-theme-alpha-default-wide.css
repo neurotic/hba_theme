@@ -86,3 +86,7 @@ body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
 body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-position: 234px -600px;
 }
+
+table#plan-comparison, table#plan-comparison tr {
+  width:70%;
+}

@@ -60,6 +60,11 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
       * or you can simply copy this function to your sub theme and change the values
       */
   
+  /*case 'search_block_form':
+    //dsm($form['search_block_form']);
+    //$form['search_block_form']['#default_value'] = 'Type your keyword(s) here';
+    break;*/
+    
   case 'user_login_block':
     $form['name']['#attributes']['placeholder'] = t('Username');
     $form['pass']['#attributes']['placeholder'] = t('Password...');
@@ -132,14 +137,12 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
     unset($form['view_taxo_paisos']);
     $form['inputs']['submit'] = $form['submit'];
     unset($form['submit']);
-    
+
     $form['inputs']['#type'] = 'fieldset';
     //}
 
-
     break;
   }
-  
 
 }
 
@@ -223,6 +226,13 @@ function hba_theme_preprocess_page(&$variables, $hook) {
     $variables['title'] = db_query('SELECT name FROM {taxonomy_term_data} where tid = :tid limit 1',array(':tid' =>arg(2)))->fetchField();
     // el titol que mostra el navigador web
     drupal_set_title($variables['title']);
+    
+    // generar template page--taxonomy--vocabulary_machine_name.tpl.php
+    $tid = (int)arg(2);
+    $term = taxonomy_term_load($tid);
+    if(is_object($term)) {
+      $variables['theme_hook_suggestions'][] = 'page__taxonomy__'.$term->vocabulary_machine_name;
+    }
   }
   
   drupal_add_library('hoverintent', 'hoverintent', TRUE);
@@ -248,7 +258,7 @@ function hba_theme_form_views_exposed_form_alter(&$form, &$form_state){
   // Overrides the views exposed form url to be the current one
   // Avoids odd views redirect to views page from an exposed form in block
   // cas del bloc de les pagines /reference/xx: es perque utilitzem el mateix bloc (el de /reference/all) per les 3 pagines
-  if ($form['#id'] == 'views-exposed-form-set-records-default') {
+  if ($form['#id'] == 'views-exposed-form-set-records-default' || $form['#id'] == 'views-exposed-form-biblio-node-references-page-2') {
     $form['#action'] = request_uri();
   }
 }

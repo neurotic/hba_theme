@@ -18,13 +18,18 @@
       hide($content['links']);
       print render($content);
       
-      // Bloc Families for xxx order
-      $view = views_get_view('families_of_the_order');
-      $view->set_display('block');
-      print '<div class="view-families-of-the-order-wrapper">';
-      print '<h2 class="block-title">' . $view->get_title() . '</h2>';
-      print $view->preview('block');
-      print '</div>';
+      if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles))) {
+        print '<p class="avis">Only members can view the family teasers list. Login or register to access to a lot of extra features !</p>';
+      }
+      else {
+        // Bloc Families for xxx order
+        $view = views_get_view('families_of_the_order');
+        $view->set_display('block');
+        print '<div class="view-families-of-the-order-wrapper">';
+        print '<h2 class="block-title">' . $view->get_title() . '</h2>';
+        print $view->preview('block');
+        print '</div>';
+      }
     ?>
   </div>
   
