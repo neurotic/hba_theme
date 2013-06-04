@@ -114,6 +114,9 @@ h1#page-title {
 #region-menu {
   margin-top: 15px;
 }
+#region-menu #block-system-main-menu div.block-inner {
+  text-align:center;
+}
 #region-menu #block-system-main-menu div.content {
   background: rgb(251,248,248); /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -130,7 +133,7 @@ h1#page-title {
   -moz-border-radius: 4px;
   border-radius: 4px;
   padding: 0 20px;
-  display: block;
+  display: inline-block;
 }
 #region-menu #block-system-main-menu div.content li {
   float: left;
@@ -181,8 +184,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffefe', end
 .logo-img {
   margin-left: auto;
   margin-right: auto;
-  width: 416px;
+  width: 276px;
   float: none;
+  text-align:center;
 }
 #region-sidebar-first, #region-content {
   margin-left: 5px !important;
@@ -635,6 +639,7 @@ body #section-content #region-sidebar-second h2.collapsiblockCollapsed span, bod
 #region-sidebar-second .block > .clearfix:after, #region-sidebar-third .block > .clearfix:after {
   content: '';
   display: inline;
+  border-color:#FFF;
 }
 /*
 #region-sidebar-second h2 {
@@ -2827,7 +2832,7 @@ article.node-species div.ds-other-names p {
 div#status.ds-status {
   position: absolute;
   right: 10px;
-  top: 20px;
+  top: 30px;
   font-size: .95em;
   color: #999;
   white-space: nowrap;
@@ -5428,6 +5433,10 @@ div.view.view-pricing div.view-content:hover {
   border: 0;
   background: none;
 }
+div.view.view-pricing {
+  max-width:800px;
+  margin:0 auto;
+}
 div.view.view-pricing table {
   border: 0 none;
 }
@@ -5435,7 +5444,7 @@ div.view.view-pricing table.views-view-grid:hover tr td {
   background: none;
 }
 div.view.view-pricing table tr td {
-  width: 25%;
+  width: 33%;
   vertical-align: top;
 }
 
@@ -5555,7 +5564,7 @@ body.context-pricing #region-content .region-inner {
 }
 div.view.view-pricing table tr td div.pricing div.price {
   color: #4E4E4D;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
 }
 div.view.view-pricing table tr td div.pricing div.body {
@@ -5571,7 +5580,8 @@ div.view.view-pricing table tr td div.pricing div.product {
   padding-top: 5px;
 }
 div.view.view-pricing table tr td div.pricing div.product input {
-  padding: 10px 45px;
+  padding: 10px 10%;
+  width:80%;
   font-size: 14px;
 }
 div.view.view-pricing table tr td.col-1 div.pricing div.product input:hover {
@@ -5582,6 +5592,9 @@ div.view.view-pricing table tr td.col-2 div.pricing div.product input:hover {
 }
 div.view.view-pricing table tr td.col-3 div.pricing div.product input:hover {
   color:#0B799D;
+}
+body.page-pricing div#block-block-34 {
+  display:none;
 }
 /*species node*/
 
@@ -5692,7 +5705,7 @@ body.context-frontpage div.view-homepage div.views-row-odd div.desc {
   position: absolute;
   right: 0;
   top: -20px;
-  padding: 60px 40px 40px 40px;
+  padding: 49px 40px 40px 40px;
   width: 250px;
   font-size: 1.1em;
   background: rgb(253,253,253); /* Old browsers */
@@ -5704,7 +5717,7 @@ body.context-frontpage div.view-homepage div.views-row-odd div.desc {
   background: linear-gradient(to bottom, rgba(253,253,253,1) 0%, rgba(253,253,253,1) 75%, rgba(232,232,232,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#e8e8e8', GradientType=0 ); /* IE6-9 */
 }
-body.context-frontpage div.view-homepage div.views-row-odd div.desc h3 {
+body.context-frontpage div.view-homepage div.views-row-odd div.desc h3, div.views-row.views-row-1 div.views-field.views-field-field-homepage-link div.field-content div.row-content p:first-child {
   color: #D33C35 !important;
   border: 0;
   font-size: 25px;
@@ -6592,3 +6605,5 @@ body.page-node-203922 .views-field-field-text-banner-link a {
 body.page-node-203922 .views-field-field-text-banner-link a:hover {
   background: #bb2934;
 }
+
+

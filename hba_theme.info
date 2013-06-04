@@ -48,6 +48,10 @@ css[carlos.css][name] = 'Carlos CSS'
 css[carlos.css][description] = 'CSS con modificaciones de Carlos Neurotic'
 css[carlos.css][options][weight] = '11'
 
+css[fernando.css][name] = 'Fernando CSS'
+css[fernando.css][description] = 'CSS con modificaciones de Fernando Neurotic'
+css[fernando.css][options][weight] = '12'
+
 scripts[] = js/actions.js
 ;scripts[] = /../../sites/all/modules/bird_taxonomies/bird_taxonomies.js
 
