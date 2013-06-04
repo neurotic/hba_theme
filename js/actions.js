@@ -30,8 +30,19 @@
       $('#block-views-flag-nodes-block-5').hoverIntent(config);
       $('#block-views-flag-nodes-block-6').hoverIntent(config);
 
+      // Miramos en qué estado está y lo ponemos
+      var filter_visible = $.cookie('plates-filters-visible');
+      if(filter_visible == 'false') {
+        $('div.view.view-galley-fluid .view-filters').hide();
+      }
+
       $('body.page-plate h1#page-title').unbind('click');
       $('body.page-plate h1#page-title').click(function() {
+        //console.log("Poniendo la cookie");
+        $.cookie('plates-filters-visible', $('body.page-plate .view-filters').is(":hidden"), {
+          path: settings.basePath,
+          expires: 365,
+        });
         //$('body.page-plate #region-content .view-filters').show();
         $('div.view.view-galley-fluid .view-filters').slideToggle("slow");
       });
