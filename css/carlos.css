@@ -91,3 +91,115 @@ body .block-inner .views-field-counter span.field-content {
 body .view.view-galley-fluid .view-filters {
   display: block;
 }
+
+body #overlay {
+  position: absolute;
+}
+
+#bowlG{
+position:relative;
+width:10px;
+height:10px;
+top: 25%;
+left: 75%;
+}
+
+#bowl_ringG{
+position:absolute;
+width:10px;
+height:10px;
+border:1px solid white;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-ms-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+}
+
+.ball_holderG{
+position:absolute;
+width:3px;
+height:10px;
+left:4px;
+top:0px;
+-moz-animation-name:ball_moveG;
+-moz-animation-duration:1.7s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-timing-function:linear;
+-webkit-animation-name:ball_moveG;
+-webkit-animation-duration:1.7s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:linear;
+-ms-animation-name:ball_moveG;
+-ms-animation-duration:1.7s;
+-ms-animation-iteration-count:infinite;
+-ms-animation-timing-function:linear;
+-o-animation-name:ball_moveG;
+-o-animation-duration:1.7s;
+-o-animation-iteration-count:infinite;
+-o-animation-timing-function:linear;
+animation-name:ball_moveG;
+animation-duration:1.7s;
+animation-iteration-count:infinite;
+animation-timing-function:linear;
+}
+
+.ballG{
+position:absolute;
+left:0px;
+top:-2px;
+width:4px;
+height:4px;
+background:#FFFFFF;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+-ms-border-radius:3px;
+-o-border-radius:3px;
+border-radius:3px;
+}
+
+@-moz-keyframes ball_moveG{
+0%{
+-moz-transform:rotate(0deg)}
+
+100%{
+-moz-transform:rotate(360deg)}
+
+}
+
+@-webkit-keyframes ball_moveG{
+0%{
+-webkit-transform:rotate(0deg)}
+
+100%{
+-webkit-transform:rotate(360deg)}
+
+}
+
+@-ms-keyframes ball_moveG{
+0%{
+-ms-transform:rotate(0deg)}
+
+100%{
+-ms-transform:rotate(360deg)}
+
+}
+
+@-o-keyframes ball_moveG{
+0%{
+-o-transform:rotate(0deg)}
+
+100%{
+-o-transform:rotate(360deg)}
+
+}
+
+@keyframes ball_moveG{
+0%{
+transform:rotate(0deg)}
+
+100%{
+transform:rotate(360deg)}
+
+}
+
