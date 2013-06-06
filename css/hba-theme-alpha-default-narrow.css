@@ -106,12 +106,13 @@ body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wr
 
 /* Node species elements */
 
-.node-species div#block-block-2 .content-toc {
+body.node-type-species #menu-content {
   margin-right: 0.5em;
 }
-#block-block-2 .content-toc ul li {
+body.node-type-species #menu-content ul li {
   width: 120px !important;
 }
+
 table#plan-comparison, table#plan-comparison tr {
   width:100%;
 }

@@ -28,10 +28,10 @@ body #region-menu {
   padding-left: 50px;
 }
 
-#block-block-2 .content-toc ul li {
+body.node-type-species #menu-content ul li {
   width: 180px !important;
 }
-body #block-block-2 .content-toc ul li.column2 {
+body.node-type-species #menu-content ul li.column2 {
   margin-left: 16em;
 }
 

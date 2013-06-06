@@ -185,19 +185,16 @@ body #region-sidebar-third {
 
 /*menu nav en species node*/
 
-.node-species div#block-block-2 .content-toc {
+body.node-type-species #menu-content {
   margin-right: 1em;
 }
-#block-block-2 .content-toc ul {
+body.node-type-species #menu-content ul {
   /*margin-left: 20px;*/
 }
-
-#block-block-2 .content-toc ul li {
+body.node-type-species #menu-content ul li {
   width: 140px !important;
 }
-body #block-block-2 .content-toc ul li.column2 {
-  margin-left: 15em;
-}
+
 table#plan-comparison, table#plan-comparison tr {
   width:85%;
 }
