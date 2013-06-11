@@ -176,9 +176,19 @@ div.vertical-tabs-panes.vertical-tabs-processed fieldset legend {
 }
 div.view.view-pricing {
   max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body.page-pricing div.view.view-pricing table.views-view-grid tr td {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+body.page-pricing div.view.view-pricing table.views-view-grid tr td .commerce-add-to-cart input {
+  width: 50%;
 }
 div#block-bird-taxonomies-prices-table {
-  display: none;
+  width: 100%;
 }
 body.page-pricing div#block-block-34 div.block-inner.clearfix {
   background: none;
@@ -196,12 +206,12 @@ body.page-pricing #zone-content-wrapper #region-sidebar-third div#block-block-34
   box-shadow: none;
 }
 body.page-pricing div#block-block-34 {
-  display:block;
+  display: block;
 }
 body.page-pricing div#block-block-34 div.prices-list {
   background: #FAFAFA;
   padding: 20px 20px 1px 20px;
-margin:0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 body.page-pricing div#block-block-34 div h3 {
   text-transform: uppercase;
@@ -214,12 +224,11 @@ body.page-pricing div#block-block-34 div ul li {
 body.page-pricing div#block-block-34 div#basic {
   border-left: 5px solid #BE1B1B;
 }
-body.page-pricing div#block-block-34 div#supporting{
+body.page-pricing div#block-block-34 div#supporting {
   border-left: 5px solid #FFD502;
 }
 body.page-pricing div#block-block-34 div#institutional {
   border-left: 5px solid #0B799D;
 }
-
 /*** FIN DE 800px */ 
 }
