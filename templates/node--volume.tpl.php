@@ -21,7 +21,6 @@
 
       // Show only Taxonomy section for unprivileged users.
       if ($user->uid != 1 && !in_array('administrator', $user->roles)) {
-
         print 'Body: ' . $content['body'] . '<br />';
         //print 'Volume number: ' . $content['vol_nb'] . '<br />';
         //print 'Volume number: ' . $content['vol_nb'][0] . '<br />';
@@ -34,12 +33,10 @@
         print 'Volume number: ' . $content['field_vol_nb'][0]['value'] . '<br />';
         //print 'Volume number: ' . $node->field_vol_nb[0]['value'] . '<br />';
         //print 'Volume number: ' . $node->field_vol_nb[0]['view'] . '<br />';
-
       }
       else {
         print render($content);
-        }
-      //print render($content);
+      }
     ?>
   </div>
   

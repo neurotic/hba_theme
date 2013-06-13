@@ -13,7 +13,6 @@
     <?php endif; ?>
   </header>
   <div class="comment-inner">
-  
 
   <footer>
    <?php

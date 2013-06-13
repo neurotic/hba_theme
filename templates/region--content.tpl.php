@@ -4,15 +4,16 @@
 
   <?php if (!empty($variables['node'])) { ?>
   <?php if ($node->type == 'family' || $node->type == 'species' || $node->type == 'subspecies') {
-	// Act on the unpublishing of an article.
-	if ($node->status == 0) { ?>
-	  <span class="node-status-unpublished"><?php print t('unpublished'); ?></span>
-	<?php } ?>
-  <?php } ?>
-  <?php } ?>
+          // Act on the unpublishing of an article.
+          if ($node->status == 0) { ?>
+            <span class="node-status-unpublished"><?php print t('unpublished'); ?></span>
+          <?php
+          }
+        }
+      }
+      ?>
   
   <div<?php print $content_attributes; ?>>
-    
     
     <a id="main-content"></a>
     <?php if ($title): ?>

@@ -64,19 +64,26 @@
       print '<div id="biblio-main-info">' . render($content) . '</div>';
 
       global $user;
-      if (empty($user->roles[6]) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) {
-        print '<br><br><div id="members-info">There is an advanced bibliographic search, only available for <a href="/tour">Supporting members</a>.</div><br>';
+      // Reference full node only available for Supporting, Institutional, Editor and Administrator roles
+      if (empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) {
+        print '<div class="avis">The advanced bibliographic search and features are only available for Supporting and Institutional members. To make the most of all of HBW\'s features, discover our subscriptions now.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
       }
       else {
-        if ($page): ?>
-          <p class="more-info">More information coming soon!</p>
-        <?php endif;
+        /*if ($page):
+          print '<p class="more-info">More information coming soon!</p>';
+        endif;*/
         $refe = render($content['field_bib_ref_name'][0]);
-        $refe_stripped = strip_tags($title.' '.$refe);
-        print 'Find the reference on the web:<ul>';
-        print '<li><a href="http://scholar.google.com/scholar?hl=en&q='.$refe_stripped.'%29&btnG=&as_sdt=1%2C5&as_sdtp=" title="Search this reference on Google Scholar">Google Scholar</a></li>';
-        print '<li><a href="https://www.google.com/search?hl=en&as_q='.$refe_stripped.'&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=off&tbs=rl%3A1%2Crls%3A2&as_filetype=pdf&as_rights=#q='.$refe_stripped.'+filetype:pdf&hl=en&lr=&safe=off&as_qdr=all&prmd=imvns&tbas=0&sa=X&ei=23A3UIvqJ5Ck0AWllIGACQ&ved=0CCsQuAs&bav=on.2,or.r_gc.r_pw.&fp=d058f6d271e1b243&biw=1269&bih=669" title="Search PDFs for this reference on Google">PDFs on Google</a></li>';
-        print '</ul>';
+        //$resta = render($content['field_bib_resta'][0]);
+        $title1 = htmlspecialchars(strip_tags($title));
+        $title2 = preg_replace('/[^a-z0-9]+/i', ' ', $title1);
+        $title3 = str_replace(' ', '+', $title2);
+        $title4 = str_replace('amp+', '', $title3);
+        $refe1 = htmlspecialchars(strip_tags($refe));
+        $refe2 = preg_replace('/[^a-z0-9]+/i', ' ', $refe1);
+        $refe3 = str_replace(' ', '+', htmlspecialchars(strip_tags($refe2)));
+        $refe4 = str_replace('amp+', '', $refe3);
+        print '<p>Find the reference on the web with <a href="http://scholar.google.com/scholar?hl=en&q='.$title4.'+'.$refe4.'&btnG=&as_sdt=1%2C5&as_sdtp=" title="Search this reference on Google Scholar">Google Scholar</a>.<br />';
+        print 'Check any available <a href="https://www.google.com/search?hl=en&as_q='.$title4.'+'.$refe4.'&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=off&tbs=rl%3A1%2Crls%3A2&as_filetype=pdf&as_rights=#q='.$title4.'+'.$refe4.'+filetype:pdf&hl=en&lr=&safe=off&as_qdr=all&prmd=imvns&tbas=0&sa=X&ei=23A3UIvqJ5Ck0AWllIGACQ&ved=0CCsQuAs&bav=on.2,or.r_gc.r_pw.&fp=d058f6d271e1b243&biw=1269&bih=669" title="Search PDFs for this reference on Google">PDF on Google</a>.</p>';
       }
     ?>
   </div>
@@ -85,8 +92,11 @@
     //$output = '<div class="sp-search">' . views_embed_view('species_table_by_family','page_2') . '</div>';
     /*$block = module_invoke('views', 'block_view', '024b51b0948df12f8903897e79946969');
     print $block['content'];*/
-    $block = block_load('views', '258063f6767b6942b787998a1c928f07');
-    print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+    if (!empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[3]) || !empty($user->roles[4])) {
+      $block = block_load('views', '258063f6767b6942b787998a1c928f07');
+      print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));
+      //dpm($user->roles);
+    }
   ?>
   
   <?php
@@ -106,7 +116,7 @@
 
   <?php
   
-    if (in_array('editor', $user->roles) || in_array('administrator', $user->roles)) {
+    if (!empty($user->roles[3]) || !empty($user->roles[4])) {
         // View Other references with the same title (possible duplicates nodes for editors to review)
         $block = block_load('views', 'nodes_where_this_biblio-block_5', $node->nid);
         print drupal_render(_block_get_renderable_array(_block_render_blocks(array($block))));

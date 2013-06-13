@@ -41,89 +41,69 @@ function hba_theme_menu_link__menu_sections(array $variables) {
   );
 }*/ // DO THE SAME FOR SEVEN THEME!!!
 
-/**
- * @file
- * This file is empty by default because the base theme chain (Alpha & Omega) provides
- * all the basic functionality. However, in case you wish to customize the output that Drupal;
- * generates through Alpha & Omega this file is a good place to do so.
- * 
- * Alpha comes with a neat solution for keeping this file as clean as possible while the code
- * for your subtheme grows. Please read the README.txt in the /preprocess and /process subfolders
- * for more information on this topic.
- */
-
 function hba_theme_form_alter(&$form, &$form_state, $form_id) {
   switch($form_id) {
     /**
-      * Make some adjustments to the login form to use HTML5 Placeholder values. 
-      * They can be easily changed as they are wrapped in the t() function
-      * or you can simply copy this function to your sub theme and change the values
-      */
-  
-  /*case 'search_block_form':
-    //dsm($form['search_block_form']);
-    //$form['search_block_form']['#default_value'] = 'Type your keyword(s) here';
-    break;*/
-    
-  case 'user_login_block':
-    $form['name']['#attributes']['placeholder'] = t('Username');
-    $form['pass']['#attributes']['placeholder'] = t('Password...');
-    break;
-    
-  /*case 'search_block_form':
-    $form['search_block_form']['#attributes']['placeholder'] = t('Search');
-    break;*/
-  
-  /*case 'views_exposed_form':
-    // Redirect to /plate if user choose <All> figures, other redirect to /plate/all (if user choose 1 figure per species)
-    //if (isset($form[$field_id .'_value']) && $form[$field_id .'_value'] == 1) { // isset imposible si <All>
-    //if ($form[$field_id .'_value'] == 1) {
-    //if( (isset($form_state['values']['field_figure_order_sp_value'])) && ($form_state['values']['field_figure_order_sp_value'] != '') ) {
-    // http://eureka.ykyuen.info/2012/01/25/drupal-show-exposed-filter-value-in-views-headerfooter/
-    $view = views_get_current_view();
-    if($view->exposed_input['field_figure_order_sp_value'] == 1) {
-      dpm($form);
-      dpm($form_state);
-      drupal_set_message('[hba_theme/template.tpl.php] Value for Figures per species is: ' . $view->exposed_input['field_figure_order_sp_value'] . '<br />#info: ' . $form['#info']['filter-field_figure_order_sp_value']['value'] . '<br />form_state: ' . $form_state['input']['field_figure_order_sp_value'], $type = 'status', $repeat = FALSE);
-      //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?') . '/plate' . url($_GET['q']);
-      //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?') . '/plate' . request_uri();
-      //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?');
-      //$form['#action'] = url($_GET['q']);
-      //$form['#action'] = 'plate';
-      //$form['#action'] = 'http://alive.hbw.com/plate';
-      $form['#action'] = '/plate';
-      //drupal_goto('checklist');
-    }
-    else {
-      $form['#action'] = '/plate/all';
-    }
-    break;*/
-  
-  case 'global_filter_1':
-    
-    /*dsm(count($_SESSION['global_filter']['view_taxo_paisos']));
-    dsm($_SESSION['global_filter']);*/
+     * Make some adjustments to the login form to use HTML5 Placeholder values. 
+     * They can be easily changed as they are wrapped in the t() function
+     * or you can simply copy this function to your sub theme and change the values
+     */
 
-    $countries = array();
+    case 'user_login_block':
+      $form['name']['#attributes']['placeholder'] = t('Username');
+      $form['pass']['#attributes']['placeholder'] = t('Password...');
+      break;
     
-    if(!empty($_SESSION['global_filter']['view_taxo_paisos'])) {
-      foreach($_SESSION['global_filter']['view_taxo_paisos'] as $country) {
-        $continents = bird_taxonomies_continents();
-        
-        if(isset($continents[$country])) {
-          $countries[] = $continents[$country]['name'];
-        }
-        else {
-          $term = taxonomy_term_load($country);
-          if(isset($term->name)) {
-            $countries[] = $term->name;
+    /*case 'views_exposed_form':
+      // Redirect to /plate if user choose <All> figures, other redirect to /plate/all (if user choose 1 figure per species)
+      //if (isset($form[$field_id .'_value']) && $form[$field_id .'_value'] == 1) { // isset imposible si <All>
+      //if ($form[$field_id .'_value'] == 1) {
+      //if( (isset($form_state['values']['field_figure_order_sp_value'])) && ($form_state['values']['field_figure_order_sp_value'] != '') ) {
+      // http://eureka.ykyuen.info/2012/01/25/drupal-show-exposed-filter-value-in-views-headerfooter/
+      $view = views_get_current_view();
+      if($view->exposed_input['field_figure_order_sp_value'] == 1) {
+        dpm($form);
+        dpm($form_state);
+        drupal_set_message('[hba_theme/template.tpl.php] Value for Figures per species is: ' . $view->exposed_input['field_figure_order_sp_value'] . '<br />#info: ' . $form['#info']['filter-field_figure_order_sp_value']['value'] . '<br />form_state: ' . $form_state['input']['field_figure_order_sp_value'], $type = 'status', $repeat = FALSE);
+        //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?') . '/plate' . url($_GET['q']);
+        //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?') . '/plate' . request_uri();
+        //$form['#action'] = strtok($_SERVER['REQUEST_URI'], '?');
+        //$form['#action'] = url($_GET['q']);
+        //$form['#action'] = 'plate';
+        //$form['#action'] = 'http://alive.hbw.com/plate';
+        $form['#action'] = '/plate';
+        //drupal_goto('checklist');
+      }
+      else {
+        $form['#action'] = '/plate/all';
+      }
+      break;*/
+    
+    case 'global_filter_1':
+      
+      /*dsm(count($_SESSION['global_filter']['view_taxo_paisos']));
+      dsm($_SESSION['global_filter']);*/
+
+      $countries = array();
+      
+      if(!empty($_SESSION['global_filter']['view_taxo_paisos'])) {
+        foreach($_SESSION['global_filter']['view_taxo_paisos'] as $country) {
+          $continents = bird_taxonomies_continents();
+          
+          if(isset($continents[$country])) {
+            $countries[] = $continents[$country]['name'];
           }
           else {
-            $countries[] = t('All');
+            $term = taxonomy_term_load($country);
+            if(isset($term->name)) {
+              $countries[] = $term->name;
+            }
+            else {
+              $countries[] = t('All');
+            }
           }
         }
-      }
-//}
+  //}
     
     $countries = implode(', ', $countries);
     $countries = truncate_utf8(ucfirst($countries),38,false,'...');
@@ -146,10 +126,11 @@ function hba_theme_form_alter(&$form, &$form_state, $form_id) {
 
 }
 
+/**
+ * Implements theme_preprocess_node()
+ */
 function hba_theme_preprocess_node(&$vars) {
-  /**
-    * if user pictures are enabled on nodes, inject them with the body field
-    */
+  // if user pictures are enabled on nodes, inject them with the body field
   if(isset($vars['user_picture']) && isset($vars['content']['body'][0]['#markup']) && !$vars['teaser']) {
     $vars['content']['body'][0]['#markup'] = $vars['user_picture'] . $vars['content']['body'][0]['#markup'];
   }
@@ -219,6 +200,16 @@ function hba_theme_preprocess_page(&$variables, $hook) {
   /*if(arg(0) == 'node' && arg(1) == '201985' && arg(2) == '') {
     $variables['title'] = '';
   }*/
+
+  if (!user_is_logged_in() && arg(0) == 'user' && !arg(1)) {
+    $variables['title'] = 'Sign in';
+  }
+  if (user_is_logged_in() && arg(0) == 'user' && arg(1) && !arg(2)) {
+    $variables['title'] = '';
+  }
+  if (arg(0) == 'user' && arg(1) == 'password' && !arg(2)) {
+    $variables['title'] = 'Forget password';
+  }
   
   // El módulo Taxonomy Views Switcher hace desparecer el titulo de la página
   if ( (arg(0) == 'taxonomy' && arg(1) == 'term' && is_numeric(arg(2))) || (arg(0) == 'vid' && is_numeric(arg(1)) && is_numeric(arg(2))) ) {
@@ -258,7 +249,7 @@ function hba_theme_form_views_exposed_form_alter(&$form, &$form_state){
   // Overrides the views exposed form url to be the current one
   // Avoids odd views redirect to views page from an exposed form in block
   // cas del bloc de les pagines /reference/xx: es perque utilitzem el mateix bloc (el de /reference/all) per les 3 pagines
-  if ($form['#id'] == 'views-exposed-form-set-records-default' || $form['#id'] == 'views-exposed-form-biblio-node-references-page-2') {
+  if ($form['#id'] == 'views-exposed-form-set-records-default') {
     $form['#action'] = request_uri();
   }
 }

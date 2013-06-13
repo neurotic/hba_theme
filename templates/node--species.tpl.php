@@ -26,7 +26,7 @@
   <div class="right">
   <?
   // si privileged user, mostrar la figure sense watermark
-  if (in_array('Basic subscriptor', $user->roles) && in_array('Supporting subscriptor', $user->roles) && in_array('editor', $user->roles) && in_array('administrator', $user->roles)) {
+  if (!empty($account->roles[5]) || !empty($account->roles[6]) || !empty($account->roles[7]) || !empty($account->roles[4]) || !empty($account->roles[3])) {
     //print '<div class="thumbnail">' . views_embed_view('species_figure','block_4', $element['#object']->nid) . '</div>'; // l'argument ja està en la view
     print '<div class="thumbnail">' . views_embed_view('species_figure','block_5', $node->nid) . '</div>';
   }
@@ -86,34 +86,24 @@
     <?php print '<div id="status" class="ds-status">' . render($content['group_sp_tab_taxo']['field_sp_status']) . '</div>'; ?>
   <?php endif; ?> 
   
-<!-- node/*/revisions
-node/*/revisions/*/list
-node/*/revisions/view/*
-node/*/revisions/*/compare
-node/*/revisions/list -->
-  <?php if ((arg(0) == 'node' and is_numeric(arg(1)) and arg(2) == 'revisions') and (arg(3) == '' || arg(4) == 'list' || arg(3) == 'view' || arg(4) == 'compare' || arg(3) == 'list')) { ?>
-  <div style="display: none;">no menu</div>
-  <?php } else { ?>
-    <div class="block block-block block-2 block-block-2" id="block-block-2">
-      <!--<h1 class="title" id="menu-title">  print t('Sections') </h1>-->
-      <div class="content-toc">
-        <ul class="clearfix">
-          <li class="column1"><a href="#Taxonomy">Taxonomy</a></li>
-          <li class="column1"><a href="#Descriptive_notes">Descriptive notes</a></li>
-          <?php if (!empty($content['group_sp_tab_voice']['field_sp_voice'])) { ?>
-            <li class="column1"><a href="#Voice">Voice</a></li>
-          <?php } ?>
-          <li class="column1"><a href="#Habitat">Habitat</a></li>
-          <li class="column1"><a href="#Food_and_feeding">Food and feeding</a></li>
-          <li class="column2 reset"><a href="#Breeding">Breeding</a></li>
-          <li class="column2"><a href="#Movements">Movements</a></li>
-          <li class="column2"><a href="#Status_and_conservation">Status and conservation</a></li>
-          <li class="column2"><a href="#Bibliography">Bibliography</a></li>
-        </ul>
-      </div>
-       <?php print '<div class="thumbnail">' . views_embed_view('species_figure','block_10', $node->nid) . '</div>'; ?>
+    <div id="menu-content">
+      <ul class="first clearfix">
+        <li><a href="#Taxonomy">Taxonomy</a></li>
+        <li><a href="#Descriptive_notes">Descriptive notes</a></li>
+        <?php if (!empty($content['group_sp_tab_voice']['field_sp_voice'])) { ?>
+          <li><a href="#Voice">Voice</a></li>
+        <?php } ?>
+        <li><a href="#Habitat">Habitat</a></li>
+        <li><a href="#Food_and_feeding">Food and feeding</a></li>
+      </ul>
+      <ul class="second clearfix">
+        <li><a href="#Breeding">Breeding</a></li>
+        <li><a href="#Movements">Movements</a></li>
+        <li><a href="#Status_and_conservation">Status and conservation</a></li>
+        <li><a href="#Bibliography">Bibliography</a></li>
+      </ul>
+      <?php print '<div class="thumbnail">' . views_embed_view('species_figure','block_10', $node->nid) . '</div>'; ?>
     </div>
-  <?php } ?>
 
   <div<?php print $content_attributes; ?>>
     <?php
@@ -121,24 +111,20 @@ node/*/revisions/list -->
       hide($content['comments']);
       hide($content['links']);
 
-      global $user;
-      
       /* CONTINGUT PER USUARIS ANONIMS O SENSE ROL DE PAGAMENT + nodes sense flag Highlighted */
       
       $flag = flag_get_flag('highlighted');
-      //  or die('no "bookmarks" flag defined');
+      //  or die('no highlighted flag defined');
       /*if ($flag->is_flagged($node->nid)) {
         print 'This node is flagged with Highlighted';
       }*/
       
-      if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && ($flag->is_flagged($node->nid))) {
-        print '<p class="avis">You are currently viewing an unrestricted species content. ... ...</p>';
+      global $user;
+      if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && $flag->is_flagged($node->nid)) ) {
+        print '<p class="avis">You are currently viewing an unrestricted species content... ...</p>';
       }
       
-      //$allowed = array('Basic subscriptor','Supporting subscriptor','editor','administrator');
-      //if ($user->uid != 1 && !in_array($allowed, $user->roles)) {
-      //if ($user->uid != 1 && !in_array($allowed, $user->roles) && empty($user->roles[5]) && empty($user->roles[6])) {
-      if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && ($flag && !$flag->is_flagged($node->nid))) {
+      if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && !$flag->is_flagged($node->nid)) ) {
         if ((arg(0) == 'node' and arg(2) == 'revisions' and arg(4) == 'compare') and is_numeric(arg(1))) {
         //$url = request_uri();
         //if (strpos($url, "revisions")) {
@@ -215,7 +201,7 @@ node/*/revisions/list -->
 
         // GROUP Habitat
         hide($content['group_sp_tab_habitat']['field_sp_habitat_text']);
-        $content['group_sp_tab_habitat']['#markup'] = '<p style="border: 1px solid orange; background: #FCF8D1; padding: 10px; margin: 15px 0; clear: both;">Only members are able to see the rest of the content. Login or register to access to a lot of extra features !</p>';
+        $content['group_sp_tab_habitat']['#markup'] = '<p class="avis">Only members are able to see the rest of the content. Login or register to access to a lot of extra features !</p>';
         print render($content['group_sp_tab_habitat']);
 
         // GROUP Food and feeding
@@ -325,12 +311,7 @@ node/*/revisions/list -->
 
           // print the modified group
           print render($content['group_sp_tab_descr_notes']);
-          
-          //TO-DO find a better way to include this embeded sound...
-          // $node->field_sp_nid_ibc['und'][0]['value']
-          if(isset($content['group_sp_tab_voice']['field_sp_voice'][0])){ //check if we have a voice section...
-              $content['group_sp_tab_voice']['field_sp_voice'][0]['#markup'].='<iframe src="http://ibc.lynxeds.com/embed_best_sound_s.php?sp='.render($content['field_sp_nid_ibc'][0]).'" width="520" height="40" frameborder="0" scrolling="no"></iframe>';
-          }
+
           
           //print the rest of the fields of the species.
           print render($content);
@@ -348,7 +329,7 @@ node/*/revisions/list -->
   
   </div><!-- END node-inner full -->
   
-  <?php print render($content['comments']); ?>
+  <?php //print render($content['comments']); ?>
 </article>
 
 

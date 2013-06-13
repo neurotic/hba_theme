@@ -20,17 +20,16 @@
       hide($content['comments']);
       hide($content['links']);
       hide($content);
-       hide($content['group_sp_admin_display']);
-       hide($content['group_sp_tab_taxo']);
-       hide($content['group_sp_tab_descr_notes']);
-       hide($content['group_sp_tab_voice']);
-       hide($content['group_sp_tab_habitat']);
-       hide($content['group_sp_tab_food']);
-       hide($content['group_sp_tab_breeding']);
-       hide($content['group_sp_tab_move']);
-       hide($content['group_sp_tab_status']);
-       hide($content['group_sp_tab_biblio']);
-       
+      hide($content['group_sp_admin_display']);
+      hide($content['group_sp_tab_taxo']);
+      hide($content['group_sp_tab_descr_notes']);
+      hide($content['group_sp_tab_voice']);
+      hide($content['group_sp_tab_habitat']);
+      hide($content['group_sp_tab_food']);
+      hide($content['group_sp_tab_breeding']);
+      hide($content['group_sp_tab_move']);
+      hide($content['group_sp_tab_status']);
+      hide($content['group_sp_tab_biblio']);
     ?>
   </div>
   

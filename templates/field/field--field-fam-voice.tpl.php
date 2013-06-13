@@ -1,4 +1,4 @@
-<div class="field-name-field-fam-food-feeding"><div class="field-label">Voice:&nbsp;</div>
+<div class="field-name-field-fam-food-feeding">
 
 <?php
   //trim the text with http://api.drupalize.me/api/drupal/function/views_trim_text/7
@@ -10,17 +10,12 @@
   );
 
   global $user;
-
-  $node = menu_get_object();
-  if (isset($node) && is_numeric(arg(1))) {
-  
-  /*if ( arg(0) == 'node' && is_numeric(arg(1)) ) {
-    $node = node_load(arg(1));*/
+  if ( arg(0) == 'node' && is_numeric(arg(1)) ) {
     $flag = flag_get_flag('highlighted');
   }
-  if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && (isset($flag) && !$flag->is_flagged($node->nid))) {
+  if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && !$flag->is_flagged($element['#object']->nid)) ) {
     print views_trim_text($items_trim, render($items));
-    print '<p class="avis">You are reading a trimmed version of the Systematics section.<br />Only members are able to see the rest of the content. Login or register to access to a lot of extra features !</p>';
+    print '<span class="hide-text"></span><div class="avis">You are reading a trimmed version of the Voice section.<br />Only members are able to see the rest of the text. To make the most of all of HBW\'s features, discover our subscriptions now.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
   }
   else {
     print render($items);

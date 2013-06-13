@@ -1,51 +1,12 @@
 <?php
-
-/**
- * @file field.tpl.php
- * Default template implementation to display the value of a field.
- *
- * This file is not used and is here as a starting point for customization only.
- * @see theme_field()
- *
- * Available variables:
- * - $items: An array of field values. Use render() to output them.
- * - $label: The item label.
- * - $label_hidden: Whether the label display is set to 'hidden'.
- * - $classes: String of classes that can be used to style contextually through
- *   CSS. It can be manipulated through the variable $classes_array from
- *   preprocess functions. The default values can be one or more of the
- *   following:
- *   - field: The current template type, i.e., "theming hook".
- *   - field-name-[field_name]: The current field name. For example, if the
- *     field name is "field_description" it would result in
- *     "field-name-field-description".
- *   - field-type-[field_type]: The current field type. For example, if the
- *     field type is "text" it would result in "field-type-text".
- *   - field-label-[label_display]: The current label position. For example, if
- *     the label position is "above" it would result in "field-label-above".
- *
- * Other variables:
- * - $element['#object']: The entity to which the field is attached.
- * - $element['#view_mode']: View mode, e.g. 'full', 'teaser'...
- * - $element['#field_name']: The field name.
- * - $element['#field_type']: The field type.
- * - $element['#field_language']: The field language.
- * - $element['#field_translatable']: Whether the field is translatable or not.
- * - $element['#label_display']: Position of label display, inline, above, or
- *   hidden.
- * - $field_name_css: The css-compatible field name.
- * - $field_type_css: The css-compatible field type.
- * - $classes_array: Array of html class attribute values. It is flattened
- *   into a string within the variable $classes.
- *
- * @see template_preprocess_field()
- * @see theme_field()
- */
-?>
-
-<?php
-  // ocultem en numero d'ordenacio...
+  // ocultem el numero d'ordenacio...
   //print render($item);
-  //...pero ens serveix per engatxar-hi la species table
-  print '<div class="embedded-view">' . views_embed_view('species_table_by_family','block_1', $element['#object']->nid) . '</div>';
-  ?>
+  //...i fem servir aquest template només per enganxar-hi la species table
+  $flag = flag_get_flag('highlighted');
+  if ( (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[4]) || !empty($user->roles[3])) || ($flag && $flag->is_flagged($element['#object']->nid)) ) {
+    print '<div class="embedded-view">' . views_embed_view('species_table_by_family','block_1', $element['#object']->nid) . '</div>';
+  }
+  else {
+    print '<img alt="Sample species table image" height="240px" src="/sites/default/files/species-list-sample.png" width="100%" /><div class="avis"><p>A list of the species of the family is displayed to subscribers.</p>You are currently a free subscriber of the HBW Alive. To make the most of all of HBW\'s features, discover our subscriptions now by clicking on the button below.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
+  }
+?>

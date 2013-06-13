@@ -29,7 +29,8 @@
  
 global $user;
 
-if (in_array('Basic subscriptor', $user->roles) || in_array('Supporting subscriptor', $user->roles) || in_array('editor', $user->roles) || in_array('administrator', $user->roles)) { ?>
+// Si usuari té rol Basic (5), Supporting (6), Institutional (7), Editor (4) o Administrator (3)
+if (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[4]) || !empty($user->roles[3])) { ?>
 
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
@@ -95,6 +96,12 @@ if (in_array('Basic subscriptor', $user->roles) || in_array('Supporting subscrip
 <?php }
 
 else {
-  print '<div class="avis">Only subscribers are allowed to use the plates. You are currently a free subscriber of the HBW Alive. To make the most of all of HBW\'s features, discover our Premium subscription now by clicking on the button below.<div style="text-align: right;"><a class="btn" href="/pricing">HBW Alive Plans & Pricing</a></div></div><div class="screenshot"><p>Screenshots preview</p><img src="/sites/default/files/visual_family_index.png" style="width: 700px; height: 500px;" /></div>';
+  print '<div class="avis">Only members are allowed to use the plates. You are currently a free subscriber of the HBW Alive. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div>
+  <div class="screenshot">
+  <p>See below some screenshots that show some of the features and results you will be able to get as subscriber.</p>
+  <a rel="screenshot" id="scr" class="colorbox" href="/sites/default/files/visual_family_index.png"><img src="/sites/default/files/visual_family_index.png" style="width: 315px; height: 250px;" /></a>
+  <a rel="screenshot" id="scr" class="colorbox" href="/sites/default/files/visual_family_index.png"><img src="/sites/default/files/visual_family_index.png" style="width: 315px; height: 250px;" /></a>
+  </div>
+  </div>';
 }
 ?>

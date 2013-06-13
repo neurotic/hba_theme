@@ -21,7 +21,7 @@
       print '<div class="left">' . render($content) . '</div>';
       print '<div class="right">';
       // si privileged user, mostrar slideshow de figures
-      if (in_array('Basic subscriptor', $user->roles) && in_array('Supporting subscriptor', $user->roles) && in_array('editor', $user->roles) && in_array('administrator', $user->roles)) {
+      if (!empty($account->roles[5]) || !empty($account->roles[6]) || !empty($account->roles[7]) || !empty($account->roles[4]) || !empty($account->roles[3])) {
         //print '<div class="thumbnail">' . views_embed_view('species_figure','block_4', $element['#object']->nid) . '</div>'; // l'argument ja està en la view
         print '<div class="thumbnail">' . views_embed_view('species_figure','block_3', $node->nid) . '</div>'; // provisional
       }
@@ -86,13 +86,10 @@
 
       /* CONTINGUT PER USUARIS ANONIMS O SENSE ROL DE PAGAMENT + nodes sense flag Highlighted */
       
-      //$allowed = array('Basic subscriptor','Supporting subscriptor','editor','administrator');
-      //if ($user->uid != 1 && !in_array($allowed, $user->roles)) {
-      //if ($user->uid != 1 && !in_array($allowed, $user->roles) && empty($user->roles[5]) && empty($user->roles[6])) {
-      if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && ($flag && !$flag->is_flagged($node->nid))) {
+      if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && !$flag->is_flagged($node->nid)) ) {
       
           // GROUP General
-          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing an restricted family content. ... ...</p>';
+          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing a restricted family content...</p>';
           
           // Altres grups
           /*hide($content['group_fam_view_vt']['group_fam_view_vt_syst']['field_fam_systematics']);
@@ -127,10 +124,11 @@
       /* CONTINGUT PER USUARIS DE PAGAMENT + ADMINS */
       
       else {
+        
         //hide($content['group_fam_view_vt']['group_fam_view_vt_sp_table']['field_fam_ordenacio']); // ho ocultem via el template field--field-fam-ordenacio.tpl.php
-        // Informar als rols free que estan veient un contingut gratis
-        if ((!in_array('Basic subscriptor', $user->roles) && !in_array('Supporting subscriptor', $user->roles) && !in_array('editor', $user->roles) && !in_array('administrator', $user->roles)) && ($flag && $flag->is_flagged($node->nid))) {
-          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing an unrestricted family content.</p>';
+        // Informar als usuaris no han pagat que estan veient un contingut gratis
+        if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && $flag->is_flagged($node->nid)) ) {
+          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing a free sample family text... ... ...</p>';
         }
         print render($content);
         print '<div class="family_nav_tab"><a href="#" class="prev_tab" id="family_prev_tab">← </a> <a href="#" class="next_tab" id="family_next_tab"> →</a></div>';
