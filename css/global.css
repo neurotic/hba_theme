@@ -1521,15 +1521,14 @@ body button, body input[type="reset"], body input[type="submit"], body input[typ
   -moz-border-radius: 6px;
   border-radius: 6px;
 }
-#block-system-user-menu .content ul {
+div#block-system-user-menu ul.menu {
+  display: inline;
   text-align: right;
+  width: auto;
 }
 #block-system-user-menu .content ul li {
   display: inline;
   list-style: none;
-}
-#block-system-user-menu .content ul li.first a {
-  color: #fff200;
 }
 #block-system-user-menu .content ul li a {
   color: white;
@@ -1537,6 +1536,26 @@ body button, body input[type="reset"], body input[type="submit"], body input[typ
 #block-system-user-menu .content ul li.last a {
   color: #bec6c6;
 }
+div#block-system-user-menu ul.menu li, div#block-system-user-menu div.block-inner.clearfix ul.menu li a {
+  background: none;
+  display: inline;
+  text-shadow: none;
+  float: none;
+  width: auto !important;
+}
+div#block-system-user-menu ul.menu li.first, body div#block-system-user-menu ul.menu li.first a {
+  margin: 0;
+  color: #FFF !important;
+  float: none;
+}
+
+div#region-user-first.grid-8.region.region-user-first {
+  width: auto;
+  background: red;
+  float: left;
+}
+
+
 /* Block You are currently filtering by... */
 .block-20 {
   margin: 15px 0;
@@ -5650,7 +5669,7 @@ div.view.view-pricing div.view-content:hover {
   background: none;
 }
 div.view.view-pricing {
-  max-width:800px;
+  width:800px;
   margin:0 auto;
 }
 div.view.view-pricing table {
@@ -5868,7 +5887,7 @@ body.page-slideshow #region-content .region-inner h1.title {
 }
 body.context-frontpage div.view-homepage div.row-content,
 body.page-slideshow div.view-homepage div.row-content {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
   position: relative;
   /*padding-bottom: 40px;*/
@@ -5939,6 +5958,7 @@ body.page-slideshow div.view-homepage div.views-row-odd div.desc h3, div.views-r
   letter-spacing: normal;
   font-weight: normal;
 }
+
 body.context-frontpage div.view-homepage div.views-row-odd div.desc ul,
 body.page-slideshow div.view-homepage div.views-row-odd div.desc ul {
   padding: 0 0 0 15px;
@@ -5974,6 +5994,15 @@ body.page-slideshow div.view-homepage div.views-row-even div.image {
 }
 
 /*** frontpage ***/
+
+body.page-frontpage div#page #region-sidebar-second.grid-3.region.region-sidebar-second div.region-sidebar-second-inner,
+body.page-frontpage div#page div#zone-content #region-sidebar-second.grid-3.region.region-sidebar-second div.region-sidebar-second-inner #block-menu-menu-sections.block.block-menu div.block-inner,
+body.page-frontpage div#page div#zone-content #region-sidebar-second.grid-3.region.region-sidebar-second div.region-sidebar-second-inner #block-menu-menu-sections.block.block-menu div.block-inner div.content {
+background:#F2F2F2  !important;
+border:none;
+}
+
+
 /*body.context-frontpage div.view-homepage div.row-content {
   width: 765px;
 }*/
@@ -5984,6 +6013,7 @@ div.view.view-homepage .views-field-body {
   text-align: center;
   margin-right:270px;
   margin-bottom: 50px;
+  font-size:13px;
 }
 div.view.view-homepage div.marco-cristal {
   background: rgba(255,255,255,0.3);
@@ -6012,6 +6042,13 @@ div.view.view-homepage .views-field-body iframe {
   width: 100%;
   border: 0;
   overflow: hidden;
+}
+
+body.page-frontpage div.view.view-homepage div.views-row.views-row-1 div.views-field.views-field-body {
+  text-align:left;
+  width:1100px;
+  margin:0 auto;
+  padding:0px 0 20px 40px;
 }
 
 /*div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
@@ -6147,8 +6184,15 @@ line-height:35px;
  * Checkout
  */
 body.page-checkout #zone-content {
-  padding-left: 245px;
-  background: url("images/bg-register.png") no-repeat 0 150px;
+  /*padding-left: 245px;*/
+  /*background: url("images/bg-register.png") no-repeat 0 150px;*/
+  margin:0 auto;
+width:50%;
+min-width:800px;
+}
+
+body.page-checkout #region-content {
+width:100%;
 }
 body.page-checkout #region-content div.region-inner {
   border-top: 32px solid #E4E5E5;
@@ -6341,6 +6385,7 @@ table#plan-comparison tr td.col4 div {
 }
 table#plan-comparison tr.row-last td div {
   border-bottom: 1px solid #7A7A7A;
+  white-space:nowrap;
 }
 table#plan-comparison tr.row-last td.col1 {
   background: none;

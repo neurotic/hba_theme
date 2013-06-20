@@ -70,10 +70,11 @@ body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-
 body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections h2.block-title {
   background: none;
   border: 0;
-  margin: 20px 0;
+  padding: 25px 0 0 35px;
   text-transform: capitalize;
   font-size: 1.7em;
   color: #D33C39;
+  display: block;
 }
 body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections h2.block-title span {
   border: 0;
@@ -95,8 +96,14 @@ body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-
 body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li {
   background: none;
   border: 0;
-  width: 30%;
+  width: 33.33%;
   float: left;
+  font-size: 1.2em;
+  min-height: 120px;
+}
+body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li div.wrapper p.desc {
+  font-size: .9em;
+  line-height: 1.2em;
 }
 body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li div.wrapper {
   background: none;
@@ -181,8 +188,12 @@ div.view.view-pricing {
 }
 body.page-pricing div.view.view-pricing table.views-view-grid tr td {
   padding: 0;
-  width: 100%;
+  margin: 0 5% 15px 5%;
+  width: 90%;
   text-align: center;
+}
+body.page-pricing div.view.view-pricing table.views-view-grid tr td div.pricing div.body {
+  font-size: 1.1em;
 }
 body.page-pricing div.view.view-pricing table.views-view-grid tr td .commerce-add-to-cart input {
   width: 50%;
@@ -230,5 +241,53 @@ body.page-pricing div#block-block-34 div#supporting {
 body.page-pricing div#block-block-34 div#institutional {
   border-left: 5px solid #0B799D;
 }
+div#block-bird-taxonomies-prices-table {
+  width: 100%;
+}
+body table#plan-comparison, body table#plan-comparison tr {
+  margin: 0 auto;
+  border: 0;
+  background: none;
+  width: 95%;
+}
+table#plan-comparison tr td.col1 div {
+  font-size: .9em;
+  line-height: 1.1em;
+}
+body #region-menu #block-system-main-menu div.content li a, body #region-menu #block-menu-menu-anonymous-menu div.content li a, body #region-menu #block-system-main-menu div.content li.first a, body #region-menu #block-menu-menu-anonymous-menu div.content li.first a {
+  padding: 10px 6px;
+  background: none;
+}
+body table#plan-comparison tr td div.false {
+  background: url("images/icons.png") no-repeat -50px -132px;
+}
+body table#plan-comparison tr td div.true {
+  background: url("images/icons.png") no-repeat -50px -75px;
+}
+body.html.page-checkout #zone-content {
+  padding-left: 0;
+  background: none;
+}
+form#commerce-checkout-form-checkout div.form-item select, form#commerce-checkout-form-checkout div.form-item input {
+  max-width: 450px;
+  width: auto;
+}
+fieldset#edit-cart-contents.cart_contents.form-wrapper {
+  width: auto !important;
+  max-width: 400px !important;
+}
+
+body.page-checkout div#page #zone-content {
+  /*padding-left: 245px;*/
+  /*background: url("images/bg-register.png") no-repeat 0 150px;*/
+  margin:0 auto;
+width:90%;
+min-width:auto;
+}
+
+body.page-checkout div#page #region-content {
+width:100%;
+}
+
 /*** FIN DE 800px */ 
 }
