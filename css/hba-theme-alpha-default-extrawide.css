@@ -25,6 +25,9 @@ body.sidebar-third #zone-content aside.region {
 .not-front #region-content {
   width: 600px;
 }
+.not-front #region-content .region-inner {
+  padding: 15px 30px;
+}
 
 #block-bird-taxonomies-bird-orders .content {
   width: 236px;
@@ -55,4 +58,9 @@ body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wr
 
 table#plan-comparison, table#plan-comparison tr {
   width:70%;
+}
+
+/*species full node*/
+body.context-species div.view-plate-node-sp.view-display-id-block_1 td.col-2.sp-row center {
+  text-align: center;
 }

@@ -113,9 +113,13 @@ html.js .content-inner form fieldset.collapsed .fieldset-legend, .content-inner 
   color: #0074BD;
   font-weight: bold;
 }
+
 #section-header {
   margin-bottom: 10px;
 }
+
+#region-user-first {width: 430px;}
+
 h1#site-name {display: none;}
 h1#page-title {
   margin-bottom: 10px;
@@ -212,6 +216,7 @@ body div#page #region-sidebar-third {
 body.page-species-comparison #region-content,
 body.page-family-diff #region-content,
 body.page-species-diff #region-content,
+body.page-checklist #region-content,
 body.page-node-203922 #region-content,
 body.page-node-revisions-view.node-type-family #region-content
 body.page-node-revisions-view.node-type-species #region-content {
@@ -530,6 +535,7 @@ body.node-type-species #region-content .region-inner {
 body.node-type-species #region-content .region-inner h1 {
   font-size: 23px;
   margin-bottom: 5px;
+  clear: left;
 }
 body.node-type-species #region-content .region-inner h1 em {
   color: #8a8989;
@@ -543,6 +549,9 @@ body.node-type-species #region-content .region-inner h2 {
   color: #c02a35;
   font-size: 15px;
   margin-bottom: 0;
+}
+body.node-type-species #region-content .region-inner header h2 {
+  float: left;
 }
 
 ul.primary {
@@ -858,7 +867,8 @@ ul.orders > li.active > .item-list > ul {
 body.context-order #block-bird-taxonomies-bird-orders .content, body.context-family #block-bird-taxonomies-bird-orders .content, body.context-species #block-bird-taxonomies-bird-orders .content, body.context-subspecies #block-bird-taxonomies-bird-orders .content {
   display: block;
 }
-#block-bird-taxonomies-bird-orders h2 span.plus {
+#block-bird-taxonomies-bird-orders h2 span.plus,
+#block-menu-menu-geographical-tree h2 span.plus {
   color: black;
   float: right;
   font-size: 25px;
@@ -914,7 +924,8 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
   /*font-size: 17px;*/
   display: block;
 }
-#block-bird-taxonomies-bird-orders h2 {
+#block-bird-taxonomies-bird-orders h2,
+#block-menu-menu-geographical-tree h2 {
   background: rgb(193,49,39); /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2MxMzEyNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNzQ3NDYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -936,6 +947,10 @@ body #block-bird-taxonomies-bird-orders .a-wrapper a {
 }
 #block-bird-taxonomies-bird-orders h2.block-title.collapsiblock {
   display: block;
+}
+#block-menu-menu-geographical-tree h2 span {
+  color: white;
+  font-size: 16px;
 }
 #block-bird-taxonomies-bird-orders .content {
   padding: 15px 0px 5px 0px;
@@ -1111,12 +1126,13 @@ body #page #section-content #block-bird-taxonomies-bird-orders .content li > spa
   /*border: 1px solid #c8c5c5;*/
   padding-left: 20px;
   margin-left: 8px;
+  line-height: 110%;
 }
 
 /*especies*/
 #block-bird-taxonomies-bird-orders .content ul.species li > .a-wrapper > a {
   color: #ca4c55;
-  padding-left: 36px;
+  padding-left: 20px;
   padding-right: 0;
 }
 #block-bird-taxonomies-bird-orders .content ul.species li.selected > .a-wrapper > a {
@@ -1285,6 +1301,7 @@ transform:rotate(360deg)}
 .node-inner.full .content {
   font-size: 14px;
 }
+
 /*Seccions Sp collapsible / collapsed*/
 /*#region-content #node_species_full_group_sp_tab_taxo h3,
 #region-content #node_species_full_group_sp_tab_descr_notes h3,
@@ -1295,7 +1312,7 @@ transform:rotate(360deg)}
 #region-content #node_species_full_group_sp_tab_move h3,
 #region-content #node_species_full_group_sp_tab_status h3,
 #region-content #node_species_full_group_sp_tab_biblio h3*/
-#region-content .field-group-div h3 {
+#region-content .field-group-div > h3 {
   margin: 10px 0 5px;
   background: #f0f0f0;
   padding: 0px 10px;
@@ -1316,7 +1333,7 @@ transform:rotate(360deg)}
 #region-content #node_species_full_group_sp_tab_move h3:after,
 #region-content #node_species_full_group_sp_tab_status h3:after,
 #region-content #node_species_full_group_sp_tab_biblio h3:after*/
-#region-content .field-group-div h3:after {
+#region-content .field-group-div > h3:after {
   background: url("images/icons.png") no-repeat scroll 0px -85px;
   content: "";
   width: 20px;
@@ -1336,7 +1353,7 @@ transform:rotate(360deg)}
 #region-content #node_species_full_group_sp_tab_move .collapsed h3:after,
 #region-content #node_species_full_group_sp_tab_status .collapsed h3:after,
 #region-content #node_species_full_group_sp_tab_biblio .collapsed h3:after*/
-#region-content .field-group-div.collapsed h3:after {
+#region-content .field-group-div.collapsed > h3:after {
   background-position: 0px -140px;
 }
 /*
@@ -1410,7 +1427,7 @@ body .node-inner.full .content .field-group-format-wrapper {
   position: relative;
   z-index: 100;
   background: #535151;
-  width: 306px;
+  width: 430px;
   float: left;
 }
 #active-country #block-global-filter-global-filter-1 {
@@ -1443,6 +1460,12 @@ body .node-inner.full .content .field-group-format-wrapper {
   /*color: red;*/
   color: #fff200;
   font-weight: normal;
+}
+#block-global-filter-global-filter-1 h2{
+  float:left;
+  font-size:15px;
+  margin-left:20px;
+  margin-right:10px;
 }
 #active-country #block-global-filter-global-filter-1 a {
   color: #535151;
@@ -1554,7 +1577,6 @@ div#region-user-first.grid-8.region.region-user-first {
   background: red;
   float: left;
 }
-
 
 /* Block You are currently filtering by... */
 .block-20 {
@@ -1842,14 +1864,21 @@ div.view-galley-fluid .views-exposed-widgets .form-item input.form-autocomplete.
 }
 
 /*bkg color + botons*/
-body.page-plate #region-content .view-content .figures-wrapper {
+body.page-plate #region-content .region-inner div.view-display-id-page .view-content .figures-wrapper,
+body.page-plate-all #region-content .region-inner .view-content .figures-wrapper {
   float: left;
+  width: 100%;
+  height: inherit;
+}
+body.page-plate-list #region-content .region-inner .view-content .figures-wrapper {
+  float: left;
+  width: 100%;
 }
 div#view-footer-custom {
   clear: left;
   float: left;
   margin: 1em 0 4em 0;
-  width: 450px;
+  width: 550px;
 }
 body.page-plate div.view-galley-fluid div.item-list {
   float: right;
@@ -1858,28 +1887,27 @@ body.page-plate div.view-galley-fluid div.item-list {
 .view.view-galley-fluid div.color-bkg-selector {
   float: left;
   display: block;
-  width: 150px;
+  width: 285px;
   padding: 5px 8px !important;
-  margin: 0.5em 0 0.9em 0.8em;
+  margin: 0.2em 0 0.9em 0;
   font: normal 12px/1.2 Arial, sans-serif;
 }
 .view.view-galley-fluid div.color-bkg-selector span.label {
   float: left;
-  margin-right: 5px;
-  padding-top: 2px;
+  margin: 4px 8px 0;
 }
 ul#BGSelector {
   margin-bottom: 0;
 }
 ul#BGSelector li {
   display: inline-block;
-  width: 12px;
-  height: 16px;
+  width: 16px;
+  height: 22px;
   border: 1px solid #CCC;
   overflow: hidden;
   cursor: pointer;
   margin-right: 2px;
-  border: 1px solid #999;
+  border-radius: 4px;
 }
 ul#BGSelector li:hover {
   border: 1px solid #000;
@@ -1890,10 +1918,25 @@ ul#BGSelector li:hover {
 #BGSelector li.white {
   background-color: #FFF;
 }
-#BGSelector li.black {
-  background-color: #423F3F !important;
-  background: #423F3F !important;
+#BGSelector li.color-1 {
+  background-color: #EDDEED;
 }
+#BGSelector li.color-2 {
+  background-color: #FDEDE7;
+}
+#BGSelector li.color-3 {
+  background-color: #EEEED1;
+}
+#BGSelector li.color-4 {
+  background-color: #EBF5EC;
+}
+#BGSelector li.color-5 {
+  background-color: #EAF6F4;
+}
+#BGSelector li.color-6 {
+  background-color: #E2E0EF;
+}
+
 /* Boton Reset drags (en plate) */
 a.hide_links_plate, .view.view-galley-fluid .reset a {
   float: right;
@@ -2198,6 +2241,22 @@ div.view.view-galley-fluid ul.pager li {
   margin: 0 5px 0 0;
   position: relative;
 }
+div.view.view-galley-fluid ul.pager li.pager-current {
+  font-weight: bold;
+}
+div.view.view-galley-fluid ul.pager li.pager-last {
+  position: inherit;
+}
+.pager li.pager-next,
+.pager li.pager-last, .pager li.pager-next.last {
+  margin: 0;
+  position: inherit;
+  top: 0;
+  right: 0;
+}
+.pager li.pager-next {
+  margin: 0 5px 0 0;
+}
 div.view.view-galley-fluid ul.pager li a {
   background: none;
   color: #333;
@@ -2274,9 +2333,13 @@ div.view.view-galley-fluid ul.pager li a:hover {
 .view-plate-node-sp.view-display-id-block_1 tr {
   min-width: 300px !important;
 }
+.view-plate-node-sp.view-display-id-block_1 table:first-child tr:first-child td {
+  text-align: center;
+}
 .view-plate-node-sp.view-display-id-block_1 table:first-child tr:first-child td:first-child {
   text-align: center;
-  padding: 10px 0 10px 10px !important;
+  /*padding: 10px 0 10px 10px !important;*/
+  padding: 0 !important;
 }
 .view-plate-node-sp.view-display-id-block_1 tr:hover {
   background: white !important;
@@ -2318,11 +2381,18 @@ div.view-plate-node-sp div.view-footer div.more-link {
   border: 1px solid #CCC;
   border-radius: 4px;
 }
-div.view-plate-node-sp div.view-footer div.more-link ul {
+body.context-reference div.content div.more-link {
+  margin: 10px 0 20px;
+  padding: 10px 0;
+  font-size: 0.9em;
+}
+div.view-plate-node-sp div.view-footer div.more-link ul,
+body.context-reference div.content div.more-link ul {
   margin-bottom: 0;
   display: inline-block;
 }
-div.view-plate-node-sp div.view-footer div.more-link ul li {
+div.view-plate-node-sp div.view-footer div.more-link ul li,
+body.context-reference div.content div.more-link ul li {
   background: url(/sites/all/themes/hba_theme/css/images/go.png) no-repeat left center transparent;
   display: table;
   padding-left: 15px;
@@ -2964,9 +3034,7 @@ article.node-species div.ds-other-names p {
 }
 /*sp status*/
 div#status.ds-status {
-  position: absolute;
-  right: 10px;
-  top: 30px;
+  float: right;
   font-size: .95em;
   color: #999;
   white-space: nowrap;
@@ -3147,6 +3215,7 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
 .page-node-revisions #page #region-content .tabs span.node-status-unpublished {
   display: none; /*no mostrar en les pagines de revisio*/
 }
+
 /* bloc Update history */
 #block-views-test-node-revision-nid-block-1 select {
   margin-right: 0px !important;
@@ -3158,6 +3227,7 @@ fieldset#node_species_full_group_sp_admin_display.collapsible.collapsed {
 #block-views-test-node-revision-nid-block-1 .view-footer p {
   margin-top: 15px !important;
 }
+
 /* Species comparison */
 
 /*block*/
@@ -3263,10 +3333,14 @@ body.page-species-comparison #region-content .region-inner {
   display: block;
   padding: 0;
 }
-.bottom_links {
+div.bottom_links {
   margin-top: 60px;
   border-top: 2px solid #f9f9f9;
 }
+div.bottom_links li.comment-add {
+  display: none;
+}
+
 /**
  * Flags
  * and Hide links button
@@ -3445,92 +3519,7 @@ body.context-family td.views-field-ops .flag-seen a.unflag-action {
 #ctools-main-dialog-box form#mynote-node-form .form-item-field-mynote-sp-und-0-target-id #autocomplete, #ctools-main-dialog-box form#mynote-node-form .form-item-field-country-und #autocomplete {
   position: inherit !important;
 }
-/*Attachment: masonry + post-it style for My Notes*/
-.view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick, .view-mynotes.view-display-id-attachment_1 .views-row, .postit {
-  /*width: 250px;
-  padding: 10px;
-  margin: 0 20px 15px 0;
-  background: rgb(241, 241, 156);*/
 
-  float: left;
-  text-align: center;
-  width: 225px;
-  height: 225px;
-  /*display: inline-block;
-  margin: 25px;
-  min-height: 175px;
-  max-height: 175px;
-  padding-top: 35px;
-  border-top: 60px solid #fdfd86;*/
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #E8E8E8;
-  font-family: 'Reenie Beanie';
-  font-size: 22px;
-  border-bottom-right-radius: 60px 5px;
-  -webkit-border-bottom-right-radius: 60px 5px;
-  background: rgb(255,255,136);
-  background: -moz-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(77%, rgba(255,255,136,1)), color-stop(100%, rgba(255,255,214,1)));
-  background: -webkit-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
-  background: -o-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
-  background: -ms-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
-  background: linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffff88', GradientType=0 );
-  -moz-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  -webkit-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  transform: rotate(-2deg);
- filter: progid : DXImageTransform.Microsoft.Matrix ( sizingMethod='auto expand', /* IE6-IE9 */ M11 = 0.9993908270190958, M12 = -0.03489949670250097, M21 =0.03489949670250097, M22 = 0.9993908270190958 );
-  zoom: 1;
-  box-shadow: 2px 7px 4px rgba(0, 0, 0, 0.40);
-}
-
-.view-mynotes.view-display-id-block .postit {
-  height: 105px;
-  font-size: 18px;
-  line-height: 95%;
-}
-.view-mynotes.view-display-id-block .postit .views-field-title {margin: 10px;}
-.view-mynotes.view-display-id-block .postit .views-field-body {margin: 5px;}
-.view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick:after, .view-mynotes.view-display-id-attachment_1 .views-row:after, .postit:after {
-/*content: "";
-  position:absolute;
-  z-index:-1;
-  right:-0px;
-  bottom:20px;
-  width:200px;
-  height: 25px;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
-    -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
- -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-      -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-     -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
-         transform: matrix(-1, -0.1, 0, 1, 0, 0);*/
-}
-.view-mynotes.view-display-id-attachment_1 .views-field.views-field-type {
-  float: left;
-  margin: 0.6em 1em;
-}
-.view-mynotes.view-display-id-attachment_1 .views-field.views-field-field-figure-img {
-  float: right;
-  margin: 0.5em 1em;
-}
-.view-mynotes.view-display-id-attachment_1 .views-field.views-field-title {
-  clear: right;
-}
-.view-mynotes.view-display-id-attachment_1 .views-field.views-field-title-1 {
-  line-height: 95%;
-  font-size: 80%;
-}
-.view-mynotes.view-display-id-attachment_1 .views-field.views-field-edit-node {
-  position: absolute;
-  bottom: 0;
-  right: 1em;
-  margin-bottom: 0.2em;
-}
 /*
  * START cosas de (http://webdesignerwall.com/tutorials/responsive-design-with-css3-media-queries)
  * no lo incorpora el tema Omega (probado con viewport de movil)
@@ -3847,15 +3836,14 @@ div.field-name-field-bib-ref-name span.source_nid a.bt.biblio {
   background: none !important;
 }
 div.node-inner.full div.field-name-field-bib-resta {clear: left;}
-/*link to pdf http://www.suburban-glory.com/blog?page=78*/
 div.node-inner.full div.field-name-field-bib-pdf-link {
   margin: 10px 0;
 }
-div.node-inner.full div.field-name-field-bib-pdf-link a {
+div.node-inner.full div.field-name-field-bib-pdf-link {
   padding-left: 40px;
-  background: url("/sites/all/themes/hba_theme/css/images/application-pdf.png") no-repeat left -5px;
-  display: inline-table;
+  background: url("/sites/all/themes/hba_theme/css/images/application-pdf.png") no-repeat left top;
   height: 35px;
+  display: block;
 }
 div.more-info {
   padding-top: 15px;
@@ -3914,6 +3902,7 @@ div.more-info {
 /*more*/
 .view > .more-link {
   margin: 10px 0;
+  clear: left;
 }
 .view .view-footer .more-link,
 div.content div.more, .view-footer .more {
@@ -3948,9 +3937,7 @@ div.view-plate-node-sp div.view-footer div.more-link ul {
   margin-bottom: 0;
 }
 body.page-plate .content-inner .content .view-empty {
-  border: 0 none;
-  background: none;
-  width: 80%;
+  margin-left: 35px;
 }
 div.view-empty .add, div.view-footer .add {
   clear: left;
@@ -3994,6 +3981,23 @@ div.view-wikicontribution.view-display-id-page .views-field-created {
   margin-bottom: 5px;
   font-size: 0.9em;
 }
+
+/*View: block Latest news en portada*/
+section#block-views-news-block div.views-row {
+  -webkit-box-shadow: 0 10px 7px -9px #D9D9D9;
+     -moz-box-shadow: 0 10px 7px -9px #D9D9D9;
+          box-shadow: 0 10px 7px -9px #D9D9D9;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+}
+section#block-views-news-block div.views-row.views-row-last {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
 .block-views-exp-family-search-page, /*block Family search*/
 #block-views-024b51b0948df12f8903897e79946969, /*blocs sp search*/
 #block-views-258063f6767b6942b787998a1c928f07, /*Search a reference*/
@@ -4022,6 +4026,11 @@ div.view-wikicontribution.view-display-id-page .views-field-created {
   -webkit-border-radius: 0;
   border-top: 1px solid #E3E1E2;
   border-bottom: 1px solid #E3E1E2;
+}
+.block-views-exp-family-search-page h2.block-title,
+#block-views-258063f6767b6942b787998a1c928f07 h2.block-title,
+#block-views-024b51b0948df12f8903897e79946969 h2.block-title {
+  cursor: pointer;
 }
 .block-views-exp-family-search-page.collapsiblock-processed div.views-submit-button,
 #block-views-024b51b0948df12f8903897e79946969.collapsiblock-processed div.views-submit-button,
@@ -4317,6 +4326,20 @@ select#edit-field-myr-date-value-op {
   border-color: #FFF;
 }
 
+/**
+ * Species home
+ */
+body.page-node-202110 div.block-highlighted {
+  background: #F8F8F8;
+  border-top: 1px solid #E3E1E2;
+}
+body.page-node-202110 div.block-highlighted h2.block-title {
+  padding: 10px 0 0 15px;
+}
+body.page-node-202110 div.block-highlighted .node-species .node-inner.teaser div.content div.left {
+  background: none;
+}
+
 /*view set-records*/
 #views-form-set-records-default .item-list li {
   list-style: inherit;
@@ -4472,6 +4495,93 @@ padding: 0;
   margin-bottom: 0;
 }
 
+/* View My private notes: page display */
+body.page-my-note div.view-display-id-page_1 div.view-grouping-header {
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  margin-bottom: 10px;
+}
+body.page-my-note div.view-display-id-page_1 div.view-empty table {
+  background: #FFF;
+  color: #666;
+  margin-top: 10px;
+}
+/* View My private notes: attachment display (masonry with post-it) */
+.view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick, .view-mynotes.view-display-id-attachment_1 .views-row, .postit {
+  float: left;
+  text-align: center;
+  width: 225px;
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #E8E8E8;
+  font-family: 'Reenie Beanie';
+  font-size: 22px;
+  border-bottom-right-radius: 60px 5px;
+  -webkit-border-bottom-right-radius: 60px 5px;
+  background: rgb(255,255,136);
+  background: -moz-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(77%, rgba(255,255,136,1)), color-stop(100%, rgba(255,255,214,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
+  background: linear-gradient(-45deg, rgba(255,255,136,1) 77%, rgba(255,255,214,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffff88', GradientType=0 );
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  filter: progid : DXImageTransform.Microsoft.Matrix ( sizingMethod='auto expand', /* IE6-IE9 */ M11 = 0.9993908270190958, M12 = -0.03489949670250097, M21 =0.03489949670250097, M22 = 0.9993908270190958 );
+  zoom: 1;
+  box-shadow: 2px 7px 4px rgba(0, 0, 0, 0.40);
+}
+
+.view-mynotes.view-display-id-block .postit {
+  height: 105px;
+  font-size: 18px;
+  line-height: 95%;
+}
+.view-mynotes.view-display-id-block .postit .views-field-title {margin: 10px;}
+.view-mynotes.view-display-id-block .postit .views-field-body {margin: 5px;}
+.view-mynotes.view-display-id-attachment_1 .views-fluidgrid-item.masonry-brick:after, .view-mynotes.view-display-id-attachment_1 .views-row:after, .postit:after {
+/*content: "";
+  position:absolute;
+  z-index:-1;
+  right:-0px;
+  bottom:20px;
+  width:200px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow:2px 15px 5px rgba(0, 0, 0, 0.40);
+    -moz-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+ -webkit-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+      -o-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+     -ms-transform: matrix(-1, -0.1, 0, 1, 0, 0);
+         transform: matrix(-1, -0.1, 0, 1, 0, 0);*/
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-type {
+  float: left;
+  margin: 0.6em 1em;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-field-figure-img {
+  float: right;
+  margin: 0.5em 1em;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-title {
+  clear: right;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-title-1 {
+  line-height: 95%;
+  font-size: 80%;
+}
+.view-mynotes.view-display-id-attachment_1 .views-field.views-field-edit-node {
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+  margin-bottom: 0.2em;
+}
+
 /**
  * Comments
  */
@@ -4487,7 +4597,60 @@ fieldset.group-comments .fieldset-legend {
   font-size: 1.3em;
   font-weight: bold;
 }
-fieldset#edit-comment-body-und-0-format, a#switch_edit-comment-body-und-0-value.ckeditor_links {
+#region-content .group-sp-comments.field-group-div {
+  margin-top: 5em;
+}
+#region-content .group-fam-comments.field-group-div > h3,
+#region-content .group-sp-comments.field-group-div > h3 {
+  background: #707070;
+}
+#region-content .group-fam-comments.field-group-div > h3 a,
+#region-content .group-sp-comments.field-group-div > h3 a {
+  color: #f0f0f0;
+}
+body.context-species div#comments.comment-wrapper,
+body.context-species fieldset.group-comments,
+body.context-family div#comments.comment-wrapper,
+body.context-family fieldset.group-comments {
+  border: 0 none;
+  padding: 0;
+}
+body.context-family div#comments.comment-wrapper div.comment-form-wrapper h2 {
+  color: #fc6f03;
+}
+body.node-type-family.group-fam-comments.field-group-div.collapsible {
+  margin-bottom: 4em;
+}
+body.node-type-family .field-group-div.collapsible div#comments div.comment-form-wrapper,
+body.node-type-species .field-group-div.collapsible div#comments div.comment-form-wrapper {
+  background: #f8f8f8;
+  padding: 15px 20px 5px;
+  margin-top: 15px;
+}
+body.node-type-family .field-group-div.collapsible div#comments.comment-wrapper h3,
+body.node-type-species .field-group-div.collapsible div#comments.comment-wrapper h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+body.node-type-family .field-group-div.collapsible div#comments.comment-wrapper h3,
+body.node-type-species .field-group-div.collapsible div#comments.comment-wrapper h3,
+div#comments.comment-wrapper h3 a {
+  cursor: default;
+}
+div#comments.comment-wrapper footer {
+  float: left;
+  clear: left;
+  color: #999;
+}
+div#comments.comment-wrapper .user-picture img {
+  width: 50px;
+}
+div#comments.comment-wrapper .field-name-comment-body {
+  clear: left;
+  padding-top: 5px;
+}
+fieldset#edit-comment-body-und-0-format,
+a#switch_edit-comment-body-und-0-value.ckeditor_links {
   display: none;
 }
 textarea#edit-comment-body-und-0-value {
@@ -4632,7 +4795,7 @@ body #region-sidebar-second, body #region-sidebar-third {
   width: 100%;
 }
 body #region-sidebar-second h2.block-title a span, body #region-sidebar-third h2.block-title a span {
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
 }
 #region-sidebar-second .block-inner > h2.collapsiblockCollapsed a:after, #region-sidebar-third .block-inner > h2.collapsiblockCollapsed a:after {
   background: url("images/icons.png") no-repeat scroll -5px -200px transparent;
@@ -4652,11 +4815,14 @@ body #region-sidebar-second h2.block-title a span, body #region-sidebar-third h2
 body.page-taxonomy-term.context-geo .block-species-table-by-family-block-2 .views-field-title {
   float: left;
   width: 80%;
+  height: 30px;
+  margin: 5px 0;
   clear: left;
+  line-height: 120%;
 }
 body.page-taxonomy-term.context-geo .block-species-table-by-family-block-2 .views-field-field-figure-img {
   float: right;
-  width: 15%;
+  width: 20%;
   text-align: right;
 }
 body.page-taxonomy-term.context-geo .block-species-table-by-family-block-2 .view > .more-link {
@@ -4719,10 +4885,23 @@ body.page-taxonomy-term.context-geo .block-species-table-by-family-block-2 .view
 #block-block-30 #breadcrumb {
   margin-bottom: 20px;
 }
+#block-block-30 #wikipedia .views-field-description {
+  float: left;
+  width: 50%;
+}
 .geo-map {
   float: right;
   padding: 0 0 15px 15px;
   width: 40%;
+}
+#block-block-30 #wikipedia .geo-map2 .views-field-field-geo-map {
+  float: right;
+  padding: 0 0 15px 15px;
+  width: 40%;
+}
+#block-block-30 #wikipedia span.more {
+  float: right;
+  clear: right;
 }
 
 /* Page: External ressources */
@@ -5869,14 +6048,12 @@ display:inline-block;
 /**
  * Landing page (para el rol Free Subscriber)
  */
-body.context-frontpage #zone-content, body.context-frontpage #region-content,
-body.page-slideshow #zone-content, body.page-slideshow #region-content {
+body.context-frontpage #zone-content, body.context-frontpage #region-content {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-body.context-frontpage #region-content .region-inner,
-body.page-slideshow #region-content .region-inner {
+body.context-frontpage #region-content .region-inner {
   border: 0;
   background: none;
   margin: 0;
@@ -5896,6 +6073,9 @@ body.context-frontpage div.view-homepage,
 body.page-slideshow div.view-homepage {
   margin: 0;
   padding: 0;
+}
+body.page-slideshow #block-views-frontpage-content-blocks-block ul {
+  list-style: none;
 }
 body.context-frontpage div.view-homepage div.views-row-odd,
 body.page-slideshow div.view-homepage div.views-row-odd {
@@ -5958,7 +6138,6 @@ body.page-slideshow div.view-homepage div.views-row-odd div.desc h3, div.views-r
   letter-spacing: normal;
   font-weight: normal;
 }
-
 body.context-frontpage div.view-homepage div.views-row-odd div.desc ul,
 body.page-slideshow div.view-homepage div.views-row-odd div.desc ul {
   padding: 0 0 0 15px;
@@ -6001,8 +6180,6 @@ body.page-frontpage div#page div#zone-content #region-sidebar-second.grid-3.regi
 background:#F2F2F2  !important;
 border:none;
 }
-
-
 /*body.context-frontpage div.view-homepage div.row-content {
   width: 765px;
 }*/
@@ -6037,20 +6214,17 @@ div.view.view-homepage .views-field-body iframe {
      -moz-box-shadow: 0 14px 7px -9px #D9D9D9;
           box-shadow: 0 14px 7px -9px #D9D9D9;
   margin-bottom:15px;
-  
   height: 360px;
   width: 100%;
   border: 0;
   overflow: hidden;
 }
-
 body.page-frontpage div.view.view-homepage div.views-row.views-row-1 div.views-field.views-field-body {
   text-align:left;
   width:1100px;
   margin:0 auto;
   padding:0px 0 20px 40px;
 }
-
 /*div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
   position: relative;
   clear: both;
@@ -6173,12 +6347,37 @@ line-height:35px;
 #block-hbw-hbw-google-translate {
   margin:0 5px;
 }
-
-/****** geographical ***********/
-
-#block-menu-menu-geographical-tree {
-  margin:0 5px;
-} 
+#block-hbw-hbw-google-translate h2.block-title {
+  float: left;
+  background: rgb(193,49,39);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, rgba(193,49,39,1) 0%, rgba(215,71,70,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(193,49,39,1)), color-stop(100%, rgba(215,71,70,1)));
+  background: -webkit-linear-gradient(top, rgba(193,49,39,1) 0%, rgba(215,71,70,1) 100%);
+  background: -o-linear-gradient(top, rgba(193,49,39,1) 0%, rgba(215,71,70,1) 100%);
+  background: -ms-linear-gradient(top, rgba(193,49,39,1) 0%, rgba(215,71,70,1) 100%);
+  background: linear-gradient(top, rgba(193,49,39,1) 0%, rgba(215,71,70,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c13127', endColorstr='#d74746', GradientType=0 );
+  color: white;
+  padding: 0 10px 0 15px;
+  margin: 0 0 0 5px;
+  font-weight: normal;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+#block-hbw-hbw-google-translate h2.block-title span {
+  color: white;
+  font-size: 16px;
+}
+#block-hbw-hbw-google-translate a.goog-te-menu-value span {
+  color: #666;
+  font-size: 0.9em;
+}
+}
 
 /**
  * Checkout
@@ -6187,12 +6386,11 @@ body.page-checkout #zone-content {
   /*padding-left: 245px;*/
   /*background: url("images/bg-register.png") no-repeat 0 150px;*/
   margin:0 auto;
-width:50%;
-min-width:800px;
+  width:50%;
+  min-width:800px;
 }
-
 body.page-checkout #region-content {
-width:100%;
+  width:100%;
 }
 body.page-checkout #region-content div.region-inner {
   border-top: 32px solid #E4E5E5;
@@ -6385,7 +6583,6 @@ table#plan-comparison tr td.col4 div {
 }
 table#plan-comparison tr.row-last td div {
   border-bottom: 1px solid #7A7A7A;
-  white-space:nowrap;
 }
 table#plan-comparison tr.row-last td.col1 {
   background: none;
@@ -6422,7 +6619,7 @@ table#plan-comparison tr td div span {
 table#plan-comparison tr td div.true {
   background: url("images/icons.png") no-repeat -20px -75px;
 }
-table#plan-comparison tr.row-last td a {
+/*table#plan-comparison tr.row-last td a {
   border: 1px solid #DDD;
   display: block;
   padding: 12px 0;
@@ -6433,29 +6630,27 @@ table#plan-comparison tr.row-last td a {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
-  background: #ffffff; /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: #ffffff;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 ); /* IE6-8 */
+  background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0 );
 }
 table#plan-comparison tr.row-last td a:hover {
-  background: rgb(255,255,255); /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: rgb(255,255,255);
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjlmOWY5IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(249,249,249,1)), color-stop(100%, rgba(255,255,255,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%); /* W3C */
- filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); /* IE6-8 */
-}
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(249,249,249,1)), color-stop(100%, rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 0%, rgba(255,255,255,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}*/
 
 /*de copia local*/
 /*body.node-type-locality #region-content .region-inner,
@@ -6613,11 +6808,18 @@ div.views-megarow-content .form-actions {
 /**
  * Geographical tree
  */
+#block-menu-menu-geographical-tree {
+  margin:0 5px;
+}
+#block-menu-menu-geographical-tree .content {
+  padding: 15px 0px 5px 0px;
+}
 section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu {
   padding-right: 5px;
   max-height: 325px;
   overflow-y: auto;
 }
+#dhtml_menu-11337 > a {color: inherit; cursor: default;}
 section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trail {
   background-color: #ca4c55;
 }
@@ -6625,6 +6827,22 @@ section#block-menu-menu-geographical-tree ul.menu ul.menu ul.menu li.active-trai
   padding: 5px;
   color: white;
   display: inline-table;
+}
+section#block-menu-menu-geographical-tree .content > ul.menu li > ul.menu li {
+  background-image: none !important;
+  margin: 0 0 0 5px;
+}
+section#block-menu-menu-geographical-tree .content > ul.menu li > ul.menu li a {
+  margin-left: 8px;
+  color: inherit;
+}
+section#block-menu-menu-geographical-tree .content > ul.menu li > ul.menu li > ul.menu li {
+  margin-left: 45px;
+}
+section#block-menu-menu-geographical-tree .content > ul.menu li > ul.menu li > ul.menu li a {
+  margin-left: 0;
+  color: #C4202B;
+  cursor: pointer;
 }
 section#block-menu-menu-geographical-tree ul ul ul li.collapsed {
   background-image: none;
@@ -6932,4 +7150,20 @@ body.page-node-203922 .views-field-field-text-banner-link a:hover {
   font-size: 0.9em;
   background: #ffc;
   font-style: italic;
+}
+
+/* Contact form (in FAQ page) */
+body.context-faq div.view-footer {
+  margin-top: 2em;
+}
+body.context-faq div.view-footer form.contact-form {
+  clear: left;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  background: #F8F8F8;
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border-top: 1px solid #E3E1E2;
+  border-bottom: 1px solid #E3E1E2;
 }
