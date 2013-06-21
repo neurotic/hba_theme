@@ -14,6 +14,9 @@ body #zone-content aside.region {
 #region-content {
   width: 580px;
 }
+.not-front #region-content .region-inner {
+  padding: 15px 30px;
+}
 body.page-species-comparison #region-content,
 body.page-species-diff #region-content {
   width: 75%;
@@ -89,4 +92,14 @@ body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wr
 
 table#plan-comparison, table#plan-comparison tr {
   width:70%;
+}
+
+/*species teaser*/
+.node-species .node-inner.teaser div.content div.left {
+  padding: 20px;
+}
+
+/*species full node*/
+body.context-species div.view-plate-node-sp.view-display-id-block_1 td.col-2.sp-row center {
+  text-align: right;
 }
