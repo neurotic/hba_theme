@@ -54,91 +54,16 @@ body.context-frontpage #zone-content-wrapper #region-sidebar-second {
   width: 100%;
   background: #FFF;
 }
-body.context-frontpage #zone-content-wrapper #region-sidebar-second div.region-inner.region-sidebar-second-inner {
+body.context-frontpage #zone-content-wrapper #region-content div.region-inner.region-sidebar-second-inner {
   background: none;
   padding: 0;
   margin: 0;
   border: 0;
 }
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections {
-  width: 1200px;
-  margin: 0 auto;
-  background: none;
-  padding: 0;
-  border: 0;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections h2.block-title {
-  background: none;
-  border: 0;
-  padding: 25px 0 0 35px;
-  text-transform: capitalize;
-  font-size: 1.7em;
-  color: #D33C39;
-  display: block;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections h2.block-title span {
-  border: 0;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix {
-  border: 0 !important;
-  background: #FFF !important;
-  padding: 0;
-  margin: 0;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content.clearfix {
-  border: 0 !important;
-  background: #FFF !important;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content.clearfix ul.menu {
-  margin: 0;
-  width: 100%;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li {
-  background: none;
-  border: 0;
-  width: 33.33%;
-  float: left;
-  font-size: 1.2em;
-  min-height: 120px;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li div.wrapper p.desc {
-  font-size: .9em;
-  line-height: 1.2em;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li div.wrapper {
-  background: none;
-  border: 0;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li div.wrapper a {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #000;
-}
-body.context-frontpage #zone-content-wrapper #region-sidebar-second #block-menu-menu-sections div.block-inner > .content {
-  /*clear: both;*/
-  background: white;
-  padding: 14px 25px 16px;
-  margin: 0 4px 0 4px;
-  border: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
- @media only screen and (max-width: 800px) {
-/*** frontpage ***/
-body.context-frontpage div.view-homepage div.row-content {
-  width: 765px;
-}
-div.view.view-homepage div.views-field.views-field-field-homepage-link div.row-content .image {
-  text-align: center;
-}
-div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc {
-  position: relative;
-  clear: both;
-  float: none;
-}
-/*** families ***/
 
+/*cortado-pegado de fernando.css*/
+ @media only screen and (max-width: 800px) {
+/*** families ***/
 
 #block-block-28 .views-exposed-form div.form-item.form-type-textfield input.form-text {
   max-width: 100%;

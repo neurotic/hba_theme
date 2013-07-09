@@ -97,7 +97,7 @@ if (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]
 <?php }
 
 else {
-  print '<div class="avis">The family index is only visible for the HBW Alive members. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
+  print '<div class="avis">The family index is a feature reserved for HBW Alive members. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
 }
 ?>
 

@@ -43,6 +43,29 @@
  */
 ?>
 
-<div class="field-name-field-bib-pdf-link">
-  <?php print render($items); ?>
-</div>
+<?php
+  // ocultem el camp original (nid ibc)
+  //print render($item);
+  //...i fem servir el template només per engantxar-hi el comments thread
+  //print render($content['comments']);
+  if (arg(0) == 'node' && is_numeric(arg(1)) && $node = menu_get_object('node')) {
+    $node = menu_get_object();
+    $rendered = render(comment_node_page_additions($node));
+    if($node->comment_count == '0') {
+      print '<p>No comments yet</p>';
+    }
+    /*else {
+      print '<p>' . $node->comment_count . ' comments so far.</p>';
+    }*/
+    print $rendered;
+    
+    global $user;
+    if (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) {
+      print '<div class="avis"><p>Only members are able to post public commments. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
+    }
+  
+  }
+  
+  /*$collapsed_content = render($content['comments']);
+  print theme('ctools_collapsible', array('handle' => 'Click here to view/add comments', 'content' => $collapsed_content, 'collapsed' => TRUE));*/
+  ?>

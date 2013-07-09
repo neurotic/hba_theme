@@ -63,7 +63,7 @@
 <article<?php print $attributes; ?>>
   <header>
     <?php print render($title_prefix); ?>
-    <h2><?php print t('Species')?></h2>
+    <h2><?php print t('Species')?></h2><?php print '<div id="status" class="ds-status">' . render($content['group_sp_tab_taxo']['field_sp_status']) . '</div>'; ?>
     <h1<?php print $title_attributes; ?>><?php print _hba_cursive($title) ?></h1>
     <?php print render($title_suffix); ?>
   </header>
@@ -82,12 +82,12 @@
 
   <?php if (!empty($content['links'])): ?>
     <?php $content['links']['#attributes']['class'][] = 'clearfix'; ?>
-    <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
-    <?php print '<div id="status" class="ds-status">' . render($content['group_sp_tab_taxo']['field_sp_status']) . '</div>'; ?>
+    <nav class="links node-links"><?php print render($content['links']); ?></nav>
   <?php endif; ?> 
   
+  <div class="menu-content-wrapper">
     <div id="menu-content">
-      <ul class="first clearfix">
+      <ul class="first">
         <li><a href="#Taxonomy">Taxonomy</a></li>
         <li><a href="#Descriptive_notes">Descriptive notes</a></li>
         <?php if (!empty($content['group_sp_tab_voice']['field_sp_voice'])) { ?>
@@ -96,14 +96,27 @@
         <li><a href="#Habitat">Habitat</a></li>
         <li><a href="#Food_and_feeding">Food and feeding</a></li>
       </ul>
-      <ul class="second clearfix">
+      <ul class="second">
         <li><a href="#Breeding">Breeding</a></li>
         <li><a href="#Movements">Movements</a></li>
         <li><a href="#Status_and_conservation">Status and conservation</a></li>
         <li><a href="#Bibliography">Bibliography</a></li>
       </ul>
-      <?php print '<div class="thumbnail">' . views_embed_view('species_figure','block_10', $node->nid) . '</div>'; ?>
+      <?php 
+        $flag = flag_get_flag('highlighted');
+        
+        //  or die('no highlighted flag defined');
+        /*if ($flag->is_flagged($node->nid)) {
+          print 'This node is flagged with Highlighted';
+        }*/
+        
+        global $user;
+        if ( (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[4]) || !empty($user->roles[3])) || ($flag && $flag->is_flagged($node->nid)) ) {
+          print '<div class="thumbnail">' . views_embed_view('species_figure','block_10', $node->nid) . '</div>';
+        }
+      ?>
     </div>
+  </div>
 
   <div<?php print $content_attributes; ?>>
     <?php
@@ -113,17 +126,11 @@
 
       /* CONTINGUT PER USUARIS ANONIMS O SENSE ROL DE PAGAMENT + nodes sense flag Highlighted */
       
-      $flag = flag_get_flag('highlighted');
-      //  or die('no highlighted flag defined');
-      /*if ($flag->is_flagged($node->nid)) {
-        print 'This node is flagged with Highlighted';
-      }*/
-      
-      global $user;
       if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && $flag->is_flagged($node->nid)) ) {
-        print '<p class="avis">You are currently viewing an unrestricted species content... ...</p>';
+        print '<div class="avis sample">You are currently reading a free species account of the HBW Alive. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
       }
       
+      // Contingut visible pels Anònims, Free subscribers + nodes no samples
       if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && !$flag->is_flagged($node->nid)) ) {
         if ((arg(0) == 'node' and arg(2) == 'revisions' and arg(4) == 'compare') and is_numeric(arg(1))) {
         //$url = request_uri();
@@ -188,7 +195,7 @@
         // First hide the group fields
         hide($content['group_sp_tab_descr_notes']['field_sp_descr_notes']);
         // Change the content of the group
-        $content['group_sp_tab_descr_notes']['#markup'] = '<p class="avis">Only members are able to see the rest of the content. Login or register to access to a lot of extra features !</p>';
+        $content['group_sp_tab_descr_notes']['#markup'] = '<div class="avis"><p>Only members are able to see the rest of the content. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div><p>Discover for free the species of the month with full content at the <a title="Go to the species homepage" href="/species/home">species homepage</a>.</p></div>';
         // print the modified group
         print render($content['group_sp_tab_descr_notes']);
         
@@ -229,16 +236,23 @@
         $content['group_sp_tab_biblio']['#markup'] = '<p class="avis">Only members are able to see the rest of the content. Login or register to access to a lot of extra features !</p>';
         print render($content['group_sp_tab_biblio']);
 
+        // GROUP Comments
+        //$content['group_sp_comments']['#markup'] = render($content['group_sp_comments']['field_sp_nid_ibc'][0]); // funciona
+        
+        print render($content['group_sp_comments']);
+
         //print render($content);
         
         } // END if page is not revision 
 
-      } // END if user is not a subscriber
+      } // END if user is not a paying subscriber
       
       /* CONTINGUT PER USUARIS DE PAGAMENT + ADMINS */
       
       // if user is subscriber
       else {
+        //dsm($content);
+        //dsm($node);
         if ((arg(0) == 'node' and arg(2) == 'revisions' and arg(4) == 'compare') and is_numeric(arg(1))) {
           // si s'està comparant 2 revisions d'un mateix node, no mostrar el node per sota de la taula de comparació
           hide($content);

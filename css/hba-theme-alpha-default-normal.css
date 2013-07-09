@@ -15,6 +15,13 @@ body #region-menu {
   width: 520px;
 }
 
+#region-menu #block-system-main-menu div.content, #region-menu #block-menu-menu-anonymous-menu div.content, #region-menu #block-menu-menu-free-menu div.content {
+  padding: 0 5px;
+}
+#region-menu #block-system-main-menu div.content li a, #region-menu #block-menu-menu-anonymous-menu div.content li a, #region-menu #block-menu-menu-free-menu div.content li a {
+  padding: 10px 14px;
+}
+
 body #region-menu ul#main-menu li a {
   font-size: 15px;
 }
@@ -33,6 +40,31 @@ body #zone-content aside.region {
 
 #region-content {
   width: 500px;
+}
+body.page-user-register #region-content,
+body.page-user-password #region-content,
+body.not-logged-in.page-user #region-content,
+body.page-species-comparison #region-content,
+body.page-family-diff #region-content,
+body.page-species-diff #region-content,
+body.page-species-updates #region-content,
+body.page-birdlist #region-content,
+body.page-node-203922 #region-content,
+body.page-node-201609 #region-content, /*subscription-plans*/
+body.page-node-revisions-view.node-type-family #region-content
+body.page-node-revisions-view.node-type-species #region-content,
+body.node-type-locality.context-birdlist #region-content,
+body.page-node-204743 #region-content,
+body.page-faq #region-content,
+body.context-about-us #region-content,
+body.page-node-204742 #region-content, /*About HBW Alive*/
+body.page-node-204744 #region-content, /*Payments*/
+body.page-node-203922 #region-content /*Plate home*/ {
+  width: 75%;
+}
+
+.front #region-sidebar-second {
+  margin-left: 5px;
 }
 
 #block-bird-taxonomies-bird-orders .content {
@@ -68,6 +100,7 @@ body #zone-content aside.region {
 
 .not-front #region-content .region-inner {
   padding: 15px 10px;
+  font-size: 14px;
 }
 
 body #region-sidebar-third {
@@ -146,51 +179,77 @@ body #region-sidebar-third {
   top: -7px;
 }
 
+/*frontpage*/
+body.context-frontpage div.view-homepage div.row-content,
+body.page-slideshow div.view-homepage div.row-content,
+body.context-frontpage #zone-content-wrapper #region-content #block-menu-menu-sections,
+body.page-slideshow #zone-content-wrapper #region-content.free #block-menu-menu-sections {
+  width: inherit;
+}
+#block-menu-menu-sections div.block-inner h2.block-title {
+  width: auto;
+  margin: 0 auto;
+  padding: 25px 0 0 20px;
+}
+#block-menu-menu-sections div.block-inner div.content {
+  padding: 14px 25px 16px 10px;
+  width: auto;
+  margin: 0 auto;
+}
 #block-views-frontpage-content-blocks-block .view-content .views-row {
   width: 225px;
 }
-
-.view-display-id-page .views_slideshow_main {
-  height: 210px;
-  width: 500px;
+body.context-frontpage div.view-homepage div.views-row-odd div.desc,
+body.page-slideshow div.view-homepage div.views-row-odd div.desc /*Why subscribe*/ {
+  margin: 0 10px 0 10px !important;
+  padding: 30px;
+  width: 250px !important;
+  position: inherit;
+  clear: none !important;
+  float: left !important;
 }
-
-#views_slideshow_cycle_teaser_section_slideshow-page {
-  width: 500px;
-  height: 210px;
-}
-
-#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row {
-  width: 500px;
-}
-
-.view-display-id-page .views_slideshow_main .views-field-title {
-  left: 150px;
-  width: 300px;
-  height: 50px;
-  top: -100px;
-}
-
-.view-display-id-page .views_slideshow_main .views-field-title a {
-  font-size: 15px;
-}
-
-#views_slideshow_cycle_teaser_section_slideshow-page {
-  margin-top: 0;
-}
-
-#block-bird-taxonomies-bird-orders .a-wrapper a {
-  /*width: 84%;*/
-}
-
 #block-menu-menu-sections .content ul li {
   float: none;
   width: auto;
   margin-left: 0;
 }
-
 #block-menu-menu-sections .content ul li:nth-child(odd) {
   margin-right: 0;
+}
+
+/*slideshow*/
+.view-display-id-page .views_slideshow_main {
+  height: 210px;
+  width: 500px !important;
+}
+#views_slideshow_cycle_teaser_section_slideshow-page {
+  width: 500px;
+  height: 210px;
+}
+#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row,
+div.view-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row img {
+  width: 500px;
+}
+.views-slideshow-cycle-main-frame-row-item {text-align: left !important;}
+.view-display-id-page .views_slideshow_main .views-field-title {
+  left: 150px !important;
+  width: 300px !important;
+  height: 60px !important;
+  top: -110px !important;
+}
+.view-display-id-page .views_slideshow_main .views-field-title a {
+  font-size: 15px;
+}
+#views_slideshow_cycle_teaser_section_slideshow-page {
+  margin-top: 0;
+}
+div.view-slideshow .views-slideshow-controls-bottom .views-slideshow-pager-fields {
+  margin-left: 30px;
+}
+
+/*bird taxonomies*/
+#block-bird-taxonomies-bird-orders .a-wrapper a {
+  /*width: 84%;*/
 }
 
 /*menu nav en species node*/
@@ -198,11 +257,11 @@ body #region-sidebar-third {
 body.node-type-species #menu-content {
   margin-right: 1em;
 }
-body.node-type-species #menu-content ul {
-  /*margin-left: 20px;*/
+body.node-type-species #menu-content ul.second {
+  margin-left: 2em;
 }
 body.node-type-species #menu-content ul li {
-  width: 140px !important;
+  width: auto !important;
 }
 
 table#plan-comparison, table#plan-comparison tr {
@@ -217,4 +276,50 @@ table#plan-comparison, table#plan-comparison tr {
 /*species full node*/
 body.context-species div.view-plate-node-sp.view-display-id-block_1 td.col-2.sp-row center {
   text-align: right;
+}
+
+.goog-te-gadget-simple {
+  width: 80px;
+  overflow: hidden;
+}
+
+/*plate home*/
+div#views_slideshow_cycle_teaser_section_plate_slideshow-block_1,
+div#views_slideshow_cycle_div_plate_slideshow-block_1_0,
+div.view-plate-slideshow .views_slideshow_main,
+div.view-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row,
+div.view-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row img,
+div.view-plate-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row img, /*provisional*/
+div.view-plate-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row,
+#views_slideshow_cycle_teaser_section_slideshow-page,
+#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+body.page-node-203922 #views_slideshow_cycle_main_plate_slideshow-block_1 .views-field-title {
+  width: 520px;
+  left: 365px;
+  height: 55px;
+  top: -110px;
+}
+div.view-plate-slideshow .views_slideshow_main .views-field-title a {
+  font-size: 20px;
+  line-height: 130%;
+  display: inline-block;
+}
+body.page-node-203922 .chzn-container {
+  width: 255px !important;
+}
+body.page-node-203922 div.row-3 div.right div.views-exposed-form div.views-exposed-widget.views-submit-button {
+  clear: left;
+}
+/*sidebar dreta*/
+body.page-node-203922 #zone-content aside.region {
+  width: 100%;
+  margin-top: 20px;
+}
+body.page-node-203922 #block-block-33 .tut01,
+body.page-node-203922 #block-block-33 .tut02 {
+  width: 50%;
+  float: left;
 }

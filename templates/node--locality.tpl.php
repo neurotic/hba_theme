@@ -1,7 +1,7 @@
 <?php if ($teaser): // START if teaser
 
 global $user;
-// content only visible if current user if node author or admin
+// content only visible if current user is node author or admin
 if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
@@ -38,7 +38,7 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 <?php }
 else {
   // The other users should not find in the website any information about another user trip, so we show a fake title
-  print "Checklist";
+  print "Private birdlist";
 }
 
 // END if teaser ?>
@@ -46,7 +46,7 @@ else {
 <?php else: // START if full node
 
 global $user;
-// content only visible if current user if node author or admin
+// content only visible if current user is node author or admin
 if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
@@ -141,10 +141,13 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
         <div class="field_myr_links"><?php print render($content['field_myr_links'][0]); ?></div>
         <div class="set-records">
           <?php
-            // aqui veure si hi han records per aquest checklist. Si es aixi, agafar els paisos, i proposar a l'usuari afegir-los via un botó
+            /*
+             * Set records WITH VBO (http://alive.hbw.com/admin/structure/views/view/set_records/edit)
+             */
+            // aqui veure si hi han records per aquest birdlist. Si es aixi, agafar els paisos, i proposar a l'usuari afegir-los via un botó
             $fieldset['element'] = array(
               '#title' => t('Set new records'),
-              '#description' => '<p class="help">Here are the species present in ' . render($content['field_myr_country'][0]) . '. You can now proceed to add species to the checklist. Note that those species you already added to the checklist are not available in the following table (click <span class="add-record"><a title="Add a single record" href="/node/add/my-record?field_myr_checklist=' . $_SESSION['hbw_action']['checklist_nid'] . '" class="add-dialog">here</a> to add a single species that is not officially classified in ' . render($content['field_myr_country'][0]) . '</span>).</p>',
+              '#description' => '<p class="help">Here are the species present in ' . render($content['field_myr_country'][0]) . '. You can now proceed to add species to the birdlist. Note that those species you already added to the birdlist are not available in the following table (click <span class="add-record"><a title="Add a single record" href="/node/add/my-record?field_myr_checklist=' . render($content['field_myr_country'][0]) . '" class="add-dialog">here</a> to add a single species that is not officially classified in ' . render($content['field_myr_country'][0]) . '</span>).</p>',
               // $_SESSION['hbw_action']['checklist_nid'] ===> canviar per if (isset($_GET['field_myr_country']) { print $_GET['field_myr_country']; }
               '#attributes' => array('class' => array('set-records', 'collapsible', 'collapsed')),
               '#value' => views_embed_view('set_records','default'),
@@ -152,17 +155,20 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
             );
             print theme('fieldset', $fieldset);
             
-            // Definir el checklist nid com variable de sessió si l'usuari vol crear més nodes my-record + filtrar la view set-records
+            // Definir el birdlist nid com variable de sessió si l'usuari vol crear més nodes my-record + filtrar la view set-records
             //$_SESSION['hbw_action']['checklist_nid'] = arg(1);
           ?>
         </div>
         
         <div class="set-records-megarow">
           <?php
-            // aqui veure si hi han records per aquest checklist. Si es aixi, agafar els paisos, i proposar a l'usuari afegir-los via un botó
+            /*
+             * Set records WITH MEGAROW (http://alive.hbw.com/admin/structure/views/view/set_records/edit/block_1)
+             */
+            // aqui veure si hi han records per aquest birdlist. Si es aixi, agafar els paisos, i proposar a l'usuari afegir-los via un botó
             $fieldset2['element'] = array(
               '#title' => t('Set new records | megarow'),
-              '#description' => '<p class="help">Here are the species present in ' . render($content['field_myr_country'][0]) . '. You can now proceed to add species to the checklist. Note that those species you already added to the checklist are not available in the following table. <br />Click <span class="add-record"><a title="Add a single record" href="/node/add/my-record?field_myr_checklist=' . $_SESSION['hbw_action']['checklist_nid'] . '" class="add-dialog">here</a> to add a single species that is not officially classified in ' . render($content['field_myr_country'][0]) . '</span>).</p>',
+              '#description' => '<p class="help">Here are the species present in ' . render($content['field_myr_country'][0]) . '. You can now proceed to add species to the birdlist. Note that those species you already added to the birdlist are not available in the following table. <br />Click <span class="add-record"><a title="Add a single record" href="/node/add/my-record?field_myr_checklist=' . render($content['field_myr_country'][0]) . '" class="add-dialog">here</a> to add a single species that is not officially classified in ' . render($content['field_myr_country'][0]) . '</span>).</p>',
               '#attributes' => array('class' => array('set-records', 'collapsible')),
               '#value' => views_embed_view('set_records','block_1'),
               '#children' => '',
@@ -179,8 +185,8 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 }
 else {
   // The other users should not find in the website any link to this full node, so we inform them and do a redirect
-  print '<div class="unauthorized">You are not authorized to see other people\'s checklists.<p>You will be redirect to your checklists overview page <span class="timer"></span></p></div>';
-  //drupal_goto('checklist');
+  print '<div class="unauthorized">You are not authorized to see other people\'s birdlists.<p>You will be redirect to your birdlists overview page <span class="timer"></span></p></div>';
+  //drupal_goto('birdlist');
 }
 ?>
 

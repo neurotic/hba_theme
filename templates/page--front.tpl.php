@@ -1,73 +1,17 @@
 <?php
 global $user;
 // If user is not logged in
-if (!$user->uid) {
-?>
+/*if (!$user->uid) {
 
-  <!--<div class="lrdiscoverwidget" data-background="on" data-css="http://alive.hbw.com/sites/all/libraries/bigvideojs/css/style.css" data-logo="on" data-share-url="alive.hbw.com/signup" rel="M6JL4NGD">
-	&nbsp;</div>
-  <script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>-->
-  
+  <div class="lynxeds-wrapper">
+    <div class="lynxeds">Continue to <a title="Continue to Lynx Edicions website" href="http://lynxeds.com">Lynx Edicions</a> website<br />Continue to <a title="Continue to Internet Bird Collection website" href="http://ibc.lynxeds.com">Internet Bird Collection</a> website</div>
+  </div>
   <div rel="M6JL4NGD" class="lrdiscoverwidget" data-logo="on" data-background="off" data-css="http://alive.hbw.com/sites/all/libraries/bigvideojs/css/style.css" data-share-url="alive.hbw.com/signup" data-css=""></div><script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
-  
-  <!--https://github.com/dfcb/BigVideo.js -->
-	<!-- BigVideo Dependencies -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="sites/all/libraries/bigvideojs/js/jquery-1.7.2.min.js"><\/script>')</script>
-    <script src="sites/all/libraries/bigvideojs/js/jquery-ui-1.8.22.custom.min.js"></script>
-    <script src="sites/all/libraries/bigvideojs/js/jquery.imagesloaded.min.js"></script>
-    <script src="http://vjs.zencdn.net/c/video.js"></script>
 
-    <!-- BigVideo -->
-    <script src="sites/all/libraries/bigvideojs/js/bigvideo.js"></script>
-    
-    <!-- Demo -->
-    <script src="sites/all/libraries/bigvideojs/js/jquery.scrollTo.js"></script>
-    <script>
-        var BV;
-	    $(function() {
-            
-            // initialize BigVideo
-            BV = new $.BigVideo();
-			BV.init();
-			//BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ambient:true});
-			//BV.show('http://alive.hbw.com/HBWalive_MarcaAgua_BR.mp4',{ambient:true});
-      BV.show('http://alive.hbw.com/promo_hbw.mov',{ambient:true});
-      //BV.show('promo_hbw.mov',{ambient:true});
-
-            // Playlist button click starts video
-            $('.playlist-btn').on('click', function(e) {
-                e.preventDefault();
-                BV.show($(this).attr('href'));
-            })
-
-            // Video Play/Pause toggle
-            $('#video-toggle').on('click', function(e) {
-                if (this.checked)   BV.getPlayer().play();
-                else                BV.getPlayer().pause();
-            })
-
-            // set up navigation
-            $('.nav-link').on('click',function(e){
-                e.preventDefault();
-                scrollToSection($(this).attr('href'));
-            })
-
-            function scrollToSection(id) {
-                $(window)._scrollable().stop();
-                $(window).scrollTo(id, {
-                    duration: 300,
-                    offset: -50,
-                    // easeInOutQuad
-                    easing: function(x,t,b,c,d){if((t/=d/2)<1) return c/2*t*t+b;return -c/2*((--t)*(t-2)-1)+b;}
-                });
-            }
-	    });
-    </script>
-
-<?php } 
+} */
 // Usuari connectat pero només amb el rol FREE
-else if (!empty($user->roles[8]) && empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7])) { ?>
+//else if (!empty($user->roles[8]) && empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7])) {
+if ( (!$user->uid) || (!empty($user->roles[8]) && empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7])) ) { ?>
 
   <div id="page-wrapper"><div id="page">
 
@@ -103,10 +47,6 @@ else if (!empty($user->roles[8]) && empty($user->roles[5]) && empty($user->roles
 
     </div></div> <!-- /.section, /#header -->
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
-
     <?php print $messages; ?>
 
     <div id="main-wrapper"><div id="main" class="clearfix">
@@ -120,10 +60,91 @@ else if (!empty($user->roles[8]) && empty($user->roles[5]) && empty($user->roles
         <?php print render($page['help']); ?>
         <?php //print render($page['content']); ?>
         
-        <div class="grid-21 region region-content" id="region-content">
+        <div class="grid-21 region region-content" id="region-content free">
           <div class="region-inner region-content-inner contextual-links-region">
-            <?php print views_embed_view('homepage','page'); ?>
+            <?php //print views_embed_view('homepage','page'); ?>
+            
+            <div class="content-inner">
+              <div class="block block-system block-main block-system-main odd block-without-title" id="block-system-main">
+                <div class="block-inner clearfix">
+                  <div class="content clearfix">
+                    <div class="view view-homepage view-id-homepage view-display-id-page view-dom-id-f68ac51c84bb012a6dfdb8ac162ca250">
+                      <div class="view-content">
+                        <div class="views-row views-row-1 views-row-odd views-row-first">
+                          <div class="views-field views-field-field-homepage-link">
+                            <div class="field-content">
+                              <div class="row-content">
+                                <div class="title">
+                                  A revolution in ornithological reference works!</div>
+            <!-- nou body-->
+                                <div class="views-field views-field-body">
+                                  <div class="field-content">
+                                    <div class="marco-cristal">
+                                      <div class="video-container">
+                                  <iframe allowfullscreen="" frameborder="0" height="360" src="http://www.youtube.com/embed/3SwDtbQ0gTs?rel=0&amp;theme=light" width="640"></iframe>
+                                      </div>
+                                    </div>
+                                    <div class="video-caption">
+                                      Watch this video to find out more about this amazing and innovative project.</div>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                  <p>Why Subscribe?</p>
+                                  <ul>
+                                    <li>
+                                      Access the most comprehensive online source of ornithological knowledge.</li>
+                                    <li>
+                                      Have all of the contents of the <em>Handbook of the Birds of the World</em> series, continuously updated by a professional team, at your fingertips.</li>
+                                    <li>
+                                      Customize to your personal needs.</li>
+                                  </ul>
+                                  <p>All for a fraction of the cost of one HBW Volume!</p>
+                                  <div class="link">
+                                    <a href="http://www.hbw.com/pricing">View subscription plans</a></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            <!-- antic body -->
+                        </div>
+                        <div class="views-row views-row-2 views-row-even views-row-last">
+                          <div class="views-field views-field-field-homepage-link">
+                            <div class="field-content">
+                              <div class="row-content">
+                                <div class="title">
+                                  Explore some samples</div>
+                                <div class="desc">
+                                  <p>Browse these contents before you subscribe:</p>
+                                  <div class="samples-links-home">
+                                    <a href="family/home">Families</a><a href="species/home">Species</a><a href="plates/home">Plates</a></div>
+                                </div>
+                                <div class="image">
+                                  <img alt="" height="120" src="http://www.hbw.com/sites/default/files/emberiza_citrinella_male_handbook_alive.png" typeof="foaf:Image" width="198" /></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <section class="block block-menu block-menu-sections block-menu-menu-sections even collapsiblock-processed" id="block-menu-menu-sections">
+          <div class="block-inner clearfix">
+                        <h2 class="block-title"><span>Features</span></h2>
+              <div class="content clearfix">
+                <ul class="menu"><li class="first leaf clearfix menu_contents"><div class="wrapper clearfix"><span class="menu_image"></span>Contents<p class="desc"><strong>Detailed information, illustrations, maps</strong> and more materials for all the species of birds of the world.</p></div></li>
+          <li class="leaf clearfix menu_updating"><div class="wrapper clearfix"><span class="menu_image"></span>Updating<p class="desc"><strong>Contents constantly updated</strong> by professional editors and moderated user participation via “wikicontributions”.</p></div></li>
+          <li class="leaf clearfix menu_customization"><div class="wrapper clearfix"><span class="menu_image"></span>Customization<p class="desc"><strong>Highly customizable format</strong> to meet every user’s needs and interests, geographical filtering and inclusion of personal notes.</p></div></li>
+          <li class="leaf clearfix menu_multimedia"><div class="wrapper clearfix"><span class="menu_image"></span>Multimedia<p class="desc"><strong>Thousands of videos, photographs and sounds</strong> conveniently linked for quick and easy access. </p></div></li>
+          <li class="leaf clearfix menu_bibliography"><div class="wrapper clearfix"><span class="menu_image"></span>Bibliography<p class="desc">Easily track the scientific references in the work.</p></div></li>
+          <li class="last leaf clearfix menu_special_features"><div class="wrapper clearfix"><span class="menu_image"></span>Special Features<p class="desc"><strong>Google translator</strong> for 71 languages integrated in each page to aid comprehension for non-English speakers.</p></div></li>
+          </ul>    </div>
+            </div>
+            </section>
           </div>
+          
+            </div>
         </div>
         
         <?php print $feed_icons; ?>
@@ -261,12 +282,6 @@ else { ?>
 
     </div></div> <!-- /.section, /#header -->
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
-
-    <?php print $messages; ?>
-
     <div id="main-wrapper"><div id="main" class="clearfix">
 
       <div id="content" class="column"><div class="section">
@@ -277,6 +292,7 @@ else { ?>
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
         <?php print render($page['content']); ?>
+        <?php //drupal_set_message('test julien', $type = 'status', $repeat = FALSE); ?>
         <?php print $feed_icons; ?>
       </div></div> <!-- /.section, /#content -->
 

@@ -29,10 +29,6 @@ body.sidebar-third #zone-content aside.region {
   padding: 15px 30px;
 }
 
-#block-bird-taxonomies-bird-orders .content {
-  width: 236px;
-}
-
 #region-branding {
   width: auto;
 }
@@ -48,6 +44,13 @@ body #region-menu {
   width: auto;
 }
 
+/*bird taxonomies*/
+#block-bird-taxonomies-bird-orders .content {
+  width: 236px;
+}
+#block-bird-taxonomies-bird-orders .content ul.orders {
+  margin-right: 10px;
+}
 body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   background-position: 212px -600px;
 }
@@ -63,4 +66,18 @@ table#plan-comparison, table#plan-comparison tr {
 /*species full node*/
 body.context-species div.view-plate-node-sp.view-display-id-block_1 td.col-2.sp-row center {
   text-align: center;
+}
+
+body.node-type-species #menu-content .thumbnail {
+  margin-right: 0.6em;
+}
+
+.goog-te-gadget-simple {
+  width: auto;
+  overflow: hidden;
+}
+
+body.context-frontpage .views-row.views-row-2.views-row-even.views-row-last,
+body.page-slideshow .view-homepage .views-row.views-row-2.views-row-even.views-row-last {
+  background: #FFF url(http://www.hbw.com/sites/default/files/emberiza_citrinella_male_handbook_alive.png) no-repeat 76% bottom;
 }

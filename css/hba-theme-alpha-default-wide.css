@@ -17,10 +17,6 @@ body #zone-content aside.region {
 .not-front #region-content .region-inner {
   padding: 15px 30px;
 }
-body.page-species-comparison #region-content,
-body.page-species-diff #region-content {
-  width: 75%;
-}
 
 #block-bird-taxonomies-bird-orders .content {
   width: 236px;
@@ -31,61 +27,106 @@ body #region-menu {
   padding-left: 50px;
 }
 
+#region-menu #block-system-main-menu div.content li a, #region-menu #block-menu-menu-anonymous-menu div.content li a, #region-menu #block-menu-menu-free-menu div.content li a {
+  padding: 10px 18px;
+}
+
 body.node-type-species #menu-content ul li {
-  width: 180px !important;
+  width: 160px !important;
 }
 body.node-type-species #menu-content ul li.column2 {
   margin-left: 16em;
 }
 
+/*homepage*/
+
+body.context-frontpage div.view-homepage div.row-content,
+body.page-slideshow div.view-homepage div.row-content,
+body.context-frontpage #zone-content-wrapper #region-content #block-menu-menu-sections,
+body.page-slideshow #zone-content-wrapper #region-content.free #block-menu-menu-sections {
+  width: 1100px !important;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.desc,
+body.page-slideshow div.view-homepage div.views-row-odd div.desc /*Why subscribe*/ {
+  float: right !important;
+}
+body.context-frontpage .views-row.views-row-2.views-row-even.views-row-last, body.page-slideshow .view-homepage .views-row.views-row-2.views-row-even.views-row-last {
+  background: #FFF url(http://www.hbw.com/sites/default/files/emberiza_citrinella_male_handbook_alive.png) no-repeat 84% bottom;
+}
+/*slideshow*/
 #block-views-frontpage-content-blocks-block .view-content .views-row {
   width: 265px;
 }
-
+#views_slideshow_cycle_teaser_section_slideshow-page,
 .view-display-id-page .views_slideshow_main {
   height: 244px;
 }
-
-#views_slideshow_cycle_main_slideshow-page {
-  width: 580px;
+#views_slideshow_cycle_teaser_section_slideshow-page,
+#views_slideshow_cycle_main_slideshow-page,
+.view-display-id-page .views_slideshow_main,
+#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row,
+div.view-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row img {
+  width: 580px !important;
 }
-
-#views_slideshow_cycle_teaser_section_slideshow-page {
-  width: 580px;
-  height: 244px;
-}
-
-#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row {
-  width: 580px;
-}
-
 .view-display-id-page .views_slideshow_main .views-field-title {
-  left: 235px;
-  width: 300px;
-  height: 80px;
-  top: -130px;
+  left: 235px !important;
 }
-
 .view-display-id-page .views_slideshow_main .views-field-title a {
   font-size: 18px;
 }
+#block-menu-menu-sections div.block-inner h2.block-title {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 25px 0 0 35px;
+}
+#block-menu-menu-sections div.block-inner div.content {
+  padding: 14px 25px 16px 35px;
+  width: 1100px;
+  margin: 0 auto;
+}
 
+/*plate home*/
+body.page-node-203922 #views_slideshow_cycle_main_plate_slideshow-block_1 .views-field-title {
+  font-size: 22px;
+  width: 570px;
+  left: 220px;
+  height: 80px;
+  top: -130px;
+}
+div.view-plate-slideshow .views_slideshow_main .views-field-title a {
+  font-size: 24px;
+  line-height: inherit;
+  display: inherit;
+}
+body.page-node-203922 .chzn-container {
+  width: 223px !important;
+}
+body.page-node-203922 #zone-content aside.region {
+  width: 270px;
+  margin-top: 0;
+}
+body.page-node-203922 #block-block-33 .tut01,
+body.page-node-203922 #block-block-33 .tut02 {
+  width: 100%;
+  float: none;
+}
+
+/*bird taxonomies*/
 #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   /*padding-left: 7px;*/
 }
-
 #block-bird-taxonomies-bird-orders .a-wrapper a {
   /*width: 86%;*/
 }
-
 body #block-bird-taxonomies-bird-orders .content {
   width: 277px;
 }
-
+#block-bird-taxonomies-bird-orders .content ul.orders {
+  margin-right: 10px;
+}
 body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   background-position: 212px -600px;
 }
-
 body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-position: 234px -600px;
 }
@@ -103,3 +144,13 @@ table#plan-comparison, table#plan-comparison tr {
 body.context-species div.view-plate-node-sp.view-display-id-block_1 td.col-2.sp-row center {
   text-align: right;
 }
+
+body.node-type-species #menu-content .thumbnail {
+  margin-right: 0.6em;
+}
+
+.goog-te-gadget-simple {
+  width: auto;
+  overflow: hidden;
+}
+

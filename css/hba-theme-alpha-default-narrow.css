@@ -23,6 +23,26 @@ body .logo-img {
   width: 100%;
   margin-bottom: 20px;
 }
+body.page-user-register #region-content,
+body.page-user-password #region-content,
+body.not-logged-in.page-user #region-content,
+body.page-species-comparison #region-content,
+body.page-family-diff #region-content,
+body.page-species-diff #region-content,
+body.page-species-updates #region-content,
+body.page-birdlist #region-content,
+body.page-node-203922 #region-content,
+body.page-node-201609 #region-content, /*subscription-plans*/
+body.page-node-revisions-view.node-type-family #region-content
+body.page-node-revisions-view.node-type-species #region-content,
+body.node-type-locality.context-birdlist #region-content,
+body.page-node-204743 #region-content,
+body.page-faq #region-content,
+body.context-about-us #region-content,
+body.page-node-204742 #region-content, /*About HBW Alive*/
+body.page-node-204744 #region-content /*Payments*/ {
+  width: 100%;
+}
 body.page-species-comparison #region-content,
 body.page-species-diff #region-content {
   width: inherit;
@@ -43,6 +63,10 @@ body.page-species-diff #region-content {
   float: right;
 }
 
+#region-menu #block-system-main-menu div.block-inner, #region-menu #block-menu-menu-anonymous-menu div.block-inner, #region-menu #block-menu-menu-free-menu div.block-inner {
+  text-align: center;
+}
+
 #block-views-flag-nodes-block-6, #block-views-flag-nodes-block-5 {
   display: none;
 }
@@ -51,49 +75,50 @@ body.page-species-diff #region-content {
   width: 98%;
 }
 
+/*slideshow*/
 #block-views-frontpage-content-blocks-block .view-content .views-row {
   width: 265px;
 }
-
 .view-display-id-page .views_slideshow_main {
   height: 302px;
   width: 720px;
+  text-align: left !important;
 }
-
+.views_slideshow_cycle_main,
+.views-slideshow-cycle-main-frame,
+.views_slideshow_cycle_teaser_section,
+.views-slideshow-cycle-main-frame-row-item {
+  text-align: left !important;
+}
 #views_slideshow_cycle_teaser_section_slideshow-page {
   width: 720px;
   height: 302px;
   margin-top: 15px;
 }
-
 #views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row {
   width: 720px;
 }
-
 .view-display-id-page .views_slideshow_main .views-field-title {
   left: 300px;
   width: 300px;
   height: 50px;
   top: -100px;
 }
-
 .view-display-id-page .views_slideshow_main .views-field-title a {
   font-size: 18px;
 }
-
 #block-views-frontpage-content-blocks-block .view-content .views-row {
   width: 335px;
+}
+div.view-slideshow .views-slideshow-controls-bottom .views-slideshow-pager-fields {
+  margin-left: 100px;
 }
 
 #region-sidebar-first,
 #region-content {
   margin-left: 10px;
   margin-right: 10px;
-}
-
-#slidemarginleft {
-  width: auto;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
@@ -110,9 +135,95 @@ body.node-type-species #menu-content {
   margin-right: 0.5em;
 }
 body.node-type-species #menu-content ul li {
-  width: 120px !important;
+  width: auto !important;
+}
+body.node-type-species #menu-content .thumbnail {
+  margin-right: 2em;
 }
 
 table#plan-comparison, table#plan-comparison tr {
   width:100%;
+}
+
+.goog-te-gadget-simple {
+  width: auto;
+  overflow: hidden;
+}
+
+/*** frontpage ***/
+body.context-frontpage div.view-homepage div.row-content,
+body.page-slideshow div.view-homepage div.row-content {
+  width: 765px;
+}
+div.view.view-homepage div.views-field.views-field-field-homepage-link div.row-content .image {
+  text-align: center;
+}
+div.view.view-homepage div.views-row div.views-field.views-field-field-homepage-link div.desc /*Block Why subscribe*/ {
+  width: 570px;
+  position: relative;
+  clear: both;
+  float: none;
+  margin: 20px 0 0 20px;
+}
+/*body.context-frontpage #zone-content-wrapper #region-content #block-menu-menu-sections,
+body.page-slideshow #zone-content-wrapper #region-content.free #block-menu-menu-sections {
+width: 765px;
+}*/
+body.context-frontpage .views-row.views-row-2.views-row-even.views-row-last, body.page-slideshow .view-homepage .views-row.views-row-2.views-row-even.views-row-last {
+  background: #FFF url(http://www.hbw.com/sites/default/files/emberiza_citrinella_male_handbook_alive.png) no-repeat 76% bottom;
+}
+#block-menu-menu-sections {
+  width: 100%;
+  float: left;
+  display: block;
+  margin: 0;
+}
+#block-menu-menu-sections div.block-inner {
+
+}
+#block-menu-menu-sections div.block-inner h2.block-title {
+  padding: 25px 0 0 35px;
+  width: 765px;
+  margin: 0 auto;
+}
+#block-menu-menu-sections div.block-inner div.content {
+  padding: 14px 25px 16px 35px;
+  width: 765px;
+  margin: 0 auto;
+}
+body.context-frontpage #zone-content-wrapper #region-content #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li,
+body.page-slideshow #zone-content-wrapper #region-content.free #block-menu-menu-sections div.block-inner.clearfix div.content ul.menu li {
+    width: 50%;
+}
+
+/*plate home*/
+div#views_slideshow_cycle_teaser_section_plate_slideshow-block_1,
+div#views_slideshow_cycle_div_plate_slideshow-block_1_0,
+div.view-plate-slideshow .views_slideshow_main,
+div.view-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row,
+div.view-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row img,
+div.view-plate-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row img, /*provisional*/
+div.view-plate-slideshow .views_slideshow_main .views-slideshow-cycle-main-frame-row,
+#views_slideshow_cycle_teaser_section_slideshow-page,
+#views_slideshow_cycle_teaser_section_slideshow-page .views-slideshow-cycle-main-frame-row {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+body.page-node-203922 #views_slideshow_cycle_main_plate_slideshow-block_1 .views-field-title {
+  width: 430px;
+  left: 175px;
+  height: 55px;
+  top: -110px;
+}
+div.view-plate-slideshow .views_slideshow_main .views-field-title a {
+  font-size: 20px;
+  line-height: 130%;
+  display: inline-block;
+}
+body.page-node-203922 .views-exposed-form .views-exposed-widget {
+  padding: 0;
+}
+body.page-node-203922 .chzn-container {
+  width: 158px !important;
+  overflow: hidden !important;
 }

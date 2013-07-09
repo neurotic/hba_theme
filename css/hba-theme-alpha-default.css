@@ -40,6 +40,30 @@ body #zone-user-wrapper {
   font-size: 14px;
 }
 
+/*frontpage*/
+body.context-frontpage div.view-homepage div.row-content,
+body.page-slideshow div.view-homepage div.row-content {
+  width: inherit;
+}
+body.context-frontpage #zone-content-wrapper #region-content #block-menu-menu-sections,
+body.page-slideshow #zone-content-wrapper #region-content.free #block-menu-menu-sections {
+  width: 765px;
+}
+body.context-frontpage div.view-homepage div.views-row-odd div.desc,
+body.page-slideshow div.view-homepage div.views-row-odd div.desc /*Why subscribe*/ {
+  margin: 0 30px 0 0;
+  padding: 30px;
+  width: 250px;
+}
+#block-menu-menu-sections .content ul li {
+  float: none;
+  width: auto;
+  margin-left: 0;
+}
+#block-menu-menu-sections .content ul li:nth-child(odd) {
+  margin-right: 0;
+}
+
 #block-views-flag-nodes-block-6,
 #block-views-flag-nodes-block-5 {
   display: block;
@@ -52,7 +76,11 @@ body #zone-user-wrapper {
 body #block-bird-taxonomies-bird-orders .content li.selected > .a-wrapper > a {
   background-position: 132px -600px;
 }
-
 body #block-bird-taxonomies-bird-orders .content ul.families li.selected > .a-wrapper > a {
   background-position: 154px -600px;
+}
+
+.goog-te-gadget-simple {
+  width: 80px;
+  overflow: hidden;
 }

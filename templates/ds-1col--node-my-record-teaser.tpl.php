@@ -8,7 +8,7 @@
  */
 
 global $user;
-// content only visible if current user if node author or admin
+// content only visible if current user is node author or admin
 if ($user->uid == $uid || in_array('administrator', $user->roles)) {
 ?>
 
@@ -32,7 +32,7 @@ if ($user->uid == $uid || in_array('administrator', $user->roles)) {
           $delete_form = drupal_get_form('node_delete_confirm', $node);
           print render($delete_form);
           drupal_set_title($page_title, PASS_THROUGH);
-          //drupal_goto('checklist');
+          //drupal_goto('birdlist');
       }*/
     ?>
   </div>

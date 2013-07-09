@@ -21,14 +21,15 @@
       print '<div class="left">' . render($content) . '</div>';
       print '<div class="right">';
       // si privileged user, mostrar slideshow de figures
-      if (!empty($account->roles[5]) || !empty($account->roles[6]) || !empty($account->roles[7]) || !empty($account->roles[4]) || !empty($account->roles[3])) {
+      /*if (!empty($account->roles[5]) || !empty($account->roles[6]) || !empty($account->roles[7]) || !empty($account->roles[4]) || !empty($account->roles[3])) {
         //print '<div class="thumbnail">' . views_embed_view('species_figure','block_4', $element['#object']->nid) . '</div>'; // l'argument ja està en la view
         print '<div class="thumbnail">' . views_embed_view('species_figure','block_3', $node->nid) . '</div>'; // provisional
       }
       else {
         //print '<div class="thumbnail">' . views_embed_view('species_figure','block_9', $node->nid) . '</div>'; // provisional
         print '<div class="thumbnail">' . views_embed_view('species_figure','block_3', $node->nid) . '</div>';
-      }
+      }*/
+      print '<div class="thumbnail">' . views_embed_view('species_figure','block_3', $node->nid) . '</div>';
       print '</div>';
     ?>
   </div>
@@ -89,7 +90,7 @@
       if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && !$flag->is_flagged($node->nid)) ) {
       
           // GROUP General
-          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing a restricted family content...</p>';
+          $content['group_fam_view_vt_general']['#markup'] = '<div class="avis">Only subscribers have complete access to the families of the HBW Alive. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
           
           // Altres grups
           /*hide($content['group_fam_view_vt']['group_fam_view_vt_syst']['field_fam_systematics']);
@@ -128,7 +129,7 @@
         //hide($content['group_fam_view_vt']['group_fam_view_vt_sp_table']['field_fam_ordenacio']); // ho ocultem via el template field--field-fam-ordenacio.tpl.php
         // Informar als usuaris no han pagat que estan veient un contingut gratis
         if ( (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) && ($flag && $flag->is_flagged($node->nid)) ) {
-          $content['group_fam_view_vt_general']['#markup'] = '<p class="avis">You are currently viewing a free sample family text... ... ...</p>';
+          $content['group_fam_view_vt_general']['#markup'] = '<div class="avis sample">You are currently reading a free family sample of the HBW Alive. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
         }
         print render($content);
         print '<div class="family_nav_tab"><a href="#" class="prev_tab" id="family_prev_tab">← </a> <a href="#" class="next_tab" id="family_next_tab"> →</a></div>';
@@ -143,8 +144,7 @@
   </div>
   
   </div><!-- END node-inner full -->
-  
-  <?php print render($content['comments']); ?>
+
 </article>
 
 <?php endif; // END if full node ?>

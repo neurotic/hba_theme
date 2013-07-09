@@ -1,4 +1,4 @@
-<?php if ($teaser): // START if teaser ?>
+<?php if ($teaser) { // START if teaser ?>
 
 <article<?php print $attributes; ?>>
   <?php if (!$page && $title): ?>
@@ -32,9 +32,14 @@
   <?php print render($content['comments']); ?>
 </article>
 
-<?php // END if teaser ?>
+<?php } // END if teaser ?>
 
-<?php else: // START if full node ?>
+<?php if (!$teaser) { // START if full node ?>
+
+<?php
+global $user;
+// node visible per rols: basic (encara que parcialment), supporting, institutional, editor, administrator
+if (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[4]) || !empty($user->roles[3])) { ?>
 
 <article<?php print $attributes; ?>>
   <?php if (!$page && $title): ?>
@@ -62,11 +67,13 @@
       hide($content['links']);
       
       print '<div id="biblio-main-info">' . render($content) . '</div>';
+      if (empty($content['field_bib_pdf_link'])) {
+        print '<div class="help">The link to PDF is a work in progress</div>';
+      }
 
-      global $user;
       // Reference full node only available for Supporting, Institutional, Editor and Administrator roles
       if (empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3])) {
-        print '<div class="avis">The advanced bibliographic search and features are only available for Supporting and Institutional members. To make the most of all of HBW\'s features, discover our subscriptions now.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
+        print '<div class="avis">The advanced bibliographic search and features are only available for Supporting and Institutional members. To make the most of all of HBW\'s features, discover our subscriptions now.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
       }
       else {
         /*if ($page):
@@ -82,8 +89,8 @@
         $refe2 = preg_replace('/[^a-z0-9]+/i', ' ', $refe1);
         $refe3 = str_replace(' ', '+', htmlspecialchars(strip_tags($refe2)));
         $refe4 = str_replace('amp+', '', $refe3);
-        print '<p>Find the reference on the web with <a href="http://scholar.google.com/scholar?hl=en&q='.$title4.'+'.$refe4.'&btnG=&as_sdt=1%2C5&as_sdtp=" title="Search this reference on Google Scholar">Google Scholar</a>.<br />';
-        print 'Check any available <a href="https://www.google.com/search?hl=en&as_q='.$title4.'+'.$refe4.'&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=off&tbs=rl%3A1%2Crls%3A2&as_filetype=pdf&as_rights=#q='.$title4.'+'.$refe4.'+filetype:pdf&hl=en&lr=&safe=off&as_qdr=all&prmd=imvns&tbas=0&sa=X&ei=23A3UIvqJ5Ck0AWllIGACQ&ved=0CCsQuAs&bav=on.2,or.r_gc.r_pw.&fp=d058f6d271e1b243&biw=1269&bih=669" title="Search PDFs for this reference on Google">PDF on Google</a>.</p>';
+        print '<div class="more-link"><ul><li>Check any available <a href="https://www.google.com/search?hl=en&as_q='.$title4.'+'.$refe4.'&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&safe=off&tbs=rl%3A1%2Crls%3A2&as_filetype=pdf&as_rights=#q='.$title4.'+'.$refe4.'+filetype:pdf&hl=en&lr=&safe=off&as_qdr=all&prmd=imvns&tbas=0&sa=X&ei=23A3UIvqJ5Ck0AWllIGACQ&ved=0CCsQuAs&bav=on.2,or.r_gc.r_pw.&fp=d058f6d271e1b243&biw=1269&bih=669" title="Search PDFs for this reference on Google">PDF on Google</a>.</li>';
+        print '<li>Find this reference on the web with <a href="http://scholar.google.com/scholar?hl=en&q='.$title4.'+'.$refe4.'&btnG=&as_sdt=1%2C5&as_sdtp=" title="Search this reference on Google Scholar">Google Scholar</a>.</li></ul></div>';
       }
     ?>
   </div>
@@ -127,4 +134,10 @@
   <?php print render($content['comments']); ?>
 </article>
 
-<?php endif; // END if full node ?>
+<?php }
+
+else {
+  print '<div class="avis">You need a membership to access the references. To make the most of all of HBW\'s features, subscribe now by clicking on the button below.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
+  }
+
+} // END if full node ?>

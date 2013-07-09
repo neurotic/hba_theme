@@ -34,6 +34,7 @@
  * @see template_preprocess_comment_wrapper()
  */
 ?>
+<a name="comments"></a>
 <div id="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if ($content['comments'] && $node->type != 'forum'): ?>
     <?php print render($title_prefix); ?>
@@ -41,16 +42,33 @@
     <?php print render($title_suffix); ?>
   <?php endif; ?>
 
-  <?php print render($content['comments']);
+  <?php 
+    //if (!empty($content['comments'])) {
+      print render($content['comments']);
+    //}
+    //else {
+      //print 'No comments yet';
+    //}
 
-    global $user;
-    if (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[4]) || !empty($user->roles[3])) {
-      if ($content['comment_form']): ?>
-    <h2 class="title comment-form"><?php print t('Add new comment'); ?></h2>
-    <?php print render($content['comment_form']); ?>
-  <?php endif;
-    }
-    else {
-      print 'Login or regiter to comment';
-    } ?>
+  /*global $user;
+  if (!empty($user->roles[8])) {
+    print 'You need a subscription to be able to comment on that element.';
+  }
+  else {*/
+  
+    if ($content['comment_form']): ?>
+    <a name="comment-form"></a>
+    <?php
+      /*global $user;
+      if (!$user->uid || (empty($user->roles[5]) && empty($user->roles[6]) && empty($user->roles[7]) && empty($user->roles[4]) && empty($user->roles[3]))) {
+        print '<div class="avis"><p>Only members are able to post public commments. To make the most of all of HBW\'s features, discover our subscriptions now!<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscriptions', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
+      }
+      else {*/ ?>
+        <div class="comment-form-wrapper">
+          <h2 class="title comment-form"><?php print t('Add new comment'); ?></h2>
+          <?php print render($content['comment_form']); ?>
+        </div>
+      <?php //} ?>
+  <?php endif; ?>
+  <?php //} ?>
 </div>

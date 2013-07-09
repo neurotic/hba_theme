@@ -27,17 +27,10 @@
  * @ingroup views_templates
  */
 
-$arg2 = arg(2);
-if(empty($arg2)) {
-  print '<p>No country found on database</p>';
-}
-else {
-  if(is_numeric($arg2)) {
-    
 global $user;
-
-if (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[4]) || !empty($user->roles[3])) { ?>
-
+// view visible per rols: basic, supporting, institutional, editor, administrator
+if (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]) || !empty($user->roles[4]) || !empty($user->roles[3])) {
+?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
@@ -103,14 +96,6 @@ if (!empty($user->roles[5]) || !empty($user->roles[6]) || !empty($user->roles[7]
 <?php }
 
 else {
-  // Fake Species list for free users
-  print '<div class="sp-list-free">';
-  print '<h2 class="block-title">Species</h2>
-        <p><img alt="Species list" height="240" width="424" src="/sites/default/files/species-list-sample.png"></p>';
-  print '<div class="avis">You need a membership to see the species present in this country. To make the most of all of HBW\'s features, subscribe now by clicking on the button below.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
-  print '</div>';
-}
+  print '<div class="avis">You need a membership to see this content. To make the most of all of HBW\'s features, subscribe now by clicking on the button below.<div class="btn-container"><a title="Compare subscriptions" class="btn" href="/pricing">HBW Alive Plans & Pricing</a>&nbsp;&nbsp;' . l('Why subscribe','subscription-plans', array('attributes' => array('title' => t('Why subscribe ?'),'class' => 'btn'))) .'<div class="sign-in">or <a title="Sign in now if you already have a membership" href="/user">sign in</a> if you already have a membership</div></div></div>';
+  }
 ?>
-
-<?php }
-} ?>
